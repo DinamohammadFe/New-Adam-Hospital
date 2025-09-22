@@ -1,0 +1,68 @@
+name: Auto Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Triggers on version tags like v1.0.0, v2.1.3, etc.
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for changelog generation
+          
+      - name: Get tag name
+        id: tag
+        run: echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+        
+      - name: Get previous tag
+        id: prev_tag
+        run: |
+          PREV_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+          echo "prev_tag=$PREV_TAG" >> $GITHUB_OUTPUT
+          
+      - name: Generate changelog
+        id: changelog
+        run: |
+          if [ -n "${{ steps.prev_tag.outputs.prev_tag }}" ]; then
+            CHANGELOG=$(git log --pretty=format:"- %s (%h)" ${{ steps.prev_tag.outputs.prev_tag }}..${{ steps.tag.outputs.tag }})
+          else
+            CHANGELOG=$(git log --pretty=format:"- %s (%h)" ${{ steps.tag.outputs.tag }})
+          fi
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGELOG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          release_name: Release ${{ steps.tag.outputs.tag }}
+          body: |
+            ## Changes in ${{ steps.tag.outputs.tag }}
+            
+            ${{ steps.changelog.outputs.changelog }}
+            
+            ## 🚀 Features & Improvements
+            - Enhanced footer styling with teal "View on Map" buttons
+            - Updated pin icons to red color for better visibility
+            - Improved legal pages visibility with dedicated section
+            - Added responsive design for mobile devices
+            
+            ## 🔧 Technical Updates
+            - Updated CSS styling for better user experience
+            - Enhanced accessibility and visual hierarchy
+            - Improved footer layout and organization
+            
+            ---
+            **Full Changelog**: https://github.com/DinamohammadFe/New-Adam-Hospital/compare/${{ steps.prev_tag.outputs.prev_tag }}...${{ steps.tag.outputs.tag }}
+          draft: false
+          prerelease: false
