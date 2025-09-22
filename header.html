@@ -1,0 +1,518 @@
+<!-- Top Bar -->
+<header role="banner" aria-label="Contact Information">
+  <div class="top-bar" style="background-color: #51917c">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="contact-info">
+            <span class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@adamhospital.com">info@adamhospital.com</a>
+            </span>
+            <span class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:16992">16992</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex align-items-center justify-content-end">
+            <!-- High Contrast Toggle -->
+            <button
+              id="high-contrast-toggle"
+              class="btn btn-sm me-3"
+              aria-label="Toggle high contrast mode"
+              title="Toggle high contrast mode for better visibility"
+              style="
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                color: white;
+                padding: 4px 8px;
+                border-radius: 4px;
+              "
+            >
+              <i class="fas fa-adjust" style="font-size: 14px"></i>
+              <span class="ms-1" style="font-size: 12px">High Contrast</span>
+            </button>
+
+            <div class="social-media">
+              <a
+                href="https://www.facebook.com/adamhospitals"
+                class="social-link"
+                aria-label="Facebook"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/adam-international-hospital/?originalSubdomain=eg"
+                class="social-link"
+                aria-label="LinkedIn"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://x.com/adamhospital"
+                class="social-link"
+                aria-label="Twitter"
+                target="_blank"
+              >
+                <i class="bi bi-twitter-x"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCqlSBmyqFK14FtedMMs_Mpg"
+                class="social-link"
+                aria-label="YouTube"
+                target="_blank"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation Bar -->
+<nav
+  class="navbar navbar-expand-lg fixed-top custom-navbar"
+  aria-label="Main navigation"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="Home.html">
+      <img
+        src="https://i.postimg.cc/kgdKgg1H/adam.png"
+        alt="Adam International Hospital Logo"
+        class="logo-img me-2"
+        loading="lazy"
+      />
+      <span
+        class="brand-text"
+        style="font-family: 'Roboto', sans-serif; font-weight: 400"
+        ><span style="color: #86171d; font-weight: 700">Adam</span>
+        International Hospital</span
+      >
+    </a>
+
+    <!-- Mobile Toggle Button -->
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation menu"
+      style="border: 1px solid #51917c"
+    >
+      <span
+        class="navbar-toggler-icon"
+        style="
+          background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox=%270 0 30 30%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath stroke=%27%2351917c%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E');
+        "
+      ></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="Home.html" data-page="home">Home</a>
+        </li>
+        <li class="nav-item dropdown mega-dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="aboutDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            About
+          </a>
+          <div class="dropdown-menu mega-menu" aria-labelledby="aboutDropdown">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Company Info Column -->
+                <div class="col-md-6">
+                  <h6 class="mega-menu-header">Our Company</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="dropdown-item" href="#" data-page="who-we-are">
+                        <i class="fas fa-building me-2"></i>
+                        Who We Are
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" data-page="meet-team">
+                        <i class="fas fa-users me-2"></i>
+                        Meet the Team
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-page="fertility-lab"
+                      >
+                        <i class="fas fa-microscope me-2"></i>
+                        Our Advanced Fertility Lab
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Stories & Updates Column -->
+                <div class="col-md-6">
+                  <h6 class="mega-menu-header">Stories & News</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-page="success-stories"
+                      >
+                        <i class="fas fa-heart me-2"></i>
+                        Success Stories
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-page="news-updates"
+                      >
+                        <i class="fas fa-newspaper me-2"></i>
+                        News & Updates
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown mega-dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="treatmentsDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Treatments
+          </a>
+          <div
+            class="dropdown-menu mega-menu"
+            aria-labelledby="treatmentsDropdown"
+          >
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Core Treatments Column -->
+                <div class="col-md-4">
+                  <h6 class="mega-menu-header">Core Treatments</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="dropdown-item" href="ivf.html" data-page="ivf">
+                        <i class="fas fa-baby me-2"></i>
+                        IVF Treatment
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="ivf-icsi.html"
+                        data-page="ivf-icsi"
+                      >
+                        <i class="fas fa-dna me-2"></i>
+                        ICSI-IVF Treatment
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" data-page="iui">
+                        <i class="fas fa-syringe me-2"></i>
+                        IUI
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="genetic-testing.html"
+                        data-page="genetic-testing"
+                      >
+                        <i class="fas fa-dna me-2"></i>
+                        Genetic Testing
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Surgical Options Column -->
+                <div class="col-md-4">
+                  <h6 class="mega-menu-header">Surgical Options</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-page="tubal-surgery"
+                      >
+                        <i class="fas fa-stethoscope me-2"></i>
+                        Tubal Surgery
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Specialized Care Column -->
+                <div class="col-md-4">
+                  <h6 class="mega-menu-header">Specialized Care</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="embryo-freezing.html"
+                        data-page="embryo-freezing"
+                      >
+                        <i class="fas fa-snowflake me-2"></i>
+                        Embryo Freezing
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pcos.html"
+                        data-page="pcos"
+                      >
+                        <i class="fas fa-female me-2"></i>
+                        PCOS Treatment
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="endometriosis.html"
+                        data-page="endometriosis"
+                      >
+                        <i class="fas fa-heartbeat me-2"></i>
+                        Endometriosis
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="fas fa-balance-scale me-2"></i>
+                        Family Balancing
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown mega-dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+          <div
+            class="dropdown-menu mega-menu"
+            aria-labelledby="servicesDropdown"
+          >
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Female Fertility Column -->
+                <div class="col-md-3">
+                  <h6 class="mega-menu-header">Female Fertility</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="female-fertility-treatments.html"
+                        data-page="female-fertility"
+                      >
+                        <i class="fas fa-venus me-2"></i>
+                        Female Fertility Diagnosis
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-page="female-fertility-treatments"
+                      >
+                        <i class="fas fa-procedures me-2"></i>
+                        Female Fertility Treatments
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Male Fertility Column -->
+                <div class="col-md-3">
+                  <h6 class="mega-menu-header">Male Fertility</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="male-fertility.html"
+                        data-page="male-fertility"
+                      >
+                        <i class="fas fa-mars me-2"></i>
+                        Male Fertility Diagnosis
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="male-fertility-treatments.html"
+                        data-page="male-fertility-treatments"
+                      >
+                        <i class="fas fa-user-md me-2"></i>
+                        Male Fertility Treatments
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Preserving Fertility Column -->
+                <div class="col-md-3">
+                  <h6 class="mega-menu-header">Preserving Fertility</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="embryo-freezing.html"
+                        data-page="egg-freezing"
+                      >
+                        <i class="fas fa-snowflake me-2"></i>
+                        Egg Freezing
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-page="sperm-freezing"
+                      >
+                        <i class="fas fa-snowflake me-2"></i>
+                        Sperm Freezing
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="embryo-freezing.html"
+                        data-page="embryo-freezing"
+                      >
+                        <i class="fas fa-snowflake me-2"></i>
+                        Embryo Freezing
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Support Services Column -->
+                <div class="col-md-3">
+                  <h6 class="mega-menu-header">Support Services</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-page="psychological-support"
+                      >
+                        <i class="fas fa-heart me-2"></i>
+                        Psychological Support
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" data-page="nutrition">
+                        <i class="fas fa-apple-alt me-2"></i>
+                        Nutrition
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-page="consultation"
+                      >
+                        <i class="fas fa-comments me-2"></i>
+                        Consultation
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" data-page="urology">
+                        <i class="fas fa-stethoscope me-2"></i>
+                        Urology
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" data-page="hematology">
+                        <i class="fas fa-tint me-2"></i>
+                        Hematology
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" data-page="immunology">
+                        <i class="fas fa-shield-alt me-2"></i>
+                        Immunology
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Patient Portal</a>
+        </li>
+        <li class="nav-item me-2">
+          <div class="language-toggle-wrapper">
+            <button
+              class="btn btn-outline-primary language-toggle"
+              id="languageToggle"
+              aria-label="Switch language"
+              title="Switch language"
+            >
+              <span class="lang-text">العربية</span>
+            </button>
+          </div>
+        </li>
+        <li class="nav-item me-2">
+          <button class="btn book-btn heartbeat-btn">
+            Book an Appointment
+          </button>
+        </li>
+        <li class="nav-item me-2">
+          <div class="theme-switch-container">
+            <input
+              type="checkbox"
+              class="theme-switch-input"
+              id="themeToggle"
+            />
+            <label for="themeToggle" class="theme-switch-label">
+              <span class="theme-switch-slider">
+                <span class="theme-icon"><i class="fas fa-moon"></i></span>
+              </span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

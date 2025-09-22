@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genetic Testing - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      as="script"
+    />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://i.postimg.cc/FHB1SY09/adam.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=4" />
+
+    <style>
+      /* Import Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap");
+
+      :root {
+        --primary-color: #4cb3a0;
+        --text-color: #333;
+        --white: #fff;
+        --bg-color: #fff;
+        --shadow-color: rgba(0, 0, 0, 0.08);
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      .navbar-brand .brand-text {
+        font-family: "Roboto Slab", serif;
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--text-color);
+      }
+
+      .logo-img {
+        height: 60px;
+        width: auto;
+      }
+
+      .navbar-nav .nav-link {
+        color: var(--text-color) !important;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        margin-right: 15px;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: var(--primary-color) !important;
+      }
+
+      /* Button Styles */
+      .book-btn {
+        background: var(--primary-color) !important;
+        color: var(--white) !important;
+        border: 2px solid var(--primary-color) !important;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .book-btn:hover {
+        background: var(--white) !important;
+        color: var(--primary-color) !important;
+        transform: translateY(-2px);
+      }
+
+      .theme-toggle,
+      .lang-toggle {
+        background: none !important;
+        border: 2px solid var(--primary-color) !important;
+        color: var(--primary-color) !important;
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        height: 37px;
+      }
+
+      .theme-toggle:hover,
+      .lang-toggle:hover {
+        background: var(--primary-color) !important;
+        color: var(--white) !important;
+      }
+
+      /* Dropdown Styles */
+      .dropdown-menu {
+        background: var(--bg-color) !important;
+        border: 1px solid var(--primary-color) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+        padding: 12px 0 !important;
+      }
+
+      .dropdown-item {
+        color: var(--text-color) !important;
+        padding: 12px 24px !important;
+        font-size: 14px !important;
+        transition: all 0.3s ease !important;
+      }
+
+      .dropdown-item:hover {
+        background: var(--primary-color) !important;
+        color: var(--white) !important;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        min-height: 120vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color: white;
+        text-align: center;
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      .hero-section .container-fluid {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-section h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-section .lead {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .cta-btn {
+        display: inline-block;
+        background: var(--primary-color);
+        color: white;
+        padding: 15px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .cta-btn:hover {
+        background: #3a9f8c;
+        color: white;
+        text-decoration: none;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Timeline Styles */
+      .timeline-container {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+
+      .timeline-container::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(to bottom, var(--primary-color), #3a9b8a);
+        transform: translateX(-50%);
+        border-radius: 2px;
+      }
+
+      .timeline-item {
+        position: relative;
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .timeline-item:nth-child(odd) {
+        flex-direction: row;
+      }
+
+      .timeline-item:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .timeline-marker {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+      }
+
+      .timeline-number {
+        width: 50px;
+        height: 50px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 18px;
+        box-shadow: 0 4px 15px rgba(76, 179, 160, 0.3);
+        border: 4px solid white;
+      }
+
+      .timeline-content {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        width: 45%;
+        position: relative;
+        border-left: 4px solid var(--primary-color);
+        transition: all 0.3s ease;
+      }
+
+      .timeline-content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: auto;
+        margin-left: 0;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: auto;
+        margin-right: 0;
+        border-left: none;
+        border-right: 4px solid var(--primary-color);
+      }
+
+      .timeline-content h4 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+
+      .timeline-content p {
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* Timeline Arrow */
+      .timeline-content::before {
+        content: "";
+        position: absolute;
+        top: 25px;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content::before {
+        right: -20px;
+        border-left-color: white;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content::before {
+        left: -20px;
+        border-right-color: white;
+      }
+
+      /* Mobile Timeline Styles */
+      @media (max-width: 768px) {
+        .timeline-container::before {
+          left: 30px;
+        }
+
+        .timeline-item {
+          flex-direction: row !important;
+        }
+
+        .timeline-marker {
+          left: 30px;
+          transform: translateX(-50%);
+        }
+
+        .timeline-content {
+          width: calc(100% - 80px);
+          margin-left: 80px !important;
+          margin-right: 0 !important;
+          border-left: 4px solid var(--primary-color) !important;
+          border-right: none !important;
+        }
+
+        .timeline-content::before {
+          left: -20px !important;
+          right: auto !important;
+          border-right-color: white !important;
+          border-left-color: transparent !important;
+        }
+      }
+
+      /* Advantage Cards Styles */
+      .advantage-card {
+        background: white;
+        padding: 30px 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        height: 100%;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(76, 179, 160, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .advantage-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-color), #3a9b8a);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .advantage-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        border-color: var(--primary-color);
+      }
+
+      .advantage-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .advantage-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, var(--primary-color), #3a9b8a);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        transition: all 0.3s ease;
+      }
+
+      .advantage-icon i {
+        font-size: 28px;
+        color: white;
+      }
+
+      .advantage-card:hover .advantage-icon {
+        transform: scale(1.1);
+        box-shadow: 0 8px 25px rgba(76, 179, 160, 0.4);
+      }
+
+      .advantage-card h4 {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+        line-height: 1.3;
+      }
+
+      .advantage-card p {
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* Mobile Advantage Cards */
+      @media (max-width: 768px) {
+        .advantage-card {
+          padding: 25px 20px;
+          margin-bottom: 20px;
+        }
+
+        .advantage-icon {
+          width: 60px;
+          height: 60px;
+        }
+
+        .advantage-icon i {
+          font-size: 24px;
+        }
+
+        .advantage-card h4 {
+          font-size: 1.2rem;
+        }
+      }
+
+      /* FAQ Cards */
+      .faq-card {
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 15px;
+        height: 140px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .faq-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .faq-card h5 {
+        color: white;
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 1.3;
+        margin: 0;
+      }
+
+      /* Content Boxes */
+      .content-box {
+        background: #e9f5f4;
+        padding: 40px;
+        border: 2px solid rgba(76, 179, 160, 0.2);
+        border-radius: 10px;
+        margin-bottom: 2rem;
+      }
+
+      .content-box h2 {
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #122a4e;
+        margin-bottom: 1.5rem;
+      }
+
+      .content-box p,
+      .content-box ul {
+        color: #122a4e;
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      /* Timeline Styles */
+      .timeline-container {
+        position: relative;
+        padding: 40px 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 20px;
+        margin: 40px 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .timeline-line {
+        position: absolute;
+        left: 80px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, #4cb3a0, #5cb3b3);
+        z-index: 1;
+      }
+
+      .timeline-item {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 4rem;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      .timeline-item:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .timeline-item:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .timeline-item:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .timeline-item:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .timeline-item:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      .timeline-item:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .process-dot {
+        background: #4cb3a0;
+        border: 2px solid white;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 72px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+      }
+
+      .process-icon {
+        background: #ffffff;
+        border: 2px solid #4cb3a0;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      .process-icon i {
+        font-size: 2rem;
+        color: #4cb3a0;
+      }
+
+      .timeline-content h4 {
+        color: #122a4e;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .timeline-content p {
+        color: #122a4e;
+        line-height: 1.6;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* Advantages Section */
+      .advantages-section {
+        margin: 3rem 0;
+      }
+
+      .advantage-item {
+        background: rgba(76, 179, 160, 0.1);
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        border-left: 4px solid var(--primary-color);
+        transition: all 0.3s ease;
+      }
+
+      .advantage-item:hover {
+        background: rgba(76, 179, 160, 0.15);
+        transform: translateX(5px);
+      }
+
+      .advantage-item h5 {
+        color: #122a4e;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .advantage-item p {
+        color: #122a4e;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* Success Rates Section */
+      .success-rates-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 60px 0;
+        margin: 40px 0;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .success-rates-section h2 {
+        color: #122a4e;
+        font-weight: 600;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .success-card {
+        background: rgba(76, 179, 160, 0.1);
+        border: none;
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        height: 100%;
+      }
+
+      .success-card i {
+        font-size: 3rem;
+        color: #4cb3a0;
+        margin-bottom: 1rem;
+      }
+
+      .success-card h4 {
+        color: #122a4e;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .success-card p {
+        color: #122a4e;
+        line-height: 1.6;
+      }
+
+      /* Statistics */
+      .stats-section {
+        background: #f8f9fa;
+        padding: 40px;
+        border-radius: 15px;
+        margin: 40px 0;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .stat-item h3 {
+        color: #5cb3b3;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        color: #122a4e;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      /* FAQ Accordion */
+      .faq-section {
+        background: #f8f9fa;
+        padding: 60px 0;
+      }
+
+      .accordion-item {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+      }
+
+      .accordion-button {
+        background: #4cb3a0;
+        color: white;
+        border: none;
+        font-weight: 600;
+        padding: 1.5rem;
+      }
+
+      .accordion-button:not(.collapsed) {
+        background: #4cb3a0;
+        color: white;
+      }
+
+      .accordion-button:focus {
+        box-shadow: none;
+        border-color: #4cb3a0;
+      }
+
+      .accordion-body {
+        background: rgba(76, 179, 160, 0.05);
+        color: #122a4e;
+        padding: 1.5rem;
+        line-height: 1.6;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        body {
+          padding-top: 100px;
+        }
+
+        .hero-section h1 {
+          font-size: 2rem;
+        }
+
+        .hero-section .lead {
+          font-size: 1rem;
+        }
+
+        .timeline-line {
+          left: 30px;
+        }
+
+        .process-dot {
+          left: 22px;
+        }
+
+        .timeline-item {
+          margin-bottom: 2rem;
+        }
+
+        .process-icon {
+          width: 60px;
+          height: 60px;
+        }
+
+        .process-icon i {
+          font-size: 1.5rem;
+        }
+
+        .content-box {
+          padding: 20px;
+        }
+
+        .faq-card {
+          height: auto;
+          min-height: 120px;
+          padding: 1.5rem;
+        }
+
+        .faq-card h5 {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero-section h1 {
+          font-size: 1.75rem;
+        }
+
+        .timeline-line {
+          left: 25px;
+        }
+
+        .process-dot {
+          left: 17px;
+        }
+
+        .process-icon {
+          width: 50px;
+          height: 50px;
+        }
+
+        .process-icon i {
+          font-size: 1.2rem;
+        }
+
+        .timeline-content h4 {
+          font-size: 1rem;
+        }
+
+        .timeline-content p {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-section"
+      style="
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+          url('https://i.postimg.cc/dQ50MyNC/genetic.jpg') center/cover;
+      "
+    >
+      <div class="container-fluid">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="display-4">Genetic Testing</h1>
+            <p class="lead">
+              Advanced preimplantation genetic testing (PGT) to screen embryos
+              for abnormalities, ensuring healthier pregnancies and reducing
+              risks.
+            </p>
+            <a href="#content" class="cta-btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section id="content" class="content-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <!-- Introduction -->
+            <div class="text-center mb-5">
+              <p class="lead">
+                Genetic testing during IVF helps identify embryos with the best
+                chance of success. Whether you're concerned about inherited
+                conditions or chromosomal abnormalities, our advanced PGT
+                services provide peace of mind and improved outcomes for your
+                fertility journey.
+              </p>
+            </div>
+
+            <!-- FAQ Cards -->
+            <div class="row mb-5 justify-content-center">
+              <div class="col-md-3 mb-3">
+                <div
+                  class="faq-card"
+                  onclick="scrollToSection('what-is-genetic-testing')"
+                >
+                  <h5>What is Genetic Testing?</h5>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div
+                  class="faq-card"
+                  onclick="scrollToSection('when-recommended')"
+                >
+                  <h5>When is Genetic Testing Recommended?</h5>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div
+                  class="faq-card"
+                  onclick="scrollToSection('genetic-testing-process')"
+                >
+                  <h5>Genetic Testing Step by Step</h5>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div class="faq-card" onclick="scrollToSection('advantages')">
+                  <h5>Advantages of Genetic Testing</h5>
+                </div>
+              </div>
+            </div>
+
+            <!-- What is Genetic Testing Section -->
+            <div id="what-is-genetic-testing" class="content-box">
+              <h2>What is Genetic Testing?</h2>
+              <p>
+                Preimplantation genetic testing (PGT) is a screening procedure
+                used during IVF to identify genetic abnormalities in embryos
+                before implantation. It includes PGT-A for chromosomal
+                abnormalities, PGT-M for single-gene disorders, and PGT-SR for
+                structural rearrangements. This helps select healthy embryos,
+                reducing the risk of miscarriage, failed IVF, and inherited
+                conditions.
+              </p>
+            </div>
+
+            <!-- When is Genetic Testing Recommended Section -->
+            <div id="when-recommended" class="content-box">
+              <h2>When is Genetic Testing Recommended?</h2>
+              <ul class="list-unstyled">
+                <li class="advantage-item">
+                  <h5>✓ Women over 37 years old</h5>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ History of recurrent miscarriages</h5>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Multiple failed IVF cycles</h5>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Family history of genetic disorders</h5>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Known carriers of genetic conditions</h5>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Prior child with chromosomal abnormalities</h5>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Sperm abnormalities</h5>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Fertility preservation for high-risk groups</h5>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Genetic Testing Step by Step Timeline Section -->
+            <div id="genetic-testing-process" class="content-box">
+              <h2 class="text-center mb-5">Genetic Testing Step by Step</h2>
+              <div
+                class="timeline-container"
+                style="position: relative; padding: 115px 40px 0 40px; margin: 20px 0; min-height: 800px; display: block; visibility: visible; z-index: 10;"
+              >
+                <div
+                  class="timeline-line"
+                  style="
+                    position: absolute;
+                    left: 99.5px;
+                    top: 0;
+                    bottom: 0;
+                    width: 4px;
+                    background: rgba(76, 179, 160, 0.5);
+                    z-index: 1;
+                  "
+                ></div>
+
+                <!-- Initial Consultation & Assessment -->
+                <div
+                  class="row align-items-center timeline-item"
+                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                >
+                  <div class="col-1 text-center">
+                    <div
+                      class="process-dot"
+                      style="
+                        background: #4cb3a0;
+                        border: 1.5px solid white;
+                        border-radius: 50%;
+                        width: 16px;
+                        height: 16px;
+                        margin: 0 auto;
+                        position: absolute;
+                        left: 64.8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 3;
+                      "
+                    ></div>
+                  </div>
+                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                    <div
+                      class="process-icon"
+                      style="
+                        background: #ffffff;
+                        border: 2px solid #4cb3a0;
+                        border-radius: 50%;
+                        width: 80px;
+                        height: 80px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto;
+                      "
+                    >
+                      <i
+                        class="fas fa-clipboard-list"
+                        style="font-size: 2rem; color: #4cb3a0"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="col-8 ps-5" style="margin-left: 50px;">
+                    <h4
+                      style="
+                        color: #122a4e;
+                        font-weight: 600;
+                        margin-bottom: 8px;
+                        font-size: 1.2rem;
+                      "
+                    >
+                      Initial Consultation & Assessment
+                    </h4>
+                    <p
+                      style="
+                        color: #122a4e;
+                        line-height: 1.5;
+                        margin-bottom: 0;
+                        font-size: 0.95rem;
+                      "
+                    >
+                      Review medical history, family genetics, and discuss PGT
+                      options with a genetic counselor.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- IVF Cycle Initiation -->
+                <div
+                  class="row align-items-center timeline-item"
+                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                >
+                  <div class="col-1 text-center">
+                    <div
+                      class="process-dot"
+                      style="
+                        background: #4cb3a0;
+                        border: 1.5px solid white;
+                        border-radius: 50%;
+                        width: 16px;
+                        height: 16px;
+                        margin: 0 auto;
+                        position: absolute;
+                        left: 64.8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 3;
+                      "
+                    ></div>
+                  </div>
+                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                    <div
+                      class="process-icon"
+                      style="
+                        background: #ffffff;
+                        border: 2px solid #4cb3a0;
+                        border-radius: 50%;
+                        width: 80px;
+                        height: 80px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto;
+                      "
+                    >
+                      <i
+                        class="fas fa-syringe"
+                        style="font-size: 2rem; color: #4cb3a0"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="col-8 ps-5" style="margin-left: 50px;">
+                    <h4
+                      style="
+                        color: #122a4e;
+                        font-weight: 600;
+                        margin-bottom: 8px;
+                        font-size: 1.2rem;
+                      "
+                    >
+                      IVF Cycle Initiation
+                    </h4>
+                    <p
+                      style="
+                        color: #122a4e;
+                        line-height: 1.5;
+                        margin-bottom: 0;
+                        font-size: 0.95rem;
+                      "
+                    >
+                      Ovarian stimulation, egg retrieval, and fertilization to
+                      create embryos.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Embryo Culture -->
+                <div
+                  class="row align-items-center timeline-item"
+                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                >
+                  <div class="col-1 text-center">
+                    <div
+                      class="process-dot"
+                      style="
+                        background: #4cb3a0;
+                        border: 1.5px solid white;
+                        border-radius: 50%;
+                        width: 16px;
+                        height: 16px;
+                        margin: 0 auto;
+                        position: absolute;
+                        left: 64.8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 3;
+                      "
+                    ></div>
+                  </div>
+                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                    <div
+                      class="process-icon"
+                      style="
+                        background: #ffffff;
+                        border: 2px solid #4cb3a0;
+                        border-radius: 50%;
+                        width: 80px;
+                        height: 80px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto;
+                      "
+                    >
+                      <i
+                        class="fas fa-flask"
+                        style="font-size: 2rem; color: #4cb3a0"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="col-8 ps-5" style="margin-left: 50px;">
+                    <h4
+                      style="
+                        color: #122a4e;
+                        font-weight: 600;
+                        margin-bottom: 8px;
+                        font-size: 1.2rem;
+                      "
+                    >
+                      Embryo Culture
+                    </h4>
+                    <p
+                      style="
+                        color: #122a4e;
+                        line-height: 1.5;
+                        margin-bottom: 0;
+                        font-size: 0.95rem;
+                      "
+                    >
+                      Embryos are grown to the blastocyst stage (day 5-6) in the
+                      lab.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Embryo Biopsy -->
+                <div
+                  class="row align-items-center timeline-item"
+                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                >
+                  <div class="col-1 text-center">
+                    <div
+                      class="process-dot"
+                      style="
+                        background: #4cb3a0;
+                        border: 1.5px solid white;
+                        border-radius: 50%;
+                        width: 16px;
+                        height: 16px;
+                        margin: 0 auto;
+                        position: absolute;
+                        left: 64.8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 3;
+                      "
+                    ></div>
+                  </div>
+                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                    <div
+                      class="process-icon"
+                      style="
+                        background: #ffffff;
+                        border: 2px solid #4cb3a0;
+                        border-radius: 50%;
+                        width: 80px;
+                        height: 80px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto;
+                      "
+                    >
+                      <i
+                        class="fas fa-cut"
+                        style="font-size: 2rem; color: #4cb3a0"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="col-8 ps-5" style="margin-left: 50px;">
+                    <h4
+                      style="
+                        color: #122a4e;
+                        font-weight: 600;
+                        margin-bottom: 8px;
+                        font-size: 1.2rem;
+                      "
+                    >
+                      Embryo Biopsy
+                    </h4>
+                    <p
+                      style="
+                        color: #122a4e;
+                        line-height: 1.5;
+                        margin-bottom: 0;
+                        font-size: 0.95rem;
+                      "
+                    >
+                      A few cells are safely removed from each embryo for
+                      genetic analysis.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Genetic Analysis -->
+                <div
+                  class="row align-items-center timeline-item"
+                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                >
+                  <div class="col-1 text-center">
+                    <div
+                      class="process-dot"
+                      style="
+                        background: #4cb3a0;
+                        border: 1.5px solid white;
+                        border-radius: 50%;
+                        width: 16px;
+                        height: 16px;
+                        margin: 0 auto;
+                        position: absolute;
+                        left: 64.8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 3;
+                      "
+                    ></div>
+                  </div>
+                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                    <div
+                      class="process-icon"
+                      style="
+                        background: #ffffff;
+                        border: 2px solid #4cb3a0;
+                        border-radius: 50%;
+                        width: 80px;
+                        height: 80px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto;
+                      "
+                    >
+                      <i
+                        class="fas fa-dna"
+                        style="font-size: 2rem; color: #4cb3a0"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="col-8 ps-5" style="margin-left: 50px;">
+                    <h4
+                      style="
+                        color: #122a4e;
+                        font-weight: 600;
+                        margin-bottom: 8px;
+                        font-size: 1.2rem;
+                      "
+                    >
+                      Genetic Analysis
+                    </h4>
+                    <p
+                      style="
+                        color: #122a4e;
+                        line-height: 1.5;
+                        margin-bottom: 0;
+                        font-size: 0.95rem;
+                      "
+                    >
+                      Samples are tested for chromosomal abnormalities or
+                      specific genetic conditions.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Embryo Freezing & Results -->
+                <div
+                  class="row align-items-center timeline-item"
+                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                >
+                  <div class="col-1 text-center">
+                    <div
+                      class="process-dot"
+                      style="
+                        background: #4cb3a0;
+                        border: 1.5px solid white;
+                        border-radius: 50%;
+                        width: 16px;
+                        height: 16px;
+                        margin: 0 auto;
+                        position: absolute;
+                        left: 64.8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 3;
+                      "
+                    ></div>
+                  </div>
+                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                    <div
+                      class="process-icon"
+                      style="
+                        background: #ffffff;
+                        border: 2px solid #4cb3a0;
+                        border-radius: 50%;
+                        width: 80px;
+                        height: 80px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto;
+                      "
+                    >
+                      <i
+                        class="fas fa-snowflake"
+                        style="font-size: 2rem; color: #4cb3a0"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="col-8 ps-5" style="margin-left: 50px;">
+                    <h4
+                      style="
+                        color: #122a4e;
+                        font-weight: 600;
+                        margin-bottom: 8px;
+                        font-size: 1.2rem;
+                      "
+                    >
+                      Embryo Freezing & Results
+                    </h4>
+                    <p
+                      style="
+                        color: #122a4e;
+                        line-height: 1.5;
+                        margin-bottom: 0;
+                        font-size: 0.95rem;
+                      "
+                    >
+                      Embryos are frozen while awaiting results (1-2 weeks).
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Embryo Selection & Transfer -->
+                <div
+                  class="row align-items-center timeline-item"
+                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                >
+                  <div class="col-1 text-center">
+                    <div
+                      class="process-dot"
+                      style="
+                        background: #4cb3a0;
+                        border: 1.5px solid white;
+                        border-radius: 50%;
+                        width: 16px;
+                        height: 16px;
+                        margin: 0 auto;
+                        position: absolute;
+                        left: 64.8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 3;
+                      "
+                    ></div>
+                  </div>
+                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                    <div
+                      class="process-icon"
+                      style="
+                        background: #ffffff;
+                        border: 2px solid #4cb3a0;
+                        border-radius: 50%;
+                        width: 80px;
+                        height: 80px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto;
+                      "
+                    >
+                      <i
+                        class="fas fa-heart"
+                        style="font-size: 2rem; color: #4cb3a0"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="col-8 ps-5" style="margin-left: 50px;">
+                    <h4
+                      style="
+                        color: #122a4e;
+                        font-weight: 600;
+                        margin-bottom: 8px;
+                        font-size: 1.2rem;
+                      "
+                    >
+                      Embryo Selection & Transfer
+                    </h4>
+                    <p
+                      style="
+                        color: #122a4e;
+                        line-height: 1.5;
+                        margin-bottom: 0;
+                        font-size: 0.95rem;
+                      "
+                    >
+                      Healthy embryos are selected and transferred to the
+                      uterus.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Advantages of Genetic Testing Section -->
+            <div id="advantages" class="content-box">
+              <h2 class="text-center mb-5">Advantages of Genetic Testing</h2>
+              <ul class="list-unstyled">
+                <li class="advantage-item">
+                  <h5>✓ Higher Success Rates</h5>
+                  <p>Selecting chromosomally normal embryos improves IVF implantation and live birth rates.</p>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Prevent Genetic Disorders</h5>
+                  <p>Screens for inherited conditions like cystic fibrosis, reducing risk of affected children.</p>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Reduced Miscarriage Risk</h5>
+                  <p>Avoids transferring embryos with abnormalities that often lead to pregnancy loss.</p>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Fewer IVF Cycles</h5>
+                  <p>Increases efficiency, potentially reducing the number of treatments needed.</p>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Personalized Selection</h5>
+                  <p>Allows for tailored embryo choice based on specific genetic profiles and risks.</p>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Cost-Effective Long-Term</h5>
+                  <p>Prevents costly treatments for genetic conditions and multiple failed cycles.</p>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Family Planning Options</h5>
+                  <p>Enables gender selection for family balancing in some cases.</p>
+                </li>
+                <li class="advantage-item">
+                  <h5>✓ Emotional Reassurance</h5>
+                  <p>Provides peace of mind knowing embryos are screened for major genetic issues.</p>
+                </li>
+              </ul>
+
+              <div class="text-center mt-4">
+                <p class="lead text-muted">
+                  Our expert team uses state-of-the-art genetic testing to
+                  maximize your chances of a healthy pregnancy and baby.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+
+    <!-- Home JS for shared components -->
+    <script src="home.js?v=7" defer></script>
+  </body>
+</html>
