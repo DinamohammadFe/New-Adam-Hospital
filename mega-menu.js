@@ -65,7 +65,7 @@ class HospitalMegaMenu {
           this.hoverTimeout = setTimeout(() => {
             this.hideMegaMenu();
             this.hoverTimeout = null;
-          }, 300); // 300ms delay
+          }, 800); // 800ms delay
         }
       });
     });

@@ -64,490 +64,28 @@
     </style>
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=4" />
+    <link rel="stylesheet" href="styles.css?v=5" />
+    <!-- Dark Theme Stylesheet -->
+    <link rel="stylesheet" href="dark-theme.css?v=1" />
+    <!-- Chatbot Stylesheet -->
+    <link rel="stylesheet" href="chatbot.css" />
 
     <!-- AOS (Animate On Scroll) CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Static Test Header -->
-    <!-- Top Bar -->
-    <header role="banner" aria-label="Contact Information">
-      <div class="top-bar" style="background-color: #51917c;">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-md-8">
-              <div class="contact-info">
-                <span class="contact-item">
-                  <i class="fas fa-envelope"></i>
-                  <a href="mailto:info@adamhospital.com">info@adamhospital.com</a>
-                </span>
-                <span class="contact-item">
-                  <i class="fas fa-phone"></i>
-                  <a href="tel:16992">16992</a>
-                </span>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="d-flex align-items-center justify-content-end">
-                <!-- High Contrast Toggle -->
-                <button 
-                  id="high-contrast-toggle" 
-                  class="btn btn-sm me-3" 
-                  aria-label="Toggle high contrast mode"
-                  title="Toggle high contrast mode for better visibility"
-                  style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 4px 8px; border-radius: 4px;"
-                >
-                  <i class="fas fa-adjust" style="font-size: 14px;"></i>
-                  <span class="ms-1" style="font-size: 12px;">High Contrast</span>
-                </button>
-                
-                <div class="social-media">
-                  <a
-                    href="https://www.facebook.com/adamhospitals"
-                    class="social-link"
-                    aria-label="Facebook"
-                    target="_blank"
-                  >
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="#" class="social-link" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/adam-international-hospital/?originalSubdomain=eg"
-                    class="social-link"
-                    aria-label="LinkedIn"
-                    target="_blank"
-                  >
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a
-                    href="https://x.com/adamhospital"
-                    class="social-link"
-                    aria-label="Twitter"
-                    target="_blank"
-                  >
-                    <i class="bi bi-twitter-x"></i>
-                  </a>
-                  <a
-                    href="https://www.youtube.com/channel/UCqlSBmyqFK14FtedMMs_Mpg"
-                    class="social-link"
-                    aria-label="YouTube"
-                    target="_blank"
-                  >
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- Spinner Loader -->
+    <div id="loader" class="loader-overlay">
+      <div class="loader-content">
+        <div class="spinner-wrapper">
+          <div class="spinner"></div>
         </div>
       </div>
-    </header>
+    </div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg fixed-top custom-navbar" aria-label="Main navigation">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="Home.html">
-          <img
-            src="https://i.postimg.cc/kgdKgg1H/adam.png"
-            alt="Adam International Hospital Logo"
-            class="logo-img me-2"
-            loading="lazy"
-          />
-          <span class="brand-text" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
-            <span style="color: #86171d; font-weight: 700;">Adam</span> International Hospital
-          </span>
-        </a>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox=%270 0 30 30%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath stroke=%27%2351917c%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E');"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto align-items-center">
-            <li class="nav-item">
-              <a class="nav-link" href="Home.html" data-page="home">Home</a>
-            </li>
-            <li class="nav-item dropdown mega-dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="aboutDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                About
-              </a>
-              <div class="dropdown-menu mega-menu" aria-labelledby="aboutDropdown">
-                <div class="container-fluid">
-                  <div class="row">
-                    <!-- Company Info Column -->
-                    <div class="col-md-6">
-                      <h6 class="mega-menu-header">Our Company</h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="who-we-are">
-                            <i class="fas fa-building me-2"></i>
-                            Who We Are
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="meet-team">
-                            <i class="fas fa-users me-2"></i>
-                            Meet the Team
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="fertility-lab">
-                            <i class="fas fa-microscope me-2"></i>
-                            Our Advanced Fertility Lab
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <!-- Stories & Updates Column -->
-                    <div class="col-md-6">
-                      <h6 class="mega-menu-header">Stories & News</h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="success-stories">
-                            <i class="fas fa-heart me-2"></i>
-                            Success Stories
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="news-updates">
-                            <i class="fas fa-newspaper me-2"></i>
-                            News & Updates
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item dropdown mega-dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="treatmentsDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Treatments
-              </a>
-              <div class="dropdown-menu mega-menu" aria-labelledby="treatmentsDropdown">
-                <div class="container-fluid">
-                  <div class="row">
-                    <!-- Core Treatments Column -->
-                    <div class="col-md-4">
-                      <h6 class="mega-menu-header">Core Treatments</h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a class="dropdown-item" href="ivf.html" data-page="ivf">
-                            <i class="fas fa-baby me-2"></i>
-                            IVF Treatment
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="ivf-icsi.html" data-page="ivf-icsi">
-                            <i class="fas fa-dna me-2"></i>
-                            ICSI-IVF Treatment
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="iui">
-                            <i class="fas fa-syringe me-2"></i>
-                            IUI
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="genetic-testing.html" data-page="genetic-testing">
-                            <i class="fas fa-dna me-2"></i>
-                            Genetic Testing
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <!-- Surgical Options Column -->
-                    <div class="col-md-4">
-                      <h6 class="mega-menu-header">Surgical Options</h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="laparoscopy">
-                            <i class="fas fa-cut me-2"></i>
-                            Laparoscopy
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="hysteroscopy">
-                            <i class="fas fa-microscope me-2"></i>
-                            Hysteroscopy
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="tubal-surgery">
-                            <i class="fas fa-stethoscope me-2"></i>
-                            Tubal Surgery
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="myomectomy">
-                            <i class="fas fa-user-md me-2"></i>
-                            Myomectomy
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <!-- Specialized Care Column -->
-                    <div class="col-md-4">
-                      <h6 class="mega-menu-header">Specialized Care</h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a class="dropdown-item" href="embryo-freezing.html" data-page="embryo-freezing">
-                            <i class="fas fa-snowflake me-2"></i>
-                            Embryo Freezing
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="pcos.html" data-page="pcos">
-                            <i class="fas fa-female me-2"></i>
-                            PCOS Treatment
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="endometriosis.html" data-page="endometriosis">
-                            <i class="fas fa-heartbeat me-2"></i>
-                            Endometriosis
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#">
-                            <i class="fas fa-balance-scale me-2"></i>
-                            Family Balancing
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item dropdown mega-dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="servicesDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Services
-              </a>
-              <div class="dropdown-menu mega-menu" aria-labelledby="servicesDropdown">
-                <div class="container-fluid">
-                  <div class="row">
-                    <!-- Female Fertility Column -->
-                    <div class="col-md-3">
-                      <h6 class="mega-menu-header">Female Fertility</h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="female-fertility-treatments.html"
-                            data-page="female-fertility"
-                          >
-                            <i class="fas fa-venus me-2"></i>
-                            Female Fertility Assessment
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="female-fertility-treatments">
-                            <i class="fas fa-procedures me-2"></i>
-                            Female Fertility Treatments
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <!-- Male Fertility Column -->
-                    <div class="col-md-3">
-                      <h6 class="mega-menu-header">Male Fertility</h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="male-fertility.html"
-                            data-page="male-fertility"
-                          >
-                            <i class="fas fa-mars me-2"></i>
-                            Male Fertility Assessment
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="male-fertility-treatments.html" data-page="male-fertility-treatments">
-                            <i class="fas fa-user-md me-2"></i>
-                            Male Fertility Treatments
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <!-- Preserving Fertility Column -->
-                    <div class="col-md-3">
-                      <h6 class="mega-menu-header">Preserving Fertility</h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a class="dropdown-item" href="embryo-freezing.html" data-page="egg-freezing">
-                            <i class="fas fa-snowflake me-2"></i>
-                            Egg Freezing
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="sperm-freezing">
-                            <i class="fas fa-snowflake me-2"></i>
-                            Sperm Freezing
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="embryo-freezing.html" data-page="embryo-freezing">
-                            <i class="fas fa-snowflake me-2"></i>
-                            Embryo Freezing
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <!-- Support Services Column -->
-                    <div class="col-md-3">
-                      <h6 class="mega-menu-header">Support Services</h6>
-                      <ul class="list-unstyled">
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="#"
-                            data-page="psychological-support"
-                          >
-                            <i class="fas fa-heart me-2"></i>
-                            Psychological Support
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="nutrition">
-                            <i class="fas fa-apple-alt me-2"></i>
-                            Nutrition
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="consultation">
-                            <i class="fas fa-comments me-2"></i>
-                            Consultation
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="urology">
-                            <i class="fas fa-stethoscope me-2"></i>
-                            Urology
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="hematology">
-                            <i class="fas fa-tint me-2"></i>
-                            Hematology
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" data-page="immunology">
-                            <i class="fas fa-shield-alt me-2"></i>
-                            Immunology
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Patient Portal</a>
-            </li>
-            <li class="nav-item me-2">
-              <div class="language-toggle-wrapper">
-                <button class="btn btn-outline-primary language-toggle" id="languageToggle" aria-label="Switch language" title="Switch language">
-                  <span class="lang-text">العربية</span>
-                </button>
-              </div>
-            </li>
-            <li class="nav-item me-2">
-              <button class="btn book-btn heartbeat-btn">
-                Book an Appointment
-              </button>
-            </li>
-            <li class="nav-item me-2">
-              <div class="theme-switch-container">
-                <input type="checkbox" class="theme-switch-input" id="themeToggle">
-                <label for="themeToggle" class="theme-switch-label">
-                  <span class="theme-switch-slider">
-                    <span class="theme-icon"><i class="fas fa-moon"></i></span>
-                  </span>
-                </label>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-        </a>
-
-        <!-- Mobile Toggle Button -->
-        <button
-          class="navbar-toggler d-lg-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation menu"
-          style="border: 1px solid #51917c;"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navigation Menu -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
     <!-- Main Content -->
     <main>
@@ -563,10 +101,10 @@
           <div class="col-12">
             <!-- Main Title -->
             <div class="text-center mb-5" data-aos="fade-up">
-              <h1 class="hero-main-title text-white display-1 fw-bold mb-3">
+              <h1 class="hero-main-title text-white display-1 fw-bold mb-3" data-i18n="hero.title">
                 <span style="color: #86171d; font-weight: 700; font-family: 'Roboto', sans-serif;">Adam</span> <span style="color: black; font-family: 'Roboto', sans-serif;">International Hospital</span>
               </h1>
-              <p class="hero-subtitle text-white lead fs-2 opacity-90" style="font-style: italic; color: black; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+              <p class="hero-subtitle text-white lead fs-2 opacity-90" style="font-style: italic; color: black; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);" data-i18n="hero.subtitle">
                 Compassionate Care, Advanced Fertility Solutions
               </p>
             </div>
@@ -580,13 +118,13 @@
                 data-aos-delay="200"
               >
                 <div class="glass-card">
-                  <h2 class="glass-card-title" style="color: #51917c;">IVF & ICSI</h2>
-                  <p class="glass-card-description" style="color: black;">
+                  <h2 class="glass-card-title" style="color: #51917c;" data-i18n="hero.card1.title">IVF & ICSI</h2>
+                  <p class="glass-card-description" style="color: black;" data-i18n="hero.card1.description">
                     Advanced fertility treatments guided by expert doctors,
                     helping you achieve the dream of parenthood.
                   </p>
 
-                  <a href="#emergency" class="glass-card-btn"> Start Now </a>
+                  <a href="#emergency" class="glass-card-btn" data-i18n="hero.card1.button"> Start Now </a>
                 </div>
               </div>
 
@@ -597,13 +135,13 @@
                 data-aos-delay="400"
               >
                 <div class="glass-card">
-                  <h2 class="glass-card-title" style="color: #51917c;">Personalized Support</h2>
-                  <p class="glass-card-description" style="color: black;">
+                  <h2 class="glass-card-title" style="color: #51917c;" data-i18n="hero.card2.title">Personalized Support</h2>
+                  <p class="glass-card-description" style="color: black;" data-i18n="hero.card2.description">
                     Dedicated, one-on-one care throughout your journey, ensuring
                     comfort, trust, and confidence at every step.
                   </p>
 
-                  <a href="#surgery" class="glass-card-btn"> Learn More </a>
+                  <a href="#surgery" class="glass-card-btn" data-i18n="hero.card2.button"> Learn More </a>
                 </div>
               </div>
 
@@ -614,13 +152,13 @@
                 data-aos-delay="600"
               >
                 <div class="glass-card">
-                  <h2 class="glass-card-title" style="color: #51917c;">Genetic Testing & Freezing</h2>
-                  <p class="glass-card-description" style="color: black;">
+                  <h2 class="glass-card-title" style="color: #51917c;" data-i18n="hero.card3.title">Genetic Testing & Freezing</h2>
+                  <p class="glass-card-description" style="color: black;" data-i18n="hero.card3.description">
                     Cutting-edge lab services, from genetic screening to embryo
                     freezing, protecting your family's future health.
                   </p>
 
-                  <a href="genetic-testing.html" class="glass-card-btn">
+                  <a href="genetic-testing.html" class="glass-card-btn" data-i18n="hero.card3.button">
                     Explore Now
                   </a>
                 </div>
@@ -1061,7 +599,7 @@
               <div class="department-card">
                 <div class="card-image">
                   <img
-                    src="https://i.postimg.cc/zvfsCDnN/adam-1.png"
+                    src="https://i.postimg.cc/05SbT8mj/mikael-stenberg-HP5bznfp-IMU-unsplash.jpg"
                     alt="Andrology Department"
                     loading="lazy"
                   />
@@ -1084,7 +622,7 @@
               <div class="department-card">
                 <div class="card-image">
                   <img
-                    src="https://i.postimg.cc/k4YZ0q7w/ivf-clinic-scene-cinematic.webp"
+                    src="https://i.postimg.cc/MT8wk812/jonathan-borba-RWg-E9-l-Kj-Y-unsplash.jpg"
                     alt="Gynecology Department"
                     loading="lazy"
                   />
@@ -1107,15 +645,15 @@
               <div class="department-card">
                 <div class="card-image">
                   <img
-                    src="https://i.postimg.cc/QMXyVHt0/kelly-sikkema-IE8-Kfew-Ap-w-unsplash.jpg"
-                    alt="Genetics Department"
+                    src="genetics-department.svg"
+                    alt="Genetics Department - Warm clinic scene with doctor providing genetic counseling to couple"
                     loading="lazy"
                   />
                 </div>
                 <div class="card-content">
-                  <h3 class="card-title">Genetics</h3>
+                  <h3 class="card-title">Genetics & Counseling</h3>
                   <p class="card-description">
-                    Genetic screening & counseling for optimal reproductive outcomes.
+                    Comprehensive genetic screening, DNA analysis, and personalized counseling services to help couples understand their reproductive health and make informed decisions for their family planning journey.
                   </p>
                 </div>
               </div>
@@ -1214,7 +752,7 @@
 
       <div class="accordion-content">
         <nav class="accordion-nav">
-          <a href="#" class="accordion-link">Home</a>
+          <a href="index.html" class="accordion-link">Home</a>
 
           <div class="accordion-item">
             <button class="accordion-toggle" data-target="aboutAccordion">
@@ -1351,16 +889,13 @@
 
     <!-- Modern Chatbot -->
     <div class="chatbot-container">
-      <div class="chatbot-toggle" id="chatbotToggle" style="background-color: #51917c; border-radius: 4px; padding: 12px 20px; display: flex; flex-direction: row; align-items: center; gap: 10px; width: auto; height: auto;">
-        <img src="adam-logo.png" alt="Adam Hospital Logo" style="width: 24px; height: 24px; margin-right: 8px; border-radius: 50%; object-fit: cover;">
-        <div style="display: flex; flex-direction: column; align-items: flex-start;">
-          <span style="font-weight: 700; color: white; font-size: 0.9rem; font-family: 'Roboto', sans-serif;">Let's talk</span>
-          <span style="font-size: 0.75rem; color: rgba(255,255,255,0.9); font-family: 'Roboto', sans-serif;">Adam Hospital</span>
-        </div>
+      <div class="chatbot-toggle" id="chatbotToggle" style="background-color: #51917c; border-radius: 0; padding: 10px; display: flex; flex-direction: column; align-items: center; cursor: pointer; border: none; color: white; font-size: 12px; font-weight: 600; min-width: 80px;">
+        <span data-i18n="chatbot.toggle.title">Let's talk</span>
+        <span data-i18n="chatbot.toggle.subtitle" style="font-size: 10px; opacity: 0.9;">Adam Hospital</span>
       </div>
 
-      <div class="chatbot-window" id="chatbotWindow" style="border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-        <div class="chatbot-header" style="background-color: #51917c; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+      <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
           <div class="chatbot-info">
             <div class="chatbot-avatar">
               <svg
@@ -1377,8 +912,8 @@
               </svg>
             </div>
             <div class="chatbot-title">
-              <h4>Hospital Assistant</h4>
-              <span class="status-indicator">Online</span>
+              <h4 data-i18n="chatbot.header.title">Hospital Assistant</h4>
+              <span class="status-indicator" data-i18n="chatbot.header.status">Online</span>
             </div>
           </div>
           <button class="chatbot-close" id="chatbotClose" aria-label="Close chat window" title="Close chat">
@@ -1415,8 +950,8 @@
               </svg>
             </div>
             <div class="message-content">
-              <p>
-                Hello! 👋 Welcome to <span style="color: #86171d; font-weight: 700; font-family: 'Roboto', sans-serif;">Adam International Hospital</span>. How can I assist you today?
+              <p data-i18n="chatbot.welcome.message">
+                Hello! 👋 Welcome to <span class="hospital-name">Adam International Hospital</span>. How can I assist you today?
               </p>
             </div>
           </div>
@@ -1426,25 +961,25 @@
           <button
             class="quick-action"
             data-message="I want to book an appointment now"
-            style="background-color: #f1f1f1; border: 1px solid #ddd; border-radius: 15px;"
+            data-i18n="chatbot.quick_actions.book_now"
           >
             <i class="fas fa-calendar-alt"></i> Book Now
           </button>
           <button
             class="quick-action"
             data-message="Tell me about your treatments and services"
-            style="background-color: #f1f1f1; border: 1px solid #ddd; border-radius: 15px;"
+            data-i18n="chatbot.quick_actions.treatments"
           >
             <i class="fas fa-hospital-alt"></i> Treatments
           </button>
           <button
             class="quick-action"
             data-message="Where are your locations?"
-            style="background-color: #f1f1f1; border: 1px solid #ddd; border-radius: 15px;"
+            data-i18n="chatbot.quick_actions.locations"
           >
             <i class="fas fa-map-marker-alt"></i> Locations
           </button>
-          <button class="quick-action" data-message="How can I contact you?" style="background-color: #f1f1f1; border: 1px solid #ddd; border-radius: 15px;">
+          <button class="quick-action" data-message="How can I contact you?" data-i18n="chatbot.quick_actions.contact">
             <i class="fas fa-phone"></i> Contact Us
           </button>
         </div>
@@ -1456,8 +991,10 @@
               type="text"
               id="chatbotInput"
               placeholder="Type your message..."
+              data-i18n-placeholder="chatbot.input.placeholder"
               autocomplete="off"
               aria-label="Type your message to the chatbot"
+              data-i18n-aria-label="chatbot.input.aria_label"
             />
             <button class="send-button" id="chatbotSend" style="background-color: #51917c;">
               <svg
@@ -1480,15 +1017,7 @@
     </main>
 
     <!-- Footer Section -->
-    <div id="footer-container"></div>
-    <script>
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
-        })
-        .catch(error => {});
-    </script>
+    <div id="footer-placeholder"></div>
 
     <!-- Bootstrap JS -->
     <script
@@ -1499,11 +1028,14 @@
     <!-- AOS (Animate On Scroll) JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
+    <!-- Internationalization JS - Load first for translations -->
+    <script src="i18n.js"></script>
+    
     <!-- Mega Menu JS for navigation -->
-    <script src="mega-menu.js" defer></script>
+    <script type="module" src="mega-menu.js" defer></script>
     
     <!-- Home JS for shared components -->
-    <script src="home.js?v=7" defer></script>
+    <script type="module" src="home.js?v=7" defer></script>
     <script>
       // Initialize AOS with proper loading detection
       function initializeAOS() {
@@ -1545,6 +1077,68 @@
     </script>
     
     <!-- Department Cards Modern Effects -->
-    <script src="js/department-cards.js"></script>
+    <script type="module" src="js/department-cards.js"></script>
+    
+    <!-- Loader Control Script -->
+    <script>
+      // Show loader initially
+      document.addEventListener('DOMContentLoaded', function() {
+        const loader = document.getElementById('loader');
+        
+        // Hide loader after page is fully loaded
+        window.addEventListener('load', function() {
+          setTimeout(function() {
+            loader.classList.add('hidden');
+            // Remove loader from DOM after animation completes
+            setTimeout(function() {
+              if (loader && loader.parentNode) {
+                loader.parentNode.removeChild(loader);
+              }
+            }, 500);
+          }, 1000); // Show loader for at least 1 second
+        });
+      });
+    </script>
+    <script src="chatbot.js"></script>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Wait for i18n to be ready before loading header/footer
+      function waitForI18n(callback) {
+        if (window.i18n) {
+          callback();
+        } else {
+          setTimeout(() => waitForI18n(callback), 50);
+        }
+      }
+
+      // Load header and footer after i18n is ready
+      waitForI18n(() => {
+        // Load header
+        fetch('header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+            // Trigger translation update for header content
+            if (window.i18n) {
+              window.i18n.updatePageContent();
+            }
+          })
+          .catch(error => console.error('Error loading header:', error));
+
+        // Load footer
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+            // Trigger translation update for footer content
+            if (window.i18n) {
+              window.i18n.updatePageContent();
+            }
+          })
+          .catch(error => console.error('Error loading footer:', error));
+      });
+    </script>
+
   </body>
 </html>

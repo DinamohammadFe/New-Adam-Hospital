@@ -3,7 +3,7 @@ import js from '@eslint/js';
 export default [
   js.configs.recommended,
   {
-    files: ['home.js', 'mega-menu.js', 'js/department-cards.js'],
+    files: ['home.js', 'mega-menu.js', 'i18n.js', 'js/department-cards.js'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'script',
@@ -134,6 +134,7 @@ export default [
       'dist/',
       'build/',
       'coverage/',
+      'scripts/',
       '*.min.js'
     ]
   }

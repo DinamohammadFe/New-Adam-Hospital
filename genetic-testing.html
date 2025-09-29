@@ -1,847 +1,536 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Genetic Testing - Adam International Hospital</title>
-
-    <!-- Preload critical resources -->
-    <link
-      rel="preload"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      as="style"
-    />
-    <link
-      rel="preload"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      as="script"
-    />
-    <link rel="preload" href="home.js?v=7" as="script" />
-
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://i.postimg.cc/FHB1SY09/adam.png"
-    />
-
-    <!-- Bootstrap CSS -->
+    <title>IVF Genetic Testing - Adam's Fertility</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Bootstrap icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
-
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=4" />
-
-    <style>
-      /* Import Fonts */
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap");
-
-      :root {
-        --primary-color: #4cb3a0;
-        --text-color: #333;
-        --white: #fff;
-        --bg-color: #fff;
-        --shadow-color: rgba(0, 0, 0, 0.08);
-      }
-
-      body {
-        font-family: "Roboto", sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        line-height: 1.6;
-      }
-
-      .navbar-brand .brand-text {
-        font-family: "Roboto Slab", serif;
-        font-size: 24px;
-        font-weight: 400;
-        color: var(--text-color);
-      }
-
-      .logo-img {
-        height: 60px;
-        width: auto;
-      }
-
-      .navbar-nav .nav-link {
-        color: var(--text-color) !important;
-        font-size: 14px;
-        font-weight: 500;
-        transition: color 0.3s ease;
-        margin-right: 15px;
-      }
-
-      .navbar-nav .nav-link:hover {
-        color: var(--primary-color) !important;
-      }
-
-      /* Button Styles */
-      .book-btn {
-        background: var(--primary-color) !important;
-        color: var(--white) !important;
-        border: 2px solid var(--primary-color) !important;
-        padding: 10px 20px;
-        border-radius: 25px;
-        font-size: 14px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-      }
-
-      .book-btn:hover {
-        background: var(--white) !important;
-        color: var(--primary-color) !important;
-        transform: translateY(-2px);
-      }
-
-      .theme-toggle,
-      .lang-toggle {
-        background: none !important;
-        border: 2px solid var(--primary-color) !important;
-        color: var(--primary-color) !important;
-        padding: 8px 12px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        height: 37px;
-      }
-
-      .theme-toggle:hover,
-      .lang-toggle:hover {
-        background: var(--primary-color) !important;
-        color: var(--white) !important;
-      }
-
-      /* Dropdown Styles */
-      .dropdown-menu {
-        background: var(--bg-color) !important;
-        border: 1px solid var(--primary-color) !important;
-        border-radius: 12px !important;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
-        padding: 12px 0 !important;
-      }
-
-      .dropdown-item {
-        color: var(--text-color) !important;
-        padding: 12px 24px !important;
-        font-size: 14px !important;
-        transition: all 0.3s ease !important;
-      }
-
-      .dropdown-item:hover {
-        background: var(--primary-color) !important;
-        color: var(--white) !important;
-      }
-
-      /* Hero Section */
-      .hero-section {
-        min-height: 120vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        color: white;
-        text-align: center;
-      }
-
-      .hero-section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.3);
-        z-index: 1;
-      }
-
-      .hero-section .container-fluid {
-        position: relative;
-        z-index: 2;
-      }
-
-      .hero-section h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      }
-
-      .hero-section .lead {
-        font-size: 1.25rem;
-        margin-bottom: 2rem;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-      }
-
-      .cta-btn {
-        display: inline-block;
-        background: var(--primary-color);
-        color: white;
-        padding: 15px 30px;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-      }
-
-      .cta-btn:hover {
-        background: #3a9f8c;
-        color: white;
-        text-decoration: none;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      /* Timeline Styles */
-      .timeline-container {
-        position: relative;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px 0;
-      }
-
-      .timeline-container::before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 3px;
-        background: linear-gradient(to bottom, var(--primary-color), #3a9b8a);
-        transform: translateX(-50%);
-        border-radius: 2px;
-      }
-
-      .timeline-item {
-        position: relative;
-        margin: 40px 0;
-        display: flex;
-        align-items: center;
-      }
-
-      .timeline-item:nth-child(odd) {
-        flex-direction: row;
-      }
-
-      .timeline-item:nth-child(even) {
-        flex-direction: row-reverse;
-      }
-
-      .timeline-marker {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
-      }
-
-      .timeline-number {
-        width: 50px;
-        height: 50px;
-        background: var(--primary-color);
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 18px;
-        box-shadow: 0 4px 15px rgba(76, 179, 160, 0.3);
-        border: 4px solid white;
-      }
-
-      .timeline-content {
-        background: white;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        width: 45%;
-        position: relative;
-        border-left: 4px solid var(--primary-color);
-        transition: all 0.3s ease;
-      }
-
-      .timeline-content:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-      }
-
-      .timeline-item:nth-child(odd) .timeline-content {
-        margin-right: auto;
-        margin-left: 0;
-      }
-
-      .timeline-item:nth-child(even) .timeline-content {
-        margin-left: auto;
-        margin-right: 0;
-        border-left: none;
-        border-right: 4px solid var(--primary-color);
-      }
-
-      .timeline-content h4 {
-        color: var(--primary-color);
-        margin-bottom: 15px;
-        font-weight: 600;
-        font-size: 1.2rem;
-      }
-
-      .timeline-content p {
-        color: #666;
-        line-height: 1.6;
-        margin: 0;
-        font-size: 0.95rem;
-      }
-
-      /* Timeline Arrow */
-      .timeline-content::before {
-        content: "";
-        position: absolute;
-        top: 25px;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-      }
-
-      .timeline-item:nth-child(odd) .timeline-content::before {
-        right: -20px;
-        border-left-color: white;
-      }
-
-      .timeline-item:nth-child(even) .timeline-content::before {
-        left: -20px;
-        border-right-color: white;
-      }
-
-      /* Mobile Timeline Styles */
-      @media (max-width: 768px) {
-        .timeline-container::before {
-          left: 30px;
-        }
-
-        .timeline-item {
-          flex-direction: row !important;
-        }
-
-        .timeline-marker {
-          left: 30px;
-          transform: translateX(-50%);
-        }
-
-        .timeline-content {
-          width: calc(100% - 80px);
-          margin-left: 80px !important;
-          margin-right: 0 !important;
-          border-left: 4px solid var(--primary-color) !important;
-          border-right: none !important;
-        }
-
-        .timeline-content::before {
-          left: -20px !important;
-          right: auto !important;
-          border-right-color: white !important;
-          border-left-color: transparent !important;
-        }
-      }
-
-      /* Advantage Cards Styles */
-      .advantage-card {
-        background: white;
-        padding: 30px 25px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        text-align: center;
-        height: 100%;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(76, 179, 160, 0.1);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .advantage-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, var(--primary-color), #3a9b8a);
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-      }
-
-      .advantage-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        border-color: var(--primary-color);
-      }
-
-      .advantage-card:hover::before {
-        transform: scaleX(1);
-      }
-
-      .advantage-icon {
-        width: 70px;
-        height: 70px;
-        background: linear-gradient(135deg, var(--primary-color), #3a9b8a);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 20px;
-        transition: all 0.3s ease;
-      }
-
-      .advantage-icon i {
-        font-size: 28px;
-        color: white;
-      }
-
-      .advantage-card:hover .advantage-icon {
-        transform: scale(1.1);
-        box-shadow: 0 8px 25px rgba(76, 179, 160, 0.4);
-      }
-
-      .advantage-card h4 {
-        color: #2c3e50;
-        font-weight: 600;
-        margin-bottom: 15px;
-        font-size: 1.3rem;
-        line-height: 1.3;
-      }
-
-      .advantage-card p {
-        color: #666;
-        line-height: 1.6;
-        margin: 0;
-        font-size: 0.95rem;
-      }
-
-      /* Mobile Advantage Cards */
-      @media (max-width: 768px) {
-        .advantage-card {
-          padding: 25px 20px;
-          margin-bottom: 20px;
-        }
-
-        .advantage-icon {
-          width: 60px;
-          height: 60px;
-        }
-
-        .advantage-icon i {
-          font-size: 24px;
-        }
-
-        .advantage-card h4 {
-          font-size: 1.2rem;
-        }
-      }
-
-      /* FAQ Cards */
-      .faq-card {
-        background: var(--primary-color);
-        color: white;
-        border: none;
-        border-radius: 15px;
-        height: 140px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        transition: all 0.3s ease;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 1rem;
-      }
-
-      .faq-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-      }
-
-      .faq-card h5 {
-        color: white;
-        font-weight: 600;
-        font-size: 1.2rem;
-        line-height: 1.3;
-        margin: 0;
-      }
-
-      /* Content Boxes */
-      .content-box {
-        background: #e9f5f4;
-        padding: 40px;
-        border: 2px solid rgba(76, 179, 160, 0.2);
-        border-radius: 10px;
-        margin-bottom: 2rem;
-      }
-
-      .content-box h2 {
-        font-size: 2.2rem;
-        font-weight: 600;
-        color: #122a4e;
-        margin-bottom: 1.5rem;
-      }
-
-      .content-box p,
-      .content-box ul {
-        color: #122a4e;
-        font-size: 1.1rem;
-        line-height: 1.8;
-      }
-
-      /* Timeline Styles */
-      .timeline-container {
-        position: relative;
-        padding: 40px 0;
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        border-radius: 20px;
-        margin: 40px 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      }
-
-      .timeline-line {
-        position: absolute;
-        left: 80px;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: linear-gradient(to bottom, #4cb3a0, #5cb3b3);
-        z-index: 1;
-      }
-
-      .timeline-item {
-        position: relative;
-        z-index: 2;
-        margin-bottom: 4rem;
-        opacity: 0;
-        transform: translateY(50px);
-        animation: fadeInUp 0.8s ease forwards;
-      }
-
-      .timeline-item:nth-child(1) {
-        animation-delay: 0.1s;
-      }
-      .timeline-item:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      .timeline-item:nth-child(3) {
-        animation-delay: 0.3s;
-      }
-      .timeline-item:nth-child(4) {
-        animation-delay: 0.4s;
-      }
-      .timeline-item:nth-child(5) {
-        animation-delay: 0.5s;
-      }
-      .timeline-item:nth-child(6) {
-        animation-delay: 0.6s;
-      }
-
-      @keyframes fadeInUp {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .process-dot {
-        background: #4cb3a0;
-        border: 2px solid white;
-        border-radius: 50%;
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        left: 72px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 3;
-      }
-
-      .process-icon {
-        background: #ffffff;
-        border: 2px solid #4cb3a0;
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-      }
-
-      .process-icon i {
-        font-size: 2rem;
-        color: #4cb3a0;
-      }
-
-      .timeline-content h4 {
-        color: #122a4e;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        font-size: 1.2rem;
-      }
-
-      .timeline-content p {
-        color: #122a4e;
-        line-height: 1.6;
-        margin: 0;
-        font-size: 0.95rem;
-      }
-
-      /* Advantages Section */
-      .advantages-section {
-        margin: 3rem 0;
-      }
-
-      .advantage-item {
-        background: rgba(76, 179, 160, 0.1);
-        border-radius: 10px;
-        padding: 1.5rem;
-        margin-bottom: 1rem;
-        border-left: 4px solid var(--primary-color);
-        transition: all 0.3s ease;
-      }
-
-      .advantage-item:hover {
-        background: rgba(76, 179, 160, 0.15);
-        transform: translateX(5px);
-      }
-
-      .advantage-item h5 {
-        color: #122a4e;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-      }
-
-      .advantage-item p {
-        color: #122a4e;
-        margin: 0;
-        font-size: 0.95rem;
-      }
-
-      /* Success Rates Section */
-      .success-rates-section {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        padding: 60px 0;
-        margin: 40px 0;
-        border-radius: 15px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-      }
-
-      .success-rates-section h2 {
-        color: #122a4e;
-        font-weight: 600;
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-        text-align: center;
-      }
-
-      .success-card {
-        background: rgba(76, 179, 160, 0.1);
-        border: none;
-        border-radius: 15px;
-        padding: 2rem;
-        text-align: center;
-        height: 100%;
-      }
-
-      .success-card i {
-        font-size: 3rem;
-        color: #4cb3a0;
-        margin-bottom: 1rem;
-      }
-
-      .success-card h4 {
-        color: #122a4e;
-        font-weight: 600;
-        margin-bottom: 1rem;
-      }
-
-      .success-card p {
-        color: #122a4e;
-        line-height: 1.6;
-      }
-
-      /* Statistics */
-      .stats-section {
-        background: #f8f9fa;
-        padding: 40px;
-        border-radius: 15px;
-        margin: 40px 0;
-      }
-
-      .stat-item {
-        text-align: center;
-        padding: 20px;
-      }
-
-      .stat-item h3 {
-        color: #5cb3b3;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-      }
-
-      .stat-label {
-        color: #122a4e;
-        font-size: 1rem;
-        font-weight: 600;
-      }
-
-      /* FAQ Accordion */
-      .faq-section {
-        background: #f8f9fa;
-        padding: 60px 0;
-      }
-
-      .accordion-item {
-        border: none;
-        border-radius: 10px;
-        overflow: hidden;
-        margin-bottom: 1rem;
-      }
-
-      .accordion-button {
-        background: #4cb3a0;
-        color: white;
-        border: none;
-        font-weight: 600;
-        padding: 1.5rem;
-      }
-
-      .accordion-button:not(.collapsed) {
-        background: #4cb3a0;
-        color: white;
-      }
-
-      .accordion-button:focus {
-        box-shadow: none;
-        border-color: #4cb3a0;
-      }
-
-      .accordion-body {
-        background: rgba(76, 179, 160, 0.05);
-        color: #122a4e;
-        padding: 1.5rem;
-        line-height: 1.6;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        body {
-          padding-top: 100px;
-        }
-
-        .hero-section h1 {
-          font-size: 2rem;
-        }
-
-        .hero-section .lead {
-          font-size: 1rem;
-        }
-
-        .timeline-line {
-          left: 30px;
-        }
-
-        .process-dot {
-          left: 22px;
-        }
-
-        .timeline-item {
-          margin-bottom: 2rem;
-        }
-
-        .process-icon {
-          width: 60px;
-          height: 60px;
-        }
-
-        .process-icon i {
-          font-size: 1.5rem;
-        }
-
-        .content-box {
-          padding: 20px;
-        }
-
-        .faq-card {
-          height: auto;
-          min-height: 120px;
-          padding: 1.5rem;
-        }
-
-        .faq-card h5 {
-          font-size: 1rem;
-        }
-      }
-
-      @media (max-width: 576px) {
-        .hero-section h1 {
-          font-size: 1.75rem;
-        }
-
-        .timeline-line {
-          left: 25px;
-        }
-
-        .process-dot {
-          left: 17px;
-        }
-
-        .process-icon {
-          width: 50px;
-          height: 50px;
-        }
-
-        .process-icon i {
-          font-size: 1.2rem;
-        }
-
-        .timeline-content h4 {
-          font-size: 1rem;
-        }
-
-        .timeline-content p {
-          font-size: 0.9rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="genetic.css" />
   </head>
-
   <body>
-    <!-- Header Placeholder -->
-    <div id="header-placeholder"></div>
+    <!-- Top Bar -->
+    <header role="banner" aria-label="Contact Information">
+      <div class="top-bar" style="background-color: #51917c">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <div class="contact-info">
+                <span class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <a href="mailto:info@adamhospital.com">info@adamhospital.com</a>
+                </span>
+                <span class="contact-item">
+                  <i class="fas fa-phone"></i>
+                  <a href="tel:16992">16992</a>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex align-items-center justify-content-end">
+                <!-- High Contrast Toggle -->
+                <button
+                  id="high-contrast-toggle"
+                  class="btn btn-sm me-3"
+                  aria-label="Toggle high contrast mode"
+                  title="Toggle high contrast mode for better visibility"
+                  style="
+                    background: rgba(255, 255, 255, 0.1);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    color: white;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                  "
+                >
+                  <i class="fas fa-adjust" style="font-size: 14px"></i>
+                  <span class="ms-1" style="font-size: 12px">High Contrast</span>
+                </button>
+
+                <div class="social-media">
+                  <a
+                    href="https://www.facebook.com/adamhospitals"
+                    class="social-link"
+                    aria-label="Facebook"
+                    target="_blank"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/adam-international-hospital/?originalSubdomain=eg"
+                    class="social-link"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://x.com/adamhospital"
+                    class="social-link"
+                    aria-label="Twitter"
+                    target="_blank"
+                  >
+                    <i class="bi bi-twitter-x"></i>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/channel/UCqlSBmyqFK14FtedMMs_Mpg"
+                    class="social-link"
+                    aria-label="YouTube"
+                    target="_blank"
+                  >
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top custom-navbar"
+      aria-label="Main navigation"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="https://i.postimg.cc/kgdKgg1H/adam.png"
+            alt="Adam International Hospital Logo"
+            class="logo-img me-2"
+            loading="lazy"
+          />
+          <span
+            class="brand-text"
+            style="font-family: 'Roboto', sans-serif; font-weight: 400"
+            ><span style="color: #86171d; font-weight: 700">Adam</span>
+            International Hospital</span
+          >
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu"
+          style="border: 1px solid #51917c"
+        >
+          <span
+            class="navbar-toggler-icon"
+            style="
+              background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox=%270 0 30 30%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath stroke=%27%2351917c%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E');
+            "
+          ></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-page="home">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                 <li>
+                   <a class="dropdown-item" href="our-ivf-family.html">
+                     <i class="fas fa-heart me-2"></i>
+                     Our IVF Family
+                   </a>
+                 </li>
+                 <li>
+                   <a class="dropdown-item" href="advanced-laboratory.html">
+                     <i class="fas fa-microscope me-2"></i>
+                     Our Advanced Fertility Lab
+                   </a>
+                 </li>
+               </ul>
+            </li>
+            <li class="nav-item dropdown mega-dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="treatmentsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Treatments
+              </a>
+              <div
+                class="dropdown-menu mega-menu"
+                aria-labelledby="treatmentsDropdown"
+              >
+                <div class="container-fluid">
+                  <div class="row">
+                    <!-- Core Treatments Column -->
+                    <div class="col-md-4">
+                      <h6 class="mega-menu-header">Core Treatments</h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a class="dropdown-item" href="ivf.html" data-page="ivf">
+                            <i class="fas fa-baby me-2"></i>
+                            IVF Treatment
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="ivf-icsi.html"
+                            data-page="ivf-icsi"
+                          >
+                            <i class="fas fa-dna me-2"></i>
+                            ICSI-IVF Treatment
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" data-page="iui">
+                            <i class="fas fa-syringe me-2"></i>
+                            IUI
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="genetic-testing.html"
+                            data-page="genetic-testing"
+                          >
+                            <i class="fas fa-dna me-2"></i>
+                            Genetic Testing
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Surgical Options Column -->
+                    <div class="col-md-4">
+                      <h6 class="mega-menu-header">Surgical Options</h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a class="dropdown-item" href="#" data-page="laparoscopy">
+                            <i class="fas fa-cut me-2"></i>
+                            Laparoscopy
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" data-page="hysteroscopy">
+                            <i class="fas fa-microscope me-2"></i>
+                            Hysteroscopy
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" data-page="tubal-surgery">
+                            <i class="fas fa-stethoscope me-2"></i>
+                            Tubal Surgery
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" data-page="myomectomy">
+                            <i class="fas fa-user-md me-2"></i>
+                            Myomectomy
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Specialized Care Column -->
+                    <div class="col-md-4">
+                      <h6 class="mega-menu-header">Specialized Care</h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="embryo-freezing.html"
+                            data-page="embryo-freezing"
+                          >
+                            <i class="fas fa-snowflake me-2"></i>
+                            Embryo Freezing
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="pcos.html"
+                            data-page="pcos"
+                          >
+                            <i class="fas fa-female me-2"></i>
+                            PCOS Treatment
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="endometriosis.html"
+                            data-page="endometriosis"
+                          >
+                            <i class="fas fa-heartbeat me-2"></i>
+                            Endometriosis
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <i class="fas fa-balance-scale me-2"></i>
+                            Family Balancing
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown mega-dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <div
+                class="dropdown-menu mega-menu"
+                aria-labelledby="servicesDropdown"
+              >
+                <div class="container-fluid">
+                  <div class="row">
+                    <!-- Female Fertility Column -->
+                    <div class="col-md-3">
+                      <h6 class="mega-menu-header">Female Fertility</h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="female-fertility-treatments.html"
+                            data-page="female-fertility"
+                          >
+                            <i class="fas fa-venus me-2"></i>
+                            Female Fertility Assessment
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-page="female-fertility-treatments"
+                          >
+                            <i class="fas fa-procedures me-2"></i>
+                            Female Fertility Treatments
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Male Fertility Column -->
+                    <div class="col-md-3">
+                      <h6 class="mega-menu-header">Male Fertility</h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="male-fertility.html"
+                            data-page="male-fertility"
+                          >
+                            <i class="fas fa-mars me-2"></i>
+                            Male Fertility Assessment
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="male-fertility-treatments.html"
+                            data-page="male-fertility-treatments"
+                          >
+                            <i class="fas fa-user-md me-2"></i>
+                            Male Fertility Treatments
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Preserving Fertility Column -->
+                    <div class="col-md-3">
+                      <h6 class="mega-menu-header">Preserving Fertility</h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="embryo-freezing.html"
+                            data-page="egg-freezing"
+                          >
+                            <i class="fas fa-snowflake me-2"></i>
+                            Egg Freezing
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-page="sperm-freezing"
+                          >
+                            <i class="fas fa-snowflake me-2"></i>
+                            Sperm Freezing
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="embryo-freezing.html"
+                            data-page="embryo-freezing"
+                          >
+                            <i class="fas fa-snowflake me-2"></i>
+                            Embryo Freezing
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Support Services Column -->
+                    <div class="col-md-3">
+                      <h6 class="mega-menu-header">Support Services</h6>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-page="psychological-support"
+                          >
+                            <i class="fas fa-heart me-2"></i>
+                            Psychological Support
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" data-page="nutrition">
+                            <i class="fas fa-apple-alt me-2"></i>
+                            Nutrition
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-page="consultation"
+                          >
+                            <i class="fas fa-comments me-2"></i>
+                            Consultation
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" data-page="urology">
+                            <i class="fas fa-stethoscope me-2"></i>
+                            Urology
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" data-page="hematology">
+                            <i class="fas fa-tint me-2"></i>
+                            Hematology
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" data-page="immunology">
+                            <i class="fas fa-shield-alt me-2"></i>
+                            Immunology
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Patient Portal</a>
+            </li>
+            <li class="nav-item me-2">
+              <div class="language-toggle-wrapper">
+                <button
+                  class="btn btn-outline-primary language-toggle"
+                  id="languageToggle"
+                  aria-label="Switch language"
+                  title="Switch language"
+                >
+                  <span class="lang-text">العربية</span>
+                </button>
+              </div>
+            </li>
+            <li class="nav-item me-2">
+              <button class="btn book-btn heartbeat-btn">
+                Book an Appointment
+              </button>
+            </li>
+            <li class="nav-item me-2">
+              <div class="theme-switch-container">
+                <input
+                  type="checkbox"
+                  class="theme-switch-input"
+                  id="themeToggle"
+                />
+                <label for="themeToggle" class="theme-switch-label">
+                  <span class="theme-switch-slider">
+                    <span class="theme-icon"><i class="fas fa-moon"></i></span>
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button
+      class="mobile-menu-toggle d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mobileNav"
+      aria-controls="mobileNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
     <!-- Hero Section -->
     <section
       class="hero-section"
       style="
-        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
           url('https://i.postimg.cc/dQ50MyNC/genetic.jpg') center/cover;
+        padding: 150px 0 100px;
       "
     >
-      <div class="container-fluid">
+      <div class="container">
         <div class="row justify-content-center text-center">
           <div class="col-lg-8">
-            <h1 class="display-4">Genetic Testing</h1>
-            <p class="lead">
-              Advanced preimplantation genetic testing (PGT) to screen embryos
-              for abnormalities, ensuring healthier pregnancies and reducing
-              risks.
+            <h1 class="display-4 text-white mb-4">
+              Genetic Testing
+            </h1>
+            <p class="lead text-white mb-4">
+              Advanced genetic screening to ensure the healthiest possible outcomes for your family.
             </p>
             <a href="#content" class="cta-btn">Learn More</a>
           </div>
@@ -849,647 +538,269 @@
       </div>
     </section>
 
+    <!-- Hospital Information Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <p class="lead text-center mb-0">
+               <strong style="color: #4cb3a0; font-weight: bold;">Adam International Hospital</strong> has a full-service in-house Genetics Laboratory. — Genetics Laboratory capable of performing Genetic Testing on embryos. As part of <strong style="color: #4cb3a0; font-weight: bold;">Adam</strong>'s mission to fulfill dreams of parenthood through the delivery of healthy babies, <strong style="color: #4cb3a0; font-weight: bold;">Adam</strong>'s Genetics Laboratory is equipped with the newest technologies, capable of performing the most up to date genetic testing and is the location of many medical firsts worldwide. With location in Cairo, <strong style="color: #4cb3a0; font-weight: bold;">Adam</strong> is available to help couples throughout Egypt and abroad.
+             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
     <!-- Main Content Section -->
-    <section id="content" class="content-section">
+    <section id="content" class="pt-5" style="padding-bottom: 0;">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10">
             <!-- Introduction -->
-            <div class="text-center mb-5">
+            <div class="mb-5">
+              <h2 class="mb-4" style="color: #4cb3a0;">What is IVF Genetic Testing?</h2>
               <p class="lead">
-                Genetic testing during IVF helps identify embryos with the best
-                chance of success. Whether you're concerned about inherited
-                conditions or chromosomal abnormalities, our advanced PGT
-                services provide peace of mind and improved outcomes for your
-                fertility journey.
+                IVF genetic testing, known as Preimplantation Genetic Testing (PGT), is a specialized procedure performed during in vitro fertilization. A few cells from each embryo are tested to detect genetic or chromosomal issues. This helps doctors select the healthiest embryos for transfer, reducing the risk of miscarriage and inherited conditions. By identifying strong, viable embryos, PGT improves IVF success rates and offers parents peace of mind on their journey to a healthy baby.
               </p>
             </div>
-
-            <!-- FAQ Cards -->
-            <div class="row mb-5 justify-content-center">
-              <div class="col-md-3 mb-3">
-                <div
-                  class="faq-card"
-                  onclick="scrollToSection('what-is-genetic-testing')"
-                >
-                  <h5>What is Genetic Testing?</h5>
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <div
-                  class="faq-card"
-                  onclick="scrollToSection('when-recommended')"
-                >
-                  <h5>When is Genetic Testing Recommended?</h5>
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <div
-                  class="faq-card"
-                  onclick="scrollToSection('genetic-testing-process')"
-                >
-                  <h5>Genetic Testing Step by Step</h5>
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <div class="faq-card" onclick="scrollToSection('advantages')">
-                  <h5>Advantages of Genetic Testing</h5>
-                </div>
-              </div>
             </div>
+ 
+            </div> <!-- End services-accordion -->
+          </div>
+        </div>
+    </section>
 
-            <!-- What is Genetic Testing Section -->
-            <div id="what-is-genetic-testing" class="content-box">
-              <h2>What is Genetic Testing?</h2>
-              <p>
-                Preimplantation genetic testing (PGT) is a screening procedure
-                used during IVF to identify genetic abnormalities in embryos
-                before implantation. It includes PGT-A for chromosomal
-                abnormalities, PGT-M for single-gene disorders, and PGT-SR for
-                structural rearrangements. This helps select healthy embryos,
-                reducing the risk of miscarriage, failed IVF, and inherited
-                conditions.
-              </p>
-            </div>
+    <!-- Did You Know Section -->
+    <section class="did-you-know-section py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-10">
+            <h2 class="did-you-know-title mb-4">Did You Know?</h2>
+            <p class="did-you-know-text mb-4">
+              Genetic testing can identify over 400 genetic conditions in embryos, significantly reducing the risk of genetic disorders and increasing the chances of a healthy pregnancy?
+            </p>
+            <a href="#" class="schedule-btn">SCHEDULE A CONSULTATION</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <!-- When is Genetic Testing Recommended Section -->
-            <div id="when-recommended" class="content-box">
-              <h2>When is Genetic Testing Recommended?</h2>
-              <ul class="list-unstyled">
-                <li class="advantage-item">
-                  <h5>✓ Women over 37 years old</h5>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ History of recurrent miscarriages</h5>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Multiple failed IVF cycles</h5>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Family history of genetic disorders</h5>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Known carriers of genetic conditions</h5>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Prior child with chromosomal abnormalities</h5>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Sperm abnormalities</h5>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Fertility preservation for high-risk groups</h5>
-                </li>
-              </ul>
-            </div>
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <h2 class="mb-4">What we offer</h2>
+            <p class="lead">
+              At Adam International Hospital's Genetics Laboratory, we provide comprehensive genetic testing services to help ensure the healthiest possible outcomes for your family.
+            </p>
+          </div>
+        </div>
 
-            <!-- Genetic Testing Step by Step Timeline Section -->
-            <div id="genetic-testing-process" class="content-box">
-              <h2 class="text-center mb-5">Genetic Testing Step by Step</h2>
-              <div
-                class="timeline-container"
-                style="position: relative; padding: 115px 40px 0 40px; margin: 20px 0; min-height: 800px; display: block; visibility: visible; z-index: 10;"
-              >
-                <div
-                  class="timeline-line"
-                  style="
-                    position: absolute;
-                    left: 99.5px;
-                    top: 0;
-                    bottom: 0;
-                    width: 4px;
-                    background: rgba(76, 179, 160, 0.5);
-                    z-index: 1;
-                  "
-                ></div>
-
-                <!-- Initial Consultation & Assessment -->
-                <div
-                  class="row align-items-center timeline-item"
-                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
-                >
-                  <div class="col-1 text-center">
-                    <div
-                      class="process-dot"
-                      style="
-                        background: #4cb3a0;
-                        border: 1.5px solid white;
-                        border-radius: 50%;
-                        width: 16px;
-                        height: 16px;
-                        margin: 0 auto;
-                        position: absolute;
-                        left: 64.8px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        z-index: 3;
-                      "
-                    ></div>
-                  </div>
-                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
-                    <div
-                      class="process-icon"
-                      style="
-                        background: #ffffff;
-                        border: 2px solid #4cb3a0;
-                        border-radius: 50%;
-                        width: 80px;
-                        height: 80px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin: 0 auto;
-                      "
-                    >
-                      <i
-                        class="fas fa-clipboard-list"
-                        style="font-size: 2rem; color: #4cb3a0"
-                      ></i>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="content-sections">
+                <div class="content-item">
+                  <h3 class="content-headline">Genetic Testing And IVF</h3>
+                  <p class="content-summary">During an IVF cycle, following Egg Retrieval (OPU) and ICSI, when the egg and sperm have fertilized to form an embryo, a few cells are taken from the embryo to be tested in the Genetics Laboratory. The Embryo Transfer takes place after the results of the genetic test are released. Completing Genetic Testing does not alter the duration of treatment.</p>
+                  <button class="expand-toggle" data-target="geneticTestingContent">
+                    <span class="toggle-text">+ More</span>
+                  </button>
+                  <div class="expandable-content" id="geneticTestingContent">
+                    <div class="content-layout">
+                      <div class="content-text">
+                        <p><strong>Family Balancing (Gender Selection):</strong></p>
+                        <p>Screen your embryos to identify the gender and check for chromosomal abnormality such as Down Syndrome.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/4dTXjn2H/pexels-mart-production-7089034.jpg" alt="Genetic Testing Laboratory" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-8 ps-5" style="margin-left: 50px;">
-                    <h4
-                      style="
-                        color: #122a4e;
-                        font-weight: 600;
-                        margin-bottom: 8px;
-                        font-size: 1.2rem;
-                      "
-                    >
-                      Initial Consultation & Assessment
-                    </h4>
-                    <p
-                      style="
-                        color: #122a4e;
-                        line-height: 1.5;
-                        margin-bottom: 0;
-                        font-size: 0.95rem;
-                      "
-                    >
-                      Review medical history, family genetics, and discuss PGT
-                      options with a genetic counselor.
-                    </p>
+                    <div class="content-layout mt-4">
+                      <div class="content-text">
+                        <p><strong>Comprehensive Chromosomal Screening (CCS):</strong></p>
+                        <p>Screen all 24 chromosomes for gender as well as any chromosomal abnormalities caused by missing or additional chromosomes. Chromosomal abnormalities include Trisomy 13 (Patau's syndrome), Trisomy 18 (Edward's syndrome) and Trisomy 21 (Down syndrome). Chromosomal abnormalities are the leading cause of miscarriage.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/mZVKxVmy/images.jpg" alt="PGT Testing Process" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="content-layout mt-4">
+                      <div class="content-text">
+                        <p><strong>Preimplantation Genetic Diagnosis (PGD):</strong></p>
+                        <p>Targeted testing for specific genetic conditions when there is a known family history of genetic disorders. PGD can detect single gene defects such as cystic fibrosis, sickle cell disease, and Huntington's disease, allowing couples to have healthy children free from inherited genetic conditions.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/Vk3kqzMv/pgt-yontemi-pgd.jpg" alt="PGD Testing Process" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="text-center mt-3">
+                      <button class="expand-toggle secondary" data-target="geneticTestingMoreContent">
+                        +more
+                      </button>
+                    </div>
+                    <div class="expandable-content secondary" id="geneticTestingMoreContent">
+                      <div class="additional-content">
+                        <h4>Advanced Testing Procedures</h4>
+                        <p>Our state-of-the-art laboratory employs cutting-edge technology for comprehensive genetic analysis. We utilize next-generation sequencing and advanced bioinformatics to provide the most accurate results.</p>
+                        <div class="row mt-4">
+                          <div class="col-md-6">
+                            <h5>Testing Timeline</h5>
+                            <ul>
+                              <li>Day 3-5: Embryo biopsy</li>
+                              <li>Day 5-7: Laboratory analysis</li>
+                              <li>Day 7-10: Results available</li>
+                              <li>Day 10+: Embryo transfer</li>
+                            </ul>
+                          </div>
+                          <div class="col-md-6">
+                            <h5>Success Rates</h5>
+                            <ul>
+                              <li>95% accuracy in detection</li>
+                              <li>40% increase in live birth rates</li>
+                              <li>60% reduction in miscarriage risk</li>
+                              <li>99% embryo survival rate</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <!-- IVF Cycle Initiation -->
-                <div
-                  class="row align-items-center timeline-item"
-                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
-                >
-                  <div class="col-1 text-center">
-                    <div
-                      class="process-dot"
-                      style="
-                        background: #4cb3a0;
-                        border: 1.5px solid white;
-                        border-radius: 50%;
-                        width: 16px;
-                        height: 16px;
-                        margin: 0 auto;
-                        position: absolute;
-                        left: 64.8px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        z-index: 3;
-                      "
-                    ></div>
-                  </div>
-                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
-                    <div
-                      class="process-icon"
-                      style="
-                        background: #ffffff;
-                        border: 2px solid #4cb3a0;
-                        border-radius: 50%;
-                        width: 80px;
-                        height: 80px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin: 0 auto;
-                      "
-                    >
-                      <i
-                        class="fas fa-syringe"
-                        style="font-size: 2rem; color: #4cb3a0"
-                      ></i>
+                <div class="content-item">
+                  <h3 class="content-headline">Identify & Prevent Hereditary Disease</h3>
+                  <p class="content-summary">Comprehensive screening to prevent transmission of genetic conditions to future generations.</p>
+                  <button class="expand-toggle" data-target="hereditaryDiseaseContent">
+                    <span class="toggle-text">+ More</span>
+                  </button>
+                  <div class="expandable-content" id="hereditaryDiseaseContent">
+                    <div class="content-layout">
+                      <div class="content-text">
+                        <p><strong>Mutation Screening:</strong></p>
+                        <p>Mutation Screening by Sanger Sequencing is most often recommended when the genetic disease has previously been identified or there is a known family history for a particular genetic disease. Mutation Screening is used to detect genetic diseases caused by a few number of mutations or for detecting mutations in small genes.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/PJ2RHrhM/703082599720fc6affb33c7467bd919971ce02d3.jpg" alt="Carrier Screening Laboratory" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-8 ps-5" style="margin-left: 50px;">
-                    <h4
-                      style="
-                        color: #122a4e;
-                        font-weight: 600;
-                        margin-bottom: 8px;
-                        font-size: 1.2rem;
-                      "
-                    >
-                      IVF Cycle Initiation
-                    </h4>
-                    <p
-                      style="
-                        color: #122a4e;
-                        line-height: 1.5;
-                        margin-bottom: 0;
-                        font-size: 0.95rem;
-                      "
-                    >
-                      Ovarian stimulation, egg retrieval, and fertilization to
-                      create embryos.
-                    </p>
+                    <div class="content-layout mt-4">
+                      <div class="content-text">
+                        <p><strong>Exome Screening:</strong>
+                         <p>Exome Screening by Next Generation Sequencing is used to screen for unidentified hereditary diseases or polygenic diseases, diseases that usually involve two or more genes interacting. In contrast to current sequencing tests that analyze one gene or small groups of related genes at a time, Exome Screening will analyze important regions of tens of thousands of genes at the same time. Next Generation Sequencing is the new generation of technology that has brought DNA sequencing to an unprecedented speed.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/rmp4b8nT/DNA-helix-magnifying-glass.jpg" alt="Genetic Counseling Session" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="content-layout mt-4">
+                      <div class="content-text">
+                        <p><strong>Premarital or Preconception Screening:</strong></p>
+                        <p>Premarital or Preconception Screening is a service for couples who want to ensure that their children will not be at risk of inheriting a genetic disease. Screening may be completed if there is a known hereditary disease in the couple's family history, if there is an unidentified hereditary disease in the couple's family history or if there is there no family history for hereditary disease and the testing is used as an extra precaution.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/pTGWdjf9/toddler-hand-4867454-1280.jpg" alt="Whole Genome Sequencing" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="text-center mt-3">
+                      <button class="expand-toggle secondary" data-target="hereditaryDiseaseMoreContent">
+                        <span class="toggle-text">+ More Details</span>
+                      </button>
+                    </div>
+                    <div class="expandable-content secondary" id="hereditaryDiseaseMoreContent">
+                      <div class="additional-content">
+                        <h4>Comprehensive Carrier Screening</h4>
+                        <p>Our expanded carrier screening panel tests for over 300 genetic conditions, providing couples with comprehensive information about their reproductive risks.</p>
+                        <div class="row mt-4">
+                          <div class="col-md-6">
+                            <h5>Common Conditions Tested</h5>
+                            <ul>
+                              <li>Cystic Fibrosis</li>
+                              <li>Sickle Cell Disease</li>
+                              <li>Tay-Sachs Disease</li>
+                              <li>Fragile X Syndrome</li>
+                              <li>Spinal Muscular Atrophy</li>
+                            </ul>
+                          </div>
+                          <div class="col-md-6">
+                            <h5>Screening Benefits</h5>
+                            <ul>
+                              <li>Early risk identification</li>
+                              <li>Informed family planning</li>
+                              <li>Reduced anxiety during pregnancy</li>
+                              <li>Personalized genetic counseling</li>
+                              <li>Treatment planning options</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <!-- Embryo Culture -->
-                <div
-                  class="row align-items-center timeline-item"
-                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
-                >
-                  <div class="col-1 text-center">
-                    <div
-                      class="process-dot"
-                      style="
-                        background: #4cb3a0;
-                        border: 1.5px solid white;
-                        border-radius: 50%;
-                        width: 16px;
-                        height: 16px;
-                        margin: 0 auto;
-                        position: absolute;
-                        left: 64.8px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        z-index: 3;
-                      "
-                    ></div>
-                  </div>
-                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
-                    <div
-                      class="process-icon"
-                      style="
-                        background: #ffffff;
-                        border: 2px solid #4cb3a0;
-                        border-radius: 50%;
-                        width: 80px;
-                        height: 80px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin: 0 auto;
-                      "
-                    >
-                      <i
-                        class="fas fa-flask"
-                        style="font-size: 2rem; color: #4cb3a0"
-                      ></i>
+                <div class="content-item">
+                  <h3 class="content-headline">Genetic Testing During Pregnancy</h3>
+                  <p class="content-summary">Early detection of genetic conditions for informed pregnancy management.</p>
+                  <button class="expand-toggle" data-target="pregnancyTestingContent">
+                    <span class="toggle-text">+ More</span>
+                  </button>
+                  <div class="expandable-content" id="pregnancyTestingContent">
+                    <div class="content-layout">
+                      <div class="content-text">
+                        <p><strong>Non-Invasive Prenatal Testing (NIPT):</strong></p>
+                        <p>Non-invasive prenatal testing is a screening test that analyzes fetal DNA circulating in the mother's blood to assess the risk of certain chromosomal conditions. NIPT can be performed as early as 10 weeks of pregnancy and provides highly accurate results for conditions like Down syndrome, Edwards syndrome, and Patau syndrome.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/Mp2QxkZC/Genomic-Testing-New-Port-Richey.jpg" alt="Non-Invasive Prenatal Testing" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="content-layout mt-4">
+                      <div class="content-text">
+                        <p><strong>Products of Conception (POC):</strong></p>
+                        <p>Fetal loss is the most common pregnancy complication, occurring in 25-30% of recognized pregnancies. Chromosomal analysis on Products of Conception may help identify the cause of pregnancy loss and improve management of future pregnancies by considering Assisted Reproductive Techniques and Comprehensive Chromosomal Screening to avoid the recurrence of miscarriages.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/YqmWJ27N/Mapping-genom.jpg" alt="Diagnostic Testing" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="text-center mt-3">
+                      <button class="expand-toggle secondary" data-target="pregnancyTestingMoreContent">
+                        <span class="toggle-text">+ More Details</span>
+                      </button>
+                    </div>
+                    <div class="expandable-content secondary" id="pregnancyTestingMoreContent">
+                      <div class="additional-content">
+                        <h4>Prenatal Testing Options</h4>
+                        <p>Our comprehensive prenatal testing program offers both screening and diagnostic options to monitor fetal development and detect potential genetic conditions throughout pregnancy.</p>
+                        <div class="row mt-4">
+                          <div class="col-md-6">
+                            <h5>Testing Timeline</h5>
+                            <ul>
+                              <li>10-13 weeks: NIPT screening</li>
+                              <li>11-14 weeks: NT scan</li>
+                              <li>15-20 weeks: Quad screen</li>
+                              <li>15-20 weeks: Amniocentesis</li>
+                              <li>18-22 weeks: Anatomy scan</li>
+                            </ul>
+                          </div>
+                          <div class="col-md-6">
+                            <h5>Detection Capabilities</h5>
+                            <ul>
+                              <li>Down syndrome (Trisomy 21)</li>
+                              <li>Edwards syndrome (Trisomy 18)</li>
+                              <li>Patau syndrome (Trisomy 13)</li>
+                              <li>Neural tube defects</li>
+                              <li>Sex chromosome abnormalities</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-8 ps-5" style="margin-left: 50px;">
-                    <h4
-                      style="
-                        color: #122a4e;
-                        font-weight: 600;
-                        margin-bottom: 8px;
-                        font-size: 1.2rem;
-                      "
-                    >
-                      Embryo Culture
-                    </h4>
-                    <p
-                      style="
-                        color: #122a4e;
-                        line-height: 1.5;
-                        margin-bottom: 0;
-                        font-size: 0.95rem;
-                      "
-                    >
-                      Embryos are grown to the blastocyst stage (day 5-6) in the
-                      lab.
-                    </p>
-                  </div>
                 </div>
-
-                <!-- Embryo Biopsy -->
-                <div
-                  class="row align-items-center timeline-item"
-                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
-                >
-                  <div class="col-1 text-center">
-                    <div
-                      class="process-dot"
-                      style="
-                        background: #4cb3a0;
-                        border: 1.5px solid white;
-                        border-radius: 50%;
-                        width: 16px;
-                        height: 16px;
-                        margin: 0 auto;
-                        position: absolute;
-                        left: 64.8px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        z-index: 3;
-                      "
-                    ></div>
-                  </div>
-                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
-                    <div
-                      class="process-icon"
-                      style="
-                        background: #ffffff;
-                        border: 2px solid #4cb3a0;
-                        border-radius: 50%;
-                        width: 80px;
-                        height: 80px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin: 0 auto;
-                      "
-                    >
-                      <i
-                        class="fas fa-cut"
-                        style="font-size: 2rem; color: #4cb3a0"
-                      ></i>
-                    </div>
-                  </div>
-                  <div class="col-8 ps-5" style="margin-left: 50px;">
-                    <h4
-                      style="
-                        color: #122a4e;
-                        font-weight: 600;
-                        margin-bottom: 8px;
-                        font-size: 1.2rem;
-                      "
-                    >
-                      Embryo Biopsy
-                    </h4>
-                    <p
-                      style="
-                        color: #122a4e;
-                        line-height: 1.5;
-                        margin-bottom: 0;
-                        font-size: 0.95rem;
-                      "
-                    >
-                      A few cells are safely removed from each embryo for
-                      genetic analysis.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Genetic Analysis -->
-                <div
-                  class="row align-items-center timeline-item"
-                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
-                >
-                  <div class="col-1 text-center">
-                    <div
-                      class="process-dot"
-                      style="
-                        background: #4cb3a0;
-                        border: 1.5px solid white;
-                        border-radius: 50%;
-                        width: 16px;
-                        height: 16px;
-                        margin: 0 auto;
-                        position: absolute;
-                        left: 64.8px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        z-index: 3;
-                      "
-                    ></div>
-                  </div>
-                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
-                    <div
-                      class="process-icon"
-                      style="
-                        background: #ffffff;
-                        border: 2px solid #4cb3a0;
-                        border-radius: 50%;
-                        width: 80px;
-                        height: 80px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin: 0 auto;
-                      "
-                    >
-                      <i
-                        class="fas fa-dna"
-                        style="font-size: 2rem; color: #4cb3a0"
-                      ></i>
-                    </div>
-                  </div>
-                  <div class="col-8 ps-5" style="margin-left: 50px;">
-                    <h4
-                      style="
-                        color: #122a4e;
-                        font-weight: 600;
-                        margin-bottom: 8px;
-                        font-size: 1.2rem;
-                      "
-                    >
-                      Genetic Analysis
-                    </h4>
-                    <p
-                      style="
-                        color: #122a4e;
-                        line-height: 1.5;
-                        margin-bottom: 0;
-                        font-size: 0.95rem;
-                      "
-                    >
-                      Samples are tested for chromosomal abnormalities or
-                      specific genetic conditions.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Embryo Freezing & Results -->
-                <div
-                  class="row align-items-center timeline-item"
-                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
-                >
-                  <div class="col-1 text-center">
-                    <div
-                      class="process-dot"
-                      style="
-                        background: #4cb3a0;
-                        border: 1.5px solid white;
-                        border-radius: 50%;
-                        width: 16px;
-                        height: 16px;
-                        margin: 0 auto;
-                        position: absolute;
-                        left: 64.8px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        z-index: 3;
-                      "
-                    ></div>
-                  </div>
-                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
-                    <div
-                      class="process-icon"
-                      style="
-                        background: #ffffff;
-                        border: 2px solid #4cb3a0;
-                        border-radius: 50%;
-                        width: 80px;
-                        height: 80px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin: 0 auto;
-                      "
-                    >
-                      <i
-                        class="fas fa-snowflake"
-                        style="font-size: 2rem; color: #4cb3a0"
-                      ></i>
-                    </div>
-                  </div>
-                  <div class="col-8 ps-5" style="margin-left: 50px;">
-                    <h4
-                      style="
-                        color: #122a4e;
-                        font-weight: 600;
-                        margin-bottom: 8px;
-                        font-size: 1.2rem;
-                      "
-                    >
-                      Embryo Freezing & Results
-                    </h4>
-                    <p
-                      style="
-                        color: #122a4e;
-                        line-height: 1.5;
-                        margin-bottom: 0;
-                        font-size: 0.95rem;
-                      "
-                    >
-                      Embryos are frozen while awaiting results (1-2 weeks).
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Embryo Selection & Transfer -->
-                <div
-                  class="row align-items-center timeline-item"
-                  style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
-                >
-                  <div class="col-1 text-center">
-                    <div
-                      class="process-dot"
-                      style="
-                        background: #4cb3a0;
-                        border: 1.5px solid white;
-                        border-radius: 50%;
-                        width: 16px;
-                        height: 16px;
-                        margin: 0 auto;
-                        position: absolute;
-                        left: 64.8px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        z-index: 3;
-                      "
-                    ></div>
-                  </div>
-                  <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
-                    <div
-                      class="process-icon"
-                      style="
-                        background: #ffffff;
-                        border: 2px solid #4cb3a0;
-                        border-radius: 50%;
-                        width: 80px;
-                        height: 80px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin: 0 auto;
-                      "
-                    >
-                      <i
-                        class="fas fa-heart"
-                        style="font-size: 2rem; color: #4cb3a0"
-                      ></i>
-                    </div>
-                  </div>
-                  <div class="col-8 ps-5" style="margin-left: 50px;">
-                    <h4
-                      style="
-                        color: #122a4e;
-                        font-weight: 600;
-                        margin-bottom: 8px;
-                        font-size: 1.2rem;
-                      "
-                    >
-                      Embryo Selection & Transfer
-                    </h4>
-                    <p
-                      style="
-                        color: #122a4e;
-                        line-height: 1.5;
-                        margin-bottom: 0;
-                        font-size: 0.95rem;
-                      "
-                    >
-                      Healthy embryos are selected and transferred to the
-                      uterus.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Advantages of Genetic Testing Section -->
-            <div id="advantages" class="content-box">
-              <h2 class="text-center mb-5">Advantages of Genetic Testing</h2>
-              <ul class="list-unstyled">
-                <li class="advantage-item">
-                  <h5>✓ Higher Success Rates</h5>
-                  <p>Selecting chromosomally normal embryos improves IVF implantation and live birth rates.</p>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Prevent Genetic Disorders</h5>
-                  <p>Screens for inherited conditions like cystic fibrosis, reducing risk of affected children.</p>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Reduced Miscarriage Risk</h5>
-                  <p>Avoids transferring embryos with abnormalities that often lead to pregnancy loss.</p>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Fewer IVF Cycles</h5>
-                  <p>Increases efficiency, potentially reducing the number of treatments needed.</p>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Personalized Selection</h5>
-                  <p>Allows for tailored embryo choice based on specific genetic profiles and risks.</p>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Cost-Effective Long-Term</h5>
-                  <p>Prevents costly treatments for genetic conditions and multiple failed cycles.</p>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Family Planning Options</h5>
-                  <p>Enables gender selection for family balancing in some cases.</p>
-                </li>
-                <li class="advantage-item">
-                  <h5>✓ Emotional Reassurance</h5>
-                  <p>Provides peace of mind knowing embryos are screened for major genetic issues.</p>
-                </li>
-              </ul>
-
-              <div class="text-center mt-4">
-                <p class="lead text-muted">
-                  Our expert team uses state-of-the-art genetic testing to
-                  maximize your chances of a healthy pregnancy and baby.
-                </p>
               </div>
             </div>
           </div>
@@ -1497,16 +808,633 @@
       </div>
     </section>
 
-    <!-- Footer Placeholder -->
-    <div id="footer-placeholder"></div>
+    <!-- Main Content Section -->
+    <section id="content" class="pt-5" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <!-- Benefits -->
+            <div class="mb-5">
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mb-5">
+              <h2 class="mb-4">Ready to Learn More About Genetic Testing?</h2>
+              <p class="lead mb-4">
+                Our genetic counselors and fertility specialists are here to guide you 
+                through every step of the process.
+              </p>
+              <a href="#" class="schedule-btn">Schedule Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="container">
+        <!-- Branch Cards Section -->
+        <div class="row mb-5">
+          <div class="col-12 text-center mb-4">
+            <h2 class="section-title text-white">Our Locations</h2>
+            <p class="section-subtitle text-white opacity-75">
+              Find us at multiple convenient locations across Egypt
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="branch-card">
+              <h3 class="branch-title">Cairo</h3>
+              <div class="branch-info">
+                <p>
+                  <i class="fas fa-map-marker-alt"></i>
+                  1 Yousef Abbas St. with Al Nasr St.<br />
+                  Dar Al Fouwad Clinics Building, 8th Floor<br />
+                  Nasr City, Cairo
+                </p>
+                <p><i class="fas fa-phone"></i> 16992</p>
+                <p><i class="fas fa-envelope"></i> Info@adamhospital.com</p>
+                <a
+                  href="https://maps.app.goo.gl/YUgeEggB58renQFJ6"
+                  target="_blank"
+                  class="map-pin-link"
+                >
+                  <i class="fas fa-map-pin" style="color: #dc3545;"></i> View on Map
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="branch-card">
+              <h3 class="branch-title">Giza</h3>
+              <div class="branch-info">
+                <p>
+                  <i
+                    class="fas fa-map-marker-alt"
+                    style="margin-right: 8px; color: teal"
+                  ></i>
+                  20 Adan St. <br />
+                  from Shebab St,<br />
+                  Al Mouhandeseen,<br />
+                  Giza
+                </p>
+
+                <p><i class="fas fa-phone"></i> 16992</p>
+                <p><i class="fas fa-envelope"></i> Info@adamhospital.com</p>
+                <a
+                  href="https://maps.google.com/?q=456+Corniche+Road+Alexandria"
+                  target="_blank"
+                  class="map-pin-link"
+                >
+                  <i class="fas fa-map-pin" style="color: #dc3545;"></i> View on Map
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="branch-card">
+              <h3 class="branch-title">Tanta</h3>
+              <div class="branch-info">
+                <p>
+                  <i class="fas fa-map-marker-alt"></i>
+                  23 Al Sheetey St., <br />
+                  2nd Floor,<br />
+                  Apartment No. 9, Above EBE Bank<br />
+                </p>
+                <p><i class="fas fa-phone"></i> 16692</p>
+                <p><i class="fas fa-envelope"></i> Info@adamhospital.com</p>
+                <a
+                  href="https://maps.app.goo.gl/pWDGoZkjYsVNwPC8A"
+                  target="_blank"
+                  class="map-pin-link"
+                >
+                  <i class="fas fa-map-pin" style="color: #dc3545;"></i> View on Map
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="branch-card">
+              <h3 class="branch-title">Ismailia</h3>
+              <div class="branch-info">
+                <p>
+                  <i class="fas fa-map-marker-alt"></i>
+                  14 Gamal Abdulnasser St. (Sheben Al Koum St.),<br />
+                  Opposite Courts of Ismaaelia Building & Al Azhar Schools
+                </p>
+                <p><i class="fas fa-phone"></i> 16692</p>
+                <p><i class="fas fa-envelope"></i> Info@adamhospital.com</p>
+                <a
+                  href="https://maps.app.goo.gl/iDomiLXM9uerzhKfA"
+                  target="_blank"
+                  class="map-pin-link"
+                >
+                  <i class="fas fa-map-pin" style="color: #dc3545;"></i> View on Map
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="branch-card">
+              <h3 class="branch-title">Beni Suef</h3>
+              <div class="branch-info">
+                <p>
+                  <i class="fas fa-map-marker-alt"></i>
+                  3 Al Jendy Tower, Old Modereya Square,<br />
+                  1st Floor, Near Al Shobeetey Stores
+                </p>
+                <p><i class="fas fa-phone"></i> 16692</p>
+                <p><i class="fas fa-envelope"></i> Info@adamhospital.com</p>
+                <a
+                  href="https://maps.app.goo.gl/ccE68rukaqjx4epS9"
+                  target="_blank"
+                  class="map-pin-link"
+                >
+                  <i class="fas fa-map-pin" style="color: #dc3545;"></i> View on Map
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="branch-card">
+              <h3 class="branch-title">Zagazig</h3>
+              <div class="branch-info">
+                <p>
+                  <i class="fas fa-map-marker-alt"></i>
+                  5 Tolba Awada Street,<br />
+                  next to KFC, <br />
+                  Opposite Courts of Ismaaelia Building & Al Azhar Schools
+                </p>
+                <p><i class="fas fa-phone"></i> 16692</p>
+                <p><i class="fas fa-envelope"></i> Info@adamhospital.com</p>
+                <a
+                  href="https://maps.google.com/?q=14+Gamal+Abdulnasser+St+Ismailia"
+                  target="_blank"
+                  class="map-pin-link"
+                >
+                  <i class="fas fa-map-pin" style="color: #dc3545;"></i> View on Map
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="branch-card">
+              <h3 class="branch-title">Luxor</h3>
+              <div class="branch-info">
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> 3 Abdulmeneem , al ouudessey
+                  – Al Mensheya , over station , At Aldahabey mall
+                </p>
+                <p><i class="fas fa-phone"></i> 16692</p>
+                <p><i class="fas fa-envelope"></i> Info@adamhospital.com</p>
+                <a
+                  href="https://maps.google.com/?q=321+Nile+Street+Aswan"
+                  target="_blank"
+                  class="map-pin-link"
+                >
+                  <i class="fas fa-map-pin" style="color: #dc3545;"></i> View on Map
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h3 class="footer-title">About Adam Hospital</h3>
+              <ul class="footer-list">
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">Meet the Team</a></li>
+                <li><a href="#">Our Advanced Fertility Lab</a></li>
+                <li><a href="#">Success Stories</a></li>
+                <li><a href="#">News & Updates</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h3 class="footer-title">Fertility Services</h3>
+              <ul class="footer-list">
+                <li><a href="female-fertility.html">Female Fertility</a></li>
+                <li><a href="male-fertility.html">Male Fertility</a></li>
+                <li><a href="ivf.html">IVF Treatment</a></li>
+                <li><a href="ivf-icsi.html">ICSI Treatment</a></li>
+                <li><a href="genetic-testing.html">Genetic Testing</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h3 class="footer-title">Specialized Treatments</h3>
+              <ul class="footer-list">
+                <li><a href="embryo-freezing.html">Embryo Freezing</a></li>
+                <li><a href="endometriosis.html">Endometriosis</a></li>
+                <li><a href="pcos.html">PCOS Treatment</a></li>
+                <li><a href="#">Egg Freezing</a></li>
+                <li><a href="#">Sperm Freezing</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h3 class="footer-title">Quick Links</h3>
+              <ul class="footer-list">
+                <li><a href="#">Patient Portal</a></li>
+                <li><a href="#">Book Appointment</a></li>
+                <li><a href="#">International Patients</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="footer-logo">
+                <img
+                  src="https://i.postimg.cc/kgdKgg1H/adam.png"
+                  alt="Adam International Hospital"
+                  width="40"
+                  height="40"
+                />
+                <span style="font-family: 'Roboto', sans-serif; font-weight: 400;"><span style="color: #86171d; font-weight: 700;">Adam</span> International Hospital</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="footer-social">
+                <a
+                  href="https://www.facebook.com/adamhospitals"
+                  class="social-link"
+                  aria-label="Facebook"
+                  target="_blank"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/adam-international-hospital/?originalSubdomain=eg"
+                  class="social-link"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="https://x.com/adamhospital"
+                  class="social-link"
+                  aria-label="Twitter"
+                  target="_blank"
+                >
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UCqlSBmyqFK14FtedMMs_Mpg"
+                  class="social-link"
+                  aria-label="YouTube"
+                  target="_blank"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <hr class="footer-divider" />
+          
+          <!-- Enhanced Legal Pages Section -->
+          <div class="row mb-3">
+            <div class="col-12 text-center">
+              <h4 class="legal-section-title">Important Legal Information</h4>
+              <div class="legal-links-container">
+                <a href="privacy-policy.html" class="legal-link">
+                  <i class="fas fa-shield-alt"></i> Privacy Policy
+                </a>
+                <a href="terms-of-service.html" class="legal-link">
+                  <i class="fas fa-file-contract"></i> Terms of Service
+                </a>
+                <a href="medical-disclaimer.html" class="legal-link">
+                  <i class="fas fa-exclamation-triangle"></i> Medical Disclaimer
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="copyright">
+                &copy; 2025 <strong>Adam International Hospital</strong>. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      defer
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Mega Menu JS -->
+    <script src="mega-menu.js"></script>
+    
+    <!-- Home JS -->
+    <script src="home.js?v=7"></script>
 
-    <!-- Home JS for shared components -->
-    <script src="home.js?v=7" defer></script>
+    <script>
+      // Initialize mega menu for hardcoded header
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof HospitalMegaMenu !== 'undefined') {
+          new HospitalMegaMenu();
+        }
+      });
+    </script>
+    
+    <!-- Expandable Content Styles -->
+     <style>
+       .content-sections {
+         display: flex;
+         flex-direction: column;
+         gap: 2rem;
+       }
+       
+       .content-item {
+          background: linear-gradient(135deg, rgba(76, 179, 160, 0.95) 0%, rgba(45, 138, 122, 0.95) 100%);
+          border-radius: 20px;
+          padding: 2.5rem;
+          color: white;
+          max-width: 1000px;
+          margin-left: auto;
+          margin-right: auto;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .content-item::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        }
+       
+/* Remove empty ruleset */
+         /* Visual effects removed */
+.content-item {
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(76, 179, 160, 0.15), rgba(45, 138, 122, 0.1));
+  border: 1px solid rgba(76, 179, 160, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+       
+       .content-item:hover::before {
+         background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+       }
+       
+       .content-headline {
+         font-size: 1.5rem;
+         font-weight: 600;
+         margin-bottom: 1rem;
+         color: white;
+       }
+       
+       .content-summary {
+         font-size: 1.1rem;
+         margin-bottom: 1.5rem;
+         opacity: 0.9;
+       }
+       
+       .expand-toggle {
+         background: rgba(255, 255, 255, 0.15);
+         border: 2px solid rgba(255, 255, 255, 0.25);
+         color: white;
+         padding: 0.75rem 2rem;
+         border-radius: 30px;
+         cursor: pointer;
+         font-weight: 600;
+         letter-spacing: 0.5px;
+         backdrop-filter: blur(5px);
+         position: relative;
+         overflow: hidden;
+         font-weight: 500;
+       }
+       
+       .expand-toggle:hover {
+         background: rgba(255, 255, 255, 0.25);
+         border-color: rgba(255, 255, 255, 0.4);
+       }
+       
+       /* Remove empty ruleset */
+         /* Transform effect removed */
+      .content-item {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+      }
+       
+       .expandable-content {
+         max-height: 0;
+         overflow: hidden;
+         margin-top: 2rem;
+         opacity: 0;
+       }
+       
+       .expand-toggle.secondary {
+         background: rgba(76, 179, 160, 0.2);
+         border: 2px solid rgba(76, 179, 160, 0.4);
+         color: #4cb3a0;
+         padding: 0.5rem 1.5rem;
+         font-size: 0.9rem;
+         margin-top: 1rem;
+       }
+       
+       .expand-toggle.secondary:hover {
+         background: rgba(76, 179, 160, 0.3);
+         border-color: rgba(76, 179, 160, 0.6);
+         color: white;
+       }
+       
+       .expandable-content.secondary {
+         margin-top: 1rem;
+         background: rgba(255, 255, 255, 0.05);
+         border-radius: 15px;
+         padding: 0;
+       }
+       
+       .additional-content {
+         padding: 2rem;
+         color: white;
+       }
+       
+       .additional-content h4 {
+         color: #4cb3a0;
+         margin-bottom: 1rem;
+         font-weight: 600;
+       }
+       
+       .additional-content h5 {
+         color: white;
+         margin-bottom: 0.75rem;
+         font-weight: 500;
+       }
+       
+       .additional-content ul {
+         list-style: none;
+         padding-left: 0;
+       }
+       
+       .additional-content li {
+         padding: 0.25rem 0;
+         position: relative;
+         padding-left: 1.5rem;
+       }
+       
+       .additional-content li::before {
+         content: '✓';
+         position: absolute;
+         left: 0;
+         color: #4cb3a0;
+         font-weight: bold;
+       }
+       
+       .expandable-content.show {
+         max-height: 2000px;
+         opacity: 1;
+         margin-top: 1.5rem;
+         padding: 1.5rem;
+         background: linear-gradient(135deg, rgba(76, 179, 160, 0.15), rgba(45, 138, 122, 0.1));
+         border-radius: 12px;
+         border: 1px solid rgba(76, 179, 160, 0.3);
+         backdrop-filter: blur(10px);
+         box-shadow: 0 4px 15px rgba(76, 179, 160, 0.1);
+       }
+       
+       .expandable-content.secondary.show {
+         background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 152, 0, 0.1));
+         border: 1px solid rgba(255, 193, 7, 0.3);
+         box-shadow: 0 4px 15px rgba(255, 193, 7, 0.1);
+       }
+       
+       .expandable-content::before {
+         content: '';
+         display: block;
+         height: 1px;
+         background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+         margin-bottom: 1.5rem;
+       }
+       
+       .expandable-content p {
+         margin-bottom: 1rem;
+         line-height: 1.6;
+       }
+       
+       .expandable-content ul {
+         list-style: none;
+         padding-left: 0;
+       }
+       
+       .expandable-content li {
+         padding: 0.5rem 0;
+         padding-left: 1.5rem;
+         position: relative;
+       }
+       
+       .expandable-content li:before {
+          content: "✓";
+          position: absolute;
+          left: 0;
+          color: #4cb3a0;
+          font-weight: bold;
+        }
+        
+        .content-layout {
+          display: flex;
+          gap: 2rem;
+          align-items: flex-start;
+        }
+        
+        .content-text {
+          flex: 1;
+        }
+        
+        .content-image {
+          flex: 0 0 300px;
+          background: rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          padding: 20px;
+        }
+        
+        .content-image img {
+          width: 100%;
+          height: auto;
+        }
+        
+        .content-image svg {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        
+        @media (max-width: 768px) {
+          .content-layout {
+            flex-direction: column;
+          }
+          
+          .content-image {
+            flex: none;
+          }
+        }
+     </style>
+    
+    <!-- Expandable Content JavaScript -->
+     <script>
+       document.addEventListener('DOMContentLoaded', function() {
+         const expandToggles = document.querySelectorAll('.expand-toggle');
+         
+         expandToggles.forEach(toggle => {
+           toggle.addEventListener('click', function(e) {
+             e.preventDefault();
+             const targetId = this.getAttribute('data-target');
+             const content = document.getElementById(targetId);
+             const toggleText = this.querySelector('.toggle-text');
+             const isSecondary = this.classList.contains('secondary');
+             
+             if (!content || !toggleText) {
+               return;
+             }
+             
+             if (content.classList.contains('show')) {
+               content.classList.remove('show');
+               if (isSecondary) {
+                 toggleText.textContent = '+ More Details';
+               } else {
+                 toggleText.textContent = '+ More';
+               }
+             } else {
+               content.classList.add('show');
+               if (isSecondary) {
+                 toggleText.textContent = '- Less Details';
+               } else {
+                 toggleText.textContent = '- Less';
+               }
+             }
+           });
+         });
+       });
+     </script>
+
+
   </body>
 </html>
