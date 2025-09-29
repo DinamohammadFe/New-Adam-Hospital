@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tubal Surgery - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script" />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/FHB1SY09/adam.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css?v=4" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="index.html" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="our-ivf-family.html" class="accordion-sublink">Our IVF Family</a>
+              <a href="advanced-laboratory.html" class="accordion-sublink">Our Advanced Fertility Lab</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <a href="ivf.html" class="accordion-sublink">IVF Treatment</a>
+              <a href="ivf-icsi.html" class="accordion-sublink">ICSI-IVF Treatment</a>
+              <a href="iui.html" class="accordion-sublink">IUI</a>
+              <a href="genetic-testing.html" class="accordion-sublink">Genetic Testing</a>
+              <a href="family-balancing.html" class="accordion-sublink">Family Balancing</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <a href="female-fertility-treatments.html" class="accordion-sublink">Female Fertility</a>
+              <a href="male-fertility.html" class="accordion-sublink">Male Fertility</a>
+              <a href="egg-freezing.html" class="accordion-sublink">Egg Freezing</a>
+              <a href="sperm-freezing.html" class="accordion-sublink">Sperm Freezing</a>
+              <a href="embryo-freezing.html" class="accordion-sublink">Embryo Freezing</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white; padding: 120px 0 80px;">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h1 class="display-4 fw-bold mb-4">Tubal Surgery</h1>
+              <p class="lead mb-4">
+                Advanced surgical procedures to restore fallopian tube function and improve fertility. Our minimally invasive techniques help repair blocked or damaged tubes to enhance your chances of natural conception.
+              </p>
+              <div class="d-flex gap-3">
+                <button class="btn btn-light btn-lg">Book Consultation</button>
+                <button class="btn btn-outline-light btn-lg">Learn More</button>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="text-center">
+                <i class="fas fa-stethoscope" style="font-size: 8rem; opacity: 0.3;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="py-5">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <!-- Introduction -->
+              <div class="mb-5">
+                <p class="lead text-center mb-4">
+                  Fallopian tube problems are a common cause of female infertility. Our specialized tubal surgery procedures can restore tube function and improve your chances of natural conception without the need for IVF.
+                </p>
+              </div>
+
+              <!-- FAQ Section -->
+              <div class="row mb-5 justify-content-center">
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('what-is-tubal-surgery').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">What is Tubal Surgery</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('types-of-procedures').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Types of Procedures</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('who-needs-surgery').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Who Needs Surgery</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('success-rates').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Success Rates</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- What is Tubal Surgery Section -->
+              <div class="row mb-5" id="what-is-tubal-surgery">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4); position: relative; z-index: 5;">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">What is Tubal Surgery?</h2>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      Tubal surgery refers to surgical procedures performed on the fallopian tubes to restore their normal function. The fallopian tubes are essential for natural conception as they transport eggs from the ovaries to the uterus and provide the site where fertilization occurs.
+                    </p>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      When tubes are blocked, damaged, or scarred due to infection, endometriosis, or previous surgery, tubal surgery can help restore their function. Modern techniques use minimally invasive approaches that reduce recovery time and improve outcomes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Types of Procedures Section -->
+              <div class="row mb-5" id="types-of-procedures">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Types of Tubal Surgery Procedures</h2>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-unlock me-2"></i>Tubal Reanastomosis</h5>
+                          <p class="card-text">Reconnecting fallopian tubes after tubal ligation (sterilization reversal) to restore fertility.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-road me-2"></i>Salpingostomy</h5>
+                          <p class="card-text">Creating a new opening in the fallopian tube when the end is blocked (hydrosalpinx).</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-broom me-2"></i>Adhesiolysis</h5>
+                          <p class="card-text">Removing scar tissue and adhesions around the fallopian tubes and ovaries.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-cut me-2"></i>Fimbrioplasty</h5>
+                          <p class="card-text">Reconstructing the fimbrial end of the tube to improve egg pickup function.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-times me-2"></i>Salpingectomy</h5>
+                          <p class="card-text">Removing severely damaged tubes that may interfere with IVF success.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-tools me-2"></i>Tubal Cannulation</h5>
+                          <p class="card-text">Non-surgical procedure to clear proximal tubal blockages using a catheter.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Who Needs Surgery Section -->
+              <div class="row mb-5" id="who-needs-surgery">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4);">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">Who Needs Tubal Surgery?</h2>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-ban me-2"></i>Tubal Blockage</h5>
+                        <p style="color: #122a4e;">Women with blocked fallopian tubes due to infection, endometriosis, or previous surgery.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-water me-2"></i>Hydrosalpinx</h5>
+                        <p style="color: #122a4e;">Fluid-filled, blocked fallopian tubes that can reduce IVF success rates.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-undo me-2"></i>Sterilization Reversal</h5>
+                        <p style="color: #122a4e;">Women who want to restore fertility after tubal ligation.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-link me-2"></i>Pelvic Adhesions</h5>
+                        <p style="color: #122a4e;">Scar tissue around tubes and ovaries affecting normal function.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-exclamation-triangle me-2"></i>Ectopic Pregnancy History</h5>
+                        <p style="color: #122a4e;">Previous ectopic pregnancies that may have damaged tubal function.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-virus me-2"></i>PID History</h5>
+                        <p style="color: #122a4e;">Previous pelvic inflammatory disease causing tubal damage.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Success Rates Section -->
+              <div class="row mb-5" id="success-rates">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Success Rates & Outcomes</h2>
+                  <div class="row">
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-chart-line"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Tubal Reanastomosis</h5>
+                          <p class="h4" style="color: #4cb3a0;">70-85%</p>
+                          <p>Pregnancy rates after sterilization reversal in appropriate candidates.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-unlock-alt"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Adhesiolysis</h5>
+                          <p class="h4" style="color: #4cb3a0;">40-60%</p>
+                          <p>Pregnancy rates after removal of pelvic adhesions.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-road"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Salpingostomy</h5>
+                          <p class="h4" style="color: #4cb3a0;">20-40%</p>
+                          <p>Pregnancy rates after creating new tubal openings.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Procedure Process Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">The Surgical Process</h2>
+                  <div class="row">
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-clipboard-check"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Pre-operative Assessment</h5>
+                          <p>Comprehensive evaluation including imaging studies and fertility testing.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-user-md"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Minimally Invasive Surgery</h5>
+                          <p>Laparoscopic approach with small incisions for faster recovery.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-bed"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Recovery Period</h5>
+                          <p>Short hospital stay with gradual return to normal activities.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-calendar-alt"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Follow-up Care</h5>
+                          <p>Regular monitoring and fertility tracking after surgery.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Benefits & Risks Section -->
+              <div class="row mb-5">
+                <div class="col-md-6">
+                  <div class="card h-100" style="background: #e9f5f4; border: none;">
+                    <div class="card-body">
+                      <h3 style="color: #4cb3a0; text-align: center;" class="mb-4">Benefits</h3>
+                      <ul style="color: #122a4e; font-size: 1.1rem;">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Potential for natural conception</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Avoids need for IVF in some cases</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Minimally invasive techniques</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Shorter recovery time</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Cost-effective long-term solution</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Improves IVF success rates when indicated</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card h-100" style="background: #fff3cd; border: none;">
+                    <div class="card-body">
+                      <h3 style="color: #856404; text-align: center;" class="mb-4">Considerations</h3>
+                      <ul style="color: #856404; font-size: 1.1rem;">
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Success depends on extent of damage</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Risk of ectopic pregnancy</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>General surgical risks</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>May not restore full function</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Age affects success rates</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Alternative treatments may be needed</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Call to Action -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="text-center" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); padding: 60px; border-radius: 15px; color: white;">
+                    <h2 class="mb-4">Restore Your Fertility with Expert Tubal Surgery</h2>
+                    <p class="lead mb-4">Our experienced surgeons use the latest minimally invasive techniques to give you the best chance of natural conception.</p>
+                    <button class="btn btn-light btn-lg me-3">Schedule Consultation</button>
+                    <button class="btn btn-outline-light btn-lg">Learn About Options</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="home.js?v=7"></script>
+    <script src="mega-menu.js"></script>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Load header
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

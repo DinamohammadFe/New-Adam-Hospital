@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IUI Treatment - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script" />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/FHB1SY09/adam.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css?v=4" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="index.html" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="our-ivf-family.html" class="accordion-sublink">Our IVF Family</a>
+              <a href="advanced-laboratory.html" class="accordion-sublink">Our Advanced Fertility Lab</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <a href="ivf.html" class="accordion-sublink">IVF Treatment</a>
+              <a href="ivf-icsi.html" class="accordion-sublink">ICSI-IVF Treatment</a>
+              <a href="iui.html" class="accordion-sublink">IUI</a>
+              <a href="genetic-testing.html" class="accordion-sublink">Genetic Testing</a>
+              <a href="pcos.html" class="accordion-sublink">PCOS</a>
+              <a href="endometriosis.html" class="accordion-sublink">Endometriosis</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <a href="female-fertility-treatments.html" class="accordion-sublink">Female Fertility</a>
+              <a href="male-fertility.html" class="accordion-sublink">Male Fertility</a>
+              <a href="egg-freezing.html" class="accordion-sublink">Egg Freezing</a>
+              <a href="sperm-freezing.html" class="accordion-sublink">Sperm Freezing</a>
+              <a href="embryo-freezing.html" class="accordion-sublink">Embryo Freezing</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white; padding: 120px 0 80px;">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h1 class="display-4 fw-bold mb-4">IUI Treatment</h1>
+              <p class="lead mb-4">
+                Intrauterine Insemination (IUI) is a fertility treatment that involves placing sperm directly into a woman's uterus to facilitate fertilization. This less invasive procedure can be an effective first step in fertility treatment.
+              </p>
+              <div class="d-flex gap-3">
+                <button class="btn btn-light btn-lg">Book Consultation</button>
+                <button class="btn btn-outline-light btn-lg">Learn More</button>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="text-center">
+                <i class="fas fa-syringe" style="font-size: 8rem; opacity: 0.3;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="py-5">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <!-- Introduction -->
+              <div class="mb-5">
+                <p class="lead text-center mb-4">
+                  IUI is often recommended as a first-line treatment for couples with unexplained infertility, mild male factor infertility, or cervical factor infertility. It's a simpler and less expensive alternative to IVF.
+                </p>
+              </div>
+
+              <!-- FAQ Section -->
+              <div class="row mb-5 justify-content-center">
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('what-is-iui').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">What is IUI?</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('iui-process').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">IUI Process</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('success-rates').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Success Rates</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('who-benefits').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Who Benefits</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- What is IUI Content Section -->
+              <div class="row mb-5" id="what-is-iui">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4); position: relative; z-index: 5;">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">What is IUI?</h2>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      Intrauterine Insemination (IUI) is a fertility treatment where specially prepared sperm is placed directly into the uterus around the time of ovulation. This procedure bypasses the cervix and places sperm closer to the fallopian tubes, increasing the chances of fertilization. IUI is often combined with fertility medications to stimulate ovulation and increase the number of eggs released.
+                    </p>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      The procedure is relatively simple and can be performed in a doctor's office. It's less invasive and less expensive than IVF, making it an attractive first option for many couples experiencing fertility challenges.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- IUI Process Section -->
+              <div class="row mb-5" id="iui-process">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">The IUI Process</h2>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-calendar-alt me-2"></i>Step 1: Monitoring</h5>
+                          <p class="card-text">Your menstrual cycle is monitored through blood tests and ultrasounds to determine the optimal timing for insemination.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-pills me-2"></i>Step 2: Medication (Optional)</h5>
+                          <p class="card-text">Fertility medications may be prescribed to stimulate ovulation and increase the number of eggs released.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-flask me-2"></i>Step 3: Sperm Preparation</h5>
+                          <p class="card-text">Sperm is collected and processed in the laboratory to concentrate the healthiest, most motile sperm.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-syringe me-2"></i>Step 4: Insemination</h5>
+                          <p class="card-text">The prepared sperm is inserted directly into the uterus using a thin, flexible catheter during a quick, painless procedure.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Success Rates Section -->
+              <div class="row mb-5" id="success-rates">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4);">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">Success Rates</h2>
+                    <div class="row">
+                      <div class="col-md-4 text-center mb-3">
+                        <div class="display-4 fw-bold" style="color: #4cb3a0;">15-20%</div>
+                        <p style="color: #122a4e;">Per cycle for women under 35</p>
+                      </div>
+                      <div class="col-md-4 text-center mb-3">
+                        <div class="display-4 fw-bold" style="color: #4cb3a0;">10-15%</div>
+                        <p style="color: #122a4e;">Per cycle for women 35-40</p>
+                      </div>
+                      <div class="col-md-4 text-center mb-3">
+                        <div class="display-4 fw-bold" style="color: #4cb3a0;">5-10%</div>
+                        <p style="color: #122a4e;">Per cycle for women over 40</p>
+                      </div>
+                    </div>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify; margin-top: 20px;">
+                      Success rates vary based on age, underlying fertility issues, and whether fertility medications are used. Most couples try 3-6 cycles of IUI before considering other treatments like IVF.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Who Benefits Section -->
+              <div class="row mb-5" id="who-benefits">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Who Benefits from IUI?</h2>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title" style="color: #4cb3a0;"><i class="fas fa-question-circle me-2"></i>Unexplained Infertility</h5>
+                          <p class="card-text">Couples who have been trying to conceive for over a year with no identifiable cause of infertility.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title" style="color: #4cb3a0;"><i class="fas fa-mars me-2"></i>Mild Male Factor</h5>
+                          <p class="card-text">Men with slightly low sperm count, motility, or morphology that may benefit from sperm concentration.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title" style="color: #4cb3a0;"><i class="fas fa-female me-2"></i>Cervical Issues</h5>
+                          <p class="card-text">Women with cervical mucus problems or cervical scarring that may impede sperm passage.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title" style="color: #4cb3a0;"><i class="fas fa-calendar me-2"></i>Ovulation Disorders</h5>
+                          <p class="card-text">Women with irregular ovulation who can benefit from fertility medications combined with IUI.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Call to Action -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="text-center" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); padding: 60px; border-radius: 15px; color: white;">
+                    <h2 class="mb-4">Ready to Start Your IUI Journey?</h2>
+                    <p class="lead mb-4">Our experienced fertility specialists are here to guide you through every step of the IUI process.</p>
+                    <button class="btn btn-light btn-lg me-3">Schedule Consultation</button>
+                    <button class="btn btn-outline-light btn-lg">Download IUI Guide</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="home.js?v=7"></script>
+    <script src="mega-menu.js"></script>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Load header
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

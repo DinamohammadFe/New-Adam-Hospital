@@ -15,10 +15,15 @@
   <div class="chatbot-window" id="chatbotWindow">
     <!-- Chatbot Header -->
     <div class="chatbot-header">
-      <h3 data-i18n="chatbot.title">Medical Assistant</h3>
-      <button class="chatbot-close" id="chatbotClose" aria-label="Close chat">
-        ×
-      </button>
+      <h3 data-i18n="chatbot.header.title">Medical Assistant</h3>
+      <div class="chatbot-header-controls">
+        <button class="chatbot-language-toggle" id="chatbotLanguageToggle" aria-label="Toggle language">
+          <span class="lang-text">العربية</span>
+        </button>
+        <button class="chatbot-close" id="chatbotClose" aria-label="Close chat">
+          ×
+        </button>
+      </div>
     </div>
     
     <!-- Chatbot Messages -->
@@ -28,8 +33,8 @@
     
     <!-- Quick Actions -->
     <div class="chatbot-quick-actions">
-      <button class="quick-action" data-message="I want to book an appointment" data-i18n="chatbot.quick_actions.appointment">
-        Book Appointment
+      <button class="quick-action" data-message="I want to book an appointment" data-i18n="chatbot.quick_actions.book_now">
+        Book Now
       </button>
       <button class="quick-action" data-message="Tell me about your treatments" data-i18n="chatbot.quick_actions.treatments">
         Treatments
@@ -38,7 +43,7 @@
         Locations
       </button>
       <button class="quick-action" data-message="How can I contact you?" data-i18n="chatbot.quick_actions.contact">
-        Contact
+        Contact Us
       </button>
     </div>
     

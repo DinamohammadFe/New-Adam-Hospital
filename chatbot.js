@@ -16,6 +16,7 @@ function initializeChatbot() {
     const chatbotInput = document.getElementById("chatbotInput");
     const sendButton = document.getElementById("chatbotSend");
     const chatbotMessages = document.getElementById("chatbotMessages");
+    const chatbotLanguageToggle = document.getElementById("chatbotLanguageToggle");
     
     if (!chatbotToggle || !chatbotWindow) {
       return;
@@ -179,6 +180,28 @@ function initializeChatbot() {
       return "Thank you for your message! For specific medical questions or to schedule an appointment, please call us at 16992. Our team is here to help with your fertility journey.";
     }
 
+    // Language toggle functionality
+    function toggleChatbotLanguage() {
+      if (typeof window.i18n !== 'undefined') {
+        const currentLang = window.i18n.getCurrentLanguage();
+        const newLang = currentLang === 'en' ? 'ar' : 'en';
+        window.i18n.setLanguage(newLang);
+        
+        // Update the language toggle button text
+        const langText = chatbotLanguageToggle?.querySelector('.lang-text');
+        if (langText) {
+          langText.textContent = newLang === 'en' ? 'العربية' : 'English';
+        }
+        
+        // Clear and re-add welcome message in new language
+        if (chatbotMessages) {
+          chatbotMessages.innerHTML = '';
+          const welcomeMessage = window.i18n.translate('chatbot.welcome.message');
+          addMessage(welcomeMessage);
+        }
+      }
+    }
+
     // Event listeners
     if (chatbotToggle) {
       chatbotToggle.addEventListener("click", toggleChatbot);
@@ -190,6 +213,10 @@ function initializeChatbot() {
     
     if (sendButton) {
       sendButton.addEventListener("click", sendMessage);
+    }
+    
+    if (chatbotLanguageToggle) {
+      chatbotLanguageToggle.addEventListener("click", toggleChatbotLanguage);
     }
     
     if (chatbotInput) {
@@ -223,11 +250,25 @@ function initializeChatbot() {
       }
     });
     
+    // Initialize language toggle button text
+    function initializeLanguageToggle() {
+      if (chatbotLanguageToggle && typeof window.i18n !== 'undefined') {
+        const currentLang = window.i18n.getCurrentLanguage();
+        const langText = chatbotLanguageToggle.querySelector('.lang-text');
+        if (langText) {
+          langText.textContent = currentLang === 'en' ? 'العربية' : 'English';
+        }
+      }
+    }
+
     // Add welcome message
-    const welcomeMessage = (typeof i18n !== 'undefined' && i18n.translate) 
-      ? i18n.translate('chatbot.welcome.message')
+    const welcomeMessage = (typeof window.i18n !== 'undefined' && window.i18n.translate) 
+      ? window.i18n.translate('chatbot.welcome.message')
       : "Hello! 👋 Welcome to Adam International Hospital. How can I assist you today?";
     addMessage(welcomeMessage);
+    
+    // Initialize language toggle
+    initializeLanguageToggle();
     
   }, 100);
 }

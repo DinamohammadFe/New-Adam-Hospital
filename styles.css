@@ -6289,6 +6289,26 @@ footer {
   color: #212529 !important;
 }
 
+/* Teal card styles for freezing pages */
+.freezing-page .card {
+  background-color: #4cb3a0 !important;
+  color: white !important;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.freezing-page .card-title,
+.freezing-page .card-text {
+  color: white !important;
+}
+
+.freezing-page .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
 /* Improve link accessibility */
 a:not(.btn) {
   text-decoration: underline;

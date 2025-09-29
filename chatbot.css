@@ -102,6 +102,33 @@
   font-weight: 600;
 }
 
+.chatbot-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chatbot-language-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.chatbot-language-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.chatbot-language-toggle:active {
+  transform: scale(0.95);
+}
+
 .chatbot-close {
   background: none;
   border: none;

@@ -8,12 +8,16 @@ const utils = {
     return function executedFunction(...args) {
       const later = () => {
         timeout = null;
-        if (!immediate) func.apply(this, args);
+        if (!immediate) {
+          func.apply(this, args);
+        }
       };
       const callNow = immediate && !timeout;
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
-      if (callNow) func.apply(this, args);
+      if (callNow) {
+        func.apply(this, args);
+      }
     };
   },
 
@@ -22,8 +26,8 @@ const utils = {
     getItem: function(key) {
       try {
         return localStorage.getItem(key);
-      } catch (e) {
-        console.warn('localStorage not available:', e);
+      } catch {
+        // localStorage not available - silently handle
         return null;
       }
     },
@@ -31,8 +35,8 @@ const utils = {
       try {
         localStorage.setItem(key, value);
         return true;
-      } catch (e) {
-        console.warn('localStorage not available:', e);
+      } catch {
+        // localStorage not available - silently handle
         return false;
       }
     }
@@ -42,16 +46,18 @@ const utils = {
   safeQuerySelector: function(selector) {
     try {
       return document.querySelector(selector);
-    } catch (e) {
-      console.warn('Invalid selector:', selector, e);
+    } catch {
+      // Invalid selector - silently handle
       return null;
     }
   },
 
   // Error logging
   logError: function(error, context) {
-    console.error(`Error in ${context}:`, error);
-    // In production, you might want to send this to an error tracking service
+    // In production, send this to an error tracking service
+    if (window.errorTracker) {
+      window.errorTracker.log(error, context);
+    }
   }
 };
 
@@ -123,7 +129,9 @@ function handleThemeToggle() {
     const themeIconElement = utils.safeQuerySelector(".theme-icon i");
     const body = document.body;
     
-    if (!themeToggle) return;
+    if (!themeToggle) {
+      return;
+    }
     
     const newTheme = themeToggle.checked ? "dark" : "light";
     
@@ -333,7 +341,7 @@ function animateCounter(element) {
   try {
     const target = parseInt(element.getAttribute('data-target'));
     if (isNaN(target)) {
-      console.warn('Invalid counter target:', element.getAttribute('data-target'));
+      // Invalid counter target - silently handle
       return;
     }
     
@@ -396,10 +404,7 @@ function handleAccordionThemeToggle() {
     if (accordionThemeIconEl) {
       accordionThemeIconEl.textContent = newTheme === "dark" ? "☀️" : "🌙";
     }
-  } catch (error) {
-    utils.logError(error, 'accordion theme toggle handling');
-  }
-  
+    
     // Update main theme toggle if it exists
     const mainThemeToggle = document.getElementById("themeToggle");
     
