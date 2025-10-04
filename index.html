@@ -107,10 +107,10 @@
           <div class="col-12">
             <!-- Main Title -->
             <div class="text-center mb-5" data-aos="fade-up">
-              <h1 class="hero-main-title text-white display-1 fw-bold mb-3" data-i18n="hero.title">
-                <span style="color: #86171d; font-weight: 700; font-family: 'Roboto', sans-serif;">Adam</span> <span style="color: black; font-family: 'Roboto', sans-serif;">International Hospital</span>
+              <h1 class="hero-main-title display-1 fw-bold mb-3" data-i18n="hero.title">
+                <span style="color: black; font-weight: 700; font-family: 'Roboto', sans-serif;">Adam</span> <span style="color: black; font-family: 'Roboto', sans-serif;">International Hospital</span>
               </h1>
-              <p class="hero-subtitle text-white lead fs-2 opacity-90" style="font-style: italic; color: black; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);" data-i18n="hero.subtitle">
+              <p class="hero-subtitle lead fs-2 opacity-90" style="font-style: italic; color: black; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);" data-i18n="hero.subtitle">
                 Compassionate Care, Advanced Fertility Solutions
               </p>
             </div>
@@ -1083,78 +1083,81 @@
       });
     </script>
 
-  </body>
-</html>
-<!-- Chatbot Widget -->
-<link rel="stylesheet" href="chatbot.css" />
-<button id="chatbot-fab" class="chatbot-fab" aria-label="Open chat">
-  <span class="fab-icon" aria-hidden="true">
-    <img src="adam-logo.png" alt="" />
-  </span>
-  <span class="fab-text">
-    <span class="fab-title">Let's Chat!</span>
-    <span class="fab-subtitle">Adam International Hospital</span>
-  </span>
+  <!-- Chatbot Widget -->
+  <link rel="stylesheet" href="chatbot.css" />
+  <div id="chatbot-backdrop" class="chatbot-backdrop" aria-hidden="true"></div>
+  <button id="chatbot-fab" class="chatbot-fab" aria-label="Open chat">
+    <span class="fab-icon" aria-hidden="true"></span>
+    <span class="fab-text">
+      <span class="fab-title">Let's Chat!</span>
+      <span class="fab-subtitle">Adam International Hospital</span>
+    </span>
   </button>
 
-<div id="chatbot-window" class="chatbot-window card">
-  <div class="card-header chatbot-header">
-    <h6 id="chatbot-title" class="chatbot-title">Adam International Hospital</h6>
-    <button id="chatbot-lang-toggle" class="btn btn-sm btn-outline-secondary chatbot-lang-toggle" type="button" aria-label="Toggle language">AR</button>
-  </div>
-  <div id="chatbot-subtitle" class="px-3 pt-2 small text-muted">How can we help you today?</div>
-  <div id="chatbot-messages" class="chatbot-messages" aria-live="polite" aria-label="Messages"></div>
-  <div class="chatbot-actions">
-    <div class="d-flex align-items-center justify-content-between mb-2">
-      <strong id="chatbot-actions-title">Quick Actions</strong>
+  <div id="chatbot-window" class="chatbot-window card">
+    <div class="card-header chatbot-header d-flex align-items-center justify-content-between">
+      <h6 id="chatbot-title" class="mb-0">Adam International Hospital</h6>
+      <button id="chatbot-lang-toggle" class="btn btn-sm btn-outline-secondary" type="button" aria-label="Toggle language">AR</button>
     </div>
-    <div class="d-flex flex-wrap">
-      <button id="btn-location" class="btn btn-outline-primary btn-sm" type="button">Location</button>
-      <button id="btn-contact" class="btn btn-outline-primary btn-sm" type="button">Contact</button>
-      <button id="btn-treatments" class="btn btn-outline-primary btn-sm" type="button">Treatments</button>
-      <button id="btn-services" class="btn btn-outline-primary btn-sm" type="button">Services</button>
-      <button id="btn-hours" class="btn btn-outline-primary btn-sm" type="button">Opening Hours</button>
-      <button id="btn-appointment" class="btn btn-success btn-sm" type="button">Book Appointment</button>
-    </div>
-  </div>
-  <div class="chatbot-input p-2">
-    <div class="input-group">
-      <input id="chatbot-input" type="text" class="form-control" placeholder="Type a question..." aria-label="Type a question" />
-      <button id="chatbot-send" class="btn btn-primary" type="button">Send</button>
-    </div>
-  </div>
-</div>
-
-<!-- Appointment Modal -->
-<div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="appointmentModalLabel">Book Appointment</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="card-body p-0">
+      <div id="chatbot-subtitle" class="px-3 pt-2 small text-muted">How can we help you today?</div>
+      <div id="chatbot-messages" class="chatbot-messages" aria-live="polite" aria-label="Messages"></div>
+      <div class="chatbot-actions">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+          <strong id="chatbot-actions-title">Quick Actions</strong>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <button id="btn-location" class="btn btn-outline-primary btn-sm" type="button">Location</button>
+          <button id="btn-contact" class="btn btn-outline-primary btn-sm" type="button">Contact</button>
+          <button id="btn-treatments" class="btn btn-outline-primary btn-sm" type="button">Treatments</button>
+          <button id="btn-services" class="btn btn-outline-primary btn-sm" type="button">Services</button>
+          <button id="btn-hours" class="btn btn-outline-primary btn-sm" type="button">Opening Hours</button>
+          <button id="btn-appointment" class="btn btn-success btn-sm" type="button">Book Appointment</button>
+        </div>
       </div>
-      <form id="appointmentForm">
-        <div class="modal-body">
-          <div class="mb-3">
-            <label id="labelName" for="apptName" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="apptName" required />
-          </div>
-          <div class="mb-3">
-            <label id="labelPhone" for="apptPhone" class="form-label">Phone</label>
-            <input type="tel" class="form-control" id="apptPhone" required />
-          </div>
-          <div class="mb-3">
-            <label id="labelDate" for="apptDate" class="form-label">Preferred Date</label>
-            <input type="date" class="form-control" id="apptDate" />
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button id="appointmentSubmit" type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </form>
+    </div>
+    <div class="card-footer p-2">
+      <div class="input-group">
+        <input id="chatbot-input" type="text" class="form-control" placeholder="Type a question..." aria-label="Type a question" />
+        <button id="chatbot-send" class="btn btn-primary" type="button">Send</button>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- Appointment Modal -->
+  <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="appointmentModalLabel">Book Appointment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="appointmentForm">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label id="labelName" for="apptName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="apptName" required />
+            </div>
+            <div class="mb-3">
+              <label id="labelPhone" for="apptPhone" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="apptPhone" required />
+            </div>
+            <div class="mb-3">
+              <label id="labelDate" for="apptDate" class="form-label">Preferred Date</label>
+              <input type="date" class="form-control" id="apptDate" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button id="appointmentSubmit" type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="chatbot.js" defer></script>
+  </body>
+</html>
 
 <script src="chatbot.js" defer></script>
