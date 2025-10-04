@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fertility Preservation - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      as="script"
+    />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://i.postimg.cc/FHB1SY09/adam.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=4" />
+
+    <style>
+      /* Import Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap");
+
+      :root {
+        --primary-color: #4cb3a0;
+        --text-color: #333;
+        --white: #fff;
+        --bg-color: #fff;
+        --shadow-color: rgba(0, 0, 0, 0.08);
+      }
+
+      .preservation-hero {
+        background: linear-gradient(135deg, rgba(76, 179, 160, 0.9) 0%, rgba(81, 145, 124, 0.9) 100%),
+                    url('https://i.postimg.cc/QMXyVHt0/kelly-sikkema-IE8-Kfew-Ap-w-unsplash.jpg') center/cover;
+        padding: 120px 0 80px;
+        color: white;
+        text-align: center;
+      }
+
+      .preservation-card {
+        background: white;
+        border-radius: 20px;
+        padding: 40px 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(76, 179, 160, 0.1);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(76, 179, 160, 0.1);
+        height: 100%;
+      }
+
+      .preservation-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(76, 179, 160, 0.2);
+      }
+
+      .preservation-icon {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        color: white;
+        font-size: 2.5rem;
+      }
+
+      .timeline {
+        position: relative;
+        padding: 20px 0;
+      }
+
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg, #4cb3a0 0%, #51917c 100%);
+        transform: translateX(-50%);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 50px;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: 55%;
+        text-align: right;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 55%;
+        text-align: left;
+      }
+
+      .timeline-marker {
+        position: absolute;
+        left: 50%;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        background: #4cb3a0;
+        border: 4px solid white;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 0 0 4px rgba(76, 179, 160, 0.2);
+      }
+
+      .timeline-content {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .stats-card {
+        background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%);
+        color: white;
+        border-radius: 20px;
+        padding: 40px 30px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .stats-number {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .timeline::before {
+          left: 30px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content,
+        .timeline-item:nth-child(even) .timeline-content {
+          margin-left: 60px;
+          margin-right: 0;
+          text-align: left;
+        }
+
+        .timeline-marker {
+          left: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="preservation-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1 class="display-4 fw-bold mb-4">Fertility Preservation</h1>
+            <p class="lead mb-4">
+              Secure your reproductive future with advanced cryopreservation technology
+            </p>
+            <a href="#services" class="btn btn-light btn-lg rounded-pill px-5">
+              Explore Options
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="mb-4">Why Choose Fertility Preservation?</h2>
+            <p class="lead mb-4">
+              Fertility preservation allows you to take control of your reproductive timeline, 
+              whether for medical, personal, or professional reasons.
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <i class="fas fa-check-circle text-success me-3"></i>
+                <strong>Medical Reasons:</strong> Before cancer treatment or surgery
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-check-circle text-success me-3"></i>
+                <strong>Personal Choice:</strong> Delaying parenthood for career or education
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-check-circle text-success me-3"></i>
+                <strong>Age-Related:</strong> Preserving fertility at younger age
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-check-circle text-success me-3"></i>
+                <strong>Military Deployment:</strong> Before overseas assignments
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-6">
+                <div class="stats-card">
+                  <div class="stats-number">95%</div>
+                  <p class="mb-0">Egg Survival Rate</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stats-card">
+                  <div class="stats-number">10+</div>
+                  <p class="mb-0">Years Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Our Preservation Services</h2>
+        
+        <div class="row">
+          <!-- Egg Freezing -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="preservation-card">
+              <div class="preservation-icon">
+                <i class="fas fa-egg"></i>
+              </div>
+              <h4 class="text-center mb-3">Egg Freezing</h4>
+              <p class="text-center text-muted mb-4">
+                Preserve your eggs at their peak quality for future use.
+              </p>
+              <ul class="list-unstyled small">
+                <li><i class="fas fa-check text-success me-2"></i>Ovarian stimulation</li>
+                <li><i class="fas fa-check text-success me-2"></i>Egg retrieval</li>
+                <li><i class="fas fa-check text-success me-2"></i>Vitrification</li>
+                <li><i class="fas fa-check text-success me-2"></i>Long-term storage</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Sperm Freezing -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="preservation-card">
+              <div class="preservation-icon">
+                <i class="fas fa-male"></i>
+              </div>
+              <h4 class="text-center mb-3">Sperm Freezing</h4>
+              <p class="text-center text-muted mb-4">
+                Preserve sperm for future fertility treatments.
+              </p>
+              <ul class="list-unstyled small">
+                <li><i class="fas fa-check text-success me-2"></i>Semen analysis</li>
+                <li><i class="fas fa-check text-success me-2"></i>Preparation</li>
+                <li><i class="fas fa-check text-success me-2"></i>Cryopreservation</li>
+                <li><i class="fas fa-check text-success me-2"></i>Quality testing</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Embryo Freezing -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="preservation-card">
+              <div class="preservation-icon">
+                <i class="fas fa-baby"></i>
+              </div>
+              <h4 class="text-center mb-3">Embryo Freezing</h4>
+              <p class="text-center text-muted mb-4">
+                Preserve embryos from IVF cycles for future transfers.
+              </p>
+              <ul class="list-unstyled small">
+                <li><i class="fas fa-check text-success me-2"></i>Embryo culture</li>
+                <li><i class="fas fa-check text-success me-2"></i>Quality assessment</li>
+                <li><i class="fas fa-check text-success me-2"></i>Vitrification</li>
+                <li><i class="fas fa-check text-success me-2"></i>Storage monitoring</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Ovarian Tissue -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="preservation-card">
+              <div class="preservation-icon">
+                <i class="fas fa-female"></i>
+              </div>
+              <h4 class="text-center mb-3">Ovarian Tissue</h4>
+              <p class="text-center text-muted mb-4">
+                Preserve ovarian tissue for future transplantation.
+              </p>
+              <ul class="list-unstyled small">
+                <li><i class="fas fa-check text-success me-2"></i>Tissue extraction</li>
+                <li><i class="fas fa-check text-success me-2"></i>Processing</li>
+                <li><i class="fas fa-check text-success me-2"></i>Cryopreservation</li>
+                <li><i class="fas fa-check text-success me-2"></i>Future transplant</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">The Preservation Process</h2>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h5>Initial Consultation</h5>
+              <p class="mb-0">Comprehensive evaluation and personalized treatment planning with our fertility specialists.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h5>Medical Assessment</h5>
+              <p class="mb-0">Complete fertility testing including hormone levels, ovarian reserve, and overall health evaluation.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h5>Treatment Protocol</h5>
+              <p class="mb-0">Customized stimulation protocol (for egg freezing) or collection procedure planning.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h5>Collection & Preservation</h5>
+              <p class="mb-0">Safe collection of eggs, sperm, or tissue followed by advanced cryopreservation techniques.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h5>Long-term Storage</h5>
+              <p class="mb-0">Secure storage in our state-of-the-art facility with continuous monitoring and backup systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+        
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="accordion" id="preservationFAQ">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    What is the best age for egg freezing?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#preservationFAQ">
+                  <div class="accordion-body">
+                    The ideal age for egg freezing is typically before age 35, when egg quality and quantity are at their peak. However, we can assess your individual situation at any age.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    How long can eggs be stored?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#preservationFAQ">
+                  <div class="accordion-body">
+                    Frozen eggs can be stored indefinitely. There is no evidence of deterioration in egg quality over time when properly frozen and stored.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    What are the success rates?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#preservationFAQ">
+                  <div class="accordion-body">
+                    Success rates depend on age at freezing and number of eggs stored. Generally, women under 35 have the highest success rates, with 85-95% egg survival after thawing.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    Is the process covered by insurance?
+                  </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#preservationFAQ">
+                  <div class="accordion-body">
+                    Coverage varies by insurance plan and indication. Medical fertility preservation (before cancer treatment) is often covered, while elective preservation may not be. We'll help verify your coverage.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, rgba(76, 179, 160, 0.05) 0%, rgba(81, 145, 124, 0.08) 100%);">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h3 class="mb-4">Take Control of Your Reproductive Future</h3>
+            <p class="lead mb-4">
+              Schedule a consultation to learn more about fertility preservation options.
+            </p>
+            <a href="#" class="btn btn-primary btn-lg rounded-pill px-5 me-3">Book Consultation</a>
+            <a href="#" class="btn btn-outline-primary btn-lg rounded-pill px-5">Download Guide</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="home.js?v=7"></script>
+    <script src="mega-menu.js"></script>
+
+    <script>
+      // Load header and footer
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+          // Initialize mega menu after header is loaded
+          if (typeof HospitalMegaMenu !== 'undefined') {
+            new HospitalMegaMenu();
+          }
+        });
+
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

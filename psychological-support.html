@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psychological Support - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script" />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/FHB1SY09/adam.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css?v=4" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="index.html" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="our-ivf-family.html" class="accordion-sublink">Our IVF Family</a>
+              <a href="advanced-laboratory.html" class="accordion-sublink">Our Advanced Fertility Lab</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <a href="ivf.html" class="accordion-sublink">IVF Treatment</a>
+              <a href="ivf-icsi.html" class="accordion-sublink">ICSI-IVF Treatment</a>
+              <a href="iui.html" class="accordion-sublink">IUI</a>
+              <a href="genetic-testing.html" class="accordion-sublink">Genetic Testing</a>
+              <a href="family-balancing.html" class="accordion-sublink">Family Balancing</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <a href="female-fertility-treatments.html" class="accordion-sublink">Female Fertility</a>
+              <a href="male-fertility.html" class="accordion-sublink">Male Fertility</a>
+              <a href="egg-freezing.html" class="accordion-sublink">Egg Freezing</a>
+              <a href="sperm-freezing.html" class="accordion-sublink">Sperm Freezing</a>
+              <a href="embryo-freezing.html" class="accordion-sublink">Embryo Freezing</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section position-relative" role="img" aria-label="Psychological Support hero background" data-animate="fade">
+        <div class="hero-background-image" data-bg="assets/images/genetic.jpg"></div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h1 class="display-4 fw-bold mb-4">Psychological Support</h1>
+              <p class="lead mb-4">
+                Comprehensive mental health support throughout your fertility journey. Our specialized counselors understand the emotional challenges of fertility treatments and provide compassionate care.
+              </p>
+              <div class="d-flex gap-3">
+                <button class="btn btn-light btn-lg">Book Consultation</button>
+                <button class="btn btn-outline-light btn-lg">Learn More</button>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="text-center">
+                <i class="fas fa-heart" style="font-size: 8rem; opacity: 0.3;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="py-5">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <!-- Introduction -->
+              <div class="mb-5">
+                <p class="lead text-center mb-4">
+                  Fertility challenges can be emotionally overwhelming. Our psychological support services provide a safe space to process feelings, develop coping strategies, and maintain mental wellness throughout your journey.
+                </p>
+              </div>
+
+              <!-- FAQ Section -->
+              <div class="row mb-5 justify-content-center">
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('why-counseling-helps').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Why Counseling Helps</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('our-services').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Our Services</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('coping-strategies').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Coping Strategies</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('support-groups').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Support Groups</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Why Counseling Helps Content Section -->
+              <div class="row mb-5" id="why-counseling-helps">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4); position: relative; z-index: 5;">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">Why Psychological Support Matters</h2>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      Fertility challenges affect not just your body, but your mind and relationships too. Research shows that the stress levels experienced during fertility treatments can be comparable to those faced by people with serious medical conditions like cancer or heart disease.
+                    </p>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      Professional psychological support helps you process complex emotions, develop healthy coping mechanisms, strengthen relationships, and maintain hope throughout your journey. Studies also suggest that reducing stress may improve fertility treatment outcomes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Our Services Section -->
+              <div class="row mb-5" id="our-services">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Our Psychological Support Services</h2>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-user me-2"></i>Individual Counseling</h5>
+                          <p class="card-text">One-on-one sessions with fertility counselors to address personal concerns, anxiety, depression, and grief.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-users me-2"></i>Couples Counseling</h5>
+                          <p class="card-text">Joint sessions to strengthen communication, navigate treatment decisions, and maintain intimacy.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-comments me-2"></i>Crisis Support</h5>
+                          <p class="card-text">Immediate support during difficult moments like treatment failures or pregnancy loss.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-clipboard-check me-2"></i>Decision-Making Support</h5>
+                          <p class="card-text">Guidance for complex decisions about treatment options, donor conception, or when to stop treatment.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Coping Strategies Section -->
+              <div class="row mb-5" id="coping-strategies">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4);">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">Healthy Coping Strategies</h2>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-brain me-2"></i>Mindfulness & Meditation</h5>
+                        <p style="color: #122a4e;">Techniques to reduce anxiety, manage stress, and stay present during challenging times.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-pen me-2"></i>Journaling</h5>
+                        <p style="color: #122a4e;">Writing exercises to process emotions, track patterns, and maintain perspective.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-dumbbell me-2"></i>Physical Activity</h5>
+                        <p style="color: #122a4e;">Exercise routines that reduce stress hormones and improve mood naturally.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-palette me-2"></i>Creative Expression</h5>
+                        <p style="color: #122a4e;">Art, music, and creative activities as outlets for emotional expression.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-calendar-alt me-2"></i>Routine & Structure</h5>
+                        <p style="color: #122a4e;">Creating stability and predictability during uncertain times.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-hand-holding-heart me-2"></i>Self-Compassion</h5>
+                        <p style="color: #122a4e;">Learning to be kind to yourself and practice self-forgiveness.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Support Groups Section -->
+              <div class="row mb-5" id="support-groups">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Support Groups & Community</h2>
+                  <div class="row">
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-users"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Fertility Support Groups</h5>
+                          <p>Regular group sessions with others facing similar challenges, providing mutual support and understanding.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-heart-broken"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Pregnancy Loss Support</h5>
+                          <p>Specialized groups for those who have experienced miscarriage, stillbirth, or infant loss.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-laptop"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Online Communities</h5>
+                          <p>Virtual support groups and forums for those who prefer online interaction or have scheduling constraints.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-graduation-cap"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Educational Workshops</h5>
+                          <p>Workshops on stress management, communication skills, and coping with fertility challenges.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-hands-helping"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Peer Mentorship</h5>
+                          <p>Connection with others who have successfully navigated similar fertility journeys.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-family"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Family & Friends Support</h5>
+                          <p>Resources and guidance for loved ones on how to provide meaningful support.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- When to Seek Help Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">When to Seek Psychological Support</h2>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-exclamation-triangle me-2"></i>Persistent Anxiety or Depression</h5>
+                          <p>Ongoing feelings of sadness, worry, or hopelessness that interfere with daily life.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-heart-broken me-2"></i>Relationship Strain</h5>
+                          <p>Fertility stress affecting your relationship with your partner, family, or friends.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-times-circle me-2"></i>Treatment Failures</h5>
+                          <p>Difficulty coping with unsuccessful cycles or pregnancy loss.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-question-circle me-2"></i>Decision Paralysis</h5>
+                          <p>Feeling overwhelmed by treatment options or unsure about next steps.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-user-slash me-2"></i>Social Isolation</h5>
+                          <p>Withdrawing from social activities, work, or relationships due to fertility stress.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-shield-alt me-2"></i>Preventive Care</h5>
+                          <p>Proactive support to build resilience before challenges become overwhelming.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Call to Action -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="text-center" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); padding: 60px; border-radius: 15px; color: white;">
+                    <h2 class="mb-4">You Don't Have to Face This Alone</h2>
+                    <p class="lead mb-4">Our compassionate counselors are here to support you every step of the way.</p>
+                    <button class="btn btn-light btn-lg me-3">Schedule Counseling Session</button>
+                    <button class="btn btn-outline-light btn-lg">Join Support Group</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="home.js?v=7"></script>
+    <script src="mega-menu.js"></script>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Load header
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

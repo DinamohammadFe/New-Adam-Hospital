@@ -1,0 +1,239 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "treatments": "Treatments",
+    "services": "Services",
+    "patient_portal": "Patient Portal",
+    "about_dropdown": {
+      "who_we_are": "Who We Are",
+      "meet_team": "Meet the Team",
+      "fertility_lab": "Our Advanced Fertility Lab",
+      "success_stories": "Success Stories",
+      "news_updates": "News & Updates"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "treatments": "Treatments",
+    "services": "Services",
+    "patientPortal": "Patient Portal",
+    "bookAppointment": "Book an Appointment",
+    "language": "العربية"
+  },
+  "hero": {
+    "title": "Adam International Hospital",
+    "subtitle": "Compassionate Care, Advanced Fertility Solutions",
+    "cta": "Start Your Journey",
+    "consultation": "Free Consultation",
+    "card1": {
+      "title": "IVF & ICSI",
+      "description": "Advanced fertility treatments guided by expert doctors, helping you achieve the dream of parenthood.",
+      "button": "Start Now"
+    },
+    "card2": {
+      "title": "Personalized Support",
+      "description": "Dedicated, one-on-one care throughout your journey, ensuring comfort, trust, and confidence at every step.",
+      "button": "Learn More"
+    },
+    "card3": {
+      "title": "Genetic Testing & Freezing",
+      "description": "Cutting-edge lab services, from genetic screening to embryo freezing, protecting your family's future health.",
+      "button": "Explore Now"
+    }
+  },
+  "about": {
+    "whoWeAre": "Who We Are",
+    "meetTeam": "Meet the Team",
+    "fertilityLab": "Our Advanced Fertility Lab",
+    "successStories": "Success Stories",
+    "newsUpdates": "News & Updates"
+  },
+  "treatments": {
+    "coreTitle": "Core Treatments",
+    "ivf": "IVF Treatment",
+    "icsi": "ICSI-IVF Treatment",
+    "iui": "IUI",
+    "geneticTesting": "Genetic Testing",
+    "surgicalTitle": "Surgical Options",
+    "laparoscopy": "Laparoscopy",
+    "hysteroscopy": "Hysteroscopy",
+    "tubalSurgery": "Tubal Surgery",
+    "myomectomy": "Myomectomy",
+    "specializedTitle": "Specialized Care",
+    "embryoFreezing": "Embryo Freezing",
+    "pcosTitle": "PCOS Treatment",
+    "endometriosis": "Endometriosis",
+    "familyBalancing": "Family Balancing"
+  },
+  "services": {
+    "femaleTitle": "Female Fertility",
+    "femaleAssessment": "Female Fertility Assessment",
+    "femaleTreatments": "Female Fertility Treatments",
+    "maleTitle": "Male Fertility",
+    "maleAssessment": "Male Fertility Assessment",
+    "maleTreatments": "Male Fertility Treatments",
+    "preservingTitle": "Preserving Fertility",
+    "eggFreezing": "Egg Freezing",
+    "spermFreezing": "Sperm Freezing",
+    "supportTitle": "Support Services",
+    "psychologicalSupport": "Psychological Support",
+    "nutrition": "Nutrition",
+    "consultation": "Consultation",
+    "urology": "Urology",
+    "hematology": "Hematology",
+    "immunology": "Immunology"
+  },
+  "statistics": {
+    "title": "Our journey in numbers",
+    "nationalities": "Patient nationalities",
+    "babies": "Adam's Fertility IVF babies born",
+    "years": "open since 1994 - 30 years",
+    "successRate": "Success rate"
+  },
+  "contact": {
+    "email": "info@adamhospital.com",
+    "phone": "16992",
+    "address": "Contact Us",
+    "getDirections": "Get Directions"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "treatments": "Treatments",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "medicalDisclaimer": "Medical Disclaimer",
+    "followUs": "Follow Us",
+    "copyright": "© 2024 Adam International Hospital. All rights reserved."
+  },
+  "pages": {
+    "treatments": {
+      "title": "Fertility Treatments",
+      "subtitle": "Comprehensive fertility solutions tailored to your needs",
+      "description": "Our expert team offers a full range of fertility treatments using the latest technology and personalized care approaches."
+    },
+    "fertilityPreservation": {
+      "title": "Fertility Preservation",
+      "subtitle": "Protecting your future family planning options",
+      "description": "Advanced fertility preservation techniques to help you plan for the future with confidence."
+    },
+    "advancedLab": {
+      "title": "Advanced Laboratory",
+      "subtitle": "State-of-the-art technology for optimal outcomes",
+      "description": "Our cutting-edge laboratory facilities ensure the highest standards of care and success rates."
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: January 2024"
+    },
+    "termsOfService": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: January 2024"
+    },
+    "medicalDisclaimer": {
+      "title": "Medical Disclaimer",
+      "lastUpdated": "Last updated: January 2024"
+    }
+  },
+  "chatbot": {
+    "toggle": {
+      "title": "Let's talk",
+      "subtitle": "Adam Hospital"
+    },
+    "header": {
+      "title": "Hospital Assistant",
+      "status": "Online"
+    },
+    "welcome": {
+      "message": "Hello! 👋 Welcome to <span style=\"color: #86171d; font-weight: 700; font-family: 'Roboto', sans-serif;\">Adam International Hospital</span>. How can I assist you today?"
+    },
+    "quick_actions": {
+      "book_now": "<i class=\"fas fa-calendar-alt\"></i> Book Now",
+      "treatments": "<i class=\"fas fa-hospital-alt\"></i> Treatments",
+      "locations": "<i class=\"fas fa-map-marker-alt\"></i> Locations",
+      "contact": "<i class=\"fas fa-phone\"></i> Contact Us"
+    },
+    "input": {
+      "placeholder": "Type your message...",
+      "aria_label": "Type your message to the chatbot"
+    },
+    "messages": {
+      "default_response": "Thank you for your message. Our team will get back to you soon!",
+      "appointment_response": "I'd be happy to help you book an appointment. Please call us at +971-4-123-4567 or visit our Patient Portal.",
+      "treatments_response": "We offer comprehensive fertility treatments including IVF, IUI, ICSI, and more. Would you like to learn about a specific treatment?",
+      "locations_response": "We are located in Dubai Healthcare City. Our address is: Adam International Hospital, Dubai Healthcare City, Dubai, UAE.",
+      "contact_response": "You can reach us at: Phone: +971-4-123-4567, Email: info@adamhospital.ae, or visit us at Dubai Healthcare City."
+    }
+  },
+  "accessibility": {
+    "highContrast": "High Contrast",
+    "toggleNavigation": "Toggle navigation",
+    "toggleHighContrast": "Toggle high contrast mode for better visibility"
+  },
+  "who_we_are": {
+    "hero": {
+      "title": "Who We Are",
+      "subtitle": "Leading the way in fertility care with compassion, innovation, and excellence"
+    },
+    "mission": {
+      "title": "Our Mission & Vision",
+      "description": "Dedicated to helping families achieve their dreams through world-class fertility care",
+      "mission_title": "Our Mission",
+      "mission_text": "To provide compassionate, personalized fertility care using the latest medical advances and technologies, helping individuals and couples achieve their dream of parenthood with dignity and hope.",
+      "vision_title": "Our Vision",
+      "vision_text": "To be the leading fertility center in the region, recognized for our clinical excellence, innovative treatments, and unwavering commitment to patient care and family building."
+    },
+    "stats": {
+      "title": "Our Impact in Numbers",
+      "years": "Years of Excellence",
+      "families": "Families Helped",
+      "success_rate": "Success Rate",
+      "specialists": "Medical Specialists"
+    },
+    "values": {
+      "title": "Our Core Values",
+      "description": "The principles that guide everything we do",
+      "compassion": {
+        "title": "Compassion",
+        "description": "We understand the emotional journey of fertility treatment and provide caring, empathetic support every step of the way."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "We maintain the highest standards in medical care, using cutting-edge technology and evidence-based treatments."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We continuously advance our treatments and technologies to improve success rates and patient experiences."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "We operate with transparency, honesty, and ethical practices in all our patient interactions and treatments."
+      },
+      "personalized": {
+        "title": "Personalized Care",
+        "description": "Every patient receives individualized treatment plans tailored to their unique needs and circumstances."
+      },
+      "hope": {
+        "title": "Hope",
+        "description": "We inspire hope and confidence in our patients through our expertise, support, and commitment to their success."
+      }
+    },
+    "history": {
+      "title": "Our Journey",
+      "description": "Milestones in our commitment to fertility care excellence"
+    },
+    "leadership": {
+      "title": "Leadership Team",
+      "description": "Meet the experts leading our mission"
+    },
+    "cta": {
+      "title": "Ready to Start Your Journey?",
+      "description": "Take the first step towards building your family with our expert team by your side."
+    }
+  }
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fertility Nutrition - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script" />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/FHB1SY09/adam.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css?v=4" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="index.html" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="our-ivf-family.html" class="accordion-sublink">Our IVF Family</a>
+              <a href="advanced-laboratory.html" class="accordion-sublink">Our Advanced Fertility Lab</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <a href="ivf.html" class="accordion-sublink">IVF Treatment</a>
+              <a href="ivf-icsi.html" class="accordion-sublink">ICSI-IVF Treatment</a>
+              <a href="iui.html" class="accordion-sublink">IUI</a>
+              <a href="genetic-testing.html" class="accordion-sublink">Genetic Testing</a>
+              <a href="family-balancing.html" class="accordion-sublink">Family Balancing</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <a href="female-fertility-treatments.html" class="accordion-sublink">Female Fertility</a>
+              <a href="male-fertility.html" class="accordion-sublink">Male Fertility</a>
+              <a href="egg-freezing.html" class="accordion-sublink">Egg Freezing</a>
+              <a href="sperm-freezing.html" class="accordion-sublink">Sperm Freezing</a>
+              <a href="embryo-freezing.html" class="accordion-sublink">Embryo Freezing</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white; padding: 120px 0 80px;">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h1 class="display-4 fw-bold mb-4">Fertility Nutrition</h1>
+              <p class="lead mb-4">
+                Optimize your fertility journey with personalized nutrition guidance. Our registered dietitians specialize in fertility nutrition to support conception, pregnancy, and overall reproductive health.
+              </p>
+              <div class="d-flex gap-3">
+                <button class="btn btn-light btn-lg">Book Consultation</button>
+                <button class="btn btn-outline-light btn-lg">Learn More</button>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="text-center">
+                <i class="fas fa-apple-alt" style="font-size: 8rem; opacity: 0.3;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="py-5">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <!-- Introduction -->
+              <div class="mb-5">
+                <p class="lead text-center mb-4">
+                  Nutrition plays a crucial role in fertility for both men and women. Our specialized fertility nutrition program provides evidence-based dietary guidance to enhance your chances of conception and support a healthy pregnancy.
+                </p>
+              </div>
+
+              <!-- FAQ Section -->
+              <div class="row mb-5 justify-content-center">
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('why-nutrition-matters').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Why Nutrition Matters</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('key-nutrients').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Key Nutrients</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('meal-planning').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Meal Planning</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('lifestyle-factors').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Lifestyle Factors</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Why Nutrition Matters Content Section -->
+              <div class="row mb-5" id="why-nutrition-matters">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4); position: relative; z-index: 5;">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">Why Nutrition Matters for Fertility</h2>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      Proper nutrition provides the building blocks for healthy eggs, sperm, and hormones. Research shows that specific nutrients can improve egg quality, sperm health, hormone balance, and overall reproductive function. A well-balanced fertility diet can also support IVF success rates and reduce pregnancy complications.
+                    </p>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      Our fertility nutrition program addresses individual needs, dietary restrictions, and medical conditions to create personalized nutrition plans that support your unique fertility journey.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Key Nutrients Section -->
+              <div class="row mb-5" id="key-nutrients">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Essential Fertility Nutrients</h2>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-leaf me-2"></i>Folate & B Vitamins</h5>
+                          <p class="card-text">Essential for DNA synthesis, cell division, and preventing neural tube defects. Critical for both egg and sperm health.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-fish me-2"></i>Omega-3 Fatty Acids</h5>
+                          <p class="card-text">Support hormone production, reduce inflammation, and improve egg quality and sperm motility.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-shield-alt me-2"></i>Antioxidants</h5>
+                          <p class="card-text">Vitamins C, E, selenium, and zinc protect eggs and sperm from oxidative damage and improve fertility outcomes.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-tint me-2"></i>Iron & Vitamin D</h5>
+                          <p class="card-text">Iron supports ovulation and pregnancy, while vitamin D regulates hormones and improves IVF success rates.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Meal Planning Section -->
+              <div class="row mb-5" id="meal-planning">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4);">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">Fertility-Focused Meal Planning</h2>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-seedling me-2"></i>Mediterranean Diet</h5>
+                        <p style="color: #122a4e;">Rich in fruits, vegetables, whole grains, legumes, nuts, and olive oil - proven to enhance fertility.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-carrot me-2"></i>Colorful Vegetables</h5>
+                        <p style="color: #122a4e;">Dark leafy greens, colorful peppers, and cruciferous vegetables provide essential vitamins and minerals.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-drumstick-bite me-2"></i>Lean Proteins</h5>
+                        <p style="color: #122a4e;">Fish, poultry, legumes, and plant-based proteins support hormone production and egg quality.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-bread-slice me-2"></i>Complex Carbohydrates</h5>
+                        <p style="color: #122a4e;">Whole grains and fiber-rich foods help regulate blood sugar and insulin levels.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-glass-whiskey me-2"></i>Healthy Fats</h5>
+                        <p style="color: #122a4e;">Avocados, nuts, seeds, and olive oil provide essential fatty acids for hormone production.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-tint me-2"></i>Hydration</h5>
+                        <p style="color: #122a4e;">Adequate water intake supports cervical mucus production and overall reproductive health.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Lifestyle Factors Section -->
+              <div class="row mb-5" id="lifestyle-factors">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Lifestyle Factors for Fertility</h2>
+                  <div class="row">
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-weight"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Healthy Weight</h5>
+                          <p>Maintaining a healthy BMI improves ovulation, hormone balance, and IVF success rates.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-ban"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Avoid Harmful Substances</h5>
+                          <p>Limiting alcohol, caffeine, and avoiding smoking and processed foods.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-running"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Regular Exercise</h5>
+                          <p>Moderate physical activity supports healthy weight and reduces stress hormones.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-moon"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Quality Sleep</h5>
+                          <p>7-9 hours of quality sleep supports hormone regulation and reproductive health.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-heart"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Stress Management</h5>
+                          <p>Mindfulness, yoga, and relaxation techniques help balance stress hormones.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-pills"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Targeted Supplements</h5>
+                          <p>Personalized supplement recommendations based on individual needs and testing.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Our Services Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Our Nutrition Services</h2>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-user-md me-2"></i>Individual Consultations</h5>
+                          <p>One-on-one sessions with registered dietitians specializing in fertility nutrition.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-clipboard-list me-2"></i>Personalized Meal Plans</h5>
+                          <p>Customized meal plans based on your preferences, lifestyle, and fertility goals.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-vial me-2"></i>Nutritional Testing</h5>
+                          <p>Comprehensive testing to identify nutrient deficiencies and metabolic factors.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-users me-2"></i>Couples Counseling</h5>
+                          <p>Joint nutrition counseling for both partners to optimize fertility together.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-baby me-2"></i>Pregnancy Nutrition</h5>
+                          <p>Continued support throughout pregnancy for optimal maternal and fetal health.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-chart-line me-2"></i>Progress Monitoring</h5>
+                          <p>Regular follow-ups to track progress and adjust nutrition plans as needed.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Call to Action -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="text-center" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); padding: 60px; border-radius: 15px; color: white;">
+                    <h2 class="mb-4">Start Your Fertility Nutrition Journey</h2>
+                    <p class="lead mb-4">Let our nutrition experts help you optimize your diet for fertility success.</p>
+                    <button class="btn btn-light btn-lg me-3">Schedule Nutrition Consultation</button>
+                    <button class="btn btn-outline-light btn-lg">Download Fertility Diet Guide</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="home.js?v=7"></script>
+    <script src="mega-menu.js"></script>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Load header
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

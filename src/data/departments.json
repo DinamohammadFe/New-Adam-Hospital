@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "name_en": "IVF & ICSI",
+    "name_ar": "الحقن المجهري وأطفال الأنابيب",
+    "icon": "fas fa-baby",
+    "url": "/ivf-icsi.html",
+    "description_en": "Advanced fertility treatments including IVF and ICSI procedures",
+    "description_ar": "علاجات الخصوبة المتقدمة بما في ذلك أطفال الأنابيب والحقن المجهري",
+    "category": "core"
+  },
+  {
+    "id": "2",
+    "name_en": "Andrology",
+    "name_ar": "قسم الذكورة",
+    "icon": "fas fa-male",
+    "url": "/male-fertility.html",
+    "description_en": "Male fertility assessment and treatment services",
+    "description_ar": "خدمات تقييم وعلاج خصوبة الرجال",
+    "category": "specialty"
+  },
+  {
+    "id": "3",
+    "name_en": "Gynecology",
+    "name_ar": "أمراض النساء والتوليد",
+    "icon": "fas fa-female",
+    "url": "/female-fertility.html",
+    "description_en": "Comprehensive women's health and fertility services",
+    "description_ar": "خدمات شاملة لصحة المرأة والخصوبة",
+    "category": "specialty"
+  },
+  {
+    "id": "4",
+    "name_en": "Embryology Lab",
+    "name_ar": "مختبر الأجنة",
+    "icon": "fas fa-microscope",
+    "url": "/advanced-laboratory.html",
+    "description_en": "State-of-the-art embryology laboratory services",
+    "description_ar": "خدمات مختبر الأجنة الحديثة",
+    "category": "laboratory"
+  },
+  {
+    "id": "5",
+    "name_en": "Genetic Testing",
+    "name_ar": "الفحص الجيني",
+    "icon": "fas fa-dna",
+    "url": "/genetic-testing.html",
+    "description_en": "Comprehensive genetic screening and testing services",
+    "description_ar": "خدمات الفحص والاختبار الجيني الشاملة",
+    "category": "diagnostic"
+  },
+  {
+    "id": "6",
+    "name_en": "Fertility Preservation",
+    "name_ar": "الحفاظ على الخصوبة",
+    "icon": "fas fa-snowflake",
+    "url": "/fertility-preservation.html",
+    "description_en": "Egg, sperm, and embryo freezing services",
+    "description_ar": "خدمات تجميد البويضات والحيوانات المنوية والأجنة",
+    "category": "preservation"
+  },
+  {
+    "id": "7",
+    "name_en": "Endoscopy",
+    "name_ar": "المناظير",
+    "icon": "fas fa-search",
+    "url": "/endoscopy.html",
+    "description_en": "Minimally invasive diagnostic and surgical procedures",
+    "description_ar": "إجراءات تشخيصية وجراحية طفيفة التوغل",
+    "category": "surgical"
+  },
+  {
+    "id": "8",
+    "name_en": "Psychology Support",
+    "name_ar": "الدعم النفسي",
+    "icon": "fas fa-heart",
+    "url": "/psychology-support.html",
+    "description_en": "Emotional and psychological support throughout treatment",
+    "description_ar": "الدعم العاطفي والنفسي طوال فترة العلاج",
+    "category": "support"
+  },
+  {
+    "id": "9",
+    "name_en": "Nutrition Counseling",
+    "name_ar": "الاستشارة الغذائية",
+    "icon": "fas fa-apple-alt",
+    "url": "/nutrition.html",
+    "description_en": "Specialized nutrition guidance for fertility optimization",
+    "description_ar": "إرشادات غذائية متخصصة لتحسين الخصوبة",
+    "category": "support"
+  },
+  {
+    "id": "10",
+    "name_en": "Internal Medicine",
+    "name_ar": "الطب الباطني",
+    "icon": "fas fa-stethoscope",
+    "url": "/internal-medicine.html",
+    "description_en": "Comprehensive internal medicine and health assessment",
+    "description_ar": "الطب الباطني الشامل وتقييم الصحة",
+    "category": "medical"
+  },
+  {
+    "id": "11",
+    "name_en": "Urology",
+    "name_ar": "المسالك البولية",
+    "icon": "fas fa-user-md",
+    "url": "/urology.html",
+    "description_en": "Urological services and male reproductive health",
+    "description_ar": "خدمات المسالك البولية وصحة الجهاز التناسلي الذكري",
+    "category": "specialty"
+  },
+  {
+    "id": "12",
+    "name_en": "Hematology",
+    "name_ar": "أمراض الدم",
+    "icon": "fas fa-tint",
+    "url": "/hematology.html",
+    "description_en": "Blood disorders and hematological services",
+    "description_ar": "اضطرابات الدم والخدمات الدموية",
+    "category": "medical"
+  }
+]

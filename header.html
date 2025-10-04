@@ -1,0 +1,458 @@
+<!-- Top Bar -->
+<header role="banner" aria-label="Contact Information">
+  <div class="top-bar" style="background-color: #51917c">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="contact-info">
+            <span class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@adamhospital.com">info@adamhospital.com</a>
+            </span>
+            <span class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:16992">16992</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex align-items-center justify-content-end">
+            <!-- High Contrast Toggle -->
+            <button
+              id="high-contrast-toggle"
+              class="btn btn-sm me-3"
+              aria-label="Toggle high contrast mode"
+              title="Toggle high contrast mode for better visibility"
+              style="
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                color: white;
+                padding: 4px 8px;
+                border-radius: 4px;
+              "
+            >
+              <i class="fas fa-adjust" style="font-size: 14px"></i>
+              <span class="ms-1" style="font-size: 12px">High Contrast</span>
+            </button>
+
+            <div class="social-media">
+              <a
+                href="https://www.facebook.com/adamhospitals"
+                class="social-link"
+                aria-label="Facebook"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/adam-international-hospital/?originalSubdomain=eg"
+                class="social-link"
+                aria-label="LinkedIn"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://x.com/adamhospital"
+                class="social-link"
+                aria-label="Twitter"
+                target="_blank"
+              >
+                <i class="bi bi-twitter-x"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCqlSBmyqFK14FtedMMs_Mpg"
+                class="social-link"
+                aria-label="YouTube"
+                target="_blank"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation Bar -->
+<nav
+  class="navbar navbar-expand-lg fixed-top custom-navbar"
+  aria-label="Main navigation"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img
+        src="https://i.postimg.cc/kgdKgg1H/adam.png"
+        alt="Adam International Hospital Logo"
+        class="logo-img me-2"
+        loading="lazy"
+      />
+      <span
+        class="brand-text"
+        style="font-family: 'Roboto', sans-serif; font-weight: 400"
+        ><span style="color: #86171d; font-weight: 700">Adam</span>
+        International Hospital</span
+      >
+    </a>
+
+    <!-- Mobile Toggle Button -->
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation menu"
+      style="border: 1px solid #51917c"
+    >
+      <span
+        class="navbar-toggler-icon"
+        style="
+          background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox=%270 0 30 30%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath stroke=%27%2351917c%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E');
+        "
+      ></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html" data-page="home">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="aboutDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            About
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+             <li>
+               <a class="dropdown-item" href="our-ivf-family.html">
+                 Our IVF Family
+               </a>
+             </li>
+             <li>
+               <a class="dropdown-item" href="advanced-laboratory.html">
+                 Our Advanced Fertility Lab
+               </a>
+             </li>
+           </ul>
+        </li>
+        <li class="nav-item dropdown mega-dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="treatmentsDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Treatments
+          </a>
+          <div
+            class="dropdown-menu mega-menu"
+            aria-labelledby="treatmentsDropdown"
+          >
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Core Treatments Column -->
+                <div class="col-md-4">
+                  <h6 class="mega-menu-header">Core Treatments</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="dropdown-item" href="ivf.html" data-page="ivf">
+                        IVF Treatment
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="ivf-icsi.html"
+                        data-page="ivf-icsi"
+                      >
+                        ICSI-IVF Treatment
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="iui.html" data-page="iui">
+                        IUI
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="genetic-testing.html"
+                        data-page="genetic-testing"
+                      >
+                        Genetic Testing
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Surgical Options Column -->
+                <div class="col-md-4">
+                  <h6 class="mega-menu-header">Surgical Options</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="tubal-surgery.html"
+                        data-page="tubal-surgery"
+                      >
+                        Tubal Surgery
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="laparoscopy.html"
+                        data-page="laparoscopy"
+                      >
+                        Laparoscopy
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="hysteroscopy.html"
+                        data-page="hysteroscopy"
+                      >
+                        Hysteroscopy
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="ovarian-drilling.html"
+                        data-page="ovarian-drilling"
+                      >
+                        Ovarian Drilling
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="myomectomy.html"
+                        data-page="myomectomy"
+                      >
+                        Myomectomy
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Specialized Care Column -->
+                <div class="col-md-4">
+                  <h6 class="mega-menu-header">Specialized Care</h6>
+                  <ul class="list-unstyled">
+                    
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pcos.html"
+                        data-page="pcos"
+                      >
+                        PCOS Treatment
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="endometriosis.html"
+                        data-page="endometriosis"
+                      >
+                        Endometriosis
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="family-balancing.html">
+                        Family Balancing
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown mega-dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+          <div
+            class="dropdown-menu mega-menu"
+            aria-labelledby="servicesDropdown"
+          >
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Female Fertility Column -->
+                <div class="col-md-3">
+                  <h6 class="mega-menu-header" tabindex="0" role="heading" aria-level="6">Female Fertility</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="female-fertility-treatments.html"
+                        data-page="female-fertility"
+                      >
+                        Female Fertility Diagnosis
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-page="female-fertility-treatments"
+                      >
+                        Female Fertility Treatments
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Male Fertility Column -->
+                <div class="col-md-3">
+                  <h6 class="mega-menu-header" tabindex="0" role="heading" aria-level="6">Male Fertility</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="male-fertility.html"
+                        data-page="male-fertility"
+                      >
+                        Male Fertility Diagnosis
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="male-fertility-treatments.html"
+                        data-page="male-fertility-treatments"
+                      >
+                        Male Fertility Treatments
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Preserving Fertility Column -->
+                <div class="col-md-3">
+                  <h6 class="mega-menu-header" tabindex="0" role="heading" aria-level="6">Preserving Fertility</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="egg-freezing.html"
+                        data-page="egg-freezing"
+                      >
+                        Egg Freezing
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="sperm-freezing.html"
+                        data-page="sperm-freezing"
+                      >
+                        Sperm Freezing
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="embryo-freezing.html"
+                        data-page="embryo-freezing"
+                      >
+                        Embryo Freezing
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+
+                <!-- Support Services Column -->
+                <div class="col-md-3">
+                  <h6 class="mega-menu-header" tabindex="0" role="heading" aria-level="6">Support Services</h6>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="psychological-support.html"
+                        data-page="psychological-support"
+                      >
+                        Psychological Support
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="nutrition.html" data-page="nutrition">
+                        Nutrition
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item" href="#" data-page="urology">
+                        Urology
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="haematology.html" data-page="hematology">
+                        Hematology
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="immunology.html" data-page="immunology">
+                        Immunology
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Patient Portal</a>
+        </li>
+        <li class="nav-item me-2">
+          <div class="language-toggle-wrapper">
+            <button
+              class="btn btn-outline-primary language-toggle"
+              id="languageToggle"
+              aria-label="Switch language"
+              title="Switch language"
+            >
+              <span class="lang-text">العربية</span>
+            </button>
+          </div>
+        </li>
+        <li class="nav-item me-2">
+          <button class="btn book-btn heartbeat-btn">
+            Book an Appointment
+          </button>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script src="i18n.js"></script>
+<!-- Removed theme.js to restore original state -->

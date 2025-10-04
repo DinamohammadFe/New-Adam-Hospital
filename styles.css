@@ -1,0 +1,124 @@
+@import url('./styles.min.css');
+
+/* Accessibility, Typography, Layout, and UI Enhancements */
+:root {
+  --accent-teal: #51917c;
+  --accent-teal-light: #4cb3a0;
+  --accent-teal-dark: #3a7866;
+  --content-max-width: 1200px;
+  --section-spacing: 70px;
+  --body-font-size: 16px;
+  --body-line-height: 1.7;
+  --card-border: #e9ecef;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+}
+
+h1 { font-size: clamp(2.25rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); }
+h3 { font-size: clamp(1.375rem, 2.5vw, 1.75rem); }
+
+section { padding-block: var(--section-spacing); }
+.container { max-width: var(--content-max-width); margin-inline: auto; }
+@media (max-width: 576px) {
+  section { padding-left: 24px; padding-right: 24px; }
+}
+
+/* Navigation focus and hover effects */
+.navbar-nav .nav-link:focus { outline: 2px solid var(--accent-teal); outline-offset: 2px; }
+.mega-menu .mega-menu-header { color: var(--accent-teal); margin-bottom: 8px; }
+.mega-menu .dropdown-item {
+  padding: 10px 16px;
+  border-left: 3px solid transparent;
+  transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+.mega-menu .dropdown-item i { display: none !important; }
+.mega-menu .dropdown-item:hover,
+.mega-menu .dropdown-item:focus,
+.mega-menu .dropdown-item.focused {
+  background-color: rgba(81, 145, 124, 0.08);
+  border-left-color: var(--accent-teal);
+  outline: none;
+}
+
+/* Accent utilities */
+.text-accent { color: var(--accent-teal); }
+.btn-accent { background-color: var(--accent-teal); border-color: var(--accent-teal); color: #fff; }
+.btn-accent:hover { background-color: var(--accent-teal-dark); border-color: var(--accent-teal-dark); }
+
+/* Card-style containers */
+.white-card, .card, .content-item {
+  background: #fff;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.white-card:hover, .card:hover, .content-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.10);
+}
+
+/* Hero overlay and typography */
+.hero-section, .hero-section-new { position: relative; color: #fff; }
+.hero-section::before, .hero-section-new::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%);
+}
+.hero-section .container, .hero-section-new .container,
+.hero-section .container-fluid, .hero-section-new .container-fluid {
+  position: relative; z-index: 1;
+}
+.hero-title, .hero-main-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; }
+
+/* Background image layer for hero sections (lazy-loaded via data-bg) */
+.hero-section { position: relative; overflow: hidden; }
+.hero-section .hero-background-image,
+.hero-section-new .hero-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 576px) {
+  .hero-section { padding-top: 100px !important; padding-bottom: 70px !important; }
+}
+
+/* Subtle fade-in on scroll */
+[data-animate="fade"] { opacity: 0; transform: translateY(8px); transition: opacity .6s ease, transform .6s ease; }
+[data-animate="fade"].in-view { opacity: 1; transform: none; }
+
+/* Improved focus visibility */
+:focus-visible { outline: 2px solid var(--accent-teal); outline-offset: 2px; }
+
+/* Problems & Diagnostics: scoped red text only for target section */
+#problems_and_diagnostics,
+#problems_and_diagnostics * {
+  color: #ff0000 !important;
+}
+
+/* Loader overlay and spinner sizing */
+.loader-overlay { position: fixed; inset: 0; background: #ffffff; display: flex; align-items: center; justify-content: center; z-index: 9999; transition: opacity .3s ease; }
+.loader-overlay.hidden { opacity: 0; pointer-events: none; }
+.loader-content { text-align: center; }
+.spinner-wrapper { position: relative; width: 72px; height: 72px; }
+.spinner { width: 56px; height: 56px; border: 6px solid rgba(81,145,124,0.2); border-top-color: var(--accent-teal); border-radius: 50%; animation: spin .9s linear infinite; margin: 0 auto; }
+.loader-logo { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 32px; height: 32px; object-fit: contain; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (max-width: 576px) {
+  .spinner-wrapper { width: 64px; height: 64px; }
+  .spinner { width: 48px; height: 48px; border-width: 5px; }
+  .loader-logo { width: 28px; height: 28px; }
+}

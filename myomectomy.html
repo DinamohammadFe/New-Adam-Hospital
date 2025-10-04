@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myomectomy - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script" />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/FHB1SY09/adam.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css?v=4" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="index.html" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="our-ivf-family.html" class="accordion-sublink">Our IVF Family</a>
+              <a href="advanced-laboratory.html" class="accordion-sublink">Our Advanced Fertility Lab</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <a href="ivf.html" class="accordion-sublink">IVF Treatment</a>
+              <a href="ivf-icsi.html" class="accordion-sublink">ICSI-IVF Treatment</a>
+              <a href="iui.html" class="accordion-sublink">IUI</a>
+              <a href="genetic-testing.html" class="accordion-sublink">Genetic Testing</a>
+              <a href="family-balancing.html" class="accordion-sublink">Family Balancing</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <a href="female-fertility-treatments.html" class="accordion-sublink">Female Fertility</a>
+              <a href="male-fertility.html" class="accordion-sublink">Male Fertility</a>
+              <a href="egg-freezing.html" class="accordion-sublink">Egg Freezing</a>
+              <a href="sperm-freezing.html" class="accordion-sublink">Sperm Freezing</a>
+              <a href="embryo-freezing.html" class="accordion-sublink">Embryo Freezing</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section position-relative" role="img" aria-label="Myomectomy hero background" data-animate="fade">
+        <div class="hero-background-image" data-bg="assets/images/genetic.jpg"></div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h1 class="display-4 fw-bold mb-4">Myomectomy</h1>
+              <p class="lead mb-4">
+                Advanced surgical removal of uterine fibroids while preserving the uterus and fertility. Our expert surgeons use minimally invasive techniques to remove fibroids and restore reproductive health.
+              </p>
+              <div class="d-flex gap-3">
+                <button class="btn btn-light btn-lg">Book Consultation</button>
+                <button class="btn btn-outline-light btn-lg">Learn More</button>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="text-center">
+                <i class="fas fa-cut" style="font-size: 8rem; opacity: 0.3;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="py-5">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <!-- Introduction -->
+              <div class="mb-5">
+                <p class="lead text-center mb-4">
+                  Myomectomy is a surgical procedure to remove uterine fibroids while preserving the uterus, making it an ideal treatment for women who want to maintain their fertility and reproductive options.
+                </p>
+              </div>
+
+              <!-- FAQ Section -->
+              <div class="row mb-5 justify-content-center">
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('what-is-myomectomy').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">What is Myomectomy</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('types-of-myomectomy').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Types of Procedures</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('who-needs-myomectomy').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Who Needs Surgery</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('fertility-outcomes').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Fertility Outcomes</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- What is Myomectomy Section -->
+              <div class="row mb-5" id="what-is-myomectomy">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4); position: relative; z-index: 5;">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">What is Myomectomy?</h2>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      Myomectomy is a surgical procedure designed to remove uterine fibroids (leiomyomas) while preserving the uterus. Unlike hysterectomy, which removes the entire uterus, myomectomy allows women to maintain their reproductive capacity and is often the preferred treatment for women who wish to preserve fertility.
+                    </p>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      Fibroids are non-cancerous growths that develop in or around the uterus. They can cause heavy menstrual bleeding, pelvic pain, pressure symptoms, and fertility problems. Myomectomy effectively removes these problematic fibroids while leaving healthy uterine tissue intact, allowing for future pregnancies.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Understanding Fibroids Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Understanding Uterine Fibroids</h2>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h4 class="card-title text-center mb-4"><i class="fas fa-info-circle me-2"></i>What are Fibroids?</h4>
+                          <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Non-cancerous muscle tumors</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Affect 20-80% of women</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Hormone-dependent growth</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Variable sizes and locations</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Can impact fertility</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Often multiple fibroids present</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h4 class="card-title text-center mb-4"><i class="fas fa-exclamation-triangle me-2"></i>Fibroid Symptoms</h4>
+                          <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Heavy menstrual bleeding</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Prolonged periods</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Pelvic pain and pressure</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Frequent urination</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Difficulty getting pregnant</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Pregnancy complications</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Types of Myomectomy Section -->
+              <div class="row mb-5" id="types-of-myomectomy">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Types of Myomectomy Procedures</h2>
+                  <div class="row">
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <div class="text-center mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-eye"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0; text-align: center;">Hysteroscopic Myomectomy</h5>
+                          <p><strong>Best for:</strong> Submucosal fibroids (inside uterine cavity)</p>
+                          <p><strong>Approach:</strong> Through the cervix, no incisions</p>
+                          <p><strong>Recovery:</strong> 1-2 days</p>
+                          <p><strong>Benefits:</strong> Minimally invasive, quick recovery</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <div class="text-center mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-search"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0; text-align: center;">Laparoscopic Myomectomy</h5>
+                          <p><strong>Best for:</strong> Subserosal and intramural fibroids</p>
+                          <p><strong>Approach:</strong> Small abdominal incisions</p>
+                          <p><strong>Recovery:</strong> 1-2 weeks</p>
+                          <p><strong>Benefits:</strong> Minimal scarring, faster healing</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <div class="text-center mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-cut"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0; text-align: center;">Abdominal Myomectomy</h5>
+                          <p><strong>Best for:</strong> Large or multiple fibroids</p>
+                          <p><strong>Approach:</strong> Open abdominal surgery</p>
+                          <p><strong>Recovery:</strong> 4-6 weeks</p>
+                          <p><strong>Benefits:</strong> Complete fibroid removal</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Who Needs Myomectomy Section -->
+              <div class="row mb-5" id="who-needs-myomectomy">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4);">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">Who Needs Myomectomy?</h2>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-baby me-2"></i>Fertility Preservation</h5>
+                        <p style="color: #122a4e;">Women who want to maintain their ability to have children.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-tint me-2"></i>Heavy Bleeding</h5>
+                        <p style="color: #122a4e;">Severe menstrual bleeding affecting quality of life.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-exclamation-circle me-2"></i>Infertility Issues</h5>
+                        <p style="color: #122a4e;">Fibroids interfering with conception or implantation.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-heartbeat me-2"></i>Pregnancy Complications</h5>
+                        <p style="color: #122a4e;">Recurrent miscarriages or pregnancy complications.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-compress-arrows-alt me-2"></i>Pressure Symptoms</h5>
+                        <p style="color: #122a4e;">Pelvic pressure, frequent urination, or bowel problems.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-ban me-2"></i>Failed Medical Treatment</h5>
+                        <p style="color: #122a4e;">Symptoms not controlled with medication.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fibroid Types and Locations Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Fibroid Types by Location</h2>
+                  <div class="row">
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="background: #e9f5f4; border: none;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-circle"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Submucosal Fibroids</h5>
+                          <p style="color: #122a4e;">Grow into the uterine cavity, cause heavy bleeding and fertility issues.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="background: #e9f5f4; border: none;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-dot-circle"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Intramural Fibroids</h5>
+                          <p style="color: #122a4e;">Grow within the uterine wall, most common type, cause enlargement.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="background: #e9f5f4; border: none;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="far fa-circle"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Subserosal Fibroids</h5>
+                          <p style="color: #122a4e;">Grow outward from uterus, cause pressure and bulk symptoms.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fertility Outcomes Section -->
+              <div class="row mb-5" id="fertility-outcomes">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Fertility Outcomes After Myomectomy</h2>
+                  <div class="row">
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-baby"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Pregnancy Rate</h5>
+                          <p class="h4" style="color: #4cb3a0;">60-70%</p>
+                          <p>Women achieve pregnancy within 2 years after surgery.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-heart"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Miscarriage Reduction</h5>
+                          <p class="h4" style="color: #4cb3a0;">50-80%</p>
+                          <p>Reduction in miscarriage rates after fibroid removal.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-chart-line"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">IVF Success Improvement</h5>
+                          <p class="h4" style="color: #4cb3a0;">2-3x</p>
+                          <p>Improved IVF success rates after submucosal fibroid removal.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Procedure Process Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">The Myomectomy Process</h2>
+                  <div class="row">
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-stethoscope"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Pre-operative Evaluation</h5>
+                          <p>Imaging studies, blood tests, and surgical planning.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-pills"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Pre-treatment</h5>
+                          <p>Hormonal medications to shrink fibroids if needed.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-cut"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Surgical Removal</h5>
+                          <p>Precise fibroid removal while preserving uterine integrity.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-heart"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Recovery & Follow-up</h5>
+                          <p>Healing monitoring and fertility planning.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Benefits & Considerations Section -->
+              <div class="row mb-5">
+                <div class="col-md-6">
+                  <div class="card h-100" style="background: #e9f5f4; border: none;">
+                    <div class="card-body">
+                      <h3 style="color: #4cb3a0; text-align: center;" class="mb-4">Benefits</h3>
+                      <ul style="color: #122a4e; font-size: 1.1rem;">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Preserves fertility</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Relieves symptoms</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Improves pregnancy outcomes</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Reduces miscarriage risk</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Maintains uterine structure</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Minimally invasive options</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Improves quality of life</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Allows natural conception</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card h-100" style="background: #fff3cd; border: none;">
+                    <div class="card-body">
+                      <h3 style="color: #856404; text-align: center;" class="mb-4">Considerations</h3>
+                      <ul style="color: #856404; font-size: 1.1rem;">
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Fibroids may recur</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Surgical risks involved</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Recovery time required</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Possible adhesion formation</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>May require C-section delivery</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Not suitable for all fibroids</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Waiting period before pregnancy</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Alternative treatments available</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Recovery Timeline Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Recovery Timeline</h2>
+                  <div class="row">
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h6 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Week 1-2</h6>
+                          <p>Rest, pain management, gradual activity increase.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h6 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Week 2-6</h6>
+                          <p>Return to normal activities, avoid heavy lifting.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h6 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Month 2-3</h6>
+                          <p>Complete healing, full activity resumption.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h6 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Month 3-6</h6>
+                          <p>Cleared for pregnancy attempts after healing.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Call to Action -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="text-center" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); padding: 60px; border-radius: 15px; color: white;">
+                    <h2 class="mb-4">Preserve Your Fertility with Expert Myomectomy</h2>
+                    <p class="lead mb-4">Remove problematic fibroids while maintaining your reproductive potential with our advanced surgical techniques.</p>
+                    <button class="btn btn-light btn-lg me-3">Schedule Consultation</button>
+                    <button class="btn btn-outline-light btn-lg">Learn About Fibroid Treatment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="home.js?v=7"></script>
+    <script src="mega-menu.js"></script>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Load header
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

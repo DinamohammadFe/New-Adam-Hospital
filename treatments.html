@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fertility Treatments - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      as="script"
+    />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://i.postimg.cc/FHB1SY09/adam.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=4" />
+
+    <style>
+      /* Import Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap");
+
+      :root {
+        --primary-color: #4cb3a0;
+        --text-color: #333;
+        --white: #fff;
+        --bg-color: #fff;
+        --shadow-color: rgba(0, 0, 0, 0.08);
+      }
+
+      .treatment-hero {
+        background: linear-gradient(135deg, rgba(76, 179, 160, 0.9) 0%, rgba(81, 145, 124, 0.9) 100%),
+                    url('https://i.postimg.cc/QMXyVHt0/kelly-sikkema-IE8-Kfew-Ap-w-unsplash.jpg') center/cover;
+        padding: 120px 0 80px;
+        color: white;
+        text-align: center;
+      }
+
+      .treatment-card {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(76, 179, 160, 0.1);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(76, 179, 160, 0.1);
+      }
+
+      .treatment-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(76, 179, 160, 0.2);
+      }
+
+      .treatment-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: white;
+        font-size: 2rem;
+      }
+
+      .section-title {
+        color: #1a202c;
+        font-weight: 700;
+        margin-bottom: 50px;
+        position: relative;
+        text-align: center;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #4cb3a0 0%, #51917c 100%);
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="treatment-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1 class="display-4 fw-bold mb-4">Comprehensive Fertility Treatments</h1>
+            <p class="lead mb-4">
+              Advanced reproductive medicine with personalized care and cutting-edge technology
+            </p>
+            <a href="#treatments" class="btn btn-light btn-lg rounded-pill px-5">
+              Explore Treatments
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Treatments Section -->
+    <section id="treatments" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Our Treatment Options</h2>
+        
+        <div class="row">
+          <!-- IVF Treatment -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="treatment-card h-100">
+              <div class="treatment-icon">
+                <i class="fas fa-microscope"></i>
+              </div>
+              <h4 class="text-center mb-3">IVF & ICSI</h4>
+              <p class="text-muted text-center mb-4">
+                In Vitro Fertilization with advanced laboratory techniques for optimal success rates.
+              </p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Conventional IVF</li>
+                <li><i class="fas fa-check text-success me-2"></i>ICSI (Intracytoplasmic Sperm Injection)</li>
+                <li><i class="fas fa-check text-success me-2"></i>Assisted Hatching</li>
+                <li><i class="fas fa-check text-success me-2"></i>Blastocyst Culture</li>
+              </ul>
+              <div class="text-center mt-4">
+                <a href="ivf.html" class="btn btn-outline-primary rounded-pill">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Genetic Testing -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="treatment-card h-100">
+              <div class="treatment-icon">
+                <i class="fas fa-dna"></i>
+              </div>
+              <h4 class="text-center mb-3">Genetic Testing</h4>
+              <p class="text-muted text-center mb-4">
+                Comprehensive genetic screening to ensure healthy pregnancies and babies.
+              </p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>PGT-A (Aneuploidy Testing)</li>
+                <li><i class="fas fa-check text-success me-2"></i>PGT-M (Monogenic Disorders)</li>
+                <li><i class="fas fa-check text-success me-2"></i>Carrier Screening</li>
+                <li><i class="fas fa-check text-success me-2"></i>Genetic Counseling</li>
+              </ul>
+              <div class="text-center mt-4">
+                <a href="genetic-testing.html" class="btn btn-outline-primary rounded-pill">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fertility Preservation -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="treatment-card h-100">
+              <div class="treatment-icon">
+                <i class="fas fa-snowflake"></i>
+              </div>
+              <h4 class="text-center mb-3">Fertility Preservation</h4>
+              <p class="text-muted text-center mb-4">
+                Preserve your fertility for the future with advanced cryopreservation techniques.
+              </p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Egg Freezing</li>
+                <li><i class="fas fa-check text-success me-2"></i>Sperm Freezing</li>
+                <li><i class="fas fa-check text-success me-2"></i>Embryo Freezing</li>
+                <li><i class="fas fa-check text-success me-2"></i>Ovarian Tissue Preservation</li>
+              </ul>
+              <div class="text-center mt-4">
+                <a href="fertility-preservation.html" class="btn btn-outline-primary rounded-pill">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Male Fertility -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="treatment-card h-100">
+              <div class="treatment-icon">
+                <i class="fas fa-male"></i>
+              </div>
+              <h4 class="text-center mb-3">Male Fertility</h4>
+              <p class="text-muted text-center mb-4">
+                Comprehensive male fertility evaluation and treatment options.
+              </p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Semen Analysis</li>
+                <li><i class="fas fa-check text-success me-2"></i>Sperm DNA Fragmentation</li>
+                <li><i class="fas fa-check text-success me-2"></i>Surgical Sperm Retrieval</li>
+                <li><i class="fas fa-check text-success me-2"></i>Varicocele Treatment</li>
+              </ul>
+              <div class="text-center mt-4">
+                <a href="male-fertility.html" class="btn btn-outline-primary rounded-pill">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Female Fertility -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="treatment-card h-100">
+              <div class="treatment-icon">
+                <i class="fas fa-female"></i>
+              </div>
+              <h4 class="text-center mb-3">Female Fertility</h4>
+              <p class="text-muted text-center mb-4">
+                Comprehensive female fertility assessment and treatment protocols.
+              </p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Ovulation Induction</li>
+                <li><i class="fas fa-check text-success me-2"></i>Hormonal Assessment</li>
+                <li><i class="fas fa-check text-success me-2"></i>Tubal Evaluation</li>
+                <li><i class="fas fa-check text-success me-2"></i>Endometrial Assessment</li>
+              </ul>
+              <div class="text-center mt-4">
+                <a href="female-fertility.html" class="btn btn-outline-primary rounded-pill">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advanced Laboratory -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="treatment-card h-100">
+              <div class="treatment-icon">
+                <i class="fas fa-flask"></i>
+              </div>
+              <h4 class="text-center mb-3">Advanced Laboratory</h4>
+              <p class="text-muted text-center mb-4">
+                State-of-the-art laboratory services with cutting-edge technology.
+              </p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Time-lapse Embryo Monitoring</li>
+                <li><i class="fas fa-check text-success me-2"></i>Embryo Biopsy</li>
+                <li><i class="fas fa-check text-success me-2"></i>Vitrification</li>
+                <li><i class="fas fa-check text-success me-2"></i>Quality Control Systems</li>
+              </ul>
+              <div class="text-center mt-4">
+                <a href="advanced-laboratory.html" class="btn btn-outline-primary rounded-pill">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, rgba(76, 179, 160, 0.05) 0%, rgba(81, 145, 124, 0.08) 100%);">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h3 class="mb-4">Ready to Start Your Fertility Journey?</h3>
+            <p class="lead mb-4">
+              Our experienced team is here to guide you through every step of your treatment.
+            </p>
+            <a href="#" class="btn btn-primary btn-lg rounded-pill px-5 me-3">Book Consultation</a>
+            <a href="#" class="btn btn-outline-primary btn-lg rounded-pill px-5">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="home.js?v=7"></script>
+    <script src="mega-menu.js"></script>
+
+    <script>
+      // Load header and footer
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+          // Initialize mega menu after header is loaded
+          if (typeof HospitalMegaMenu !== 'undefined') {
+            new HospitalMegaMenu();
+          }
+        });
+
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

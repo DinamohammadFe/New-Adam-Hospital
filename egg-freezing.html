@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Egg Freezing - Adam's Fertility Center</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script" />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css?v=4" rel="stylesheet" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=4" />
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="#" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="#" class="accordion-sublink">Who We Are</a>
+              <a href="#" class="accordion-sublink">Meet the Team</a>
+              <a href="#" class="accordion-sublink"
+                >Our Advanced Fertility Lab</a
+              >
+              <a href="#" class="accordion-sublink">Success Stories</a>
+              <a href="#" class="accordion-sublink">News</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <div class="accordion-item">
+                <button class="accordion-toggle" data-target="ivfAccordion">
+                  <span>IVF</span>
+                  <span class="chevron">&#8250;</span>
+                </button>
+                <div class="accordion-panel" id="ivfAccordion">
+                  <a href="ivf.html" class="accordion-sublink">Basics</a>
+                  <a href="#" class="accordion-sublink">When to Consider IVF</a>
+                  <a href="#" class="accordion-sublink"
+                    >IVF Treatment Process</a
+                  >
+                </div>
+              </div>
+
+              <a href="genetic testing.html" class="accordion-sublink">Genetic Testing</a>
+              <a href="#" class="accordion-sublink">PCOS</a>
+              <a href="Endometriosis.html" class="accordion-sublink">Endometriosis</a>
+              <a href="#" class="accordion-sublink">Tubal Reversal</a>
+              <a href="#" class="accordion-sublink">Sex Selection</a>
+              <a href="#" class="accordion-sublink">Gyn Surgery</a>
+              <a href="#" class="accordion-sublink">TESE</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <div class="accordion-item">
+                <button
+                  class="accordion-toggle"
+                  data-target="femaleFertilityAccordion"
+                >
+                  <span>Female Fertility</span>
+                  <span class="chevron">&#8250;</span>
+                </button>
+                <div class="accordion-panel" id="femaleFertilityAccordion">
+                  <a href="female-fertility.html" class="accordion-sublink"
+                    >Female Fertility Diagnosis</a
+                  >
+                  <a
+                    href="female-fertility-treatments.html"
+                    class="accordion-sublink"
+                    >Female Fertility Treatments</a
+                  >
+                  <a href="embryo-freezing.html" class="accordion-sublink">Embryo Freezing</a>
+                  <a href="sperm-freezing.html" class="accordion-sublink">Sperm Freezing</a>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a
+                  href="male-fertility.html"
+                  class="accordion-toggle"
+                  style="text-decoration: none; color: inherit"
+                >
+                  <span>Male Fertility</span>
+                  <span class="chevron">&#8250;</span>
+                </a>
+                <div class="accordion-panel" id="maleFertilityAccordion">
+                  <a href="male-fertility.html" class="accordion-sublink"
+                    >Male Fertility Diagnosis</a
+                  >
+                  <a href="male-fertility.html" class="accordion-sublink"
+                    >Male Fertility Treatments</a
+                  >
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <a href="#" class="accordion-link">Patient Portal</a>
+          <a href="#" class="accordion-link">Contact</a>
+          <a href="#" class="accordion-link">Appointments</a>
+        </nav>
+
+        <div class="accordion-footer">
+          <button class="accordion-btn book-btn">Book Appointment</button>
+          <div class="accordion-controls">
+            <button
+              class="btn accordion-theme-toggle"
+              id="accordionThemeToggle"
+            >
+              <span class="theme-icon">🌙</span>
+            </button>
+            <button class="btn accordion-lang-toggle">AR</button>
+          </div>
+          <p class="accordion-contact">
+            Call us: <a href="tel:19662">19662</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle" id="menuToggle">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <!-- Page-specific CSS for hero image -->
+    <style>
+      .egg-freezing-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url('https://i.postimg.cc/zXYWcmxS/embryo_freezing_hero.jpg') center/cover !important;
+        background-size: cover !important;
+        background-position: center !important;
+        min-height: 80vh !important;
+        padding: 150px 0 100px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .egg-freezing-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        z-index: -1;
+      }
+      
+      .egg-freezing-hero .container-fluid {
+        position: relative;
+        z-index: 2;
+      }
+    </style>
+
+    <!-- Hero Section -->
+    <section class="hero-section egg-freezing-hero">
+      <div class="container-fluid">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="display-4 text-white mb-4">
+              Egg Freezing (Oocyte Cryopreservation)
+            </h1>
+            <p class="lead text-white mb-4">
+              Preserve your fertility and take control of your reproductive future with our advanced egg freezing technology.
+            </p>
+            <a href="#content" class="cta-btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section id="content" class="pt-5" style="padding-bottom: 0;">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <!-- Introduction -->
+            <div class="mb-5">
+              <p class="lead text-center mb-4">
+                Egg freezing is an empowering fertility preservation option that allows women to freeze their eggs at their peak quality for future use. This advanced technique gives you the flexibility to pursue your career, education, or personal goals while preserving your fertility potential.
+              </p>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="row mb-5 justify-content-center freezing-page">
+              <div class="col-md-3 mb-3">
+                <div class="card" onclick="document.getElementById('what-is-egg-freezing').scrollIntoView({behavior: 'smooth'});">
+                  <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                    <h5 class="card-title mb-2">What is Egg Freezing?</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div class="card" onclick="document.querySelector('h2[style*=\'color: #4cb3a0\']').scrollIntoView({behavior: 'smooth'});">
+                  <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                    <h5 class="card-title mb-2">Benefits of Egg Freezing</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div class="card">
+                  <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                    <h5 class="card-title mb-2">How are Eggs Frozen?</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div class="card">
+                  <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                    <h5 class="card-title mb-2">Success Rates with Frozen Eggs</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- What is Egg Freezing Content Section -->
+            <div class="row mb-5" id="what-is-egg-freezing">
+              <div class="col-12">
+                <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4); position: relative; z-index: 5;">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">What is Egg Freezing?</h2>
+                  <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                    Egg freezing, also known as oocyte cryopreservation, is a process where a woman's eggs are extracted, frozen, and stored for later use. 
+                    This fertility preservation technique allows women to maintain their reproductive options by preserving eggs at their current age and quality. The frozen eggs can be thawed, fertilized, and transferred to the uterus when the woman is ready to conceive.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benefits of Egg Freezing Section -->
+            <div class="row align-items-start mb-5">
+              <div class="col-md-5 col-lg-5 mb-4" style="text-align: left; align-self: flex-start;">
+                <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; letter-spacing: 1px; position: relative; z-index: 10;">Benefits of Egg Freezing</h2>
+                <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: left;">
+                  Egg freezing provides women with reproductive autonomy and peace of mind. It offers the flexibility to pursue personal and professional goals while preserving fertility potential for the future.
+                </p>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <div class="accordion" style="background: transparent; position: relative; min-height: 400px;">
+                  <!-- Preserving Fertility -->
+                  <div class="mb-3">
+                    <div class="d-flex align-items-center justify-content-between" style="cursor: pointer; padding: 20px; background: rgba(76, 179, 160, 0.8); border-radius: 0; color: white; margin-left: 0px; width: 100%; position: relative; left: 80px; right: 40px;" onclick="toggleSection('preserving-fertility')">
+                      <h5 class="mb-0" style="color: white; font-weight: 600; font-size: 1.1rem; text-transform: uppercase;">PRESERVING FERTILITY AT PEAK QUALITY</h5>
+                      <span id="preserving-fertility-icon" style="color: white; font-size: 2.5rem;">+</span>
+                    </div>
+                    <div id="preserving-fertility" style="max-height: 0px; padding: 0 20px; background: #e9f5f4; color: #122a4e; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; margin-left: 80px; width: 100%;">
+                      <p style="color: #122a4e; margin: 0; font-size: 1rem;">Egg quality naturally declines with age, particularly after 35. By freezing your eggs at a younger age, you preserve them at their current quality, maintaining better chances of successful pregnancy in the future.</p>
+                        <p style="color: #122a4e; margin: 0; font-size: 1rem;">This gives you the opportunity to use younger, healthier eggs even if you decide to have children later in life, significantly improving your chances of conception and reducing the risk of genetic abnormalities.</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Career and Life Planning -->
+                  <div class="mb-3">
+                    <div class="d-flex align-items-center justify-content-between" style="cursor: pointer; padding: 20px; background: rgba(76, 179, 160, 0.8); border-radius: 0; color: white; margin-left: 0px; width: 100%; position: relative; left: 80px; right: 40px;" onclick="toggleSection('career-planning')">
+                      <h5 class="mb-0" style="color: white; font-weight: 600; font-size: 1.1rem; text-transform: uppercase;">CAREER AND LIFE PLANNING FLEXIBILITY</h5>
+                      <span id="career-planning-icon" style="color: white; font-size: 2.5rem;">+</span>
+                    </div>
+                    <div id="career-planning" style="max-height: 0px; padding: 0 20px; background: #e9f5f4; color: #122a4e; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; margin-left: 80px; width: 100%;">
+                      <p style="color: #122a4e; margin: 0; font-size: 1rem;">Egg freezing allows you to pursue your career goals, education, or personal aspirations without the pressure of a biological clock. You can focus on establishing your career, finding the right partner, or achieving financial stability.</p>
+                       <p style="color: #122a4e; margin: 0; font-size: 1rem;">This reproductive autonomy empowers women to make family planning decisions on their own timeline, reducing stress and anxiety about age-related fertility decline.</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Medical Reasons -->
+                  <div class="mb-3">
+                    <div class="d-flex align-items-center justify-content-between" style="cursor: pointer; padding: 20px; background: rgba(76, 179, 160, 0.8); border-radius: 0; color: white; margin-left: 0px; width: 100%; position: relative; left: 80px; right: 40px;" onclick="toggleSection('medical-reasons')">
+                      <h5 class="mb-0" style="color: white; font-weight: 600; font-size: 1.1rem; text-transform: uppercase;">MEDICAL FERTILITY PRESERVATION</h5>
+                      <span id="medical-reasons-icon" style="color: white; font-size: 2.5rem;">+</span>
+                    </div>
+                    <div id="medical-reasons" style="max-height: 0px; padding: 0 20px; background: #e9f5f4; color: #122a4e; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; margin-left: 80px; width: 100%;">
+                      <p style="color: #122a4e; margin: 0; font-size: 1rem;">For women facing medical treatments that may affect fertility, such as chemotherapy or radiation, egg freezing offers hope for future biological children. It's also beneficial for those with conditions like endometriosis or PCOS.</p>
+                       <p style="color: #122a4e; margin: 0; font-size: 1rem;">At Adam, we work closely with oncologists and other specialists to provide timely fertility preservation options, ensuring you have the best chance of preserving your reproductive potential before treatment begins.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Did You Know Section -->
+      <section class="did-you-know-section py-5">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-10">
+              <h2 class="did-you-know-title mb-4">Did You Know?</h2>
+              <p class="did-you-know-text mb-4">
+                Women are born with all the eggs they'll ever have, and egg quality begins to decline in the late 20s, with a more significant decline after age 35? Freezing your eggs in your 20s or early 30s can significantly improve your future fertility outcomes?
+              </p>
+              <a href="#" class="schedule-btn">SCHEDULE A CONSULTATION</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+    <!-- What You Can Expect from the Egg Freezing Process Section -->
+    <section style="background: linear-gradient(to bottom, rgba(76, 179, 160, 0.05) 0%, rgba(76, 179, 160, 0.1) 20%, rgba(76, 179, 160, 0.2) 40%, rgba(76, 179, 160, 0.3) 60%, rgba(76, 179, 160, 0.4) 80%, rgba(76, 179, 160, 0.5) 100%); padding: 0; margin: 0; min-height: 100vh; display: block; visibility: visible;">
+      <div class="container-fluid" style="padding-top: 60px; padding-bottom: 60px;">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">
+              Egg Freezing Step by Step
+            </h2>
+            <p class="text-center mb-5" style="color: #122a4e;">
+              Your egg freezing journey is carefully planned and executed with precision. Here's what the process typically involves, so you can feel confident about preserving your fertility options.
+            </p>
+
+            <div
+              class="timeline-container"
+              style="position: relative; padding: 115px 40px 0 40px; margin: 20px 0; min-height: 800px; display: block; visibility: visible; z-index: 10;"
+            >
+              <div
+                class="timeline-line"
+                style="
+                  position: absolute;
+                  left: 99.5px;
+                  top: 0;
+                  bottom: 0;
+                  width: 4px;
+                  background: rgba(76, 179, 160, 0.5);
+                  z-index: 1;
+                "
+              ></div>
+
+              <!-- Initial Consultation -->
+              <div
+                class="row align-items-center timeline-item"
+                style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+              >
+                <div class="col-1 text-center">
+                  <div
+                    class="process-dot"
+                    style="
+                      background: rgba(76, 179, 160, 0.5);
+                      border: 1.5px solid white;
+                      border-radius: 50%;
+                      width: 16px;
+                      height: 16px;
+                      margin: 0 auto;
+                      position: absolute;
+                      left: 64.8px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      z-index: 3;
+                    "
+                  ></div>
+                </div>
+                <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                  <div
+                    class="process-icon"
+                    style="
+                      background: #ffffff;
+                      border: 2px solid #4cb3a0;
+                      border-radius: 50%;
+                      width: 80px;
+                      height: 80px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin: 0 auto;
+                      /* box-shadow removed for cleaner appearance */
+                    "
+                  >
+                    <i
+                      class="fas fa-clipboard-list"
+                      style="font-size: 2rem; color: #4cb3a0"
+                    ></i>
+                  </div>
+                </div>
+                <div class="col-8 ps-5" style="margin-left: 50px;">
+                  <h4
+                    style="
+                      color: #122a4e;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      font-size: 1.2rem;
+                    "
+                  >
+                    Initial Consultation
+                  </h4>
+                  <p
+                    style="
+                      color: #122a4e;
+                      line-height: 1.5;
+                      margin-bottom: 0;
+                      font-size: 0.95rem;
+                    "
+                  >
+                    Meet with our fertility specialist to discuss your goals, medical history, and assess your ovarian reserve. We'll create a personalized egg freezing plan tailored to your specific needs and timeline.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Ovarian Stimulation -->
+              <div
+                class="row align-items-center timeline-item"
+                style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+              >
+                <div class="col-1 text-center">
+                  <div
+                    class="process-dot"
+                    style="
+                      background: #4cb3a0;
+                      border: 1.5px solid white;
+                      border-radius: 50%;
+                      width: 16px;
+                      height: 16px;
+                      margin: 0 auto;
+                      position: absolute;
+                      left: 64.8px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      z-index: 3;
+                    "
+                  ></div>
+                </div>
+                <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                  <div
+                    class="process-icon"
+                    style="
+                      background: #ffffff;
+                      border: 2px solid #4cb3a0;
+                      border-radius: 50%;
+                      width: 80px;
+                      height: 80px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin: 0 auto;
+                      /* box-shadow removed for cleaner appearance */
+                    "
+                  >
+                    <i
+                      class="fas fa-syringe"
+                      style="font-size: 2rem; color: #4cb3a0"
+                    ></i>
+                  </div>
+                </div>
+                <div class="col-8 ps-5" style="margin-left: 50px;">
+                  <h4
+                    style="
+                      color: #122a4e;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      font-size: 1.2rem;
+                    "
+                  >
+                    Ovarian Stimulation
+                  </h4>
+                  <p
+                    style="
+                      color: #122a4e;
+                      line-height: 1.5;
+                      margin-bottom: 0;
+                      font-size: 0.95rem;
+                    "
+                  >
+                    You'll take hormone medications for 8-14 days to stimulate your ovaries to produce multiple eggs. Regular monitoring with blood tests and ultrasounds ensures optimal response and timing.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Egg Retrieval -->
+              <div
+                class="row align-items-center timeline-item"
+                style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+              >
+                <div class="col-1 text-center">
+                  <div
+                    class="process-dot"
+                    style="
+                      background: #4cb3a0;
+                      border: 1.5px solid white;
+                      border-radius: 50%;
+                      width: 16px;
+                      height: 16px;
+                      margin: 0 auto;
+                      position: absolute;
+                      left: 64.8px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      z-index: 3;
+                    "
+                  ></div>
+                </div>
+                <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                  <div
+                    class="process-icon"
+                    style="
+                      background: #ffffff;
+                      border: 2px solid #4cb3a0;
+                      border-radius: 50%;
+                      width: 80px;
+                      height: 80px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin: 0 auto;
+                      /* box-shadow removed for cleaner appearance */
+                    "
+                  >
+                    <i
+                      class="fas fa-microscope"
+                      style="font-size: 2rem; color: #4cb3a0"
+                    ></i>
+                  </div>
+                </div>
+                <div class="col-8 ps-5" style="margin-left: 50px;">
+                  <h4
+                    style="
+                      color: #122a4e;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      font-size: 1.2rem;
+                    "
+                  >
+                    Egg Retrieval
+                  </h4>
+                  <p
+                    style="
+                      color: #122a4e;
+                      line-height: 1.5;
+                      margin-bottom: 0;
+                      font-size: 0.95rem;
+                    "
+                  >
+                    A minimally invasive procedure performed under light sedation to collect mature eggs from your ovaries. The procedure takes about 20-30 minutes and you can go home the same day.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Egg Assessment -->
+              <div
+                class="row align-items-center timeline-item"
+                style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+              >
+                <div class="col-1 text-center">
+                  <div
+                    class="process-dot"
+                    style="
+                      background: #4cb3a0;
+                      border: 1.5px solid white;
+                      border-radius: 50%;
+                      width: 16px;
+                      height: 16px;
+                      margin: 0 auto;
+                      position: absolute;
+                      left: 64.8px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      z-index: 3;
+                    "
+                  ></div>
+                </div>
+                <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                  <div
+                    class="process-icon"
+                    style="
+                      background: #ffffff;
+                      border: 2px solid #4cb3a0;
+                      border-radius: 50%;
+                      width: 80px;
+                      height: 80px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin: 0 auto;
+                      /* box-shadow removed for cleaner appearance */
+                    "
+                  >
+                    <i
+                      class="fas fa-search"
+                      style="font-size: 2rem; color: #4cb3a0"
+                    ></i>
+                  </div>
+                </div>
+                <div class="col-8 ps-5" style="margin-left: 50px;">
+                  <h4
+                    style="
+                      color: #122a4e;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      font-size: 1.2rem;
+                    "
+                  >
+                    Egg Assessment
+                  </h4>
+                  <p
+                    style="
+                      color: #122a4e;
+                      line-height: 1.5;
+                      margin-bottom: 0;
+                      font-size: 0.95rem;
+                    "
+                  >
+                    Our embryologists carefully evaluate each egg for maturity and quality. Only mature, high-quality eggs are selected for freezing to maximize future success rates.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Vitrification Process -->
+              <div
+                class="row align-items-center timeline-item"
+                style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+              >
+                <div class="col-1 text-center">
+                  <div
+                    class="process-dot"
+                    style="
+                      background: #4cb3a0;
+                      border: 1.5px solid white;
+                      border-radius: 50%;
+                      width: 16px;
+                      height: 16px;
+                      margin: 0 auto;
+                      position: absolute;
+                      left: 64.8px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      z-index: 3;
+                    "
+                  ></div>
+                </div>
+                <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                  <div
+                    class="process-icon"
+                    style="
+                      background: #ffffff;
+                      border: 2px solid #4cb3a0;
+                      border-radius: 50%;
+                      width: 80px;
+                      height: 80px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin: 0 auto;
+                      /* box-shadow removed for cleaner appearance */
+                    "
+                  >
+                    <i
+                      class="fas fa-snowflake"
+                      style="font-size: 2rem; color: #4cb3a0"
+                    ></i>
+                  </div>
+                </div>
+                <div class="col-8 ps-5" style="margin-left: 50px;">
+                  <h4
+                    style="
+                      color: #122a4e;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      font-size: 1.2rem;
+                    "
+                  >
+                    Vitrification Process
+                  </h4>
+                  <p
+                    style="
+                      color: #122a4e;
+                      line-height: 1.5;
+                      margin-bottom: 0;
+                      font-size: 0.95rem;
+                    "
+                  >
+                    Using advanced vitrification technology, eggs are rapidly frozen to -196°C in liquid nitrogen. This ultra-fast freezing prevents ice crystal formation and preserves cellular integrity.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Secure Storage -->
+              <div
+                class="row align-items-center timeline-item"
+                style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+              >
+                <div class="col-1 text-center">
+                  <div
+                    class="process-dot"
+                    style="
+                      background: #4cb3a0;
+                      border: 1.5px solid white;
+                      border-radius: 50%;
+                      width: 16px;
+                      height: 16px;
+                      margin: 0 auto;
+                      position: absolute;
+                      left: 64.8px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      z-index: 3;
+                    "
+                  ></div>
+                </div>
+                <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                  <div
+                    class="process-icon"
+                    style="
+                      background: #ffffff;
+                      border: 2px solid #4cb3a0;
+                      border-radius: 50%;
+                      width: 80px;
+                      height: 80px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin: 0 auto;
+                      /* box-shadow removed for cleaner appearance */
+                    "
+                  >
+                    <i
+                      class="fas fa-shield-alt"
+                      style="font-size: 2rem; color: #4cb3a0"
+                    ></i>
+                  </div>
+                </div>
+                <div class="col-8 ps-5" style="margin-left: 50px;">
+                  <h4
+                    style="
+                      color: #122a4e;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      font-size: 1.2rem;
+                    "
+                  >
+                    Secure Storage
+                  </h4>
+                  <p
+                    style="
+                      color: #122a4e;
+                      line-height: 1.5;
+                      margin-bottom: 0;
+                      font-size: 0.95rem;
+                    "
+                  >
+                    Your frozen eggs are stored in our state-of-the-art cryopreservation facility with 24/7 monitoring, backup systems, and comprehensive security measures to ensure their safety.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Future Use -->
+              <div
+                class="row align-items-center timeline-item"
+                style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+              >
+                <div class="col-1 text-center">
+                  <div
+                    class="process-dot"
+                    style="
+                      background: #4cb3a0;
+                      border: 1.5px solid white;
+                      border-radius: 50%;
+                      width: 16px;
+                      height: 16px;
+                      margin: 0 auto;
+                      position: absolute;
+                      left: 64.8px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      z-index: 3;
+                    "
+                  ></div>
+                </div>
+                <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                  <div
+                    class="process-icon"
+                    style="
+                      background: #ffffff;
+                      border: 2px solid #4cb3a0;
+                      border-radius: 50%;
+                      width: 80px;
+                      height: 80px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin: 0 auto;
+                      /* box-shadow removed for cleaner appearance */
+                    "
+                  >
+                    <img
+                      src="https://i.postimg.cc/RF0xmHKN/mother.png"
+                      alt="Future Family"
+                      style="width: 2.5rem; height: 2.5rem; filter: brightness(0) saturate(100%) invert(29%) sepia(85%) saturate(1200%) hue-rotate(140deg) brightness(85%) contrast(110%); transform: scaleX(-1);"
+                    />
+                  </div>
+                </div>
+                <div class="col-8 ps-5" style="margin-left: 50px;">
+                  <h4
+                    style="
+                      color: #122a4e;
+                      font-weight: 600;
+                      margin-bottom: 8px;
+                      font-size: 1.2rem;
+                    "
+                  >
+                    Future Use
+                  </h4>
+                  <p
+                    style="
+                      color: #122a4e;
+                      line-height: 1.5;
+                      margin-bottom: 0;
+                      font-size: 0.95rem;
+                    "
+                  >
+                    When you're ready to use your frozen eggs, they'll be carefully thawed, fertilized with sperm, and the resulting embryos transferred to your uterus. Our high survival rates give you the best chance of achieving pregnancy when the time is right for you.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Success Rates with Frozen Eggs Section -->
+            <section class="py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin: 40px 0; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-10">
+                    <h2 class="text-center mb-5" style="color: #122a4e; font-weight: 600; font-size: 2.5rem; margin-bottom: 2rem;">Success Rates with Frozen Eggs</h2>
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="card h-100" style="border: none; background: rgba(76, 179, 160, 0.1); border-radius: 15px;">
+                          <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                              <i class="fas fa-chart-line" style="font-size: 3rem; color: #4cb3a0;"></i>
+                            </div>
+                            <h4 style="color: #122a4e; font-weight: 600; margin-bottom: 1rem;">Age-Dependent Success</h4>
+                            <p style="color: #122a4e; line-height: 1.6;">Success rates depend primarily on the age at which eggs were frozen. Eggs frozen before age 35 have the highest success rates, with live birth rates of 30-60% per egg retrieval cycle.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="card h-100" style="border: none; background: rgba(76, 179, 160, 0.1); border-radius: 15px;">
+                          <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                              <i class="fas fa-microscope" style="font-size: 3rem; color: #4cb3a0;"></i>
+                            </div>
+                            <h4 style="color: #122a4e; font-weight: 600; margin-bottom: 1rem;">Quality Preservation</h4>
+                            <p style="color: #122a4e; line-height: 1.6;">Our advanced vitrification technology ensures over 90% egg survival rate after thawing, maintaining the same genetic potential as fresh eggs from the time of freezing.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-12">
+                        <div class="text-center p-4" style="background: rgba(255, 255, 255, 0.8); border-radius: 15px; border: 2px solid rgba(76, 179, 160, 0.2);">
+                          <h5 style="color: #122a4e; font-weight: 600; margin-bottom: 1rem;">Factors Affecting Success Rates</h5>
+                          <p style="color: #122a4e; line-height: 1.6; margin-bottom: 0;">Success rates depend on various factors including age at egg freezing, number of eggs retrieved and frozen, egg quality, and overall reproductive health. Our experienced team will discuss your individual prognosis during consultation.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Success Rates Section -->
+            <div class="bg-light p-4 rounded mb-5">
+              <div class="row text-center">
+                <div class="col-md-4 mb-3">
+                  <div class="stat-item">
+                    <h3 style="color: #5cb3b3">90%</h3>
+                    <p class="stat-label" style="color: #122a4e;">Egg Survival Rate</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="stat-item">
+                    <h3 style="color: #5cb3b3">2,500+</h3>
+                    <p class="stat-label" style="color: #122a4e;">Eggs Successfully Frozen</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="stat-item">
+                    <h3 style="color: #5cb3b3">15+</h3>
+                    <p class="stat-label" style="color: #122a4e;">Years Storage Experience</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ready to Preserve Your Fertility Options Section -->
+    <section class="did-you-know-section py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-10">
+            <h2 class="did-you-know-title mb-4" style="text-align: left;">Ready to Preserve Your Fertility Options?</h2>
+            <p class="did-you-know-text mb-4">
+              Our experienced team is here to guide you through the egg freezing process with personalized care and advanced technology.
+            </p>
+            <a 
+              href="#" 
+              class="btn"
+              style="
+                background: #c8e5df !important;
+                color: #2c5f5f !important;
+                padding: 12px 30px !important;
+                border-radius: 25px !important;
+                text-decoration: none !important;
+                font-weight: 600 !important;
+                font-size: 14px !important;
+                text-transform: uppercase !important;
+                letter-spacing: 1px !important;
+                border: none !important;
+                transition: all 0.3s ease !important;
+                display: inline-block !important;
+                font-family: 'Montserrat', sans-serif !important;
+              "
+              onmouseover="this.style.background='#b8dbd3'; this.style.transform='translateY(-2px)'; this.style.color='#2c5f5f'"
+              onmouseout="this.style.background='#c8e5df'; this.style.transform='translateY(0)'; this.style.color='#2c5f5f'"
+            >
+              SCHEDULE CONSULTATION
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- Floating Call Button -->
+    <a href="tel:+15551234567" class="floating-call-btn">
+      <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- Scroll Animation Styles -->
+    <style>
+      .timeline-item {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      
+      .timeline-item.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .process-icon {
+        transform: scale(0.8);
+        transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+      }
+      
+      .timeline-item.animate .process-icon {
+        transform: scale(1);
+      }
+      
+      .process-dot {
+        transform: translateY(-50%) scale(0);
+        transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
+      }
+      
+      .timeline-item.animate .process-dot {
+        transform: translateY(-50%) scale(1);
+      }
+    </style>
+
+    <!-- Old script references removed to prevent duplicates -->
+
+<script>
+// Timeline Animation
+function initTimelineAnimation() {
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, {
+    threshold: 0.3,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  
+  timelineItems.forEach((item) => {
+    observer.observe(item);
+  });
+}
+
+// Initialize timeline animation when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  initTimelineAnimation();
+});
+
+function toggleSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  const icon = document.getElementById(sectionId + '-icon');
+  
+  if (section.style.maxHeight === '0px' || section.style.maxHeight === '') {
+    section.style.padding = '20px';
+    section.style.maxHeight = '500px';
+    icon.textContent = '−';
+  } else {
+    section.style.maxHeight = '0px';
+    section.style.padding = '0 20px';
+    icon.textContent = '+';
+  }
+}
+
+// Add click functionality to navigate from card to h2 section
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the card with "How are Eggs Frozen?" title
+  const cards = document.querySelectorAll('.card');
+  let targetCard = null;
+  
+  cards.forEach(card => {
+    const cardTitle = card.querySelector('.card-title');
+    if (cardTitle && cardTitle.textContent.trim() === 'How are Eggs Frozen?') {
+      targetCard = card;
+    }
+  });
+  
+  if (targetCard) {
+    targetCard.style.cursor = 'pointer';
+    targetCard.addEventListener('click', function() {
+      // Find the h2 with "How are eggs frozen?" text
+      const h2Elements = document.querySelectorAll('h2');
+      let targetH2 = null;
+      
+      h2Elements.forEach(h2 => {
+        if (h2.textContent.trim().toLowerCase() === 'how are eggs frozen?') {
+          targetH2 = h2;
+        }
+      });
+      
+      if (targetH2) {
+        targetH2.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      }
+    });
+  }
+  
+  // Add click functionality for Success Rates card to navigate to section
+  const cardBodies = document.querySelectorAll('.card-body');
+  
+  cardBodies.forEach(cardBody => {
+    const cardTitle = cardBody.querySelector('.card-title');
+    if (cardTitle && cardTitle.textContent.trim() === 'Success Rates with Frozen Eggs') {
+      cardBody.style.cursor = 'pointer';
+      cardBody.addEventListener('click', function() {
+        // Find the Success Rates section
+        const successRatesSection = document.querySelector('section[style*="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)"]');
+        if (successRatesSection) {
+          successRatesSection.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+        }
+      });
+    }
+  });
+});
+</script>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+
+    <!-- Mega Menu JS -->
+    <script src="mega-menu.js"></script>
+
+    <!-- Home JS for shared components -->
+    <script src="home.js?v=7" defer></script>
+
+    <script>
+      // Load header and footer
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+          // Initialize mega menu after header is loaded
+          if (typeof HospitalMegaMenu !== 'undefined') {
+            new HospitalMegaMenu();
+          }
+        });
+
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+
+  </body>
+</html>

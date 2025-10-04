@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hysteroscopy - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script" />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/FHB1SY09/adam.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css?v=4" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="index.html" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="our-ivf-family.html" class="accordion-sublink">Our IVF Family</a>
+              <a href="advanced-laboratory.html" class="accordion-sublink">Our Advanced Fertility Lab</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <a href="ivf.html" class="accordion-sublink">IVF Treatment</a>
+              <a href="ivf-icsi.html" class="accordion-sublink">ICSI-IVF Treatment</a>
+              <a href="iui.html" class="accordion-sublink">IUI</a>
+              <a href="genetic-testing.html" class="accordion-sublink">Genetic Testing</a>
+              <a href="family-balancing.html" class="accordion-sublink">Family Balancing</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <a href="female-fertility-treatments.html" class="accordion-sublink">Female Fertility</a>
+              <a href="male-fertility.html" class="accordion-sublink">Male Fertility</a>
+              <a href="egg-freezing.html" class="accordion-sublink">Egg Freezing</a>
+              <a href="sperm-freezing.html" class="accordion-sublink">Sperm Freezing</a>
+              <a href="embryo-freezing.html" class="accordion-sublink">Embryo Freezing</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section position-relative" role="img" aria-label="Hysteroscopy hero background" data-animate="fade">
+        <div class="hero-background-image" data-bg="assets/images/genetic.jpg"></div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h1 class="display-4 fw-bold mb-4">Hysteroscopy</h1>
+              <p class="lead mb-4">
+                Advanced uterine examination and treatment using minimally invasive techniques. Our expert team uses state-of-the-art hysteroscopic technology to diagnose and treat uterine conditions affecting fertility.
+              </p>
+              <div class="d-flex gap-3">
+                <button class="btn btn-light btn-lg">Book Consultation</button>
+                <button class="btn btn-outline-light btn-lg">Learn More</button>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="text-center">
+                <i class="fas fa-eye" style="font-size: 8rem; opacity: 0.3;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="py-5">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <!-- Introduction -->
+              <div class="mb-5">
+                <p class="lead text-center mb-4">
+                  Hysteroscopy is a minimally invasive procedure that allows direct visualization of the uterine cavity, enabling accurate diagnosis and treatment of conditions that may affect fertility and pregnancy outcomes.
+                </p>
+              </div>
+
+              <!-- FAQ Section -->
+              <div class="row mb-5 justify-content-center">
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('what-is-hysteroscopy').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">What is Hysteroscopy</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('types-procedures').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Types of Procedures</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('conditions-treated').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Conditions Treated</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('benefits-recovery').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Benefits & Recovery</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- What is Hysteroscopy Section -->
+              <div class="row mb-5" id="what-is-hysteroscopy">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4); position: relative; z-index: 5;">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">What is Hysteroscopy?</h2>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      Hysteroscopy is a minimally invasive procedure that uses a thin, lighted telescope called a hysteroscope to examine the inside of the uterus (uterine cavity). The hysteroscope is inserted through the vagina and cervix, allowing direct visualization of the uterine lining and detection of any abnormalities.
+                    </p>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      This procedure can be both diagnostic (to identify problems) and operative (to treat conditions). It provides superior visualization compared to other imaging methods and allows for immediate treatment of many uterine conditions that can affect fertility.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Types of Procedures Section -->
+              <div class="row mb-5" id="types-procedures">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Types of Hysteroscopic Procedures</h2>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h4 class="card-title text-center mb-4"><i class="fas fa-search me-2"></i>Diagnostic Hysteroscopy</h4>
+                          <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Evaluate abnormal bleeding</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Investigate infertility causes</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Assess recurrent miscarriages</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Examine uterine shape</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Check for polyps or fibroids</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Evaluate adhesions</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h4 class="card-title text-center mb-4"><i class="fas fa-tools me-2"></i>Operative Hysteroscopy</h4>
+                          <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Remove uterine polyps</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Treat submucosal fibroids</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Divide uterine septum</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Remove intrauterine adhesions</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Endometrial ablation</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Foreign body removal</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Conditions Treated Section -->
+              <div class="row mb-5" id="conditions-treated">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4);">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">Conditions Treated with Hysteroscopy</h2>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-circle me-2"></i>Uterine Polyps</h5>
+                        <p style="color: #122a4e;">Benign growths in the uterine lining that can affect implantation and fertility.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-shapes me-2"></i>Submucosal Fibroids</h5>
+                        <p style="color: #122a4e;">Fibroids that grow into the uterine cavity and can impact pregnancy.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-divide me-2"></i>Uterine Septum</h5>
+                        <p style="color: #122a4e;">Congenital condition where tissue divides the uterine cavity.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-link me-2"></i>Intrauterine Adhesions</h5>
+                        <p style="color: #122a4e;">Scar tissue inside the uterus that can prevent implantation.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-tint me-2"></i>Abnormal Bleeding</h5>
+                        <p style="color: #122a4e;">Heavy or irregular menstrual bleeding affecting quality of life.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-exclamation-triangle me-2"></i>Recurrent Miscarriage</h5>
+                        <p style="color: #122a4e;">Investigating uterine causes of pregnancy loss.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Procedure Process Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">The Hysteroscopic Process</h2>
+                  <div class="row">
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-calendar-check"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Pre-procedure Planning</h5>
+                          <p>Optimal timing during menstrual cycle for best visualization.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-eye"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Direct Visualization</h5>
+                          <p>High-definition camera provides clear view of uterine cavity.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-tools"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Immediate Treatment</h5>
+                          <p>Many conditions can be treated during the same procedure.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-clock"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Quick Recovery</h5>
+                          <p>Outpatient procedure with minimal downtime required.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Benefits & Recovery Section -->
+              <div class="row mb-5" id="benefits-recovery">
+                <div class="col-md-6">
+                  <div class="card h-100" style="background: #e9f5f4; border: none;">
+                    <div class="card-body">
+                      <h3 style="color: #4cb3a0; text-align: center;" class="mb-4">Benefits of Hysteroscopy</h3>
+                      <ul style="color: #122a4e; font-size: 1.1rem;">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>No external incisions required</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Outpatient procedure</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Immediate diagnosis and treatment</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Minimal discomfort</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Quick recovery time</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>High diagnostic accuracy</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Preserves uterine function</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Cost-effective solution</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card h-100" style="background: #fff3cd; border: none;">
+                    <div class="card-body">
+                      <h3 style="color: #856404; text-align: center;" class="mb-4">Recovery Timeline</h3>
+                      <div style="color: #856404; font-size: 1.1rem;">
+                        <div class="mb-3">
+                          <h6 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Day 1</h6>
+                          <p class="mb-1">Mild cramping, light spotting normal</p>
+                        </div>
+                        <div class="mb-3">
+                          <h6 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Day 2-3</h6>
+                          <p class="mb-1">Return to normal activities</p>
+                        </div>
+                        <div class="mb-3">
+                          <h6 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Week 1</h6>
+                          <p class="mb-1">Complete recovery for most patients</p>
+                        </div>
+                        <div class="mb-3">
+                          <h6 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Follow-up</h6>
+                          <p class="mb-1">Monitor healing and treatment success</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Success Rates Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Success Rates & Outcomes</h2>
+                  <div class="row">
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-bullseye"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Diagnostic Accuracy</h5>
+                          <p class="h4" style="color: #4cb3a0;">98%+</p>
+                          <p>Accurate identification of uterine abnormalities.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-heart"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Polyp Removal</h5>
+                          <p class="h4" style="color: #4cb3a0;">95%+</p>
+                          <p>Successful complete removal of uterine polyps.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-baby"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Pregnancy Rates</h5>
+                          <p class="h4" style="color: #4cb3a0;">60-80%</p>
+                          <p>Improved conception rates after treatment.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- When is Hysteroscopy Recommended Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">When is Hysteroscopy Recommended?</h2>
+                  <div class="row">
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-question-circle me-2"></i>Unexplained Infertility</h5>
+                          <p>When other tests haven't identified the cause of fertility problems.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-repeat me-2"></i>Recurrent Miscarriage</h5>
+                          <p>To investigate uterine factors that may cause pregnancy loss.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-times-circle me-2"></i>Failed IVF Cycles</h5>
+                          <p>Before repeat IVF to optimize uterine environment.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Call to Action -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="text-center" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); padding: 60px; border-radius: 15px; color: white;">
+                    <h2 class="mb-4">Optimize Your Uterine Health with Expert Hysteroscopy</h2>
+                    <p class="lead mb-4">Our advanced hysteroscopic procedures can identify and treat uterine conditions that may be affecting your fertility.</p>
+                    <button class="btn btn-light btn-lg me-3">Schedule Consultation</button>
+                    <button class="btn btn-outline-light btn-lg">Learn About Treatment Options</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="home.js?v=7"></script>
+    <script src="mega-menu.js"></script>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Load header
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
