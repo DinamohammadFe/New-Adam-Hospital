@@ -93,16 +93,28 @@ if (!window.IntersectionObserver) {
 // Theme toggle functionality
 
 
-function handleThemeToggle() {
+function handleThemeToggle(event) {
   try {
     const themeToggle = document.getElementById("themeToggle");
+    const mobileThemeToggle = document.getElementById("mobileThemeToggle");
     const body = document.body;
 
-    if (!themeToggle) {
+    // Determine which toggle was clicked
+    const clickedToggle = event ? event.target : themeToggle;
+    
+    if (!clickedToggle) {
       return;
     }
 
-    const newTheme = themeToggle.checked ? "dark" : "light";
+    const newTheme = clickedToggle.checked ? "dark" : "light";
+
+    // Sync both toggles
+    if (themeToggle && themeToggle !== clickedToggle) {
+      themeToggle.checked = clickedToggle.checked;
+    }
+    if (mobileThemeToggle && mobileThemeToggle !== clickedToggle) {
+      mobileThemeToggle.checked = clickedToggle.checked;
+    }
 
     body.setAttribute("data-theme", newTheme);
     document.documentElement.setAttribute("data-theme", newTheme);
@@ -194,10 +206,72 @@ function animateCounter(element, target) {
   }, stepTime);
 }
 
-// Initialize counters when DOM is loaded
+// Initialize theme and counters when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
   initCounters();
+  initTheme();
 });
+
+// Theme initialization function
+function initTheme() {
+  try {
+    const themeToggle = document.getElementById("themeToggle");
+    const mobileThemeToggle = document.getElementById("mobileThemeToggle");
+    
+    // Get saved theme or default to light
+    const savedTheme = utils.safeLocalStorage.getItem("theme") || "light";
+    const isDark = savedTheme === "dark";
+    
+    // Apply theme to both body and html
+    document.body.setAttribute("data-theme", savedTheme);
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    
+    // Set toggle states
+    if (themeToggle) {
+      themeToggle.checked = isDark;
+      themeToggle.addEventListener('change', handleThemeToggle);
+    }
+    
+    if (mobileThemeToggle) {
+      mobileThemeToggle.checked = isDark;
+      mobileThemeToggle.addEventListener('change', handleThemeToggle);
+    }
+    
+    // Update accordion theme icon if it exists
+    const accordionThemeIconEl = utils.safeQuerySelector(
+      ".accordion-theme-toggle .theme-icon"
+    );
+    if (accordionThemeIconEl) {
+      accordionThemeIconEl.textContent = isDark ? "☀️" : "🌙";
+    }
+    
+    // Handle accordion theme toggle if it exists
+    const accordionThemeToggle = document.getElementById("accordionThemeToggle");
+    if (accordionThemeToggle) {
+      accordionThemeToggle.addEventListener('click', function() {
+        // Toggle the theme
+        const currentTheme = document.body.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        
+        // Apply new theme
+        document.body.setAttribute("data-theme", newTheme);
+        document.documentElement.setAttribute("data-theme", newTheme);
+        utils.safeLocalStorage.setItem("theme", newTheme);
+        
+        // Update all toggles
+        const isDark = newTheme === "dark";
+        if (themeToggle) themeToggle.checked = isDark;
+        if (mobileThemeToggle) mobileThemeToggle.checked = isDark;
+        
+        // Update accordion icon
+        this.querySelector('.theme-icon').textContent = isDark ? "☀️" : "🌙";
+      });
+    }
+    
+  } catch (error) {
+    utils.logError(error, "theme initialization");
+  }
+}
 
 // Chatbot functionality has been moved to chatbot.js for better modularity
 

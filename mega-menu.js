@@ -348,6 +348,51 @@ class HospitalMegaMenu {
     this.setupLazyBackgrounds();
   }
 
+  setupLazyBackgrounds() {
+    // Find all elements with data-bg attribute
+    const bgElements = document.querySelectorAll('[data-bg]');
+    
+    if (bgElements.length === 0) {
+      return;
+    }
+
+    // Use Intersection Observer for performance
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const element = entry.target;
+          const bgUrl = element.getAttribute('data-bg');
+          
+          if (bgUrl) {
+            // Create a new image to preload
+            const img = new Image();
+            img.onload = () => {
+              // Set the background image once loaded
+              element.style.backgroundImage = `url('${bgUrl}')`;
+              element.classList.add('bg-loaded');
+            };
+            img.onerror = () => {
+              // Fallback if image fails to load
+              console.warn(`Failed to load background image: ${bgUrl}`);
+              element.classList.add('bg-error');
+            };
+            img.src = bgUrl;
+          }
+          
+          // Stop observing this element
+          observer.unobserve(element);
+        }
+      });
+    }, {
+      rootMargin: '50px' // Start loading 50px before element comes into view
+    });
+
+    // Observe all elements with data-bg
+    bgElements.forEach(element => {
+      observer.observe(element);
+    });
+  }
+
   setupRAFAnimations() {
     const animatedElements = document.querySelectorAll('.mega-menu .dropdown-item');
     

@@ -28,6 +28,7 @@ class I18n {
             this.translations.ar = await arResponse.json();
         } catch (error) {
             // Fallback to English if loading fails
+            console.warn('Failed to load translations:', error);
             this.currentLanguage = 'en';
         }
     }

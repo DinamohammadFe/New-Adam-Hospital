@@ -229,7 +229,7 @@
     <section class="fertility-cards-section py-4 py-md-5 py-lg-6">
       <div class="container">
         <div class="row justify-content-center g-3 g-md-4 g-lg-5">
-          <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mb-3 mb-lg-4">
+          <div class="col-12 col-sm-6 col-lg-5 col-xl-4 mb-3 mb-lg-4">
             <div class="fertility-card h-100">
               <div class="card-image">
                 <img
@@ -1098,15 +1098,24 @@
     <!-- Theme Toggle Initialization -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // Initialize theme toggle
+        // Initialize theme toggles (both desktop and mobile)
         const themeToggle = document.getElementById('themeToggle');
-        if (themeToggle && typeof handleThemeToggle === 'function') {
+        const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+        
+        if (typeof handleThemeToggle === 'function') {
           // Set initial state based on saved theme
           const savedTheme = localStorage.getItem('theme') || 'light';
-          themeToggle.checked = savedTheme === 'dark';
+          const isDark = savedTheme === 'dark';
           
-          // Add change event listener
-          themeToggle.addEventListener('change', handleThemeToggle);
+          if (themeToggle) {
+            themeToggle.checked = isDark;
+            themeToggle.addEventListener('change', handleThemeToggle);
+          }
+          
+          if (mobileThemeToggle) {
+            mobileThemeToggle.checked = isDark;
+            mobileThemeToggle.addEventListener('change', handleThemeToggle);
+          }
         }
       });
     </script>
@@ -1157,7 +1166,8 @@
   <button id="chatbot-fab" class="chatbot-fab" aria-label="Open chat">
     <span class="fab-icon" aria-hidden="true"></span>
     <span class="fab-text">
-      <span class="fab-title">Let's chat! Adam International Hospital</span>
+      <span class="fab-title">Let's Chat</span>
+      <span class="fab-subtitle">Adam International Hospital</span>
     </span>
   </button>
 

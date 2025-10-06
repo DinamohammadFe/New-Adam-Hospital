@@ -4,9 +4,23 @@
     <span class="adam-text">Adam</span>
     <span class="hospital-text"> International Hospital</span>
   </a>
-  <button class="mobile-language-toggle" id="mobileLanguageToggle">
-    العربية
-  </button>
+  <div class="mobile-controls">
+    <div class="mobile-theme-switch-container">
+      <input
+        type="checkbox"
+        class="mobile-theme-switch-input"
+        id="mobileThemeToggle"
+      />
+      <label for="mobileThemeToggle" class="mobile-theme-switch-label">
+        <span class="mobile-theme-switch-slider">
+          <span class="mobile-theme-icon"><i class="fas fa-moon"></i></span>
+        </span>
+      </label>
+    </div>
+    <button class="mobile-language-toggle" id="mobileLanguageToggle">
+      العربية
+    </button>
+  </div>
 </div>
 
 <!-- Top Bar -->
@@ -114,9 +128,6 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html" data-page="home">Home</a>
-        </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -312,7 +323,7 @@
                     <li>
                       <a
                         class="dropdown-item"
-                        href="#"
+                        href="female-fertility-treatments.html"
                         data-page="female-fertility-treatments"
                       >
                         Female Fertility Treatments
@@ -395,7 +406,7 @@
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="#" data-page="urology">
+                      <a class="dropdown-item" href="urology.html" data-page="urology">
                         Urology
                       </a>
                     </li>
@@ -430,7 +441,20 @@
             </button>
           </div>
         </li>
-
+        <li class="nav-item me-2">
+          <div class="theme-switch-container">
+            <input
+              type="checkbox"
+              class="theme-switch-input"
+              id="themeToggle"
+            />
+            <label for="themeToggle" class="theme-switch-label">
+              <span class="theme-switch-slider">
+                <span class="theme-icon"><i class="fas fa-moon"></i></span>
+              </span>
+            </label>
+          </div>
+        </li>
         <li class="nav-item">
           <button class="btn book-btn heartbeat-btn">
             <i class="fas fa-heart beating-heart"></i>
