@@ -194,7 +194,7 @@ section {
   }
 }
 
-/* Mobile header overlay on hero section */
+/* Mobile header overlay on hero section - Fakih IVF Style */
 @media (max-width: 991.98px) {
   .mobile-header-overlay {
     position: absolute;
@@ -202,39 +202,48 @@ section {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 20px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   
   .mobile-hospital-name {
     color: white !important;
     text-decoration: none !important;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
   }
   
-  .mobile-hospital-name .adam-text {
-    color: #8B0000 !important;
+  .mobile-hospital-name .fakih-text {
+    font-weight: 400;
+  }
+  
+  .mobile-hospital-name .ivf-text {
     font-weight: 700;
+    margin-left: 8px;
   }
   
-  .mobile-hamburger {
+  .mobile-language-toggle {
     background: none;
-    border: 2px solid white;
+    border: none;
     color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 400;
     cursor: pointer;
     transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
   }
   
-  .mobile-hamburger:hover {
+  .mobile-language-toggle:hover {
     background: rgba(255, 255, 255, 0.2);
   }
   
@@ -248,6 +257,16 @@ section {
   /* Ensure hero section starts from top */
   .hero-section-new {
     min-height: 100vh !important;
+  }
+  
+  /* Update hero background for mobile to match screenshot */
+  .hero-section-new .hero-background-image {
+    filter: blur(1px) brightness(0.8);
+  }
+  
+  /* Hide main hero content on mobile to match minimal design */
+  .hero-section-new .container {
+    display: none;
   }
 }
 
