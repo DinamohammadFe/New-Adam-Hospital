@@ -215,19 +215,20 @@ section {
   .mobile-hospital-name {
     color: white !important;
     text-decoration: none !important;
-    font-size: 22px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .mobile-hospital-name .fakih-text {
+    font-size: 20px;
     font-weight: 400;
+    letter-spacing: 0.5px;
+    font-family: 'Oswald', sans-serif;
   }
   
-  .mobile-hospital-name .ivf-text {
-    font-weight: 700;
-    margin-left: 8px;
+  .mobile-hospital-name .adam-text {
+    color: #8B0000 !important;
+    font-weight: 600;
+  }
+  
+  .mobile-hospital-name .hospital-text {
+    color: white !important;
+    font-weight: 400;
   }
   
   .mobile-language-toggle {
@@ -267,6 +268,28 @@ section {
   /* Hide main hero content on mobile to match minimal design */
   .hero-section-new .container {
     display: none;
+  }
+  
+  /* Fix mobile content visibility and overflow issues */
+  body {
+    overflow-x: hidden;
+  }
+  
+  .mobile-header-overlay {
+    padding: 15px 20px;
+    box-sizing: border-box;
+  }
+  
+  .mobile-hospital-name {
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .mobile-language-toggle {
+    flex-shrink: 0;
+    min-width: auto;
   }
 }
 
