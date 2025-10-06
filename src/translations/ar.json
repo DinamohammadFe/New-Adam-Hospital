@@ -119,8 +119,6 @@
     "title": "تحدث معنا"
   },
   "accessibility": {
-    "highContrast": "تباين عالي",
-    "toggleNavigation": "تبديل التنقل",
-    "toggleHighContrast": "تبديل وضع التباين العالي لرؤية أفضل"
+    "toggleNavigation": "تبديل التنقل"
   }
 }

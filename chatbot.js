@@ -1,286 +1,196 @@
-/**
- * Modern Chatbot Functionality
- * Extracted from home.js for better modularity
- */
-
 // Chatbot functionality
-function initializeChatbot() {
-  if (window.chatbotInitialized) {
-    return;
+let chatbotLanguage = 'en';
+
+// Open chatbot window
+function openChatbot() {
+  try {
+    const winEl = document.getElementById("chatbot-window");
+    const backdrop = document.getElementById("chatbot-backdrop");
+    
+    if (winEl) {
+      winEl.classList.add("open");
+      if (backdrop) {
+        backdrop.classList.add("open");
+      }
+      generateMainMenu();
+    }
+  } catch (error) {
+    console.error("Error opening chatbot:", error);
   }
-  
-  setTimeout(() => {
-    const chatbotToggle = document.getElementById("chatbotToggle");
-    const chatbotWindow = document.getElementById("chatbotWindow");
-    const chatbotClose = document.getElementById("chatbotClose");
-    const chatbotInput = document.getElementById("chatbotInput");
-    const sendButton = document.getElementById("chatbotSend");
-    const chatbotMessages = document.getElementById("chatbotMessages");
-    const chatbotLanguageToggle = document.getElementById("chatbotLanguageToggle");
-    
-    if (!chatbotToggle || !chatbotWindow) {
-      return;
-    }
-    
-    window.chatbotInitialized = true;
-    let isOpen = false;
-    let isTyping = false;
+}
 
-    function toggleChatbot() {
-      isOpen = !isOpen;
-      chatbotWindow.classList.toggle("open", isOpen);
-      
-      if (isOpen && chatbotInput) {
-        setTimeout(() => {
-          chatbotInput.focus();
-        }, 300);
-      }
-    }
+// Close chatbot window
+function closeChatbot() {
+  try {
+    const winEl = document.getElementById("chatbot-window");
+    const backdrop = document.getElementById("chatbot-backdrop");
     
-    function scrollToBottom() {
-      if (chatbotMessages) {
-        setTimeout(() => {
-          chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-        }, 100);
+    if (winEl) {
+      winEl.classList.remove("open");
+      if (backdrop) {
+        backdrop.classList.remove("open");
       }
     }
+  } catch (error) {
+    console.error("Error closing chatbot:", error);
+  }
+}
 
-    function addMessage(content, isUser = false, delay = 0) {
-      if (!chatbotMessages) {
-        return;
-      }
-      
-      setTimeout(() => {
-        const messageDiv = document.createElement("div");
-        messageDiv.className = `message ${isUser ? "user-message" : "bot-message"}`;
-        messageDiv.style.opacity = "0";
-        messageDiv.style.transform = "translateY(10px)";
-        
-        messageDiv.innerHTML = `
-          <div class="message-avatar">
-            ${isUser ? "👤" : "🏥"}
-          </div>
-          <div class="message-content">
-            <p>${content}</p>
-          </div>
-        `;
-        
-        chatbotMessages.appendChild(messageDiv);
-        
-        // Animate message appearance
-        setTimeout(() => {
-          messageDiv.style.transition = "all 0.3s ease";
-          messageDiv.style.opacity = "1";
-          messageDiv.style.transform = "translateY(0)";
-        }, 50);
-        
-        scrollToBottom();
-      }, delay);
-    }
+// Generate main menu for chatbot
+function generateMainMenu() {
+  try {
+    const messagesContainer = document.getElementById("chatbot-messages");
+    if (!messagesContainer) return;
 
-    function showTypingIndicator() {
-      if (isTyping) return;
-      
-      isTyping = true;
-      const typingDiv = document.createElement("div");
-      typingDiv.className = "message bot-message typing-indicator";
-      typingDiv.id = "typing-indicator";
-      
-      typingDiv.innerHTML = `
-        <div class="message-avatar">🏥</div>
-        <div class="message-content">
-          <div class="typing-dots">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      `;
-      
-      chatbotMessages.appendChild(typingDiv);
-      scrollToBottom();
-    }
-
-    function hideTypingIndicator() {
-      const typingIndicator = document.getElementById("typing-indicator");
-      if (typingIndicator) {
-        typingIndicator.remove();
-      }
-      isTyping = false;
-    }
-
-    function sendMessage() {
-      if (!chatbotInput || isTyping) {
-        return;
-      }
-      
-      const message = chatbotInput.value.trim();
-      if (message) {
-        // Clear input immediately
-        chatbotInput.value = "";
-        
-        // Add user message
-        addMessage(message, true);
-        
-        // Show typing indicator
-        setTimeout(() => {
-          showTypingIndicator();
-        }, 500);
-        
-        // Generate and show response
-        setTimeout(() => {
-          hideTypingIndicator();
-          const response = generateResponse(message);
-          addMessage(response, false);
-        }, 1500);
-      }
-    }
-
-    function generateResponse(message) {
-      const lowerMessage = message.toLowerCase();
-      
-      // Check if i18n is available for translations
-      if (typeof i18n !== 'undefined' && i18n.translate) {
-        if (lowerMessage.includes("appointment") || lowerMessage.includes("book")) {
-          return i18n.translate('chatbot.messages.appointment_response');
-        }
-        
-        if (lowerMessage.includes("treatment") || lowerMessage.includes("service")) {
-          return i18n.translate('chatbot.messages.treatments_response');
-        }
-        
-        if (lowerMessage.includes("location") || lowerMessage.includes("address")) {
-          return i18n.translate('chatbot.messages.locations_response');
-        }
-        
-        if (lowerMessage.includes("contact") || lowerMessage.includes("phone")) {
-          return i18n.translate('chatbot.messages.contact_response');
-        }
-        
-        return i18n.translate('chatbot.messages.default_response');
-      }
-      
-      // Fallback responses if i18n is not available
-      if (lowerMessage.includes("appointment") || lowerMessage.includes("book")) {
-        return "I'd be happy to help you schedule an appointment! Please call us at 16992 or you can book online. Our fertility specialists are available for consultations Monday through Saturday.";
-      }
-      
-      if (lowerMessage.includes("treatment") || lowerMessage.includes("service")) {
-        return "We offer comprehensive fertility treatments including IVF, ICSI, fertility preservation, and more. Our experienced team provides personalized care for each patient.";
-      }
-      
-      if (lowerMessage.includes("location") || lowerMessage.includes("address")) {
-        return "Adam International Hospital has multiple locations to serve you better. Please visit our website or call 16992 for specific location details and directions.";
-      }
-      
-      if (lowerMessage.includes("contact") || lowerMessage.includes("phone")) {
-        return "You can reach us at 16992 for appointments and inquiries. Our patient care team is available to assist you with any questions about our fertility services.";
-      }
-      
-      return "Thank you for your message! For specific medical questions or to schedule an appointment, please call us at 16992. Our team is here to help with your fertility journey.";
-    }
-
-    // Language toggle functionality
-    function toggleChatbotLanguage() {
-      if (typeof window.i18n !== 'undefined') {
-        const currentLang = window.i18n.getCurrentLanguage();
-        const newLang = currentLang === 'en' ? 'ar' : 'en';
-        window.i18n.setLanguage(newLang);
-        
-        // Update the language toggle button text
-        const langText = chatbotLanguageToggle?.querySelector('.lang-text');
-        if (langText) {
-          langText.textContent = newLang === 'en' ? 'العربية' : 'English';
-        }
-        
-        // Clear and re-add welcome message in new language
-        if (chatbotMessages) {
-          chatbotMessages.innerHTML = '';
-          const welcomeMessage = window.i18n.translate('chatbot.welcome.message');
-          addMessage(welcomeMessage);
-        }
-      }
-    }
-
-    // Event listeners
-    if (chatbotToggle) {
-      chatbotToggle.addEventListener("click", toggleChatbot);
-    }
-    
-    if (chatbotClose) {
-      chatbotClose.addEventListener("click", toggleChatbot);
-    }
-    
-    if (sendButton) {
-      sendButton.addEventListener("click", sendMessage);
-    }
-    
-    if (chatbotLanguageToggle) {
-      chatbotLanguageToggle.addEventListener("click", toggleChatbotLanguage);
-    }
-    
-    if (chatbotInput) {
-      chatbotInput.addEventListener("keypress", function(e) {
-        if (e.key === "Enter") {
-          sendMessage();
-        }
-      });
-    }
-    
-    // Quick action buttons
-    const quickActionButtons = document.querySelectorAll('.quick-action');
-    quickActionButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const message = this.getAttribute('data-message');
-        if (message && chatbotInput) {
-          chatbotInput.value = message;
-          sendMessage();
-        }
-      });
-    });
-    
-    // Close chatbot when clicking outside
-    document.addEventListener("click", function(e) {
-      if (isOpen && 
-          chatbotToggle && 
-          chatbotWindow && 
-          !chatbotToggle.contains(e.target) && 
-          !chatbotWindow.contains(e.target)) {
-        toggleChatbot();
-      }
-    });
-    
-    // Initialize language toggle button text
-    function initializeLanguageToggle() {
-      if (chatbotLanguageToggle && typeof window.i18n !== 'undefined') {
-        const currentLang = window.i18n.getCurrentLanguage();
-        const langText = chatbotLanguageToggle.querySelector('.lang-text');
-        if (langText) {
-          langText.textContent = currentLang === 'en' ? 'العربية' : 'English';
-        }
-      }
-    }
+    // Clear existing messages
+    messagesContainer.innerHTML = '';
 
     // Add welcome message
-    const welcomeMessage = (typeof window.i18n !== 'undefined' && window.i18n.translate) 
-      ? window.i18n.translate('chatbot.welcome.message')
-      : "Hello! 👋 Welcome to Adam International Hospital. How can I assist you today?";
-    addMessage(welcomeMessage);
+    const welcomeMessage = chatbotLanguage === 'ar' 
+      ? 'مرحباً بك في مستشفى آدم الدولي! كيف يمكنني مساعدتك اليوم؟'
+      : 'Welcome to Adam International Hospital! How can I help you today?';
     
-    // Initialize language toggle
-    initializeLanguageToggle();
-    
-  }, 100);
+    addBotMessage(welcomeMessage);
+
+    // Add quick action buttons
+    const quickActions = chatbotLanguage === 'ar' 
+      ? [
+          { id: 'btn-location', text: 'الموقع', action: () => showLocationInfo() },
+          { id: 'btn-contact', text: 'اتصل بنا', action: () => showContactInfo() },
+          { id: 'btn-treatments', text: 'العلاجات', action: () => showTreatmentInfo() },
+          { id: 'btn-services', text: 'الخدمات', action: () => showServicesInfo() }
+        ]
+      : [
+          { id: 'btn-location', text: 'Location', action: () => showLocationInfo() },
+          { id: 'btn-contact', text: 'Contact', action: () => showContactInfo() },
+          { id: 'btn-treatments', text: 'Treatments', action: () => showTreatmentInfo() },
+          { id: 'btn-services', text: 'Services', action: () => showServicesInfo() }
+        ];
+
+    // Update button texts and add event listeners
+    quickActions.forEach(action => {
+      const button = document.getElementById(action.id);
+      if (button) {
+        button.textContent = action.text;
+        button.onclick = action.action;
+      }
+    });
+
+  } catch (error) {
+    console.error("Error generating main menu:", error);
+  }
 }
 
-// Export for use in other files
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { initializeChatbot };
+// Toggle chatbot language
+function toggleLanguage() {
+  try {
+    chatbotLanguage = chatbotLanguage === 'en' ? 'ar' : 'en';
+    
+    // Update language toggle button
+    const langToggle = document.getElementById("chatbot-lang-toggle");
+    if (langToggle) {
+      langToggle.textContent = chatbotLanguage === 'en' ? 'AR' : 'EN';
+    }
+
+    // Update chatbot window direction
+    const chatbotWindow = document.getElementById("chatbot-window");
+    if (chatbotWindow) {
+      chatbotWindow.setAttribute('dir', chatbotLanguage === 'ar' ? 'rtl' : 'ltr');
+    }
+
+    // Regenerate main menu with new language
+    generateMainMenu();
+  } catch (error) {
+    console.error("Error toggling language:", error);
+  }
 }
 
-// Auto-initialize if DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initializeChatbot);
+// Helper function to add bot message
+function addBotMessage(text) {
+  const messagesContainer = document.getElementById("chatbot-messages");
+  if (!messagesContainer) return;
+
+  const messageDiv = document.createElement('div');
+  messageDiv.className = 'msg bot';
+  messageDiv.innerHTML = `<div class="bubble">${text}</div>`;
+  messagesContainer.appendChild(messageDiv);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+// Quick action functions
+function showLocationInfo() {
+  const locationText = chatbotLanguage === 'ar' 
+    ? 'مستشفى آدم الدولي يقع في قلب المدينة. يمكنك العثور علينا في العنوان التالي أو الاتصال بنا للحصول على الاتجاهات.'
+    : 'Adam International Hospital is located in the heart of the city. You can find us at our main address or contact us for directions.';
+  addBotMessage(locationText);
+}
+
+function showContactInfo() {
+  const contactText = chatbotLanguage === 'ar' 
+    ? 'يمكنك الاتصال بنا على الرقم: 16992 أو زيارة موقعنا الإلكتروني لمزيد من المعلومات.'
+    : 'You can contact us at: 16992 or visit our website for more information.';
+  addBotMessage(contactText);
+}
+
+function showTreatmentInfo() {
+  const treatmentText = chatbotLanguage === 'ar' 
+    ? 'نحن نقدم مجموعة واسعة من علاجات الخصوبة بما في ذلك أطفال الأنابيب، الحقن المجهري، وتجميد البويضات.'
+    : 'We offer a wide range of fertility treatments including IVF, ICSI, egg freezing, and more.';
+  addBotMessage(treatmentText);
+}
+
+function showServicesInfo() {
+  const servicesText = chatbotLanguage === 'ar' 
+    ? 'خدماتنا تشمل استشارات الخصوبة، الفحوصات التشخيصية، والدعم النفسي للمرضى.'
+    : 'Our services include fertility consultations, diagnostic tests, and psychological support for patients.';
+  addBotMessage(servicesText);
+}
+
+// Initialize event bindings when DOM is ready (with readyState fallback)
+function initChatbotBindings() {
+  try {
+    if (window.__chatbotInitDone) return;
+    window.__chatbotInitDone = true;
+
+    const fab = document.getElementById("chatbot-fab");
+    const winEl = document.getElementById("chatbot-window");
+    const langToggle = document.getElementById("chatbot-lang-toggle");
+    const closeBtn = document.getElementById("chatbot-close");
+    const backdrop = document.getElementById("chatbot-backdrop");
+
+    if (fab && winEl) {
+      fab.addEventListener("click", () => {
+        const isOpen = winEl.classList.contains("open");
+        if (isOpen) {
+          closeChatbot();
+        } else {
+          openChatbot();
+        }
+      });
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closeChatbot);
+    }
+
+    if (backdrop) {
+      backdrop.addEventListener("click", closeChatbot);
+    }
+
+    if (langToggle) {
+      langToggle.addEventListener("click", toggleLanguage);
+    }
+
+    // Initialize with default language
+    generateMainMenu();
+  } catch (err) {
+    console.error("Chatbot initialization failed", err);
+  }
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initChatbotBindings, { once: true });
 } else {
-  initializeChatbot();
+  // DOM is already parsed; initialize immediately
+  initChatbotBindings();
 }

@@ -62,7 +62,7 @@ function removeUnusedCSS(css, htmlFiles) {
   const essentialClasses = [
     'active', 'show', 'hide', 'open', 'closed', 'loading', 'error', 'success',
     'btn', 'nav', 'dropdown', 'modal', 'carousel', 'alert', 'card', 'form',
-    'chatbot', 'dark-theme', 'high-contrast', 'rtl'
+    'chatbot', 'dark-theme', 'rtl'
   ];
   
   essentialClasses.forEach(cls => usedClasses.add(cls));

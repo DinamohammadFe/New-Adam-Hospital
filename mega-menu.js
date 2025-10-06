@@ -300,23 +300,12 @@ class HospitalMegaMenu {
         item.setAttribute('role', 'menuitem');
         item.setAttribute('tabindex', '-1');
       });
+    // Update ARIA state
+    trigger.setAttribute('aria-expanded', 'true');
+    // Make menu items focusable when open
+    megaMenu.querySelectorAll('.dropdown-item').forEach(item => {
+      item.setAttribute('tabindex', '0');
     });
-  }
-
-  showMegaMenu(trigger) {
-    // Hide any currently active menu
-    this.hideMegaMenu();
-
-    const dropdown = trigger.closest('.mega-dropdown');
-    const megaMenu = dropdown.querySelector('.mega-menu');
-    
-    if (!megaMenu) {
-      return;
-    }
-
-    // Show the menu
-    dropdown.classList.add('show');
-    megaMenu.classList.add('show');
     
     // Update ARIA attributes
     trigger.setAttribute('aria-expanded', 'true');
@@ -351,142 +340,12 @@ class HospitalMegaMenu {
     this.activeDropdown.classList.remove('show');
     if (megaMenu) {
       megaMenu.classList.remove('show');
-    }
-    
-    // Update ARIA attributes
-    if (trigger) {
-      trigger.setAttribute('aria-expanded', 'false');
-    }
-    
-    // Remove body class
-    document.body.classList.remove('mega-menu-open');
-    
-    // Clear active dropdown
-    this.activeDropdown = null;
-  }
 
-  toggleMegaMenu(trigger) {
-    const dropdown = trigger.closest('.mega-dropdown');
-    const isActive = dropdown.classList.contains('show');
-    
-    if (isActive) {
-      this.hideMegaMenu();
-    } else {
-      this.showMegaMenu(trigger);
-    }
-  }
+    // Setup fade-in on scroll animations
+    this.setupScrollAnimations();
 
-  toggleAccordionSection(header) {
-    const listContainer = header.nextElementSibling;
-    if (!listContainer) {
-      return;
-    }
-
-    const isActive = header.classList.contains('active');
-    
-    // Close all other sections
-    const allHeaders = document.querySelectorAll('.mega-menu .mega-menu-header');
-    allHeaders.forEach(h => {
-      if (h !== header) {
-        h.classList.remove('active');
-        const list = h.nextElementSibling;
-        if (list) {
-          list.classList.remove('show');
-        }
-      }
-    });
-
-    // Toggle current section
-    if (isActive) {
-      header.classList.remove('active');
-      listContainer.classList.remove('show');
-    } else {
-      header.classList.add('active');
-      listContainer.classList.add('show');
-    }
-  }
-
-  closeAllMenus() {
-    this.hideMegaMenu();
-  }
-
-  triggerStaggeredAnimations(megaMenu) {
-    const items = megaMenu.querySelectorAll('.dropdown-item');
-    items.forEach((item, index) => {
-      item.style.animationDelay = `${0.1 + (index * 0.05)}s`;
-    });
-  }
-
-  // Public methods for external control
-  closeAll() {
-    this.hideMegaMenu();
-  }
-
-  isOpen() {
-    return this.activeDropdown !== null;
-  }
-}
-
-// Enhanced hover effects for navigation links
-class NavigationEnhancer {
-  constructor() {
-    this.init();
-  }
-
-  init() {
-    this.setupHoverEffects();
-    this.setupFocusEffects();
-  }
-
-  setupHoverEffects() {
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    
-    navLinks.forEach(link => {
-      link.addEventListener('mouseenter', (e) => {
-        this.addHoverEffect(e.target);
-      });
-      
-      link.addEventListener('mouseleave', (e) => {
-        this.removeHoverEffect(e.target);
-      });
-    });
-  }
-
-  setupFocusEffects() {
-    const focusableElements = document.querySelectorAll('.dropdown-item, .nav-link');
-    
-    focusableElements.forEach(element => {
-      element.addEventListener('focus', (e) => {
-        e.target.classList.add('focused');
-      });
-      
-      element.addEventListener('blur', (e) => {
-        e.target.classList.remove('focused');
-      });
-    });
-  }
-
-  addHoverEffect(element) {
-    element.style.transform = 'translateY(-1px)';
-  }
-
-  removeHoverEffect(element) {
-    element.style.transform = '';
-  }
-}
-
-// Performance optimization for smooth animations
-class AnimationOptimizer {
-  constructor() {
-    this.init();
-  }
-
-  init() {
-    // Use requestAnimationFrame for smooth animations
-    this.setupRAFAnimations();
-    
-    // Optimize for reduced motion preference
-    this.handleReducedMotion();
+    // Lazy-load background images for performance
+    this.setupLazyBackgrounds();
   }
 
   setupRAFAnimations() {
@@ -512,15 +371,13 @@ class AnimationOptimizer {
       document.documentElement.style.setProperty('--transition-smooth', 'none');
     }
   }
-}
-
-// Initialize when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    new HospitalMegaMenu();
+    new NavigationEnhancer();
+    new AnimationOptimizer();
   });
 } else {
   new HospitalMegaMenu();
+  new NavigationEnhancer();
+  new AnimationOptimizer();
 }
 
 // Export for module usage

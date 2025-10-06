@@ -5,7 +5,7 @@
 
 class I18n {
     constructor() {
-        this.currentLanguage = localStorage.getItem('language') || 'en';
+        this.currentLanguage = 'en'; // Default to English
         this.translations = {};
         this.isRTL = false;
         this.init();
@@ -27,7 +27,6 @@ class I18n {
             const arResponse = await fetch('./locales/ar.json');
             this.translations.ar = await arResponse.json();
         } catch (error) {
-            console.error('Failed to load translations:', error);
             // Fallback to English if loading fails
             this.currentLanguage = 'en';
         }

@@ -119,8 +119,6 @@
     "title": "Chat with us"
   },
   "accessibility": {
-    "highContrast": "High Contrast",
-    "toggleNavigation": "Toggle navigation",
-    "toggleHighContrast": "Toggle high contrast mode for better visibility"
+    "toggleNavigation": "Toggle navigation"
   }
 }

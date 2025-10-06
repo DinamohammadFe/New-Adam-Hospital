@@ -273,15 +273,18 @@
 [data-theme="dark"] .top-bar .contact-item i,
 [data-theme="dark"] .top-bar .contact-item a,
 [data-theme="dark"] .top-bar .social-link,
-[data-theme="dark"] .top-bar .social-link i,
-[data-theme="dark"] .top-bar #high-contrast-toggle,
-[data-theme="dark"] .top-bar #high-contrast-toggle i {
+[data-theme="dark"] .top-bar .social-link i {
   color: var(--theme-text);
 }
 
 [data-theme="dark"] .top-bar .social-link:hover {
   color: var(--theme-accent-light);
   transform: translateY(-2px);
+}
+
+[data-theme="dark"] .top-bar .contact-item a:hover {
+  color: #dc3545 !important;
+  transform: translateY(-1px);
 }
 
 [data-theme="dark"] .theme-toggle,

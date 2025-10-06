@@ -1,55 +1,48 @@
+<!-- Mobile Top Bar for Small Screens -->
+<div class="mobile-top-bar d-lg-none">
+  <a href="index.html" class="mobile-hospital-name">
+    <span class="adam-text">Adam</span>
+    <span class="hospital-text"> International Hospital</span>
+  </a>
+  <button class="mobile-language-toggle" id="mobileLanguageToggle">
+    العربية
+  </button>
+</div>
+
 <!-- Top Bar -->
 <header role="banner" aria-label="Contact Information">
-  <div class="top-bar" style="background-color: #51917c">
-    <div class="container-fluid">
+  <div class="top-bar d-none d-lg-block" style="background-color: #51917c">
+    <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-8">
-          <div class="contact-info">
-            <span class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:info@adamhospital.com">info@adamhospital.com</a>
+        <div class="col-lg-8">
+          <div class="contact-info d-flex">
+            <span class="contact-item me-4">
+              <i class="fas fa-envelope me-2"></i>
+              <a href="mailto:info@adamhospital.com" class="text-decoration-none">info@adamhospital.com</a>
             </span>
             <span class="contact-item">
-              <i class="fas fa-phone"></i>
-              <a href="tel:16992">16992</a>
+              <i class="fas fa-phone me-2"></i>
+              <a href="tel:16992" class="text-decoration-none">16992</a>
             </span>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4">
           <div class="d-flex align-items-center justify-content-end">
-            <!-- High Contrast Toggle -->
-            <button
-              id="high-contrast-toggle"
-              class="btn btn-sm me-3"
-              aria-label="Toggle high contrast mode"
-              title="Toggle high contrast mode for better visibility"
-              style="
-                background: rgba(255, 255, 255, 0.1);
-                border: 1px solid rgba(255, 255, 255, 0.3);
-                color: white;
-                padding: 4px 8px;
-                border-radius: 4px;
-              "
-            >
-              <i class="fas fa-adjust" style="font-size: 14px"></i>
-              <span class="ms-1" style="font-size: 12px">High Contrast</span>
-            </button>
-
-            <div class="social-media">
+            <div class="social-media d-flex gap-3">
               <a
                 href="https://www.facebook.com/adamhospitals"
-                class="social-link"
+                class="social-link btn btn-sm btn-outline-light"
                 aria-label="Facebook"
                 target="_blank"
               >
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="social-link" aria-label="Instagram">
+              <a href="#" class="social-link btn btn-sm btn-outline-light" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
               </a>
               <a
                 href="https://www.linkedin.com/company/adam-international-hospital/?originalSubdomain=eg"
-                class="social-link"
+                class="social-link btn btn-sm btn-outline-light"
                 aria-label="LinkedIn"
                 target="_blank"
               >
@@ -57,7 +50,7 @@
               </a>
               <a
                 href="https://x.com/adamhospital"
-                class="social-link"
+                class="social-link btn btn-sm btn-outline-light"
                 aria-label="Twitter"
                 target="_blank"
               >
@@ -65,7 +58,7 @@
               </a>
               <a
                 href="https://www.youtube.com/channel/UCqlSBmyqFK14FtedMMs_Mpg"
-                class="social-link"
+                class="social-link btn btn-sm btn-outline-light"
                 aria-label="YouTube"
                 target="_blank"
               >
@@ -84,32 +77,32 @@
   class="navbar navbar-expand-lg fixed-top custom-navbar"
   aria-label="Main navigation"
 >
-  <div class="container-fluid">
+  <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
       <img
         src="https://i.postimg.cc/kgdKgg1H/adam.png"
         alt="Adam International Hospital Logo"
-        class="logo-img me-2"
+        class="logo-img me-3 img-fluid"
         loading="lazy"
+        style="max-height: 40px; width: auto;"
       />
       <span
         class="brand-text"
         style="font-family: 'Roboto', sans-serif; font-weight: 400"
-        ><span style="color: #86171d; font-weight: 700">Adam</span>
+        ><span style="color: #8B0000; font-weight: 700">Adam</span>
         International Hospital</span
       >
     </a>
 
     <!-- Mobile Toggle Button -->
     <button
-      class="navbar-toggler d-lg-none"
+      class="navbar-toggler border-0 p-1"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNav"
       aria-controls="navbarNav"
       aria-expanded="false"
       aria-label="Toggle navigation menu"
-      style="border: 1px solid #51917c"
     >
       <span
         class="navbar-toggler-icon"
@@ -160,37 +153,37 @@
             Treatments
           </a>
           <div
-            class="dropdown-menu mega-menu"
+            class="dropdown-menu mega-menu p-3 p-md-4"
             aria-labelledby="treatmentsDropdown"
           >
             <div class="container-fluid">
-              <div class="row">
+              <div class="row g-3 g-md-4">
                 <!-- Core Treatments Column -->
-                <div class="col-md-4">
-                  <h6 class="mega-menu-header">Core Treatments</h6>
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="dropdown-item" href="ivf.html" data-page="ivf">
+                <div class="col-12 col-md-4">
+                  <h6 class="mega-menu-header mb-2 mb-md-3">Core Treatments</h6>
+                  <ul class="list-unstyled mb-3 mb-md-0">
+                    <li class="mb-1">
+                      <a class="dropdown-item py-1 py-md-2" href="ivf.html" data-page="ivf">
                         IVF Treatment
                       </a>
                     </li>
-                    <li>
+                    <li class="mb-1">
                       <a
-                        class="dropdown-item"
+                        class="dropdown-item py-1 py-md-2"
                         href="ivf-icsi.html"
                         data-page="ivf-icsi"
                       >
                         ICSI-IVF Treatment
                       </a>
                     </li>
-                    <li>
-                      <a class="dropdown-item" href="iui.html" data-page="iui">
+                    <li class="mb-1">
+                      <a class="dropdown-item py-1 py-md-2" href="iui.html" data-page="iui">
                         IUI
                       </a>
                     </li>
-                    <li>
+                    <li class="mb-1">
                       <a
-                        class="dropdown-item"
+                        class="dropdown-item py-1 py-md-2"
                         href="genetic-testing.html"
                         data-page="genetic-testing"
                       >
@@ -201,48 +194,48 @@
                 </div>
 
                 <!-- Surgical Options Column -->
-                <div class="col-md-4">
-                  <h6 class="mega-menu-header">Surgical Options</h6>
-                  <ul class="list-unstyled">
-                    <li>
+                <div class="col-12 col-md-4">
+                  <h6 class="mega-menu-header mb-2 mb-md-3">Surgical Options</h6>
+                  <ul class="list-unstyled mb-3 mb-md-0">
+                    <li class="mb-1">
                       <a
-                        class="dropdown-item"
+                        class="dropdown-item py-1 py-md-2"
                         href="tubal-surgery.html"
                         data-page="tubal-surgery"
                       >
                         Tubal Surgery
                       </a>
                     </li>
-                    <li>
+                    <li class="mb-1">
                       <a
-                        class="dropdown-item"
+                        class="dropdown-item py-1 py-md-2"
                         href="laparoscopy.html"
                         data-page="laparoscopy"
                       >
                         Laparoscopy
                       </a>
                     </li>
-                    <li>
+                    <li class="mb-1">
                       <a
-                        class="dropdown-item"
+                        class="dropdown-item py-1 py-md-2"
                         href="hysteroscopy.html"
                         data-page="hysteroscopy"
                       >
                         Hysteroscopy
                       </a>
                     </li>
-                    <li>
+                    <li class="mb-1">
                       <a
-                        class="dropdown-item"
+                        class="dropdown-item py-1 py-md-2"
                         href="ovarian-drilling.html"
                         data-page="ovarian-drilling"
                       >
                         Ovarian Drilling
                       </a>
                     </li>
-                    <li>
+                    <li class="mb-1">
                       <a
-                        class="dropdown-item"
+                        class="dropdown-item py-1 py-md-2"
                         href="myomectomy.html"
                         data-page="myomectomy"
                       >
@@ -253,38 +246,30 @@
                 </div>
 
                 <!-- Specialized Care Column -->
-                <div class="col-md-4">
-                  <h6 class="mega-menu-header">Specialized Care</h6>
-                  <ul class="list-unstyled">
-                    <li>
+                <div class="col-12 col-md-4">
+                  <h6 class="mega-menu-header mb-2 mb-md-3">Specialized Care</h6>
+                  <ul class="list-unstyled mb-3 mb-md-0">
+                    
+                    <li class="mb-1">
                       <a
-                        class="dropdown-item"
-                        href="embryo-freezing.html"
-                        data-page="embryo-freezing"
-                      >
-                        Embryo Freezing
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
+                        class="dropdown-item py-1 py-md-2"
                         href="pcos.html"
                         data-page="pcos"
                       >
                         PCOS Treatment
                       </a>
                     </li>
-                    <li>
+                    <li class="mb-1">
                       <a
-                        class="dropdown-item"
+                        class="dropdown-item py-1 py-md-2"
                         href="endometriosis.html"
                         data-page="endometriosis"
                       >
                         Endometriosis
                       </a>
                     </li>
-                    <li>
-                      <a class="dropdown-item" href="family-balancing.html">
+                    <li class="mb-1">
+                      <a class="dropdown-item py-1 py-md-2" href="family-balancing.html">
                         Family Balancing
                       </a>
                     </li>
@@ -306,15 +291,15 @@
             Services
           </a>
           <div
-            class="dropdown-menu mega-menu"
+            class="dropdown-menu mega-menu p-3 p-md-4"
             aria-labelledby="servicesDropdown"
           >
             <div class="container-fluid">
-              <div class="row">
+              <div class="row g-3 g-md-4">
                 <!-- Female Fertility Column -->
-                <div class="col-md-3">
-                  <h6 class="mega-menu-header">Female Fertility</h6>
-                  <ul class="list-unstyled">
+                <div class="col-12 col-sm-6 col-md-3">
+                  <h6 class="mega-menu-header mb-2 mb-md-3" tabindex="0" role="heading" aria-level="6">Female Fertility</h6>
+                  <ul class="list-unstyled mb-3 mb-md-0">
                     <li>
                       <a
                         class="dropdown-item"
@@ -338,7 +323,7 @@
 
                 <!-- Male Fertility Column -->
                 <div class="col-md-3">
-                  <h6 class="mega-menu-header">Male Fertility</h6>
+                  <h6 class="mega-menu-header" tabindex="0" role="heading" aria-level="6">Male Fertility</h6>
                   <ul class="list-unstyled">
                     <li>
                       <a
@@ -363,7 +348,7 @@
 
                 <!-- Preserving Fertility Column -->
                 <div class="col-md-3">
-                  <h6 class="mega-menu-header">Preserving Fertility</h6>
+                  <h6 class="mega-menu-header" tabindex="0" role="heading" aria-level="6">Preserving Fertility</h6>
                   <ul class="list-unstyled">
                     <li>
                       <a
@@ -392,12 +377,7 @@
                         Embryo Freezing
                       </a>
                     </li>
-                  </ul>
-                </div>
-
-                <!-- Support Services Column -->
-                <div class="col-md-3">
-                  <h6 class="mega-menu-header">Support Services</h6>
+                  <h6 class="mega-menu-header" tabindex="0" role="heading" aria-level="6">Support Services</h6>
                   <ul class="list-unstyled">
                     <li>
                       <a
@@ -438,10 +418,10 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Patient Portal</a>
         </li>
-        <li class="nav-item me-2">
+        <li class="nav-item me-2 me-lg-3">
           <div class="language-toggle-wrapper">
             <button
-              class="btn btn-outline-primary language-toggle"
+              class="btn btn-outline-primary btn-sm language-toggle"
               id="languageToggle"
               aria-label="Switch language"
               title="Switch language"
@@ -450,28 +430,19 @@
             </button>
           </div>
         </li>
-        <li class="nav-item me-2">
+
+        <li class="nav-item">
           <button class="btn book-btn heartbeat-btn">
+            <i class="fas fa-heart beating-heart"></i>
             Book an Appointment
           </button>
         </li>
-        <li class="nav-item me-2">
-          <div class="theme-switch-container">
-            <input
-              type="checkbox"
-              class="theme-switch-input"
-              id="themeToggle"
-            />
-            <label for="themeToggle" class="theme-switch-label">
-              <span class="theme-switch-slider">
-                <span class="theme-icon"><i class="fas fa-moon"></i></span>
-              </span>
-            </label>
-          </div>
-        </li>
+        
       </ul>
     </div>
   </div>
 </nav>
 
 <script src="i18n.js"></script>
+<script src="adam-text-styler.js"></script>
+<!-- Removed theme.js to restore original state -->

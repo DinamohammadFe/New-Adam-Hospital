@@ -3,7 +3,7 @@ import js from '@eslint/js';
 export default [
   js.configs.recommended,
   {
-    files: ['home.js', 'mega-menu.js', 'i18n.js', 'js/department-cards.js'],
+    files: ['home.js', 'mega-menu.js', 'i18n.js', 'js/department-cards.js', 'adam-text-styler.js', 'chatbot.js'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'script',
@@ -27,7 +27,8 @@ export default [
         AOS: 'readonly',
         requestAnimationFrame: 'readonly',
         cancelAnimationFrame: 'readonly',
-        module: 'readonly'
+        module: 'readonly',
+        Node: 'readonly'
       }
     },
     rules: {

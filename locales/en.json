@@ -24,7 +24,7 @@
   },
   "hero": {
     "title": "Adam International Hospital",
-    "subtitle": "Compassionate Care, Advanced Fertility Solutions",
+    "subtitle": "Leading fertility treatments in Egypt with advanced technology",
     "cta": "Start Your Journey",
     "consultation": "Free Consultation",
     "card1": {
@@ -171,9 +171,7 @@
     }
   },
   "accessibility": {
-    "highContrast": "High Contrast",
-    "toggleNavigation": "Toggle navigation",
-    "toggleHighContrast": "Toggle high contrast mode for better visibility"
+    "toggleNavigation": "Toggle navigation"
   },
   "who_we_are": {
     "hero": {
