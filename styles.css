@@ -173,6 +173,26 @@ section {
   outline-offset: 2px;
 }
 
+/* Fix navbar background on mobile screens */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@media (max-width: 991.98px) {
+  .custom-navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+  }
+}
+
 /* Problems & Diagnostics: scoped red text only for target section */
 #problems_and_diagnostics,
 #problems_and_diagnostics * {
