@@ -24,6 +24,7 @@ class HospitalMegaMenu {
     this.setupMobileAccordions();
     this.setupKeyboardNavigation();
     this.setupAccessibility();
+    this.setupLazyBackgrounds();
     this.isInitialized = true;
   }
 
@@ -340,12 +341,10 @@ class HospitalMegaMenu {
     this.activeDropdown.classList.remove('show');
     if (megaMenu) {
       megaMenu.classList.remove('show');
+    }
 
-    // Setup fade-in on scroll animations
-    this.setupScrollAnimations();
-
-    // Lazy-load background images for performance
-    this.setupLazyBackgrounds();
+    // Clear active dropdown
+    this.activeDropdown = null;
   }
 
   setupLazyBackgrounds() {
@@ -416,14 +415,18 @@ class HospitalMegaMenu {
       document.documentElement.style.setProperty('--transition-smooth', 'none');
     }
   }
-    new NavigationEnhancer();
-    new AnimationOptimizer();
-  });
-} else {
-  new HospitalMegaMenu();
-  new NavigationEnhancer();
-  new AnimationOptimizer();
 }
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  new HospitalMegaMenu();
+  if (typeof NavigationEnhancer !== 'undefined') {
+    new NavigationEnhancer();
+  }
+  if (typeof AnimationOptimizer !== 'undefined') {
+    new AnimationOptimizer();
+  }
+});
 
 // Export for module usage
 if (typeof module !== 'undefined' && module.exports) {
