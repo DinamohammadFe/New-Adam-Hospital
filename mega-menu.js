@@ -85,7 +85,7 @@ class HospitalMegaMenu {
       if (wasMobile !== this.isMobile) {
         this.hideMegaMenu();
         if (this.isMobile) {
-          this.setupMobileAccordion();
+          this.setupMobileAccordions();
         }
       }
     });
