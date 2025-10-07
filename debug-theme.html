@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggle Debug</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark-theme.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .debug-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .toggle-container {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+        .debug-info {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-container">
+        <h1>Theme Toggle Debug Page</h1>
+        
+        <div class="test-card">
+            <h2>Current Theme Status</h2>
+            <div class="debug-info" id="themeStatus">
+                Loading...
+            </div>
+        </div>
+
+        <div class="toggle-container">
+            <h3>Manual Theme Toggle</h3>
+            <button onclick="toggleThemeManually('light')">Set Light Theme</button>
+            <button onclick="toggleThemeManually('dark')">Set Dark Theme</button>
+            <button onclick="checkThemeElements()">Check Theme Elements</button>
+            <button onclick="testHandleThemeToggle()">Test handleThemeToggle Function</button>
+        </div>
+
+        <div class="test-card">
+            <h2>Test Content</h2>
+            <p>This is a test paragraph to see theme changes.</p>
+            <div class="card" style="padding: 15px; margin: 10px 0; border: 1px solid #ddd;">
+                <h4>Test Card</h4>
+                <p>This card should change appearance with theme.</p>
+            </div>
+        </div>
+
+        <div class="debug-info" id="debugOutput">
+            Debug output will appear here...
+        </div>
+    </div>
+
+    <script>
+        function log(message) {
+            const output = document.getElementById('debugOutput');
+            const timestamp = new Date().toLocaleTimeString();
+            output.innerHTML += `[${timestamp}] ${message}<br>`;
+            console.log(message);
+        }
+
+        function updateThemeStatus() {
+            const bodyTheme = document.body.getAttribute('data-theme');
+            const htmlTheme = document.documentElement.getAttribute('data-theme');
+            const savedTheme = localStorage.getItem('theme');
+            
+            document.getElementById('themeStatus').innerHTML = `
+                Body data-theme: ${bodyTheme || 'not set'}<br>
+                HTML data-theme: ${htmlTheme || 'not set'}<br>
+                localStorage theme: ${savedTheme || 'not set'}
+            `;
+        }
+
+        function toggleThemeManually(theme) {
+            log(`🎨 Manually setting theme to: ${theme}`);
+            document.body.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateThemeStatus();
+            log(`✅ Theme set to ${theme}`);
+        }
+
+        function checkThemeElements() {
+            log('🔍 Checking for theme toggle elements...');
+            
+            // Check if elements exist in current page
+            const themeToggle = document.getElementById('themeToggle');
+            const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+            
+            log(`Desktop toggle (themeToggle): ${themeToggle ? '✅ Found' : '❌ Not found'}`);
+            log(`Mobile toggle (mobileThemeToggle): ${mobileThemeToggle ? '✅ Found' : '❌ Not found'}`);
+            
+            // Check if handleThemeToggle function exists
+            log(`handleThemeToggle function: ${typeof handleThemeToggle === 'function' ? '✅ Available' : '❌ Not available'}`);
+            
+            // Try to load header.html content
+            fetch('/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    const hasDesktop = html.includes('id="themeToggle"');
+                    const hasMobile = html.includes('id="mobileThemeToggle"');
+                    log(`Header.html contains desktop toggle: ${hasDesktop ? '✅ Yes' : '❌ No'}`);
+                    log(`Header.html contains mobile toggle: ${hasMobile ? '✅ Yes' : '❌ No'}`);
+                })
+                .catch(err => log(`❌ Error loading header.html: ${err.message}`));
+        }
+
+        function testHandleThemeToggle() {
+            log('🧪 Testing handleThemeToggle function...');
+            
+            if (typeof handleThemeToggle === 'function') {
+                // Create a mock event
+                const mockEvent = {
+                    target: {
+                        id: 'themeToggle',
+                        checked: !document.body.getAttribute('data-theme') || document.body.getAttribute('data-theme') === 'light'
+                    }
+                };
+                
+                try {
+                    handleThemeToggle(mockEvent);
+                    log('✅ handleThemeToggle executed successfully');
+                } catch (error) {
+                    log(`❌ Error calling handleThemeToggle: ${error.message}`);
+                }
+            } else {
+                log('❌ handleThemeToggle function not available');
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            log('🚀 Debug page loaded');
+            updateThemeStatus();
+            checkThemeElements();
+        });
+
+        // Update status every 2 seconds
+        setInterval(updateThemeStatus, 2000);
+    </script>
+
+    <!-- Load home.js to get handleThemeToggle function -->
+    <script type="module" defer src="home.js"></script>
+</body>
+</html>

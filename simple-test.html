@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Theme Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark-theme.css">
+    <style>
+        body {
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .theme-toggle {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .status {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .test-card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Simple Theme Toggle Test</h1>
+        
+        <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+        <button class="theme-toggle" onclick="setLight()">Light</button>
+        <button class="theme-toggle" onclick="setDark()">Dark</button>
+        
+        <div class="status" id="status">
+            Current theme: <span id="currentTheme">loading...</span>
+        </div>
+        
+        <div class="test-card">
+            <h2>Test Card</h2>
+            <p>This card should change appearance when theme is toggled.</p>
+        </div>
+        
+        <div id="console" style="background: #000; color: #0f0; padding: 10px; font-family: monospace; text-align: left; height: 200px; overflow-y: auto;">
+            Console output:<br>
+        </div>
+    </div>
+
+    <script>
+        function log(message) {
+            const console = document.getElementById('console');
+            const timestamp = new Date().toLocaleTimeString();
+            console.innerHTML += `[${timestamp}] ${message}<br>`;
+            console.scrollTop = console.scrollHeight;
+            window.console.log(message);
+        }
+
+        function updateStatus() {
+            const bodyTheme = document.body.getAttribute('data-theme') || 'light';
+            const htmlTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const savedTheme = localStorage.getItem('theme') || 'none';
+            
+            document.getElementById('currentTheme').textContent = bodyTheme;
+            log(`Status - Body: ${bodyTheme}, HTML: ${htmlTheme}, Saved: ${savedTheme}`);
+        }
+
+        function setTheme(theme) {
+            log(`Setting theme to: ${theme}`);
+            
+            // Apply to both body and html
+            document.body.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
+            
+            // Save to localStorage
+            localStorage.setItem('theme', theme);
+            
+            updateStatus();
+            log(`Theme applied successfully: ${theme}`);
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.body.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        }
+
+        function setLight() {
+            setTheme('light');
+        }
+
+        function setDark() {
+            setTheme('dark');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            log('Page loaded');
+            
+            // Check if dark-theme.css is loaded
+            const darkThemeLink = document.querySelector('link[href="dark-theme.css"]');
+            log(`Dark theme CSS loaded: ${darkThemeLink ? 'Yes' : 'No'}`);
+            
+            // Set initial theme from localStorage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                log(`Found saved theme: ${savedTheme}`);
+                setTheme(savedTheme);
+            } else {
+                log('No saved theme, using light');
+                setTheme('light');
+            }
+        });
+    </script>
+</body>
+</html>

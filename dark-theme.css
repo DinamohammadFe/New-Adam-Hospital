@@ -3,22 +3,27 @@
 
 /* Dark Mode Colors */
 [data-theme="dark"] {
-  --theme-bg: #02073f;
+  --theme-bg: #1a1a1a;
   --theme-text: #f5f5dc;
-  --theme-card-bg: #18237b;
-  --theme-border: #2cdfdc;
+  --theme-card-bg: #2a2a2a;
+  --theme-border: #404040;
   --theme-accent: #f5f5dc;
-  --theme-accent-light: #309f9a;
-  --theme-nav-bg: rgba(2, 8, 67, 0.98);
-  --theme-shadow: rgba(0, 0, 0, 0.3);
-  --theme-hero-overlay: rgba(26, 35, 126, 0.7);
+  --theme-accent-light: #606060;
+  --theme-nav-bg: rgba(0, 0, 0, 0.95);
+  --theme-shadow: rgba(0, 0, 0, 0.5);
+  --theme-hero-overlay: rgba(0, 0, 0, 0.7);
+  
+  /* Dark grey colors for buttons and elements */
+  --theme-dark-grey: #404040;
+  --theme-dark-grey-hover: #505050;
+  --theme-dark-grey-light: #606060;
 
   /* Override existing variables for dark mode */
-  --bg-color: #1a237e;
+  --bg-color: #1a1a1a;
   --text-color: #f5f5dc;
-  --nav-bg: rgba(26, 35, 126, 0.98);
-  --hero-bg: rgba(26, 35, 126, 0.7);
-  --shadow-color: rgba(0, 0, 0, 0.3);
+  --nav-bg: rgba(0, 0, 0, 0.95);
+  --hero-bg: rgba(0, 0, 0, 0.7);
+  --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Global Dark Theme */
@@ -262,12 +267,39 @@
 }
 
 [data-theme="dark"] .navbar-toggler:hover {
-  background: rgba(44, 223, 220, 0.1);
+  background: rgba(96, 96, 96, 0.1);
   border-color: var(--theme-accent-light);
 }
 
+/* Navigation positioning to match light theme */
+[data-theme="dark"] .navbar {
+  position: relative;
+  z-index: 1030;
+}
+
+[data-theme="dark"] .navbar-collapse {
+  background: var(--theme-nav-bg);
+  border-radius: 8px;
+  margin-top: 8px;
+  padding: 16px;
+  box-shadow: 0 8px 32px var(--theme-shadow);
+}
+
+[data-theme="dark"] .navbar-nav {
+  align-items: center;
+}
+
+[data-theme="dark"] .nav-item {
+  margin: 0 8px;
+}
+
+[data-theme="dark"] .dropdown-menu {
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
 [data-theme="dark"] .top-bar {
-  background: var(--theme-bg);
+  background: var(--theme-dark-grey) !important;
 }
 
 [data-theme="dark"] .top-bar .contact-item i,
@@ -306,19 +338,38 @@
 }
 
 [data-theme="dark"] .dropdown-menu {
-  background: var(--theme-card-bg);
-  border: 1px solid var(--theme-border);
-  box-shadow: 0 8px 25px var(--theme-shadow);
+  background: var(--theme-card-bg) !important;
+  border: 1px solid var(--theme-border) !important;
+  box-shadow: 0 8px 32px var(--theme-shadow) !important;
   backdrop-filter: blur(10px);
 }
 
 [data-theme="dark"] .dropdown-item {
-  color: var(--theme-text);
+  color: var(--theme-text) !important;
+  transition: all 0.3s ease;
 }
 
-[data-theme="dark"] .dropdown-item:hover {
-  background: var(--theme-accent-light);
-  color: var(--theme-bg);
+[data-theme="dark"] .dropdown-item:hover,
+[data-theme="dark"] .dropdown-item:focus {
+  background: var(--theme-dark-grey) !important;
+  color: white !important;
+  transform: translateX(5px);
+}
+
+[data-theme="dark"] .dropdown-item:active {
+  background: var(--theme-dark-grey-hover) !important;
+  color: white !important;
+}
+
+/* Dropdown dividers */
+[data-theme="dark"] .dropdown-divider {
+  border-color: var(--theme-border) !important;
+}
+
+/* Dropdown headers */
+[data-theme="dark"] .dropdown-header {
+  color: var(--theme-accent) !important;
+  font-weight: 600;
 }
 
 /* Hero Section */
@@ -371,7 +422,8 @@
   background-clip: text;
 }
 
-/* Footer */
+/* Footer - Removed dark theme styles to keep footer unchanged during theme switching */
+/* 
 [data-theme="dark"] .footer-section {
   background: linear-gradient(
     135deg,
@@ -479,17 +531,50 @@
 [data-theme="dark"] .copyright a:hover {
   color: var(--theme-accent);
 }
+*/
 
 /* Buttons */
 [data-theme="dark"] .cta-btn {
   background: linear-gradient(
     135deg,
-    var(--theme-accent-light) 0%,
-    var(--theme-accent) 100%
-  );
-  border: 1px solid var(--theme-border);
-  color: var(--theme-bg);
-  box-shadow: 0 4px 15px rgba(48, 159, 154, 0.3);
+    var(--theme-dark-grey) 0%,
+    var(--theme-dark-grey-hover) 100%
+  ) !important;
+  border: 1px solid var(--theme-dark-grey) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(64, 64, 64, 0.4) !important;
+}
+
+[data-theme="dark"] .cta-btn:hover {
+  background: linear-gradient(
+    135deg,
+    var(--theme-dark-grey-hover) 0%,
+    var(--theme-dark-grey-light) 100%
+  ) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(64, 64, 64, 0.5) !important;
+}
+
+/* Book appointment button styles */
+[data-theme="dark"] .book-btn {
+  background: linear-gradient(
+    135deg,
+    var(--theme-dark-grey) 0%,
+    var(--theme-dark-grey-hover) 100%
+  ) !important;
+  border: 1px solid var(--theme-dark-grey) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(64, 64, 64, 0.4) !important;
+}
+
+[data-theme="dark"] .book-btn:hover {
+  background: linear-gradient(
+    135deg,
+    var(--theme-dark-grey-hover) 0%,
+    var(--theme-dark-grey-light) 100%
+  ) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(64, 64, 64, 0.5) !important;
 }
 
 [data-theme="dark"] .hero-section .btn-primary,
@@ -497,11 +582,12 @@
 [data-theme="dark"] .glass-card-btn {
   background: linear-gradient(
     135deg,
-    var(--theme-accent-light) 0%,
-    var(--theme-accent) 100%
-  );
-  border: 1px solid var(--theme-border);
-  color: var(--theme-bg);
+    var(--theme-dark-grey) 0%,
+    var(--theme-dark-grey-hover) 100%
+  ) !important;
+  border: 1px solid var(--theme-dark-grey) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(64, 64, 64, 0.4) !important;
 }
 
 [data-theme="dark"] .hero-section .btn-primary:hover,
@@ -509,10 +595,12 @@
 [data-theme="dark"] .glass-card-btn:hover {
   background: linear-gradient(
     135deg,
-    var(--theme-accent) 0%,
-    var(--theme-accent-light) 100%
-  );
+    var(--theme-dark-grey-hover) 0%,
+    var(--theme-dark-grey-light) 100%
+  ) !important;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(64, 64, 64, 0.5) !important;
+  color: white !important;
 }
 
 [data-theme="dark"] .hero-section .btn-outline-primary,
@@ -611,8 +699,9 @@
 }
 
 [data-theme="dark"] .mega-menu .dropdown-item:hover {
-  background: rgba(48, 159, 154, 0.1);
-  color: var(--theme-accent);
+  background: var(--theme-dark-grey);
+  color: white;
+  border-left-color: var(--theme-dark-grey-light);
 }
 
 [data-theme="dark"] .mega-menu .dropdown-item i {

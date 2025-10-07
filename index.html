@@ -1139,33 +1139,52 @@
       });
     </script>
 
-    <!-- Theme Toggle Initialization -->
+    <!-- Load Header and Footer -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Initialize theme toggles (both desktop and mobile)
-        const themeToggle = document.getElementById("themeToggle");
-        const mobileThemeToggle = document.getElementById("mobileThemeToggle");
+      // Function to initialize theme toggles
+      function initializeThemeToggles() {
+        // Simple theme toggle function
+        function simpleThemeToggle(event) {
+          const newTheme = event.target.checked ? "dark" : "light";
+          
+          // Apply theme
+          document.body.setAttribute("data-theme", newTheme);
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+          
+          // Sync both toggles
+          const themeToggle = document.getElementById("themeToggle");
+          const mobileThemeToggle = document.getElementById("mobileThemeToggle");
+          
+          if (themeToggle) themeToggle.checked = event.target.checked;
+          if (mobileThemeToggle) mobileThemeToggle.checked = event.target.checked;
+        }
+        
+        // Wait for header to load, then initialize
+        setTimeout(() => {
+          const themeToggle = document.getElementById("themeToggle");
+          const mobileThemeToggle = document.getElementById("mobileThemeToggle");
 
-        if (typeof handleThemeToggle === "function") {
           // Set initial state based on saved theme
           const savedTheme = localStorage.getItem("theme") || "light";
           const isDark = savedTheme === "dark";
 
           if (themeToggle) {
             themeToggle.checked = isDark;
-            themeToggle.addEventListener("change", handleThemeToggle);
+            themeToggle.addEventListener("change", simpleThemeToggle);
           }
 
           if (mobileThemeToggle) {
             mobileThemeToggle.checked = isDark;
-            mobileThemeToggle.addEventListener("change", handleThemeToggle);
+            mobileThemeToggle.addEventListener("change", simpleThemeToggle);
           }
-        }
-      });
-    </script>
+          
+          // Apply initial theme
+          document.body.setAttribute("data-theme", savedTheme);
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        }, 1000); // Wait 1 second for header to load
+      }
 
-    <!-- Load Header and Footer -->
-    <script>
       // Wait for i18n to be ready before loading header/footer
       function waitForI18n(callback) {
         if (window.i18n) {
@@ -1182,6 +1201,8 @@
           .then((response) => response.text())
           .then((data) => {
             document.getElementById("header-placeholder").innerHTML = data;
+            // Initialize theme toggles after header is loaded
+            initializeThemeToggles();
             // Trigger translation update for header content
             if (window.i18n) {
               window.i18n.updatePageContent();
