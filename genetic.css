@@ -1,0 +1,387 @@
+/* Genetic Testing Page - Clean Modern Styles */
+
+/* Hero Section */
+.genetic-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/genetic.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 120px 0 80px;
+  color: white;
+  text-align: center;
+}
+
+.genetic-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.genetic-hero .lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.genetic-hero .btn-primary {
+  background-color: #4cb3a0;
+  border-color: #4cb3a0;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.genetic-hero .btn-primary:hover {
+  background-color: #3a9688;
+  border-color: #3a9688;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 179, 160, 0.3);
+}
+
+/* Hospital Info Section */
+.hospital-info {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.hospital-info .lead {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.brand-highlight {
+  color: #4cb3a0;
+  font-weight: 700;
+}
+
+/* Content Cards */
+.content-item {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.content-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #4cb3a0;
+}
+
+.content-item h3 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.content-item p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Expandable Sections */
+.expand-toggle {
+  background-color: #4cb3a0;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expand-toggle:hover {
+  background-color: #3a9688;
+  transform: translateY(-1px);
+}
+
+.expandable-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.expandable-content.show {
+  max-height: 1000px;
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+}
+
+.expandable-content h4 {
+  color: #4cb3a0;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.expandable-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.expandable-content li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.expandable-content li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4cb3a0;
+  font-weight: bold;
+}
+
+/* Timeline Section */
+.timeline-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 60px 0;
+}
+
+.timeline-section h2 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #4cb3a0;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  padding-right: 3rem;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  padding-left: 3rem;
+}
+
+.timeline-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  right: -30px;
+  border-left-color: white;
+  transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  left: -30px;
+  border-right-color: white;
+  transform: translateY(-50%);
+}
+
+.timeline-day {
+  background: #4cb3a0;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.timeline-item:nth-child(odd) .timeline-day {
+  right: -30px;
+}
+
+.timeline-item:nth-child(even) .timeline-day {
+  left: -30px;
+}
+
+.timeline-title {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Success Rates Section */
+.success-rates {
+  background: white;
+  padding: 60px 0;
+}
+
+.success-rates h2 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #4cb3a0, #3a9688);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 25px rgba(76, 179, 160, 0.2);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Footer */
+.footer-section {
+  background-color: #2c3e50;
+  color: white;
+  padding: 50px 0 30px;
+}
+
+.footer-title {
+  color: #4cb3a0;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #4cb3a0;
+}
+
+.footer-text {
+  color: #bdc3c7;
+  line-height: 1.6;
+}
+
+.footer-copyright {
+  color: #95a5a6;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .genetic-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .genetic-hero .lead {
+    font-size: 1.1rem;
+  }
+  
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 80px !important;
+    padding-right: 0 !important;
+  }
+  
+  .timeline-day {
+    left: 0 !important;
+  }
+  
+  .timeline-content::before {
+    left: -30px !important;
+    border-right-color: white !important;
+    border-left-color: transparent !important;
+  }
+  
+  .content-item {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .genetic-hero {
+    padding: 80px 0 60px;
+  }
+  
+  .genetic-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}

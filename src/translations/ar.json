@@ -1,0 +1,124 @@
+{
+  "navigation": {
+    "home": "الرئيسية",
+    "about": "عن المستشفى",
+    "treatments": "العلاجات",
+    "services": "الخدمات",
+    "patientPortal": "بوابة المرضى",
+    "bookAppointment": "احجز موعد",
+    "language": "English"
+  },
+  "hero": {
+    "title": "رحلتك نحو الأبوة والأمومة تبدأ هنا",
+    "subtitle": "علاجات الخصوبة الرائدة في مصر مع الرعاية الشخصية والتكنولوجيا المتقدمة",
+    "cta": "ابدأ رحلتك",
+    "consultation": "استشارة مجانية"
+  },
+  "about": {
+    "whoWeAre": "من نحن",
+    "meetTeam": "تعرف على الفريق",
+    "fertilityLab": "مختبر الخصوبة المتقدم",
+    "successStories": "قصص النجاح",
+    "newsUpdates": "الأخبار والتحديثات"
+  },
+  "treatments": {
+    "coreTitle": "العلاجات الأساسية",
+    "ivf": "علاج أطفال الأنابيب",
+    "icsi": "علاج الحقن المجهري",
+    "iui": "التلقيح الصناعي",
+    "geneticTesting": "الفحص الجيني",
+    "surgicalTitle": "الخيارات الجراحية",
+    "laparoscopy": "منظار البطن",
+    "hysteroscopy": "منظار الرحم",
+    "tubalSurgery": "جراحة قناة فالوب",
+    "myomectomy": "استئصال الأورام الليفية",
+    "specializedTitle": "الرعاية المتخصصة",
+    "embryoFreezing": "تجميد الأجنة",
+    "pcosTitle": "علاج متلازمة تكيس المبايض",
+    "endometriosis": "بطانة الرحم المهاجرة",
+    "familyBalancing": "توازن الأسرة"
+  },
+  "services": {
+    "femaleTitle": "خصوبة المرأة",
+    "femaleAssessment": "تقييم خصوبة المرأة",
+    "femaleTreatments": "علاجات خصوبة المرأة",
+    "maleTitle": "خصوبة الرجل",
+    "maleAssessment": "تقييم خصوبة الرجل",
+    "maleTreatments": "علاجات خصوبة الرجل",
+    "preservingTitle": "الحفاظ على الخصوبة",
+    "eggFreezing": "تجميد البويضات",
+    "spermFreezing": "تجميد الحيوانات المنوية",
+    "supportTitle": "خدمات الدعم",
+    "psychologicalSupport": "الدعم النفسي",
+    "nutrition": "التغذية",
+    "consultation": "الاستشارة",
+    "urology": "المسالك البولية",
+    "hematology": "أمراض الدم",
+    "immunology": "المناعة"
+  },
+  "statistics": {
+    "title": "رحلتنا بالأرقام",
+    "nationalities": "جنسيات المرضى",
+    "babies": "أطفال أنابيب آدم المولودين",
+    "years": "مفتوح منذ ١٩٩٤ - ٣٠ عاماً",
+    "successRate": "معدل النجاح"
+  },
+  "contact": {
+    "email": "info@adamhospital.com",
+    "phone": "16992",
+    "address": "اتصل بنا",
+    "getDirections": "احصل على الاتجاهات"
+  },
+  "footer": {
+    "quickLinks": "روابط سريعة",
+    "treatments": "العلاجات",
+    "services": "الخدمات",
+    "about": "عن المستشفى",
+    "contact": "اتصل بنا",
+    "legal": "قانوني",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة",
+    "medicalDisclaimer": "إخلاء المسؤولية الطبية",
+    "followUs": "تابعنا",
+    "copyright": "© ٢٠٢٤ مستشفى آدم الدولي. جميع الحقوق محفوظة."
+  },
+  "pages": {
+    "treatments": {
+      "title": "علاجات الخصوبة",
+      "subtitle": "حلول شاملة للخصوبة مصممة خصيصاً لاحتياجاتك",
+      "description": "يقدم فريقنا المتخصص مجموعة كاملة من علاجات الخصوبة باستخدام أحدث التقنيات ونهج الرعاية الشخصية."
+    },
+    "fertilityPreservation": {
+      "title": "الحفاظ على الخصوبة",
+      "subtitle": "حماية خيارات تخطيط الأسرة المستقبلية",
+      "description": "تقنيات متقدمة للحفاظ على الخصوبة لمساعدتك في التخطيط للمستقبل بثقة."
+    },
+    "advancedLab": {
+      "title": "المختبر المتقدم",
+      "subtitle": "تكنولوجيا حديثة للحصول على أفضل النتائج",
+      "description": "مرافق مختبرية متطورة تضمن أعلى معايير الرعاية ومعدلات النجاح."
+    },
+    "privacyPolicy": {
+      "title": "سياسة الخصوصية",
+      "lastUpdated": "آخر تحديث: يناير ٢٠٢٤"
+    },
+    "termsOfService": {
+      "title": "شروط الخدمة",
+      "lastUpdated": "آخر تحديث: يناير ٢٠٢٤"
+    },
+    "medicalDisclaimer": {
+      "title": "إخلاء المسؤولية الطبية",
+      "lastUpdated": "آخر تحديث: يناير ٢٠٢٤"
+    }
+  },
+  "chatbot": {
+    "welcome": "مرحباً! كيف يمكنني مساعدتك اليوم؟",
+    "placeholder": "اكتب رسالتك...",
+    "send": "إرسال",
+    "close": "إغلاق",
+    "title": "تحدث معنا"
+  },
+  "accessibility": {
+    "toggleNavigation": "تبديل التنقل"
+  }
+}

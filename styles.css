@@ -1,0 +1,1129 @@
+@import url("./styles.min.css");
+
+/* Accessibility, Typography, Layout, and UI Enhancements */
+:root {
+  --accent-teal: #51917c;
+  --accent-teal-light: #4cb3a0;
+  --accent-teal-dark: #3a7866;
+  --content-max-width: 1200px;
+  --section-spacing: 70px;
+  --body-font-size: 16px;
+  --body-line-height: 1.7;
+  --card-border: #e9ecef;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 4vw, 3rem);
+}
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+h3 {
+  font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+}
+
+section {
+  padding-block: var(--section-spacing);
+}
+.container {
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+}
+@media (max-width: 576px) {
+  section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Navigation focus and hover effects */
+.navbar-nav .nav-link:focus {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 2px;
+}
+.mega-menu .mega-menu-header {
+  color: var(--accent-teal);
+  margin-bottom: 8px;
+}
+.mega-menu .dropdown-item {
+  padding: 10px 16px;
+  border-left: 3px solid transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    transform 0.2s ease;
+}
+.mega-menu .dropdown-item i {
+  display: none !important;
+}
+.mega-menu .dropdown-item:hover,
+.mega-menu .dropdown-item:focus,
+.mega-menu .dropdown-item.focused {
+  background-color: rgba(81, 145, 124, 0.08);
+  border-left-color: var(--accent-teal);
+  outline: none;
+}
+
+/* Accent utilities */
+.text-accent {
+  color: var(--accent-teal);
+}
+.btn-accent {
+  background-color: var(--accent-teal);
+  border-color: var(--accent-teal);
+  color: #fff;
+}
+.btn-accent:hover {
+  background-color: var(--accent-teal-dark);
+  border-color: var(--accent-teal-dark);
+}
+
+/* Card-style containers */
+.white-card,
+.card,
+.content-item {
+  background: #fff;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.white-card:hover,
+.card:hover,
+.content-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero overlay and typography */
+.hero-section,
+.hero-section-new {
+  position: relative;
+  color: #fff;
+}
+.hero-section::before,
+.hero-section-new::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+.hero-section .container,
+.hero-section-new .container,
+.hero-section .container-fluid,
+.hero-section-new .container-fluid {
+  position: relative;
+  z-index: 1;
+}
+.hero-title,
+.hero-main-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Add text shadows to all hero section text on large screens */
+@media (min-width: 992px) {
+  .hero-section h1,
+  .hero-section-new h1,
+  .hero-main-title {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-section p,
+  .hero-section-new p,
+  .hero-subtitle {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Glass card base styles */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .glass-card-btn {
+    background: linear-gradient(135deg, #51917c, #6ba88a);
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .glass-card-btn:hover {
+    background: linear-gradient(135deg, #6ba88a, #51917c);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(81, 145, 124, 0.4);
+    color: white;
+    text-decoration: none;
+  }
+
+  .hero-section .glass-card-title,
+  .hero-section-new .glass-card-title {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-section .glass-card-description,
+  .hero-section-new .glass-card-description {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Background image layer for hero sections (lazy-loaded via data-bg) */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+.hero-section .hero-background-image,
+.hero-section-new .hero-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media (max-width: 576px) {
+  .hero-section,
+  .hero-section-new {
+    padding-top: 0 !important;
+    padding-bottom: 70px !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Additional fix for mobile white band */
+  body {
+    padding-top: 0 !important;
+  }
+  
+  main {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Ensure hero sections start from the very top */
+  section[class*="hero"] {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* Subtle fade-in on scroll */
+[data-animate="fade"] {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-animate="fade"].in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Improved focus visibility */
+:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 2px;
+}
+
+/* Fix navbar background on mobile screens */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Hide navbar completely on small screens */
+@media (max-width: 991.98px) {
+  .custom-navbar {
+    display: none !important;
+  }
+}
+
+/* Adjust body padding when navbar is hidden on mobile */
+@media (max-width: 991.98px) {
+  body {
+    padding-top: 0 !important;
+  }
+}
+
+/* Mobile header overlay on hero section - Fakih IVF Style */
+@media (max-width: 991.98px) {
+  .mobile-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .mobile-hospital-name {
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-family: 'Oswald', sans-serif;
+    flex: 1;
+    text-align: center;
+    margin: 0 15px;
+  }
+  
+  .mobile-hospital-name .adam-text {
+    color: #8B0000 !important;
+    font-weight: 600;
+  }
+  
+  .mobile-hospital-name .hospital-text {
+    color: white !important;
+    font-weight: 400;
+  }
+  
+  .mobile-hamburger-menu {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    z-index: 1001;
+  }
+  
+  .hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-hamburger-menu:hover .hamburger-line {
+    background-color: #f0f0f0;
+  }
+  
+  .mobile-language-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Cairo', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-language-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Remove any top margin/padding from hero section */
+  .hero-section,
+  .hero-section-new {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    top: 0 !important;
+  }
+  
+  /* Ensure hero section starts from top */
+  .hero-section-new {
+    min-height: 100vh !important;
+    position: relative;
+    top: 0;
+  }
+  
+  /* Remove any body padding/margin that might cause white space */
+  body {
+    margin: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  /* Ensure main element starts from top */
+  main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  /* Update hero background for mobile to match screenshot */
+  .hero-section-new .hero-background-image {
+    filter: blur(1px) brightness(0.8);
+  }
+  
+  /* Hide main hero content on mobile to match minimal design */
+  .hero-section-new .container {
+    display: none;
+  }
+  
+  /* Fix mobile content visibility and overflow issues */
+  body {
+    overflow-x: hidden;
+  }
+  
+  .mobile-header-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100vw;
+  }
+  
+  .mobile-hospital-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .mobile-language-toggle {
+    flex-shrink: 0;
+    min-width: auto;
+  }
+  
+  .mobile-hamburger-menu {
+    flex-shrink: 0;
+  }
+  
+  /* Mobile theme toggle styles */
+  .mobile-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .mobile-theme-switch-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .mobile-theme-switch-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .mobile-theme-switch-label {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mobile-theme-switch-label:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .mobile-theme-switch-slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mobile-theme-switch-input:checked + .mobile-theme-switch-label {
+    background-color: rgba(81, 145, 124, 0.8);
+  }
+  
+  .mobile-theme-switch-input:checked + .mobile-theme-switch-label .mobile-theme-switch-slider {
+    transform: translateX(20px);
+  }
+  
+  .mobile-theme-icon {
+    font-size: 8px;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .mobile-theme-switch-input:checked + .mobile-theme-switch-label .mobile-theme-icon {
+    color: var(--accent-teal);
+  }
+}
+
+/* Theme Toggle Styles */
+.theme-switch-container {
+  position: relative;
+  display: inline-block;
+}
+
+.theme-switch-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-switch-label {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-switch-label:hover {
+  background-color: #bbb;
+}
+
+.theme-switch-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-switch-input:checked + .theme-switch-label {
+  background-color: var(--accent-teal);
+}
+
+.theme-switch-input:checked + .theme-switch-label .theme-switch-slider {
+  transform: translateX(26px);
+}
+
+.theme-icon {
+  font-size: 10px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.theme-switch-input:checked + .theme-switch-label .theme-icon {
+  color: var(--accent-teal);
+}
+
+/* Problems & Diagnostics: scoped red text only for target section */
+#problems_and_diagnostics,
+#problems_and_diagnostics * {
+  color: #ff0000 !important;
+}
+
+/* Loader overlay and spinner sizing */
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+.loader-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.loader-content {
+  text-align: center;
+}
+.spinner-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+.spinner {
+  width: 140px;
+  height: 140px;
+  border: 15px solid rgba(81, 145, 124, 0.2);
+  border-top-color: var(--accent-teal);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+  margin: 0 auto;
+}
+.loader-logo {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 576px) {
+  .spinner-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+  .spinner {
+    width: 120px;
+    height: 120px;
+    border-width: 12px;
+  }
+  .loader-logo {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* iPad Responsive Styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-nav {
+    gap: 0.5rem;
+  }
+  
+  .theme-switch-container {
+    margin: 0 0.25rem;
+  }
+  
+  .book-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .language-toggle {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* iPhone X and iPhone 14 Responsive Styles */
+@media (max-width: 414px) {
+  .mobile-top-bar {
+    padding: 0.75rem 1rem;
+  }
+  
+  .mobile-hospital-name {
+    font-size: 1.1rem;
+  }
+  
+  .mobile-controls {
+    gap: 0.5rem;
+  }
+  
+  .mobile-theme-switch-container {
+    transform: scale(0.9);
+  }
+  
+  .mobile-language-toggle {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* iPhone X Specific (375px width) */
+@media (max-width: 375px) {
+  .mobile-hospital-name {
+    font-size: 1rem;
+  }
+  
+  .mobile-theme-switch-container {
+    transform: scale(0.85);
+  }
+  
+  .mobile-language-toggle {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Landscape orientation adjustments for mobile devices */
+@media (max-height: 500px) and (orientation: landscape) {
+  .mobile-top-bar {
+    padding: 0.5rem 1rem;
+  }
+  
+  .mobile-hospital-name {
+    font-size: 0.95rem;
+  }
+  
+  .mobile-theme-switch-container {
+    transform: scale(0.8);
+  }
+}
+
+/* Glass Card Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    min-height: 280px;
+  }
+  
+  .glass-card-title {
+    font-size: 1.25rem !important;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  
+  .glass-card-description {
+    font-size: 0.95rem !important;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  .glass-card-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* iPhone X and iPhone 14 Glass Card Styles */
+@media (max-width: 414px) {
+  .glass-card {
+    padding: 1.25rem;
+    min-height: 260px;
+    margin-bottom: 1rem;
+  }
+  
+  .glass-card-title {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.75rem;
+  }
+  
+  .glass-card-description {
+    font-size: 0.9rem !important;
+    line-height: 1.4;
+    margin-bottom: 1.25rem;
+  }
+  
+  .glass-card-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* iPhone X Specific Glass Card Styles */
+@media (max-width: 375px) {
+  .glass-card {
+    padding: 1rem;
+    min-height: 240px;
+  }
+  
+  .glass-card-title {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  .glass-card-description {
+    font-size: 0.85rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .glass-card-btn {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Why Choose Cards Styles */
+.why-choose-card {
+  background: linear-gradient(135deg, rgba(76, 179, 160, 0.9), rgba(81, 145, 124, 0.9));
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  height: 100%;
+  min-height: 400px;
+  position: relative;
+}
+
+.why-choose-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.why-choose-card .card-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.why-choose-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.why-choose-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.why-choose-card .card-content {
+  padding: 2rem;
+  text-align: center;
+  height: calc(100% - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.why-choose-card .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.why-choose-card .card-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* Department Cards Styles */
+.department-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  min-height: 400px;
+  border: 1px solid rgba(76, 179, 160, 0.1);
+}
+
+.department-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-color: rgba(76, 179, 160, 0.3);
+}
+
+.department-card .card-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.department-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.department-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.department-card .card-content {
+  padding: 2rem;
+  text-align: center;
+  height: calc(100% - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.department-card .card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #4cb3a0;
+}
+
+.department-card .card-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive styles for cards */
+@media (max-width: 768px) {
+  .why-choose-card,
+  .department-card {
+    min-height: 350px;
+    margin-bottom: 2rem;
+  }
+  
+  .why-choose-card .card-content,
+  .department-card .card-content {
+    padding: 1.5rem;
+  }
+  
+  .why-choose-card .card-title,
+  .department-card .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .why-choose-card .card-description,
+  .department-card .card-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-choose-card,
+  .department-card {
+    min-height: 320px;
+  }
+  
+  .why-choose-card .card-image,
+  .department-card .card-image {
+    height: 160px;
+  }
+  
+  .why-choose-card .card-content,
+  .department-card .card-content {
+    padding: 1.25rem;
+    height: calc(100% - 160px);
+  }
+  
+  .why-choose-card .card-title,
+  .department-card .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .why-choose-card .card-description,
+  .department-card .card-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Fertility Cards Styles */
+.fertility-card {
+  background: linear-gradient(135deg, rgba(76, 179, 160, 0.9), rgba(81, 145, 124, 0.9));
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  height: 100%;
+  min-height: 450px;
+  position: relative;
+}
+
+.fertility-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.fertility-card .card-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fertility-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.fertility-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.fertility-card .card-content {
+  padding: 2rem;
+  text-align: center;
+  height: calc(100% - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fertility-card .card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fertility-card .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.fertility-card .card-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.fertility-card .card-btn {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+/* Responsive styles for fertility cards */
+@media (max-width: 768px) {
+  .fertility-card {
+    min-height: 400px;
+    margin-bottom: 2rem;
+  }
+  
+  .fertility-card .card-content {
+    padding: 1.5rem;
+  }
+  
+  .fertility-card .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .fertility-card .card-btn {
+    min-width: 100px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .fertility-card {
+    min-height: 380px;
+  }
+  
+  .fertility-card .card-image {
+    height: 160px;
+  }
+  
+  .fertility-card .card-content {
+    padding: 1.25rem;
+    height: calc(100% - 160px);
+  }
+  
+  .fertility-card .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .fertility-card .card-btn {
+    min-width: 90px;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Department Icons Styles - Twice Larger */
+.department-icon-new,
+.department-icon-glow {
+  font-size: 4rem !important;
+  width: 128px !important;
+  height: 128px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #4cb3a0;
+  transition: all 0.3s ease;
+}
+
+.department-icon-new i,
+.department-icon-glow i {
+  font-size: 4rem !important;
+}
+
+.department-icon-new img,
+.department-icon-glow img {
+  width: 128px !important;
+  height: 128px !important;
+  object-fit: contain;
+}
+
+/* Hover effects for department icons */
+.department-card:hover .department-icon-new,
+.department-card:hover .department-icon-glow {
+  transform: scale(1.1);
+  color: #51917c;
+}
+
+/* Mobile responsive for department icons */
+@media (max-width: 768px) {
+  .department-icon-new,
+  .department-icon-glow {
+    font-size: 3.5rem !important;
+    width: 112px !important;
+    height: 112px !important;
+  }
+  
+  .department-icon-new i,
+  .department-icon-glow i {
+    font-size: 3.5rem !important;
+  }
+  
+  .department-icon-new img,
+  .department-icon-glow img {
+    width: 112px !important;
+    height: 112px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .department-icon-new,
+  .department-icon-glow {
+    font-size: 3rem !important;
+    width: 96px !important;
+    height: 96px !important;
+  }
+  
+  .department-icon-new i,
+  .department-icon-glow i {
+    font-size: 3rem !important;
+  }
+  
+  .department-icon-new img,
+  .department-icon-glow img {
+    width: 96px !important;
+    height: 96px !important;
+  }
+}

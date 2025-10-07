@@ -1,0 +1,136 @@
+{
+  "en": {
+    "welcome": "Hello! I'm here to help you with information about Adam International Hospital's fertility services. How can I assist you today?",
+    "faqs": [
+      {
+        "id": "1",
+        "question": "What is IVF?",
+        "answer": "IVF (In Vitro Fertilization) is a fertility treatment where eggs are retrieved from the ovaries and fertilized with sperm in a laboratory. The resulting embryos are then transferred to the uterus. Our success rates are among the highest in Egypt.",
+        "keywords": ["ivf", "in vitro", "fertilization", "treatment"]
+      },
+      {
+        "id": "2",
+        "question": "What is ICSI?",
+        "answer": "ICSI (Intracytoplasmic Sperm Injection) is a specialized form of IVF where a single sperm is directly injected into an egg. This technique is particularly helpful for male fertility issues and has excellent success rates.",
+        "keywords": ["icsi", "sperm injection", "male fertility"]
+      },
+      {
+        "id": "3",
+        "question": "How much does IVF cost?",
+        "answer": "IVF costs vary depending on your specific treatment plan. We offer transparent pricing and payment plans. Please contact us at 16992 or book a consultation to discuss costs and insurance coverage options.",
+        "keywords": ["cost", "price", "payment", "insurance"]
+      },
+      {
+        "id": "4",
+        "question": "What is your success rate?",
+        "answer": "Our success rates vary by age and treatment type, but we maintain some of the highest success rates in Egypt. Over 3,200 IVF babies have been born through our programs. We'll discuss your specific chances during your consultation.",
+        "keywords": ["success rate", "statistics", "results"]
+      },
+      {
+        "id": "5",
+        "question": "How do I book an appointment?",
+        "answer": "You can book an appointment by calling 16992, using our online booking system, or visiting our clinic directly. We offer free initial consultations to discuss your fertility journey.",
+        "keywords": ["appointment", "booking", "consultation", "schedule"]
+      },
+      {
+        "id": "6",
+        "question": "What should I bring to my first appointment?",
+        "answer": "Please bring any previous medical records, test results, and a list of current medications. Also bring your ID and insurance information if applicable. We'll guide you through what to expect during your first visit.",
+        "keywords": ["first appointment", "documents", "medical records"]
+      },
+      {
+        "id": "7",
+        "question": "Do you offer egg freezing?",
+        "answer": "Yes, we offer comprehensive fertility preservation services including egg freezing, sperm freezing, and embryo freezing. These services are ideal for those who want to preserve their fertility for the future.",
+        "keywords": ["egg freezing", "fertility preservation", "sperm freezing"]
+      },
+      {
+        "id": "8",
+        "question": "What are your clinic hours?",
+        "answer": "Our clinic is open Sunday through Thursday from 9 AM to 8 PM, and Saturdays from 9 AM to 3 PM. We're closed on Fridays. Emergency services are available 24/7.",
+        "keywords": ["hours", "schedule", "open", "emergency"]
+      },
+      {
+        "id": "9",
+        "question": "Do you accept international patients?",
+        "answer": "Absolutely! We welcome patients from 83+ nationalities. We provide comprehensive support for international patients including assistance with travel arrangements and accommodation recommendations.",
+        "keywords": ["international", "travel", "foreign patients"]
+      },
+      {
+        "id": "10",
+        "question": "What support services do you offer?",
+        "answer": "We offer comprehensive support including psychological counseling, nutrition guidance, patient care coordination, and 24/7 support throughout your treatment journey. Your wellbeing is our priority.",
+        "keywords": ["support", "counseling", "nutrition", "care"]
+      }
+    ],
+    "defaultResponse": "I'd be happy to help you with that! For specific medical questions or to schedule an appointment, please call us at 16992 or visit our clinic. Our medical team can provide personalized guidance for your situation.",
+    "contactPrompt": "Would you like me to help you schedule an appointment or connect you with our medical team?"
+  },
+  "ar": {
+    "welcome": "مرحباً! أنا هنا لمساعدتك بمعلومات حول خدمات الخصوبة في مستشفى آدم الدولي. كيف يمكنني مساعدتك اليوم؟",
+    "faqs": [
+      {
+        "id": "1",
+        "question": "ما هو أطفال الأنابيب؟",
+        "answer": "أطفال الأنابيب هو علاج للخصوبة حيث يتم استخراج البويضات من المبايض وتخصيبها بالحيوانات المنوية في المختبر. ثم يتم نقل الأجنة الناتجة إلى الرحم. معدلات نجاحنا من بين الأعلى في مصر.",
+        "keywords": ["أطفال الأنابيب", "التلقيح الصناعي", "العلاج"]
+      },
+      {
+        "id": "2",
+        "question": "ما هو الحقن المجهري؟",
+        "answer": "الحقن المجهري هو شكل متخصص من أطفال الأنابيب حيث يتم حقن حيوان منوي واحد مباشرة في البويضة. هذه التقنية مفيدة بشكل خاص لمشاكل خصوبة الرجال ولها معدلات نجاح ممتازة.",
+        "keywords": ["الحقن المجهري", "خصوبة الرجال"]
+      },
+      {
+        "id": "3",
+        "question": "كم تكلفة أطفال الأنابيب؟",
+        "answer": "تختلف تكاليف أطفال الأنابيب حسب خطة العلاج المحددة. نحن نقدم أسعاراً شفافة وخطط دفع. يرجى الاتصال بنا على 16992 أو حجز استشارة لمناقشة التكاليف وخيارات التأمين.",
+        "keywords": ["التكلفة", "السعر", "الدفع", "التأمين"]
+      },
+      {
+        "id": "4",
+        "question": "ما هو معدل النجاح لديكم؟",
+        "answer": "تختلف معدلات النجاح حسب العمر ونوع العلاج، لكننا نحافظ على بعض من أعلى معدلات النجاح في مصر. أكثر من 3200 طفل أنابيب ولدوا من خلال برامجنا. سنناقش فرصك المحددة أثناء الاستشارة.",
+        "keywords": ["معدل النجاح", "الإحصائيات", "النتائج"]
+      },
+      {
+        "id": "5",
+        "question": "كيف أحجز موعد؟",
+        "answer": "يمكنك حجز موعد بالاتصال على 16992، أو استخدام نظام الحجز الإلكتروني، أو زيارة العيادة مباشرة. نحن نقدم استشارات أولية مجانية لمناقشة رحلة الخصوبة الخاصة بك.",
+        "keywords": ["موعد", "حجز", "استشارة", "جدولة"]
+      },
+      {
+        "id": "6",
+        "question": "ماذا أحضر للموعد الأول؟",
+        "answer": "يرجى إحضار أي سجلات طبية سابقة ونتائج الفحوصات وقائمة بالأدوية الحالية. كما أحضر الهوية ومعلومات التأمين إن وجدت. سنرشدك خلال ما تتوقعه في زيارتك الأولى.",
+        "keywords": ["الموعد الأول", "الوثائق", "السجلات الطبية"]
+      },
+      {
+        "id": "7",
+        "question": "هل تقدمون تجميد البويضات؟",
+        "answer": "نعم، نحن نقدم خدمات شاملة للحفاظ على الخصوبة بما في ذلك تجميد البويضات والحيوانات المنوية والأجنة. هذه الخدمات مثالية لأولئك الذين يريدون الحفاظ على خصوبتهم للمستقبل.",
+        "keywords": ["تجميد البويضات", "الحفاظ على الخصوبة", "تجميد الحيوانات المنوية"]
+      },
+      {
+        "id": "8",
+        "question": "ما هي ساعات العمل؟",
+        "answer": "عيادتنا مفتوحة من الأحد إلى الخميس من 9 صباحاً إلى 8 مساءً، والسبت من 9 صباحاً إلى 3 مساءً. نحن مغلقون يوم الجمعة. الخدمات الطارئة متاحة 24/7.",
+        "keywords": ["ساعات العمل", "الجدول", "مفتوح", "طوارئ"]
+      },
+      {
+        "id": "9",
+        "question": "هل تستقبلون المرضى الدوليين؟",
+        "answer": "بالطبع! نحن نرحب بالمرضى من أكثر من 83 جنسية. نحن نقدم دعماً شاملاً للمرضى الدوليين بما في ذلك المساعدة في ترتيبات السفر وتوصيات الإقامة.",
+        "keywords": ["دولي", "سفر", "مرضى أجانب"]
+      },
+      {
+        "id": "10",
+        "question": "ما هي خدمات الدعم التي تقدمونها؟",
+        "answer": "نحن نقدم دعماً شاملاً بما في ذلك الاستشارة النفسية وإرشادات التغذية وتنسيق رعاية المرضى والدعم على مدار 24/7 طوال رحلة العلاج. رفاهيتك هي أولويتنا.",
+        "keywords": ["الدعم", "الاستشارة", "التغذية", "الرعاية"]
+      }
+    ],
+    "defaultResponse": "سأكون سعيداً لمساعدتك في ذلك! للأسئلة الطبية المحددة أو لجدولة موعد، يرجى الاتصال بنا على 16992 أو زيارة عيادتنا. يمكن لفريقنا الطبي تقديم إرشادات شخصية لحالتك.",
+    "contactPrompt": "هل تريد مني مساعدتك في جدولة موعد أو ربطك بفريقنا الطبي؟"
+  }
+}

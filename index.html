@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Top fertility treatments in Egypt including IVF, IUI, and personalized care. Start your journey with trusted experts today."
+    />
+    <title>Adam International Hospital - IVF, IUI & Egg Freezing</title>
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      as="script"
+    />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://i.postimg.cc/kgdKgg1H/adam.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@400;700&family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Font Styles -->
+    <style>
+      /* Font styles */
+      h1,
+      h2,
+      h3 {
+        font-family: "Oswald", sans-serif;
+        color: #51917c;
+      }
+
+      body,
+      p,
+      .card-text,
+      .description {
+        font-family: "Lato", sans-serif;
+      }
+    </style>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=5" />
+    <!-- Dark Theme Stylesheet -->
+    <link rel="stylesheet" href="dark-theme.css?v=1" />
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Spinner Loader -->
+    <div
+      id="loader"
+      class="loader-overlay"
+      aria-live="polite"
+      aria-label="Loading"
+    >
+      <div class="loader-content">
+        <div class="spinner-wrapper" role="status">
+          <div class="spinner"></div>
+          <!-- Centered logo inside the loader circle -->
+          <img
+            src="https://i.postimg.cc/kgdKgg1H/adam.png"
+            alt="Adam International Hospital"
+            class="loader-logo"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section with Static Background -->
+      <section class="hero-section-new position-relative">
+        <!-- Mobile Header Overlay (only visible on small screens) -->
+        <div class="mobile-header-overlay d-lg-none">
+          <button
+            class="mobile-hamburger-menu"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenuOffcanvas"
+            aria-controls="mobileMenuOffcanvas"
+          >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          <a href="#" class="mobile-hospital-name">
+            <span class="adam-text">Adam</span>
+            <span class="hospital-text">International Hospital</span>
+          </a>
+          <button
+            class="mobile-language-toggle"
+            type="button"
+            onclick="changeLanguage('ar')"
+          >
+            العربية
+          </button>
+        </div>
+
+        <!-- Huge Static Background Image -->
+        <div
+          class="hero-background-image"
+          style="
+            background-image: url('https://i.postimg.cc/QMXyVHt0/kelly-sikkema-IE8-Kfew-Ap-w-unsplash.jpg');
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+          "
+        ></div>
+
+        <div class="container h-100">
+          <div class="row h-100 align-items-center min-vh-100">
+            <div class="col-12 text-center">
+              <!-- Main Title -->
+              <div class="text-center mb-4 mb-md-5 mb-lg-6" data-aos="fade-up">
+                <h1
+                  class="hero-main-title display-3 display-md-2 display-lg-1 fw-bold mb-3 mb-md-4"
+                  style="color: white !important"
+                  data-i18n="hero.title"
+                >
+                  <span
+                    style="
+                      color: #8b0000 !important;
+                      font-weight: 700;
+                      font-family: 'Roboto', sans-serif;
+                    "
+                    >Adam</span
+                  >
+                  <span style="color: white !important"
+                    >International Hospital</span
+                  >
+                </h1>
+                <p
+                  class="hero-subtitle lead fs-4 fs-md-3 fs-lg-2 opacity-90 px-3 px-md-4 px-lg-0"
+                  style="font-style: italic; color: white !important"
+                  data-i18n="hero.subtitle"
+                >
+                  Leading fertility treatments in Egypt with advanced technology
+                </p>
+              </div>
+
+              <!-- 3 Floating Glass Cards -->
+              <div class="row justify-content-center g-3 g-md-4 g-lg-5">
+                <!-- Card 1: IVF Treatment -->
+                <div
+                  class="col-12 col-sm-6 col-lg-4 col-xl-4 mb-3 mb-lg-0"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div class="glass-card h-100 d-flex flex-column">
+                    <h2
+                      class="glass-card-title h4 h3-md"
+                      style="color: #51917c"
+                      data-i18n="hero.card1.title"
+                    >
+                      IVF & ICSI
+                    </h2>
+                    <p
+                      class="glass-card-description flex-grow-1"
+                      style="color: black"
+                      data-i18n="hero.card1.description"
+                    >
+                      Advanced fertility treatments guided by expert doctors,
+                      helping you achieve the dream of parenthood.
+                    </p>
+
+                    <a
+                      href="#emergency"
+                      class="glass-card-btn btn btn-primary mt-auto"
+                      data-i18n="hero.card1.button"
+                    >
+                      Start Now
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Card 2: Personalized Support -->
+                <div
+                  class="col-12 col-sm-6 col-lg-4 col-xl-4 mb-3 mb-lg-0"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <div class="glass-card h-100 d-flex flex-column">
+                    <h2
+                      class="glass-card-title h4 h3-md"
+                      style="color: #51917c"
+                      data-i18n="hero.card2.title"
+                    >
+                      Personalized Support
+                    </h2>
+                    <p
+                      class="glass-card-description flex-grow-1"
+                      style="color: black"
+                      data-i18n="hero.card2.description"
+                    >
+                      Dedicated, one-on-one care throughout your journey,
+                      ensuring comfort, trust, and confidence at every step.
+                    </p>
+
+                    <a
+                      href="#surgery"
+                      class="glass-card-btn btn btn-primary mt-auto"
+                      data-i18n="hero.card2.button"
+                    >
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Card 3: Genetic Testing & Freezing -->
+                <div
+                  class="col-12 col-sm-6 col-lg-4 col-xl-4 mb-3 mb-lg-0"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                >
+                  <div class="glass-card h-100 d-flex flex-column">
+                    <h2
+                      class="glass-card-title h4 h3-md"
+                      style="color: #51917c"
+                      data-i18n="hero.card3.title"
+                    >
+                      Genetic Testing & Freezing
+                    </h2>
+                    <p
+                      class="glass-card-description flex-grow-1"
+                      style="color: black"
+                      data-i18n="hero.card3.description"
+                    >
+                      Cutting-edge lab services, from genetic screening to
+                      embryo freezing, protecting your family's future health.
+                    </p>
+
+                    <a
+                      href="genetic-testing.html"
+                      class="glass-card-btn btn btn-primary mt-auto"
+                      data-i18n="hero.card3.button"
+                    >
+                      Explore Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mobile Menu Offcanvas -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="mobileMenu"
+        aria-labelledby="mobileMenuLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="mobileMenuLabel">
+            <span style="color: #8b0000; font-weight: 700">Adam</span>
+            International Hospital
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <nav class="nav flex-column">
+            <a class="nav-link" href="#" data-i18n="nav.home">Home</a>
+            <a class="nav-link" href="about.html" data-i18n="nav.about"
+              >About</a
+            >
+            <a class="nav-link" href="services.html" data-i18n="nav.services"
+              >Services</a
+            >
+            <a
+              class="nav-link"
+              href="treatments.html"
+              data-i18n="nav.treatments"
+              >Treatments</a
+            >
+            <a class="nav-link" href="contact.html" data-i18n="nav.contact"
+              >Contact</a
+            >
+            <a
+              class="nav-link"
+              href="our-ivf-family.html"
+              data-i18n="nav.our_family"
+              >Our IVF Family</a
+            >
+          </nav>
+
+          <!-- Language Toggle -->
+          <div class="mt-4">
+            <h6>Language</h6>
+            <div class="btn-group" role="group">
+              <button
+                type="button"
+                class="btn btn-outline-primary btn-sm"
+                onclick="changeLanguage('en')"
+              >
+                English
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-primary btn-sm"
+                onclick="changeLanguage('ar')"
+              >
+                العربية
+              </button>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="mt-4">
+            <h6>Contact</h6>
+            <p class="small mb-1">📞 +20 100 123 4567</p>
+            <p class="small mb-1">📧 info@adamhospital.com</p>
+            <p class="small">📍 Cairo, Egypt</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fertility Cards Section -->
+      <section class="fertility-cards-section py-4 py-md-5 py-lg-6">
+        <div class="container">
+          <div class="row justify-content-center g-3 g-md-4 g-lg-5">
+            <div class="col-12 col-sm-6 col-lg-5 col-xl-4 mb-3 mb-lg-4">
+              <div class="fertility-card h-100">
+                <div class="card-image">
+                  <img
+                    src="https://i.postimg.cc/MT8wk812/jonathan-borba-RWg-E9-l-Kj-Y-unsplash.jpg"
+                    alt="Female Fertility"
+                    loading="lazy"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-content d-flex flex-column h-100">
+                  <div class="card-icon mb-2 mb-md-3">
+                    <img
+                      src="https://i.postimg.cc/gchHgb2q/female.png"
+                      alt="Female Fertility Icon"
+                      width="40"
+                      height="40"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <h3 class="card-title text-white h4 h3-md mb-3">
+                    Female fertility
+                  </h3>
+                  <div class="card-buttons mt-auto">
+                    <a
+                      href="female-fertility.html"
+                      class="card-btn diagnostics-btn btn btn-outline-light btn-sm me-2 mb-2"
+                    >
+                      Diagnostics
+                    </a>
+                    <a
+                      href="female-fertility-treatments.html"
+                      class="card-btn treatments-btn btn btn-primary btn-sm mb-2"
+                    >
+                      Treatments
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-5 col-xl-4 mb-3 mb-lg-4">
+              <div class="fertility-card h-100">
+                <div class="card-image">
+                  <img
+                    src="https://i.postimg.cc/05SbT8mj/mikael-stenberg-HP5bznfp-IMU-unsplash.jpg"
+                    alt="Male Fertility"
+                    loading="lazy"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-content d-flex flex-column h-100">
+                  <div class="card-icon mb-2 mb-md-3">
+                    <img
+                      src="https://i.postimg.cc/RVzQ8p3r/male.png"
+                      alt="Male Fertility Icon"
+                      width="40"
+                      height="40"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <h3 class="card-title text-white h4 h3-md mb-3">
+                    Male fertility
+                  </h3>
+                  <div class="card-buttons mt-auto">
+                    <a
+                      href="male-fertility.html"
+                      class="card-btn diagnostics-btn btn btn-outline-light btn-sm me-2 mb-2"
+                    >
+                      Diagnostics
+                    </a>
+                    <a
+                      href="male-fertility-treatments.html"
+                      class="card-btn treatments-btn btn btn-primary btn-sm mb-2"
+                    >
+                      Treatments
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-6 col-lg-5 col-xl-4 mb-3 mb-lg-4"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="fertility-card h-100">
+                <div class="card-image">
+                  <img
+                    src="https://i.postimg.cc/k4YZ0q7w/ivf-clinic-scene-cinematic.webp"
+                    alt="IVF & ICSI"
+                    loading="lazy"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-content d-flex flex-column h-100">
+                  <div class="card-icon mb-2 mb-md-3">
+                    <img
+                      src="https://i.postimg.cc/85tQ6SnR/ivf.png"
+                      alt="IVF & ICSI Icon"
+                      width="40"
+                      height="40"
+                      loading="lazy"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <h3 class="card-title text-white h4 h3-md mb-3">
+                    IVF & ICSI
+                  </h3>
+                  <div class="card-buttons mt-auto">
+                    <a
+                      href="ivf.html"
+                      class="card-btn diagnostics-btn btn btn-outline-light btn-sm me-2 mb-2"
+                    >
+                      IVF Process
+                    </a>
+                    <a
+                      href="ivf-icsi.html"
+                      class="card-btn treatments-btn btn btn-primary btn-sm mb-2"
+                    >
+                      ICSI Treatment
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-6 col-lg-5 col-xl-4 mb-3 mb-lg-4"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="fertility-card h-100">
+                <div class="card-image">
+                  <img
+                    src="https://i.postimg.cc/QMXyVHt0/kelly-sikkema-IE8-Kfew-Ap-w-unsplash.jpg"
+                    alt="Genetic Testing"
+                    loading="lazy"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-content d-flex flex-column h-100">
+                  <div class="card-icon mb-2 mb-md-3">
+                    <img
+                      src="https://i.postimg.cc/g2YVMbMX/genetic.png"
+                      alt="Genetic Testing Icon"
+                      width="40"
+                      height="40"
+                      loading="lazy"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <h3 class="card-title text-white h4 h3-md mb-3">
+                    Genetic Testing
+                  </h3>
+                  <div class="card-buttons mt-auto">
+                    <a
+                      href="genetic-testing.html"
+                      class="card-btn diagnostics-btn btn btn-outline-light btn-sm me-2 mb-2"
+                    >
+                      PGT Testing
+                    </a>
+                    <a
+                      href="genetic-testing.html"
+                      class="card-btn treatments-btn btn btn-primary btn-sm mb-2"
+                    >
+                      Screening
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics Section -->
+      <section class="stats-section">
+        <div class="stats-background">
+          <div class="container">
+            <div class="stats-header text-center" data-aos="fade-up">
+              <h2 class="text-white text-center">Our journey in numbers</h2>
+            </div>
+            <div class="row justify-content-center">
+              <div
+                class="col-lg-3 col-md-6 col-sm-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <img
+                      src="https://i.postimg.cc/Yhn5yhQM/globe-1.png"
+                      alt="Patient Nationalities"
+                      loading="lazy"
+                    />
+                    <div class="stat-number" data-target="83">0</div>
+                  </div>
+                  <div class="stat-label">Patient nationalities</div>
+                </div>
+              </div>
+              <div
+                class="col-lg-3 col-md-6 col-sm-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <img
+                      src="https://i.postimg.cc/JGzwqbDp/egg.png"
+                      alt="IVF Babies Born"
+                      loading="lazy"
+                    />
+                    <div class="stat-number" data-target="3200">0</div>
+                  </div>
+                  <div class="stat-label">Adam's Fertility IVF babies born</div>
+                </div>
+              </div>
+              <div
+                class="col-lg-3 col-md-6 col-sm-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <img
+                      src="https://i.postimg.cc/9zVH43W5/countdown.png"
+                      alt="Years Open"
+                      loading="lazy"
+                    />
+                    <div class="stat-number" data-target="30">0</div>
+                  </div>
+                  <div class="stat-label">open since 1994 - 30 years</div>
+                </div>
+              </div>
+              <div
+                class="col-lg-3 col-md-6 col-sm-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <img
+                      src="https://i.postimg.cc/t75QWrT1/favorite.png"
+                      alt="Patient Ratings"
+                      loading="lazy"
+                    />
+                    <div class="stat-number" data-target="94.3">0</div>
+                  </div>
+                  <div class="stat-label">
+                    94.3% gave us at least 4* ratings
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fertility Preservation Section -->
+      <section class="fertility-preservation-section py-5">
+        <div class="container">
+          <div class="row align-items-start justify-content-center">
+            <div class="col-lg-4 mb-4" data-aos="fade-right">
+              <div class="preservation-content">
+                <h2 class="mb-4">I Want To Preserve My Fertility</h2>
+                <p class="lead mb-4" style="font-family: 'Oswald', sans-serif">
+                  Not the right time to start a family? At
+                  <strong style="color: #86171d; font-weight: 700"
+                    >Adam International Hospital</strong
+                  >, we offer
+                  <strong
+                    ><a
+                      href="egg-freezing.html"
+                      style="color: inherit; text-decoration: none"
+                      >egg freezing</a
+                    ></strong
+                  >,
+                  <strong
+                    ><a
+                      href="sperm-freezing.html"
+                      style="color: inherit; text-decoration: none"
+                      >sperm freezing</a
+                    ></strong
+                  >
+                  and
+                  <strong
+                    ><a
+                      href="embryo-freezing.html"
+                      style="color: inherit; text-decoration: none"
+                      >embryo freezing</a
+                    ></strong
+                  >
+                  for couples as a method of successfully preserving their
+                  fertility so that they can still start a family later in life.
+                  We also offer
+                  <a href="genetic-testing.html" style="color: #51917c"
+                    >fertility preservation</a
+                  >
+                  for those that are at risk of becoming prematurely infertile.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-8" data-aos="fade-left">
+              <div class="preservation-cards">
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <div class="preservation-card text-center">
+                      <div class="card-image mb-3">
+                        <img
+                          src="https://i.postimg.cc/NGHmDGkj/egg_freezing.jpg"
+                          alt="Egg Freezing"
+                          class="rounded-3"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="card-label">
+                        <a
+                          href="egg-freezing.html"
+                          class="preservation-btn"
+                          style="
+                            color: white;
+                            background-color: #51917c;
+                            border-color: #51917c;
+                            width: 100%;
+                            display: block;
+                            text-align: center;
+                          "
+                        >
+                          EGG FREEZING
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="preservation-card text-center">
+                      <div class="card-image mb-3">
+                        <img
+                          src="https://i.postimg.cc/zXYWcmxS/embryo_freezing_hero.jpg"
+                          alt="Embryo Freezing"
+                          class="rounded-3"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="card-label">
+                        <a
+                          href="embryo-freezing.html"
+                          class="preservation-btn"
+                          style="
+                            color: white;
+                            background-color: #51917c;
+                            border-color: #51917c;
+                            width: 100%;
+                            display: block;
+                            text-align: center;
+                          "
+                        >
+                          EMBRYO FREEZING
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="preservation-card text-center">
+                      <div class="card-image mb-3">
+                        <img
+                          src="https://i.postimg.cc/4dKtrXCw/sperm-freezing.jpg"
+                          alt="Sperm Freezing"
+                          class="rounded-3"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="card-label">
+                        <a
+                          href="sperm-freezing.html"
+                          class="preservation-btn"
+                          style="
+                            color: white;
+                            background-color: #51917c;
+                            border-color: #51917c;
+                            width: 100%;
+                            display: block;
+                            text-align: center;
+                          "
+                        >
+                          SPERM FREEZING
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Section -->
+      <section class="why-choose-section">
+        <div class="container">
+          <div class="section-header text-center mb-5" data-aos="fade-up">
+            <h2 class="text-center">Why Choose Adam's Fertility?</h2>
+            <p class="text-center">
+              We are award-winning medical experts offering cutting-edge,
+              innovative treatments, with proven results to help you grow your
+              family. Our mission is to fulfill dreams by building families,
+              with compassionate care at the heart of everything we do.
+            </p>
+          </div>
+          <div class="row justify-content-center">
+            <div
+              class="col-lg-4 col-md-6 mb-4"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="why-choose-card">
+                <div class="card-image">
+                  <img
+                    src="https://i.postimg.cc/zvfsCDnN/adam-1.png"
+                    alt="Expert Care Nationwide"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title text-white">Expert Care</h3>
+                  <p class="card-description">
+                    Our award-winning fertility experts bring decades of
+                    experience and personalized care.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 mb-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="why-choose-card">
+                <div class="card-image">
+                  <img
+                    src="https://i.postimg.cc/k4YZ0q7w/ivf-clinic-scene-cinematic.webp"
+                    alt="1:1 Personalized Support"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title text-white">
+                    1:1 Personalized Support
+                  </h3>
+                  <p class="card-description">
+                    From day one, you'll be paired with a dedicated patient
+                    navigator, delivering a concierge-like experience throughout
+                    your entire journey.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 mb-4"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="why-choose-card">
+                <div class="card-image">
+                  <img
+                    src="https://i.postimg.cc/QMXyVHt0/kelly-sikkema-IE8-Kfew-Ap-w-unsplash.jpg"
+                    alt="Proven Success Rates"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title text-white">Proven Success Rates</h3>
+                  <p class="card-description">
+                    Our exceptional success rates, highlighted by glowing
+                    patient reviews and healthy birth outcomes, reflect our
+                    dedication to setting the standard in fertility care.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Departments Section -->
+      <section class="departments-section py-5">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="section-header text-center mb-5" data-aos="fade-up">
+            <h2
+              class="display-4 fw-bold mb-3 text-center"
+              style="color: #4cb3a0"
+            >
+              Our Departments
+            </h2>
+            <p class="lead text-muted text-center">
+              Comprehensive fertility and reproductive health services with
+              specialized departments offering expert medical care and
+              cutting-edge treatments for your journey to parenthood.
+            </p>
+          </div>
+
+          <!-- Departments Grid -->
+          <div class="departments-grid">
+            <div class="row justify-content-center">
+              <!-- Andrology -->
+              <div
+                class="col-lg-4 col-md-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="department-card">
+                  <div class="card-image">
+                    <img
+                      src="https://i.postimg.cc/05SbT8mj/mikael-stenberg-HP5bznfp-IMU-unsplash.jpg"
+                      alt="Andrology Department"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Andrology</h3>
+                    <p class="card-description">
+                      Male fertility diagnosis & treatment with advanced
+                      reproductive solutions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Gynecology -->
+              <div
+                class="col-lg-4 col-md-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="department-card">
+                  <div class="card-image">
+                    <img
+                      src="https://i.postimg.cc/MT8wk812/jonathan-borba-RWg-E9-l-Kj-Y-unsplash.jpg"
+                      alt="Gynecology Department"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Gynecology</h3>
+                    <p class="card-description">
+                      Women's reproductive health with comprehensive care and
+                      expertise.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Genetics -->
+              <div
+                class="col-lg-4 col-md-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="department-card">
+                  <div class="card-image">
+                    <img
+                      src="https://i.postimg.cc/T3B2Y8PT/4ai.jpg"
+                      alt="Genetics Department - Warm clinic scene with doctor providing genetic counseling to couple"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Genetics & Counseling</h3>
+                    <p class="card-description">
+                      Comprehensive genetic screening, DNA analysis, and
+                      personalized counseling services to help couples
+                      understand their reproductive health and make informed
+                      decisions for their family planning journey.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Embryology -->
+              <div
+                class="col-lg-4 col-md-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div class="department-card">
+                  <div class="card-image">
+                    <img
+                      src="https://i.postimg.cc/zvfsCDnN/adam-1.png"
+                      alt="Embryology Department"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Embryology</h3>
+                    <p class="card-description">
+                      Embryo culture & freezing with state-of-the-art laboratory
+                      techniques.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Endoscopy -->
+              <div
+                class="col-lg-4 col-md-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <div class="department-card">
+                  <div class="card-image">
+                    <img
+                      src="https://i.postimg.cc/k4YZ0q7w/ivf-clinic-scene-cinematic.webp"
+                      alt="Endoscopy Department"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Endoscopy</h3>
+                    <p class="card-description">
+                      Minimally invasive reproductive procedures with precision
+                      and care.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Internal Medicine -->
+              <div
+                class="col-lg-4 col-md-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <div class="department-card">
+                  <div class="card-image">
+                    <img
+                      src="https://i.postimg.cc/X7Vw2n9T/internal-medicine-services.jpg"
+                      alt="Internal Medicine Department"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Internal Medicine</h3>
+                    <p class="card-description">
+                      Comprehensive medical care supporting your fertility
+                      journey.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-8 col-md-7 text-center">
+              <h2 class="cta-title text-center">Book Your Appointment Today</h2>
+            </div>
+            <div class="col-lg-4 col-md-5 text-center">
+              <a
+                href="#"
+                class="cta-btn heartbeat-btn"
+                style="
+                  background-color: white;
+                  color: #51917c;
+                  border: 2px solid #51917c;
+                "
+                ><i class="fas fa-heart beating-heart"></i>Book an
+                Appointment</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+    <!-- Internationalization JS - Load first for translations -->
+    <script src="i18n.js"></script>
+
+    <!-- Mega Menu JS for navigation -->
+    <script type="module" src="mega-menu.js" defer></script>
+
+    <!-- Home JS for shared components -->
+    <script type="module" src="home.js?v=7" defer></script>
+    <script>
+      // Initialize AOS with proper loading detection
+      function initializeAOS() {
+        if (typeof AOS !== "undefined") {
+          try {
+            AOS.init({
+              duration: 600,
+              easing: "ease-out",
+              once: true,
+              offset: 50,
+              disable: "mobile",
+            });
+          } catch (error) {
+            // AOS initialization failed
+          }
+        } else {
+          // Retry after a short delay if AOS isn't loaded yet
+          setTimeout(initializeAOS, 100);
+        }
+      }
+
+      // Wait for both DOM and window load to ensure all scripts are loaded
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initializeAOS);
+      } else {
+        initializeAOS();
+      }
+
+      // Fallback for window load event
+      window.addEventListener("load", function () {
+        if (
+          typeof AOS !== "undefined" &&
+          !document.querySelector(".aos-animate")
+        ) {
+          initializeAOS();
+        }
+      });
+    </script>
+
+    <!-- Department Cards Modern Effects -->
+    <script type="module" src="js/department-cards.js"></script>
+
+    <!-- Loader Control Script -->
+    <script>
+      // Show loader initially and add a safety fallback so it never blocks loading
+      document.addEventListener("DOMContentLoaded", function () {
+        const loader = document.getElementById("loader");
+        if (!loader) return;
+
+        // Fallback: hide after 3s in case window 'load' never fires
+        const fallback = setTimeout(() => {
+          loader.classList.add("hidden");
+          setTimeout(() => loader.remove(), 500);
+        }, 3000);
+
+        // Hide loader after page is fully loaded
+        window.addEventListener("load", function () {
+          clearTimeout(fallback);
+          setTimeout(function () {
+            loader.classList.add("hidden");
+            // Remove loader from DOM after animation completes
+            setTimeout(function () {
+              if (loader && loader.parentNode) {
+                loader.parentNode.removeChild(loader);
+              }
+            }, 500);
+          }, 800); // Show loader briefly for smoother transition
+        });
+      });
+    </script>
+
+    <!-- Theme Toggle Initialization -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize theme toggles (both desktop and mobile)
+        const themeToggle = document.getElementById("themeToggle");
+        const mobileThemeToggle = document.getElementById("mobileThemeToggle");
+
+        if (typeof handleThemeToggle === "function") {
+          // Set initial state based on saved theme
+          const savedTheme = localStorage.getItem("theme") || "light";
+          const isDark = savedTheme === "dark";
+
+          if (themeToggle) {
+            themeToggle.checked = isDark;
+            themeToggle.addEventListener("change", handleThemeToggle);
+          }
+
+          if (mobileThemeToggle) {
+            mobileThemeToggle.checked = isDark;
+            mobileThemeToggle.addEventListener("change", handleThemeToggle);
+          }
+        }
+      });
+    </script>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Wait for i18n to be ready before loading header/footer
+      function waitForI18n(callback) {
+        if (window.i18n) {
+          callback();
+        } else {
+          setTimeout(() => waitForI18n(callback), 50);
+        }
+      }
+
+      // Load header and footer after i18n is ready
+      waitForI18n(() => {
+        // Load header
+        fetch("header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            // Trigger translation update for header content
+            if (window.i18n) {
+              window.i18n.updatePageContent();
+            }
+          })
+          .catch((error) => console.error("Error loading header:", error));
+
+        // Load footer
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+            // Trigger translation update for footer content
+            if (window.i18n) {
+              window.i18n.updatePageContent();
+            }
+          })
+          .catch((error) => console.error("Error loading footer:", error));
+      });
+    </script>
+
+    <!-- Chatbot Widget -->
+    <link rel="stylesheet" href="chatbot.css" />
+    <div
+      id="chatbot-backdrop"
+      class="chatbot-backdrop"
+      aria-hidden="true"
+    ></div>
+    <button id="chatbot-fab" class="chatbot-fab" aria-label="Open chat">
+      <span class="fab-icon" aria-hidden="true"></span>
+      <span class="fab-text">
+        <span class="fab-title">Let's Chat!</span>
+        <span class="fab-subtitle">Adam International Hospital</span>
+      </span>
+    </button>
+
+    <div id="chatbot-window" class="chatbot-window card">
+      <div
+        class="card-header chatbot-header d-flex align-items-center justify-content-between"
+      >
+        <h6 id="chatbot-title" class="mb-0">Adam International Hospital</h6>
+        <div class="d-flex align-items-center gap-2">
+          <button
+            id="chatbot-lang-toggle"
+            class="btn btn-sm btn-outline-secondary"
+            type="button"
+            aria-label="Toggle language"
+          >
+            AR
+          </button>
+          <button
+            id="chatbot-close"
+            class="btn btn-sm btn-outline-secondary"
+            type="button"
+            aria-label="Close chat"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+      <div class="card-body p-0">
+        <div id="chatbot-subtitle" class="px-3 pt-2 small text-muted">
+          How can we help you today?
+        </div>
+        <div
+          id="chatbot-messages"
+          class="chatbot-messages"
+          aria-live="polite"
+          aria-label="Messages"
+        ></div>
+        <div class="chatbot-actions">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <strong id="chatbot-actions-title">Quick Actions</strong>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <button
+              id="btn-location"
+              class="btn btn-outline-primary btn-sm"
+              type="button"
+            >
+              Location
+            </button>
+            <button
+              id="btn-contact"
+              class="btn btn-outline-primary btn-sm"
+              type="button"
+            >
+              Contact
+            </button>
+            <button
+              id="btn-treatments"
+              class="btn btn-outline-primary btn-sm"
+              type="button"
+            >
+              Treatments
+            </button>
+            <button
+              id="btn-services"
+              class="btn btn-outline-primary btn-sm"
+              type="button"
+            >
+              Services
+            </button>
+            <button
+              id="btn-hours"
+              class="btn btn-outline-primary btn-sm"
+              type="button"
+            >
+              Opening Hours
+            </button>
+            <button
+              id="btn-appointment"
+              class="btn btn-success btn-sm"
+              type="button"
+            >
+              Book Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer p-2">
+        <div class="input-group">
+          <input
+            id="chatbot-input"
+            type="text"
+            class="form-control"
+            placeholder="Type a question..."
+            aria-label="Type a question"
+          />
+          <button id="chatbot-send" class="btn btn-primary" type="button">
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Appointment Modal -->
+    <div
+      class="modal fade"
+      id="appointmentModal"
+      tabindex="-1"
+      aria-labelledby="appointmentModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="appointmentModalLabel">
+              Book Appointment
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form id="appointmentForm">
+            <div class="modal-body">
+              <div class="mb-3">
+                <label id="labelName" for="apptName" class="form-label"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apptName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label id="labelPhone" for="apptPhone" class="form-label"
+                  >Phone</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="apptPhone"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label id="labelDate" for="apptDate" class="form-label"
+                  >Preferred Date</label
+                >
+                <input type="date" class="form-control" id="apptDate" />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                id="appointmentSubmit"
+                type="submit"
+                class="btn btn-primary"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="chatbot.js" defer></script>
+  </body>
+</html>

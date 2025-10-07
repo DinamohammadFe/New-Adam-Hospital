@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IVF Treatment - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script" />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/FHB1SY09/adam.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css?v=4" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="index.html" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="#" class="accordion-sublink">Who We Are</a>
+              <a href="#" class="accordion-sublink">Meet the Team</a>
+              <a href="#" class="accordion-sublink">Our Advanced Fertility Lab</a>
+              <a href="#" class="accordion-sublink">Success Stories</a>
+              <a href="#" class="accordion-sublink">News</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <div class="accordion-item">
+                <button class="accordion-toggle" data-target="ivfAccordion">
+                  <span>IVF</span>
+                  <span class="chevron">&#8250;</span>
+                </button>
+                <div class="accordion-panel" id="ivfAccordion">
+                  <a href="ivf.html" class="accordion-sublink">Basics</a>
+                  <a href="#" class="accordion-sublink">When to Consider IVF</a>
+                  <a href="#" class="accordion-sublink">IVF Treatment Process</a>
+                </div>
+              </div>
+
+              <a href="genetic-testing.html" class="accordion-sublink">Genetic Testing</a>
+              <a href="pcos.html" class="accordion-sublink">PCOS</a>
+              <a href="endometriosis.html" class="accordion-sublink">Endometriosis</a>
+              <a href="#" class="accordion-sublink">Tubal Reversal</a>
+              <a href="#" class="accordion-sublink">Sex Selection</a>
+              <a href="#" class="accordion-sublink">Gyn Surgery</a>
+              <a href="#" class="accordion-sublink">TESE</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <div class="accordion-item">
+                <button class="accordion-toggle" data-target="femaleFertilityAccordion">
+                  <span>Female Fertility</span>
+                  <span class="chevron">&#8250;</span>
+                </button>
+                <div class="accordion-panel" id="femaleFertilityAccordion">
+                  <a href="female-fertility.html" class="accordion-sublink">Female Fertility Diagnosis</a>
+                  <a href="female-fertility-treatments.html" class="accordion-sublink">Female Fertility Treatments</a>
+                  <a href="#" class="accordion-sublink">Egg Freezing</a>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a href="male-fertility.html" class="accordion-toggle" style="text-decoration: none; color: inherit">
+                  <span>Male Fertility</span>
+                  <span class="chevron">&#8250;</span>
+                </a>
+                <div class="accordion-panel" id="maleFertilityAccordion">
+                  <a href="male-fertility.html" class="accordion-sublink">Male Fertility Diagnosis</a>
+                  <a href="male-fertility.html" class="accordion-sublink">Male Fertility Treatments</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="accordion-link">Patient Portal</a>
+          <a href="#" class="accordion-link">Contact</a>
+          <a href="#" class="accordion-link">Appointments</a>
+        </nav>
+
+        <div class="accordion-footer">
+          <button class="accordion-btn book-btn">Book Appointment</button>
+          <div class="accordion-controls">
+            <button class="btn accordion-theme-toggle" id="accordionThemeToggle">
+              <span class="theme-icon">🌙</span>
+            </button>
+            <button class="btn accordion-lang-toggle">AR</button>
+          </div>
+          <p class="accordion-contact">
+            Call us: <a href="tel:16992">16992</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Toggle Button -->
+
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/R05HLknS/6508cc0ce4b4eb60a8bcbf7e-6508cba563329de8ac43f9a0-wepik-export-20230918221222-Inm-P-1.webp') center/cover; height: 80vh; display: flex; align-items: center; justify-content: center; color: #fff;">
+      <div class="container-fluid">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="display-4 text-white mb-4">IVF Treatment</h1>
+            <p class="lead text-white mb-4">
+              Advanced fertility treatment combining egg and sperm fertilization in our state-of-the-art laboratory, offering hope and success for couples on their journey to parenthood.
+            </p>
+            <a href="#content" class="cta-btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section id="content" class="pt-5" style="padding-bottom: 0">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <!-- Introduction -->
+            <div class="mb-5">
+              <p class="lead text-center mb-4">
+                Our comprehensive IVF program combines cutting-edge technology with personalized care to maximize your chances of success.
+              </p>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="row mb-5 justify-content-center">
+              <div class="col-md-3 mb-3">
+                <div class="card" style="background: #4cb3a0; color: white; border: none; border-radius: 15px; height: 140px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';">
+                  <div class="card-body d-flex flex-column justify-content-center align-items-center text-center" style="padding: 0.75rem; height: 100%">
+                    <h5 class="card-title mb-2" style="color: white; font-weight: 600; font-size: 1.3rem; line-height: 1.2;">What is IVF?</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div class="card" style="background: #4cb3a0; color: white; border: none; border-radius: 15px; height: 140px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';">
+                  <div class="card-body d-flex flex-column justify-content-center align-items-center text-center" style="padding: 0.75rem; height: 100%">
+                    <h5 class="card-title mb-2" style="color: white; font-weight: 600; font-size: 1.3rem; line-height: 1.2;">When is IVF Recommended?</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div class="card" style="background: #4cb3a0; color: white; border: none; border-radius: 15px; height: 140px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';">
+                  <div class="card-body d-flex flex-column justify-content-center align-items-center text-center" style="padding: 0.75rem; height: 100%">
+                    <h5 class="card-title mb-2" style="color: white; font-weight: 600; font-size: 1.3rem; line-height: 1.2;">IVF Process</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div class="card" style="background: #4cb3a0; color: white; border: none; border-radius: 15px; height: 140px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';">
+                  <div class="card-body d-flex flex-column justify-content-center align-items-center text-center" style="padding: 0.75rem; height: 100%">
+                    <h5 class="card-title mb-2" style="color: white; font-weight: 600; font-size: 1.3rem; line-height: 1.2;">Success Rates</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- What is IVF Content Section -->
+            <div class="row mb-5" id="what-is-ivf">
+              <div class="col-12">
+                <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4); position: relative; z-index: 5;">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">What is IVF?</h2>
+                  <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                    In Vitro Fertilization (IVF) is an advanced fertility treatment where eggs are retrieved from the ovaries and fertilized with sperm in our specialized laboratory. The resulting embryos are carefully monitored and developed before being transferred to the uterus, offering hope to couples facing various fertility challenges.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- When is IVF Recommended Section -->
+            <div class="row align-items-start mb-5">
+              <div class="col-md-12 col-lg-12 mb-4" style="text-align: left; align-self: flex-start">
+                <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">When is IVF Recommended?</h2>
+                <ul style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; padding-left: 0; list-style: none; margin: 0;">
+                  <li style="padding: 8px 0; border-left: 4px solid #4cb3a0; padding-left: 20px; margin-bottom: 10px; background: rgba(76, 179, 160, 0.05); border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';">
+                    ✓ Blocked or damaged fallopian tubes
+                  </li>
+                  <li style="padding: 8px 0; border-left: 4px solid #4cb3a0; padding-left: 20px; margin-bottom: 10px; background: rgba(76, 179, 160, 0.05); border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';">
+                    ✓ Male factor infertility
+                  </li>
+                  <li style="padding: 8px 0; border-left: 4px solid #4cb3a0; padding-left: 20px; margin-bottom: 10px; background: rgba(76, 179, 160, 0.05); border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';">
+                    ✓ Ovulation disorders
+                  </li>
+                  <li style="padding: 8px 0; border-left: 4px solid #4cb3a0; padding-left: 20px; margin-bottom: 10px; background: rgba(76, 179, 160, 0.05); border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';">
+                    ✓ Endometriosis
+                  </li>
+                  <li style="padding: 8px 0; border-left: 4px solid #4cb3a0; padding-left: 20px; margin-bottom: 10px; background: rgba(76, 179, 160, 0.05); border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';">
+                    ✓ Unexplained infertility
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- IVF Treatment Timeline Section -->
+            <div class="row justify-content-center mt-5">
+              <div class="col-lg-12">
+                <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">
+                  IVF Treatment Step by Step
+                </h2>
+                <p class="text-center mb-5" style="color: #122a4e;">
+                  Your IVF journey is carefully planned and executed with precision. Here's what the process typically involves, so you can feel confident about your fertility treatment.
+                </p>
+
+                <div
+                  class="timeline-container"
+                  style="position: relative; padding: 115px 40px 0 40px; margin: 20px 0; min-height: 800px; display: block; visibility: visible; z-index: 10;"
+                >
+                  <div
+                    class="timeline-line"
+                    style="
+                      position: absolute;
+                      left: 99.5px;
+                      top: 0;
+                      bottom: 0;
+                      width: 4px;
+                      background: rgba(76, 179, 160, 0.5);
+                      z-index: 1;
+                    "
+                  ></div>
+
+                  <!-- Initial Consultation -->
+                  <div
+                    class="row align-items-center timeline-item"
+                    style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                  >
+                    <div class="col-1 text-center">
+                      <div
+                        class="process-dot"
+                        style="
+                          background: rgba(76, 179, 160, 0.5);
+                          border: 1.5px solid white;
+                          border-radius: 50%;
+                          width: 16px;
+                          height: 16px;
+                          margin: 0 auto;
+                          position: absolute;
+                          left: 64.8px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          z-index: 3;
+                        "
+                      ></div>
+                    </div>
+                    <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                      <div
+                        class="process-icon"
+                        style="
+                          background: #ffffff;
+                          border: 2px solid #4cb3a0;
+                          border-radius: 50%;
+                          width: 80px;
+                          height: 80px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin: 0 auto;
+                        "
+                      >
+                        <i
+                          class="fas fa-clipboard-list"
+                          style="font-size: 2rem; color: #4cb3a0"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="col-8 ps-5" style="margin-left: 50px;">
+                      <h4
+                        style="
+                          color: #122a4e;
+                          font-weight: 600;
+                          margin-bottom: 8px;
+                          font-size: 1.2rem;
+                        "
+                      >
+                        Initial Consultation
+                      </h4>
+                      <p
+                        style="
+                          color: #122a4e;
+                          line-height: 1.5;
+                          margin-bottom: 0;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        Meet with our fertility specialist to discuss your medical history, previous treatments, and assess both partners. We'll create a personalized IVF treatment plan tailored to your specific needs.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Ovarian Stimulation -->
+                  <div
+                    class="row align-items-center timeline-item"
+                    style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                  >
+                    <div class="col-1 text-center">
+                      <div
+                        class="process-dot"
+                        style="
+                          background: #4cb3a0;
+                          border: 1.5px solid white;
+                          border-radius: 50%;
+                          width: 16px;
+                          height: 16px;
+                          margin: 0 auto;
+                          position: absolute;
+                          left: 64.8px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          z-index: 3;
+                        "
+                      ></div>
+                    </div>
+                    <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                      <div
+                        class="process-icon"
+                        style="
+                          background: #ffffff;
+                          border: 2px solid #4cb3a0;
+                          border-radius: 50%;
+                          width: 80px;
+                          height: 80px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin: 0 auto;
+                        "
+                      >
+                        <i
+                          class="fas fa-syringe"
+                          style="font-size: 2rem; color: #4cb3a0"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="col-8 ps-5" style="margin-left: 50px;">
+                      <h4
+                        style="
+                          color: #122a4e;
+                          font-weight: 600;
+                          margin-bottom: 8px;
+                          font-size: 1.2rem;
+                        "
+                      >
+                        Ovarian Stimulation
+                      </h4>
+                      <p
+                        style="
+                          color: #122a4e;
+                          line-height: 1.5;
+                          margin-bottom: 0;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        You'll take hormone medications for 8-14 days to stimulate your ovaries to produce multiple eggs. Regular monitoring with blood tests and ultrasounds ensures optimal response and timing.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Egg Retrieval -->
+                  <div
+                    class="row align-items-center timeline-item"
+                    style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                  >
+                    <div class="col-1 text-center">
+                      <div
+                        class="process-dot"
+                        style="
+                          background: #4cb3a0;
+                          border: 1.5px solid white;
+                          border-radius: 50%;
+                          width: 16px;
+                          height: 16px;
+                          margin: 0 auto;
+                          position: absolute;
+                          left: 64.8px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          z-index: 3;
+                        "
+                      ></div>
+                    </div>
+                    <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                      <div
+                        class="process-icon"
+                        style="
+                          background: #ffffff;
+                          border: 2px solid #4cb3a0;
+                          border-radius: 50%;
+                          width: 80px;
+                          height: 80px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin: 0 auto;
+                        "
+                      >
+                        <i
+                          class="fas fa-microscope"
+                          style="font-size: 2rem; color: #4cb3a0"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="col-8 ps-5" style="margin-left: 50px;">
+                      <h4
+                        style="
+                          color: #122a4e;
+                          font-weight: 600;
+                          margin-bottom: 8px;
+                          font-size: 1.2rem;
+                        "
+                      >
+                        Egg Retrieval
+                      </h4>
+                      <p
+                        style="
+                          color: #122a4e;
+                          line-height: 1.5;
+                          margin-bottom: 0;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        A minimally invasive procedure performed under light sedation to collect mature eggs from your ovaries. The procedure takes about 20-30 minutes and you can go home the same day.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Sperm Collection & Preparation -->
+                  <div
+                    class="row align-items-center timeline-item"
+                    style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                  >
+                    <div class="col-1 text-center">
+                      <div
+                        class="process-dot"
+                        style="
+                          background: #4cb3a0;
+                          border: 1.5px solid white;
+                          border-radius: 50%;
+                          width: 16px;
+                          height: 16px;
+                          margin: 0 auto;
+                          position: absolute;
+                          left: 64.8px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          z-index: 3;
+                        "
+                      ></div>
+                    </div>
+                    <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                      <div
+                        class="process-icon"
+                        style="
+                          background: #ffffff;
+                          border: 2px solid #4cb3a0;
+                          border-radius: 50%;
+                          width: 80px;
+                          height: 80px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin: 0 auto;
+                        "
+                      >
+                        <i
+                          class="fas fa-vial"
+                          style="font-size: 2rem; color: #4cb3a0"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="col-8 ps-5" style="margin-left: 50px;">
+                      <h4
+                        style="
+                          color: #122a4e;
+                          font-weight: 600;
+                          margin-bottom: 8px;
+                          font-size: 1.2rem;
+                        "
+                      >
+                        Sperm Collection & Preparation
+                      </h4>
+                      <p
+                        style="
+                          color: #122a4e;
+                          line-height: 1.5;
+                          margin-bottom: 0;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        On the same day as egg retrieval, sperm is collected and prepared in our laboratory. The healthiest and most motile sperm are selected for fertilization.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Fertilization -->
+                  <div
+                    class="row align-items-center timeline-item"
+                    style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                  >
+                    <div class="col-1 text-center">
+                      <div
+                        class="process-dot"
+                        style="
+                          background: #4cb3a0;
+                          border: 1.5px solid white;
+                          border-radius: 50%;
+                          width: 16px;
+                          height: 16px;
+                          margin: 0 auto;
+                          position: absolute;
+                          left: 64.8px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          z-index: 3;
+                        "
+                      ></div>
+                    </div>
+                    <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                      <div
+                        class="process-icon"
+                        style="
+                          background: #ffffff;
+                          border: 2px solid #4cb3a0;
+                          border-radius: 50%;
+                          width: 80px;
+                          height: 80px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin: 0 auto;
+                        "
+                      >
+                        <i
+                          class="fas fa-dna"
+                          style="font-size: 2rem; color: #4cb3a0"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="col-8 ps-5" style="margin-left: 50px;">
+                      <h4
+                        style="
+                          color: #122a4e;
+                          font-weight: 600;
+                          margin-bottom: 8px;
+                          font-size: 1.2rem;
+                        "
+                      >
+                        Fertilization
+                      </h4>
+                      <p
+                        style="
+                          color: #122a4e;
+                          line-height: 1.5;
+                          margin-bottom: 0;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        Eggs and sperm are combined in our specialized laboratory using conventional IVF or ICSI (Intracytoplasmic Sperm Injection) techniques, depending on your specific needs.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Embryo Development -->
+                  <div
+                    class="row align-items-center timeline-item"
+                    style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                  >
+                    <div class="col-1 text-center">
+                      <div
+                        class="process-dot"
+                        style="
+                          background: #4cb3a0;
+                          border: 1.5px solid white;
+                          border-radius: 50%;
+                          width: 16px;
+                          height: 16px;
+                          margin: 0 auto;
+                          position: absolute;
+                          left: 64.8px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          z-index: 3;
+                        "
+                      ></div>
+                    </div>
+                    <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                      <div
+                        class="process-icon"
+                        style="
+                          background: #ffffff;
+                          border: 2px solid #4cb3a0;
+                          border-radius: 50%;
+                          width: 80px;
+                          height: 80px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin: 0 auto;
+                        "
+                      >
+                        <i
+                          class="fas fa-seedling"
+                          style="font-size: 2rem; color: #4cb3a0"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="col-8 ps-5" style="margin-left: 50px;">
+                      <h4
+                        style="
+                          color: #122a4e;
+                          font-weight: 600;
+                          margin-bottom: 8px;
+                          font-size: 1.2rem;
+                        "
+                      >
+                        Embryo Development
+                      </h4>
+                      <p
+                        style="
+                          color: #122a4e;
+                          line-height: 1.5;
+                          margin-bottom: 0;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        Fertilized embryos are carefully monitored and cultured in our incubators for 3-5 days. Our embryologists track their development and select the highest quality embryos for transfer.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Embryo Transfer -->
+                  <div
+                    class="row align-items-center timeline-item"
+                    style="position: relative; z-index: 2; margin-bottom: 6.25rem;"
+                  >
+                    <div class="col-1 text-center">
+                      <div
+                        class="process-dot"
+                        style="
+                          background: #4cb3a0;
+                          border: 1.5px solid white;
+                          border-radius: 50%;
+                          width: 16px;
+                          height: 16px;
+                          margin: 0 auto;
+                          position: absolute;
+                          left: 64.8px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          z-index: 3;
+                        "
+                      ></div>
+                    </div>
+                    <div class="col-2 text-center" style="padding-left: 25px; margin-left: 35px;">
+                      <div
+                        class="process-icon"
+                        style="
+                          background: #ffffff;
+                          border: 2px solid #4cb3a0;
+                          border-radius: 50%;
+                          width: 80px;
+                          height: 80px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin: 0 auto;
+                        "
+                      >
+                        <img
+                          src="https://i.postimg.cc/RF0xmHKN/mother.png"
+                          alt="Embryo Transfer"
+                          style="width: 2.5rem; height: 2.5rem; filter: brightness(0) saturate(100%) invert(29%) sepia(85%) saturate(1200%) hue-rotate(140deg) brightness(85%) contrast(110%); transform: scaleX(-1);"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-8 ps-5" style="margin-left: 50px;">
+                      <h4
+                        style="
+                          color: #122a4e;
+                          font-weight: 600;
+                          margin-bottom: 8px;
+                          font-size: 1.2rem;
+                        "
+                      >
+                        Embryo Transfer
+                      </h4>
+                      <p
+                        style="
+                          color: #122a4e;
+                          line-height: 1.5;
+                          margin-bottom: 0;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        The selected embryo(s) are gently transferred into your uterus using a thin catheter. This simple procedure is usually painless and takes just a few minutes to complete.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- IVF Success Rates Section -->
+            <div class="row justify-content-center mt-5">
+              <div class="col-lg-12">
+                <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">
+                  IVF Success Rates
+                </h2>
+                <p class="text-center mb-5" style="color: #122a4e;">
+                  Our success rates reflect our commitment to excellence and personalized care. These statistics are based on our latest clinical data and demonstrate our dedication to helping you achieve your dream of parenthood.
+                </p>
+
+                <!-- Success Rate Cards -->
+                <div class="row mb-5">
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0, #3a9688); color: white; border: none; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';">
+                      <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                          <i class="fas fa-chart-line" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <h3 class="card-title mb-3" style="font-size: 2.5rem; font-weight: 700;">75%</h3>
+                        <h5 class="mb-2" style="font-weight: 600;">Overall Success Rate</h5>
+                        <p class="mb-0" style="font-size: 0.9rem; opacity: 0.9;">For women under 35 years old</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100" style="background: linear-gradient(135deg, #122a4e, #1a3a5c); color: white; border: none; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';">
+                      <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                          <i class="fas fa-baby" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <h3 class="card-title mb-3" style="font-size: 2.5rem; font-weight: 700;">85%</h3>
+                        <h5 class="mb-2" style="font-weight: 600;">Live Birth Rate</h5>
+                        <p class="mb-0" style="font-size: 0.9rem; opacity: 0.9;">Per embryo transfer</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100" style="background: linear-gradient(135deg, #e67e22, #d35400); color: white; border: none; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';">
+                      <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                          <i class="fas fa-heart" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <h3 class="card-title mb-3" style="font-size: 2.5rem; font-weight: 700;">92%</h3>
+                        <h5 class="mb-2" style="font-weight: 600;">Patient Satisfaction</h5>
+                        <p class="mb-0" style="font-size: 0.9rem; opacity: 0.9;">Based on patient surveys</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Success Rates by Age Group -->
+                <div class="row mb-5">
+                  <div class="col-12">
+                    <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4); border-radius: 15px;">
+                      <h3 class="mb-4" style="font-size: 1.8rem; font-weight: 500; color: #122a4e; text-align: center;">Success Rates by Age Group</h3>
+                      
+                      <div class="row">
+                        <div class="col-md-3 mb-3">
+                          <div class="text-center p-3" style="background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                            <h4 style="color: #4cb3a0; font-weight: 700; font-size: 2rem; margin-bottom: 10px;">78%</h4>
+                            <p style="color: #122a4e; font-weight: 600; margin-bottom: 5px;">Under 30</p>
+                            <small style="color: #666;">Per cycle</small>
+                          </div>
+                        </div>
+                        
+                        <div class="col-md-3 mb-3">
+                          <div class="text-center p-3" style="background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                            <h4 style="color: #4cb3a0; font-weight: 700; font-size: 2rem; margin-bottom: 10px;">75%</h4>
+                            <p style="color: #122a4e; font-weight: 600; margin-bottom: 5px;">30-34 years</p>
+                            <small style="color: #666;">Per cycle</small>
+                          </div>
+                        </div>
+                        
+                        <div class="col-md-3 mb-3">
+                          <div class="text-center p-3" style="background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                            <h4 style="color: #4cb3a0; font-weight: 700; font-size: 2rem; margin-bottom: 10px;">68%</h4>
+                            <p style="color: #122a4e; font-weight: 600; margin-bottom: 5px;">35-39 years</p>
+                            <small style="color: #666;">Per cycle</small>
+                          </div>
+                        </div>
+                        
+                        <div class="col-md-3 mb-3">
+                          <div class="text-center p-3" style="background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                            <h4 style="color: #4cb3a0; font-weight: 700; font-size: 2rem; margin-bottom: 10px;">55%</h4>
+                            <p style="color: #122a4e; font-weight: 600; margin-bottom: 5px;">40+ years</p>
+                            <small style="color: #666;">Per cycle</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Factors Affecting Success -->
+                <div class="row mb-5">
+                  <div class="col-md-6 mb-4">
+                    <h3 class="mb-4" style="font-size: 1.8rem; font-weight: 500; color: #122a4e;">Factors That Enhance Success</h3>
+                    <ul style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; padding-left: 0; list-style: none; margin: 0;">
+                      <li style="padding: 12px 0; border-left: 4px solid #4cb3a0; padding-left: 20px; margin-bottom: 15px; background: rgba(76, 179, 160, 0.05); border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';">
+                        <strong>✓ Younger maternal age</strong><br>
+                        <small style="color: #666;">Better egg quality and higher success rates</small>
+                      </li>
+                      <li style="padding: 12px 0; border-left: 4px solid #4cb3a0; padding-left: 20px; margin-bottom: 15px; background: rgba(76, 179, 160, 0.05); border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';">
+                        <strong>✓ Healthy lifestyle</strong><br>
+                        <small style="color: #666;">Proper nutrition, exercise, and avoiding smoking</small>
+                      </li>
+                      <li style="padding: 12px 0; border-left: 4px solid #4cb3a0; padding-left: 20px; margin-bottom: 15px; background: rgba(76, 179, 160, 0.05); border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';">
+                        <strong>✓ Optimal timing</strong><br>
+                        <small style="color: #666;">Starting treatment at the right time in your cycle</small>
+                      </li>
+                      <li style="padding: 12px 0; border-left: 4px solid #4cb3a0; padding-left: 20px; margin-bottom: 15px; background: rgba(76, 179, 160, 0.05); border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';" onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';">
+                        <strong>✓ Personalized protocols</strong><br>
+                        <small style="color: #666;">Customized treatment plans based on individual needs</small>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div class="col-md-6 mb-4">
+                    <h3 class="mb-4" style="font-size: 1.8rem; font-weight: 500; color: #122a4e;">Our Commitment to Excellence</h3>
+                    <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);">
+                      <div class="mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="fas fa-microscope me-3" style="color: #4cb3a0; font-size: 1.5rem;"></i>
+                          <h5 style="color: #122a4e; margin: 0;">Advanced Laboratory</h5>
+                        </div>
+                        <p style="color: #666; margin: 0; font-size: 0.9rem;">State-of-the-art equipment and techniques</p>
+                      </div>
+                      
+                      <div class="mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="fas fa-user-md me-3" style="color: #4cb3a0; font-size: 1.5rem;"></i>
+                          <h5 style="color: #122a4e; margin: 0;">Expert Team</h5>
+                        </div>
+                        <p style="color: #666; margin: 0; font-size: 0.9rem;">Highly experienced fertility specialists</p>
+                      </div>
+                      
+                      <div class="mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="fas fa-heart me-3" style="color: #4cb3a0; font-size: 1.5rem;"></i>
+                          <h5 style="color: #122a4e; margin: 0;">Personalized Care</h5>
+                        </div>
+                        <p style="color: #666; margin: 0; font-size: 0.9rem;">Individual treatment plans for each patient</p>
+                      </div>
+                      
+                      <div>
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="fas fa-chart-line me-3" style="color: #4cb3a0; font-size: 1.5rem;"></i>
+                          <h5 style="color: #122a4e; margin: 0;">Continuous Monitoring</h5>
+                        </div>
+                        <p style="color: #666; margin: 0; font-size: 0.9rem;">Regular tracking and optimization of outcomes</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <div style="background: linear-gradient(135deg, #4cb3a0, #3a9688); padding: 40px; border-radius: 15px; color: white;">
+                      <h3 class="mb-3" style="font-weight: 600;">Ready to Start Your IVF Journey?</h3>
+                      <p class="mb-4" style="font-size: 1.1rem; opacity: 0.9;">Our success rates speak for themselves, but your individual journey is what matters most. Let us help you achieve your dream of parenthood.</p>
+                      <a href="#book" class="btn btn-light btn-lg" style="padding: 12px 30px; font-weight: 600; border-radius: 30px;">Schedule Your Consultation</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Placeholder -->
+            <div id="footer-placeholder"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="mega-menu.js"></script>
+    <script src="home.js?v=7"></script>
+    <script src="i18n.js"></script>
+
+    <!-- Initialize AOS -->
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+      });
+    </script>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Enhanced header loading with error handling
+      async function loadHeader() {
+        const headerPlaceholder = document.getElementById('header-placeholder');
+        
+        if (!headerPlaceholder) {
+          return;
+        }
+        
+        // Check if header is already loaded
+        if (headerPlaceholder.innerHTML.trim()) {
+          return;
+        }
+        
+        try {
+          const response = await fetch('header.html?v=' + Date.now());
+          if (!response.ok) {
+            throw new Error('Failed to fetch header');
+          }
+          
+          const headerHTML = await response.text();
+          
+          if (!headerHTML.trim()) {
+            throw new Error('Header content is empty');
+          }
+          
+          headerPlaceholder.innerHTML = headerHTML;
+          
+          // Initialize mega menu after header is loaded
+          if (typeof HospitalMegaMenu !== 'undefined') {
+            new HospitalMegaMenu();
+          }
+          
+          // Initialize Bootstrap components and language toggle after header loads
+          setTimeout(() => {
+            if (typeof bootstrap !== 'undefined') {
+              // Initialize dropdowns
+              const dropdowns = document.querySelectorAll('.dropdown-toggle');
+              dropdowns.forEach(dropdown => {
+                new bootstrap.Dropdown(dropdown);
+              });
+              
+              // Initialize navbar collapse
+              const navbarToggler = document.querySelector('.navbar-toggler');
+              const navbarCollapse = document.querySelector('.navbar-collapse');
+              if (navbarToggler && navbarCollapse) {
+                new bootstrap.Collapse(navbarCollapse, { toggle: false });
+              }
+            }
+            
+            // Reinitialize language toggle - wait for i18n if not ready
+            const initLanguageToggle = () => {
+              if (window.i18n) {
+                window.i18n.initLanguageToggle();
+                window.i18n.updateToggleButton();
+              } else {
+                // Wait for i18n to be ready
+                setTimeout(initLanguageToggle, 100);
+              }
+            };
+            initLanguageToggle();
+          }, 100);
+          
+        } catch (error) {
+          console.error('Header loading error:', error);
+          headerPlaceholder.innerHTML = `
+            <div class="alert alert-warning d-flex justify-content-between align-items-center" role="alert">
+              <span>Failed to load header. Please check your connection.</span>
+              <button class="btn btn-sm btn-outline-primary" onclick="loadHeader()">Retry</button>
+            </div>
+          `;
+        }
+      }
+
+      // Enhanced footer loading with error handling
+      async function loadFooter() {
+        const footerPlaceholder = document.getElementById('footer-placeholder');
+        
+        if (!footerPlaceholder) {
+          return;
+        }
+        
+        try {
+          const response = await fetch('footer.html?v=' + Date.now());
+          if (!response.ok) {
+            throw new Error('Failed to fetch footer');
+          }
+          
+          const footerHTML = await response.text();
+          footerPlaceholder.innerHTML = footerHTML;
+          
+        } catch (error) {
+          console.error('Footer loading error:', error);
+          footerPlaceholder.innerHTML = `
+            <div class="alert alert-warning text-center" role="alert">
+              Failed to load footer content.
+            </div>
+          `;
+        }
+      }
+
+      // Load components when DOM is ready
+      document.addEventListener('DOMContentLoaded', function() {
+        loadHeader();
+        loadFooter();
+      });
+    </script>
+  </body>
+</html>

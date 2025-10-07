@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endometriosis Treatment - Adam's Fertility Center</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script" />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/kgdKgg1H/adam.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css?v=4" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="#" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="#" class="accordion-sublink">Who We Are</a>
+              <a href="#" class="accordion-sublink">Meet the Team</a>
+              <a href="#" class="accordion-sublink"
+                >Our Advanced Fertility Lab</a
+              >
+              <a href="#" class="accordion-sublink">Success Stories</a>
+              <a href="#" class="accordion-sublink">News</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <div class="accordion-item">
+                <button class="accordion-toggle" data-target="ivfAccordion">
+                  <span>IVF</span>
+                  <span class="chevron">&#8250;</span>
+                </button>
+                <div class="accordion-panel" id="ivfAccordion">
+                  <a href="IVF.html" class="accordion-sublink">Basics</a>
+                  <a href="#" class="accordion-sublink">When to Consider IVF</a>
+                  <a href="#" class="accordion-sublink"
+                    >IVF Treatment Process</a
+                  >
+                </div>
+              </div>
+
+              <a href="genetic testing.html" class="accordion-sublink"
+                >Genetic Testing</a
+              >
+              <a href="#" class="accordion-sublink">PCOS</a>
+              <a href="Endometriosis.html" class="accordion-sublink">Endometriosis</a>
+              <a href="#" class="accordion-sublink">Tubal Reversal</a>
+              <a href="#" class="accordion-sublink">Sex Selection</a>
+              <a href="#" class="accordion-sublink">Gyn Surgery</a>
+              <a href="#" class="accordion-sublink">TESE</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <div class="accordion-item">
+                <button
+                  class="accordion-toggle"
+                  data-target="femaleFertilityAccordion"
+                >
+                  <span>Female Fertility</span>
+                  <span class="chevron">&#8250;</span>
+                </button>
+                <div class="accordion-panel" id="femaleFertilityAccordion">
+                  <a href="female-fertility.html" class="accordion-sublink"
+                    >Female Fertility Diagnosis</a
+                  >
+                  <a
+                    href="female-fertility-treatments.html"
+                    class="accordion-sublink"
+                    >Female Fertility Treatments</a
+                  >
+                  <a href="#" class="accordion-sublink">Egg Freezing</a>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a
+                  href="male-fertility.html"
+                  class="accordion-toggle"
+                  style="text-decoration: none; color: inherit"
+                >
+                  <span>Male Fertility</span>
+                  <span class="chevron">&#8250;</span>
+                </a>
+                <div class="accordion-panel" id="maleFertilityAccordion">
+                  <a href="male-fertility.html" class="accordion-sublink"
+                    >Male Fertility Diagnosis</a
+                  >
+                  <a href="male-fertility.html" class="accordion-sublink"
+                    >Male Fertility Treatments</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="accordion-link">Patient Portal</a>
+          <a href="#" class="accordion-link">Contact</a>
+          <a href="#" class="accordion-link">Appointments</a>
+        </nav>
+
+        <div class="accordion-footer">
+          <button class="accordion-btn book-btn">Book Appointment</button>
+          <div class="accordion-controls">
+            <button
+              class="btn accordion-theme-toggle"
+              id="accordionThemeToggle"
+            >
+              <span class="theme-icon">🌙</span>
+            </button>
+            <button class="btn accordion-lang-toggle">AR</button>
+          </div>
+          <p class="accordion-contact">
+            Call us: <a href="tel:19662">19662</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Toggle Button -->
+
+
+    <!-- Hero Section -->
+    <section class="hero-section position-relative" role="img" aria-label="Endometriosis hero background" data-animate="fade">
+      <div class="hero-background-image" data-bg="https://i.postimg.cc/440Tjpgy/joshua-rawson-harris-md7c-CWYVq9-U-unsplash.jpg"></div>
+      <div class="container-fluid">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="display-4 text-white mb-4">
+              Endometriosis
+            </h1>
+            <p class="lead text-white mb-4">
+           painful condition where tissue similar to the uterine lining grows outside the uterus, affecting fertility.
+            </p>
+            <a href="#content" class="cta-btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section id="content" class="pt-5" style="padding-bottom: 0">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <!-- Introduction -->
+            <div class="mb-5">
+              <p class="lead text-center mb-4">
+Endometriosis is a chronic gynecological disorder where tissue resembling the uterine lining grows outside the uterus, commonly on ovaries, fallopian tubes, or pelvic lining. It often causes severe pain, heavy periods, inflammation, scarring, and fertility issues, significantly impacting women’s reproductive health and emotional well-being.             </p>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="row mb-5 justify-content-center">
+              <div class="col-md-3 mb-3">
+                <div
+                  class="card"
+                  style="
+                    background: #4cb3a0;
+                    color: white;
+                    border: none;
+                    border-radius: 15px;
+                    height: 140px;
+                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                  "
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';"
+                  onclick="Array.from(document.querySelectorAll('h2')).find(h2 => h2.textContent.trim() === 'The Embryo Freezing Process').scrollIntoView({behavior: 'smooth'});"
+                >
+                  <div
+                    class="card-body d-flex flex-column justify-content-center align-items-center text-center"
+                    style="padding: 0.75rem; height: 100%"
+                  >
+                    <h5
+                      class="card-title mb-2"
+                      style="
+                        color: white;
+                        font-weight: 600;
+                        font-size: 1.3rem;
+                        line-height: 1.2;
+                      "
+                    >
+                      What is Endometriosis ?
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div
+                  class="card"
+                  style="
+                    background: #4cb3a0;
+                    color: white;
+                    border: none;
+                    border-radius: 15px;
+                    height: 140px;
+                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                  "
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';"
+                  onclick="Array.from(document.querySelectorAll('h2')).find(h2 => h2.textContent.trim() === 'When is IVF Recommended?').scrollIntoView({behavior: 'smooth'});"
+                >
+                  <div
+                    class="card-body d-flex flex-column justify-content-center align-items-center text-center"
+                    style="padding: 0.75rem; height: 100%"
+                  >
+                    <h5
+                      class="card-title mb-2"
+                      style="
+                        color: white;
+                        font-weight: 600;
+                        font-size: 1.3rem;
+                        line-height: 1.2;
+                      "
+                    >
+                      What are the symptoms of Endometriosis ?
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div
+                  class="card"
+                  style="
+                    background: #4cb3a0;
+                    color: white;
+                    border: none;
+                    border-radius: 15px;
+                    height: 140px;
+                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                  "
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';"
+                >
+                  <div
+                    class="card-body d-flex flex-column justify-content-center align-items-center text-center"
+                    style="padding: 0.75rem; height: 100%"
+                  >
+                    <h5
+                      class="card-title mb-2"
+                      style="
+                        color: white;
+                        font-weight: 600;
+                        font-size: 1.3rem;
+                        line-height: 1.2;
+                      "
+                    >
+                      Management and Treatment
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- What is Embryo Freezing Content Section -->
+            <div class="row mb-5" id="what-is-embryo-freezing">
+              <div class="col-12">
+                <div
+                  style="
+                    background: #e9f5f4;
+                    padding: 40px;
+                    border: 2px solid rgba(255, 255, 255, 0.4);
+                    position: relative;
+                    z-index: 5;
+                  "
+                >
+                  <h2
+                    class="mb-4"
+                    style="
+                      font-size: 2.2rem;
+                      font-weight: 500;
+                      color: #122a4e;
+                      text-align: left;
+                    "
+                  >
+                    What is Endometriosis ?
+                  </h2>
+                  <p
+                    style="
+                      color: #122a4e;
+                      font-size: 1.1rem;
+                      line-height: 1.8;
+                      text-align: justify;
+                    "
+                  >
+                  Endometriosis is derived from the word “endometrium,” which is the tissue that lines the uterus. Patients with endometriosis have endometrial-type tissue outside of the uterus
+Endometriosis affects an estimated 2 to 10 percent of American women between the ages of 25 and 40.
+Women with endometriosis are more likely to have infertility or difficulty getting pregnant
+Symptoms of endometriosis may include: excessive menstrual cramps, abnormal or heavy menstrual flow and pain during intercourse.
+Laparoscopy, a minimally invasive surgical procedure, can be used to definitively diagnose and treat endometriosis.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- What are the symptoms of PCOS Section -->
+            <div class="row align-items-start mb-5">
+              <div
+                class="col-md-12 col-lg-12 mb-4"
+                style="text-align: left; align-self: flex-start"
+              >
+                <h2
+                  class="mb-4"
+                  style="
+                    font-size: 2.2rem;
+                    font-weight: 500;
+                    color: #122a4e;
+                    text-align: left;
+                  "
+                >
+                  What are the symptoms of Endometriosis ?
+                </h2>
+                <ul
+                  style="
+                    color: #122a4e;
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    padding-left: 0;
+                    list-style: none;
+                    margin: 0;
+                  "
+                >
+                  <li
+                    style="
+                      padding: 8px 0;
+                      border-left: 4px solid #4cb3a0;
+                      padding-left: 20px;
+                      margin-bottom: 10px;
+                      background: rgba(76, 179, 160, 0.05);
+                      border-radius: 5px;
+                      transition: all 0.3s ease;
+                    "
+                    onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';"
+                    onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';"
+                  >
+                    ✓ Painful periods. Pelvic pain and cramping may start before a menstrual period and last for days into it. You also may have lower back and stomach pain. Another name for painful periods is dysmenorrhea.
+                  </li>
+                  <li
+                    style="
+                      padding: 8px 0;
+                      border-left: 4px solid #4cb3a0;
+                      padding-left: 20px;
+                      margin-bottom: 10px;
+                      background: rgba(76, 179, 160, 0.05);
+                      border-radius: 5px;
+                      transition: all 0.3s ease;
+                    "
+                    onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';"
+                    onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';"
+                  >
+                    ✓ Pain with sex. Pain during or after sex is common with endometriosis.
+                  </li>
+                  <li
+                    style="
+                      padding: 8px 0;
+                      border-left: 4px solid #4cb3a0;
+                      padding-left: 20px;
+                      margin-bottom: 10px;
+                      background: rgba(76, 179, 160, 0.05);
+                      border-radius: 5px;
+                      transition: all 0.3s ease;
+                    "
+                    onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';"
+                    onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';"
+                  >
+                    ✓ Excessive bleeding. Sometimes, you may have heavy menstrual periods or bleeding between periods.
+                  </li>
+                  <li
+                    style="
+                      padding: 8px 0;
+                      border-left: 4px solid #4cb3a0;
+                      padding-left: 20px;
+                      margin-bottom: 10px;
+                      background: rgba(76, 179, 160, 0.05);
+                      border-radius: 5px;
+                      transition: all 0.3s ease;
+                    "
+                    onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';"
+                    onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';"
+                  >
+                    ✓ Infertility. For some people, endometriosis is first found during tests for infertility treatment.
+                  </li>
+                  <li
+                    style="
+                      padding: 8px 0;
+                      border-left: 4px solid #4cb3a0;
+                      padding-left: 20px;
+                      margin-bottom: 10px;
+                      background: rgba(76, 179, 160, 0.05);
+                      border-radius: 5px;
+                      transition: all 0.3s ease;
+                    "
+                    onmouseover="this.style.background='rgba(76, 179, 160, 0.1)'; this.style.transform='translateX(5px)';"
+                    onmouseout="this.style.background='rgba(76, 179, 160, 0.05)'; this.style.transform='translateX(0)';"
+                  >
+                    ✓ Other symptoms. You may have fatigue, diarrhea, constipation, bloating or nausea. These symptoms are more common before or during menstrual periods. 
+                  </li>
+
+
+                </ul>
+              </div>
+            </div>
+
+            <!-- Did You Know Section -->
+            <div class="row justify-content-center text-center mb-5 mt-5">
+              <div class="col-lg-8">
+                <div class="did-you-know-section py-4">
+                  <h2 class="did-you-know-title mb-3" style="color: #122a4e; font-weight: 600;">Did You Know?</h2>
+                  <p class="did-you-know-text mb-3" style="color: #122a4e; font-size: 1.1rem; line-height: 1.6;">
+                    Some women with endometriosis have no symptoms, while others experience severe pain—making diagnosis challenging.
+                  </p>
+                  <a href="#" class="schedule-btn" style="background: #4cb3a0; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">SCHEDULE A CONSULTATION</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Causes & Mechanisms Section -->
+            <div class="row align-items-start mb-5">
+              <div
+                class="col-md-12 col-lg-12 mb-4"
+                style="text-align: left; align-self: flex-start"
+              >
+                <h2
+                  class="mb-4"
+                  style="
+                    font-size: 2.2rem;
+                    font-weight: 500;
+                    color: #122a4e;
+                    text-align: left;
+                  "
+                >
+                  
+                </ul>
+              </div>
+            </div>
+
+            <!-- Management and Treatment Section -->
+            <div class="row align-items-start mb-5">
+              <div
+                class="col-md-12 col-lg-12 mb-4"
+                style="text-align: left; align-self: flex-start"
+              >
+                <h2
+                  class="mb-4"
+                  style="
+                    font-size: 2.2rem;
+                    font-weight: 500;
+                    color: #4cb3a0;
+                    text-align: left;
+                  "
+                >
+                  Management and Treatment
+                </h2>
+                <p
+                  style="
+                    color: #122a4e;
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    margin-bottom: 20px;
+                  "
+                >
+                  Your healthcare provider will help create a treatment plan for endometriosis based on a few factors, including:
+
+The severity of the endometriosis.
+Your plans for future pregnancies.
+Your age.
+The severity of your symptoms (often, pain).
+                </p>
+                
+                <!-- Treatment Accordions -->
+                <div class="mb-3">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                    style="
+                      cursor: pointer;
+                      padding: 20px;
+                      background: rgba(76, 179, 160, 0.8);
+                      border-radius: 0;
+                      color: white;
+                      margin: 0 auto;
+                       width: 80%;
+                       position: relative;
+                    "
+                    onclick="toggleSection('creating-embryos')"
+                  >
+                    <h5 style="margin: 0; font-weight: 600; font-size: 1.1rem">
+                      Medications for endometriosis
+                    </h5>
+                    <span
+                      id="creating-embryos-icon"
+                      style="font-size: 1.5rem; font-weight: bold"
+                    >+</span>
+                  </div>
+                  <div
+                    id="creating-embryos"
+                    style="
+                      max-height: 0px;
+                      overflow: hidden;
+                      transition: 0.3s;
+                      background: rgba(76, 179, 160, 0.1);
+                      width: 80%;
+                       position: relative;
+                       margin: 0 auto;
+                      border-radius: 0px 0px 8px 8px;
+                       padding: 0 20px;
+                    "
+                  >
+                    <p
+                      style="
+                        color: #122a4e;
+                        line-height: 1.6;
+                        margin: 0;
+                        font-size: 1.1rem;
+                      "
+                    >
+     The most common treatments for endometriosis that do not require surgery are hormone therapy and pain management.Treatments that include hormone therapy can alter hormone levels or stop your body from producing certain hormones. Hormone therapy can affect your ability to get pregnant, so it may not be right for everyone.
+
+Hormone therapy can be taken as pills, or shots. The most common options include:
+
+Oral contraceptives with estrogen and progesterone to control hormones
+Progestins to stop menstrual periods and endometrial tissue growth
+Gonadotropin-releasing hormone antagonist to limit ovarian hormones
+Gonadotropin-releasing hormone agonist to stop ovarian hormones
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                    style="
+                      cursor: pointer;
+                      padding: 20px;
+                      background: rgba(76, 179, 160, 0.8);
+                      border-radius: 0;
+                      color: white;
+                      margin: 0 auto;
+                       width: 80%;
+                       position: relative;
+                    "
+                    onclick="toggleSection('genetic-testing')"
+                  >
+                    <h5 style="margin: 0; font-weight: 600; font-size: 1.1rem">
+                      Surgery for endometriosis
+                    </h5>
+                    <span
+                      id="genetic-testing-icon"
+                      style="font-size: 1.5rem; font-weight: bold"
+                    >+</span>
+                  </div>
+                  <div
+                    id="genetic-testing"
+                    style="
+                      max-height: 0px;
+                      overflow: hidden;
+                      transition: 0.3s;
+                      background: rgba(76, 179, 160, 0.1);
+                      width: 80%;
+                       position: relative;
+                       margin: 0 auto;
+                      border-radius: 0px 0px 8px 8px;
+                       padding: 0 20px;
+                    "
+                  >
+                    <p
+                      style="
+                        color: #122a4e;
+                        line-height: 1.6;
+                        margin: 0;
+                        font-size: 1.1rem;
+                      "
+                    >
+                      n some cases, your provider might recommend surgery to treat endometriosis. There are always risks to a surgical procedure. But surgery for endometriosis can be an effective way to relieve pain and, in some cases, improve your fertility. The goal of surgery is to remove the endometriosis tissue.
+
+Surgical options to treat endometriosis include:
+
+Laparoscopic surgery. In this procedure, your surgeon will make a small cut in your abdomen and insert a thin tube-like tool called a laparoscope into your body. The laparoscope can see inside your body and identify endometriosis with a high-definition camera. Your surgeon can insert additional surgical instruments to remove the problematic tissue.
+Hysterectomy. In severe cases, your surgeon may suggest removing your uterus and/or ovaries.
+                    </p>
+                   </div>
+                 </div>
+                 
+
+
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <!-- Advantages of IVF Section -->
+            <div class="row align-items-start mb-5">
+              <div
+                class="col-md-5 col-lg-5 mb-4"
+                style="text-align: left; align-self: flex-start"
+              >
+                <h2
+                  class="mb-4"
+                  style="
+                    font-size: 2.2rem;
+                    font-weight: 500;
+                    color: #4cb3a0;
+                    letter-spacing: 1px;
+                    position: relative;
+                    z-index: 10;
+                  "
+                >
+                  
+
+                    </div>
+                  </div>
+
+                  <!-- Reduced Physical and Emotional Stress -->
+                  <div class="mb-3">
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+
+            
+
+
+            
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+           
+               
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ready to Preserve Your Fertility Options Section -->
+    <section class="did-you-know-section py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-10">
+            <h2 class="did-you-know-title mb-4" style="text-align: left">
+              Ready to Preserve Your Fertility Options?
+            </h2>
+            <p class="did-you-know-text mb-4">
+              Take the first step towards securing your reproductive future. Our
+              experienced team is here to guide you through every aspect of
+              embryo freezing, from initial consultation to successful
+              pregnancy.
+            </p>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div
+                  class="info-card p-4"
+                  style="
+                    background: rgba(76, 179, 160, 0.1);
+                    border-radius: 15px;
+                    height: 100%;
+                  "
+                >
+                  <div class="d-flex align-items-center mb-3">
+                    <i
+                      class="fas fa-calendar-check"
+                      style="
+                        font-size: 2rem;
+                        color: #4cb3a0;
+                        margin-right: 15px;
+                      "
+                    ></i>
+                    <h4 style="color: #122a4e; margin: 0">
+                      Schedule Consultation
+                    </h4>
+                  </div>
+                  <p style="color: #122a4e; line-height: 1.6; margin-bottom: 0">
+                    Book a personalized consultation with our fertility
+                    specialists to discuss your embryo freezing options and
+                    create a tailored treatment plan.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div
+                  class="info-card p-4"
+                  style="
+                    background: rgba(76, 179, 160, 0.1);
+                    border-radius: 15px;
+                    height: 100%;
+                  "
+                >
+                  <div class="d-flex align-items-center mb-3">
+                    <i
+                      class="fas fa-phone"
+                      style="
+                        font-size: 2rem;
+                        color: #4cb3a0;
+                        margin-right: 15px;
+                      "
+                    ></i>
+                    <h4 style="color: #122a4e; margin: 0">Call Us Today</h4>
+                  </div>
+                  <p style="color: #122a4e; line-height: 1.6; margin-bottom: 0">
+                    Speak directly with our patient care coordinators who can
+                    answer your questions and help you get started on your
+                    fertility preservation journey.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <a href="#" class="cta-btn me-3">Book Consultation</a>
+              <a href="tel:19662" class="btn btn-outline-primary">Call 19662</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5" style="background: #f8f9fa">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <h2
+              class="text-center mb-5"
+              style="color: #122a4e; font-weight: 600"
+            >
+              Frequently Asked Questions
+            </h2>
+
+            <div class="accordion" id="faqAccordion">
+              <!-- FAQ 1 -->
+              <div
+                class="accordion-item mb-3"
+                style="border: none; border-radius: 10px; overflow: hidden"
+              >
+                <h2 class="accordion-header" id="faq1">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse1"
+                    aria-expanded="false"
+                    aria-controls="collapse1"
+                    style="
+                      background: #4cb3a0;
+                      color: white;
+                      border: none;
+                      font-weight: 600;
+                    "
+                  >
+                    How long can embryos be stored?
+                  </button>
+                </h2>
+                <div
+                  id="collapse1"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faq1"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div
+                    class="accordion-body"
+                    style="
+                      background: rgba(76, 179, 160, 0.05);
+                      color: #122a4e;
+                      line-height: 1.6;
+                    "
+                  >
+                    Embryos can be safely stored for many years. In many
+                    countries, the standard storage period is 10 years, though
+                    this can often be extended. The vitrification process
+                    preserves embryos indefinitely without deterioration in
+                    quality.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 2 -->
+              <div
+                class="accordion-item mb-3"
+                style="border: none; border-radius: 10px; overflow: hidden"
+              >
+                <h2 class="accordion-header" id="faq2">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2"
+                    aria-expanded="false"
+                    aria-controls="collapse2"
+                    style="
+                      background: #4cb3a0;
+                      color: white;
+                      border: none;
+                      font-weight: 600;
+                    "
+                  >
+                    What is the success rate of frozen embryo transfers?
+                  </button>
+                </h2>
+                <div
+                  id="collapse2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faq2"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div
+                    class="accordion-body"
+                    style="
+                      background: rgba(76, 179, 160, 0.05);
+                      color: #122a4e;
+                      line-height: 1.6;
+                    "
+                  >
+                    Frozen embryo transfer success rates are comparable to fresh
+                    transfers, typically ranging from 40-60% per transfer
+                    depending on factors like maternal age, embryo quality, and
+                    individual health conditions.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 3 -->
+              <div
+                class="accordion-item mb-3"
+                style="border: none; border-radius: 10px; overflow: hidden"
+              >
+                <h2 class="accordion-header" id="faq3">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse3"
+                    aria-expanded="false"
+                    aria-controls="collapse3"
+                    style="
+                      background: #4cb3a0;
+                      color: white;
+                      border: none;
+                      font-weight: 600;
+                    "
+                  >
+                    Is embryo freezing safe?
+                  </button>
+                </h2>
+                <div
+                  id="collapse3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faq3"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div
+                    class="accordion-body"
+                    style="
+                      background: rgba(76, 179, 160, 0.05);
+                      color: #122a4e;
+                      line-height: 1.6;
+                    "
+                  >
+                    Yes, embryo freezing using vitrification is a safe and
+                    well-established procedure. Studies show no increased risk
+                    of birth defects or developmental issues in babies born from
+                    frozen embryos compared to fresh embryo transfers.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+              <div
+                class="accordion-item mb-3"
+                style="border: none; border-radius: 10px; overflow: hidden"
+              >
+                <h2 class="accordion-header" id="faq4">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse4"
+                    aria-expanded="false"
+                    aria-controls="collapse4"
+                    style="
+                      background: #4cb3a0;
+                      color: white;
+                      border: none;
+                      font-weight: 600;
+                    "
+                  >
+                    What happens if I don't use all my frozen embryos?
+                  </button>
+                </h2>
+                <div
+                  id="collapse4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faq4"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div
+                    class="accordion-body"
+                    style="
+                      background: rgba(76, 179, 160, 0.05);
+                      color: #122a4e;
+                      line-height: 1.6;
+                    "
+                  >
+                    You have several options including continued storage,
+                    donation to other couples, donation for research, or
+                    disposal. We'll discuss all options with you and respect
+                    your wishes regarding unused embryos.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Scroll Animation Styles -->
+    <style>
+      .timeline-item {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .timeline-item.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .process-icon {
+        transform: scale(0.8);
+        transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+      }
+
+      .timeline-item.animate .process-icon {
+        transform: scale(1);
+      }
+
+      .process-dot {
+        transform: translateY(-50%) scale(0);
+        transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
+      }
+
+      .timeline-item.animate .process-dot {
+        transform: translateY(-50%) scale(1);
+      }
+    </style>
+
+    <!-- Old scripts removed - now handled in footer -->
+
+    <script>
+      function toggleSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        const icon = document.getElementById(sectionId + "-icon");
+
+        if (
+          section.style.maxHeight === "0px" ||
+          section.style.maxHeight === ""
+        ) {
+          section.style.padding = "70px 20px";
+          section.style.minHeight = "120px";
+          section.style.maxHeight = "500px";
+          icon.textContent = "−";
+        } else {
+          section.style.maxHeight = "0px";
+          section.style.padding = "0 20px";
+          section.style.minHeight = "0px";
+          icon.textContent = "+";
+        }
+      }
+
+      // Add click functionality to navigate from card to h2 section
+      document.addEventListener("DOMContentLoaded", function () {
+        // Find the card with "How are Embryos Frozen?" title
+        const cards = document.querySelectorAll(".card");
+        let targetCard = null;
+
+        cards.forEach((card) => {
+          const cardTitle = card.querySelector(".card-title");
+          if (
+            cardTitle &&
+            cardTitle.textContent.trim() === "How are Embryos Frozen?"
+          ) {
+            targetCard = card;
+          }
+        });
+
+        if (targetCard) {
+          targetCard.style.cursor = "pointer";
+          targetCard.addEventListener("click", function () {
+            // Find the h2 with "How are embryos frozen?" text
+            const h2Elements = document.querySelectorAll("h2");
+            let targetH2 = null;
+
+            h2Elements.forEach((h2) => {
+              if (
+                h2.textContent.trim().toLowerCase() ===
+                "how are embryos frozen?"
+              ) {
+                targetH2 = h2;
+              }
+            });
+
+            if (targetH2) {
+              targetH2.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        }
+
+        // Add click functionality for Success Rates card to navigate to section
+        const cardBodies = document.querySelectorAll(".card-body");
+
+        cardBodies.forEach((cardBody) => {
+          const cardTitle = cardBody.querySelector(".card-title");
+          if (
+            cardTitle &&
+            cardTitle.textContent.trim() === "Success Rates with Frozen Embryos"
+          ) {
+            cardBody.style.cursor = "pointer";
+            cardBody.addEventListener("click", function () {
+              // Find the Success Rates section
+              const successRatesSection = document.querySelector(
+                'section[style*="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)"]'
+              );
+              if (successRatesSection) {
+                successRatesSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            });
+          }
+        });
+
+        // Timeline animation on scroll
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+            }
+          });
+        }, observerOptions);
+
+        // Observe all timeline items
+        document.querySelectorAll(".timeline-item").forEach((item) => {
+          observer.observe(item);
+        });
+      });
+    </script>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="mega-menu.js"></script>
+    <script src="home.js?v=7" defer></script>
+
+    <script>
+      // Load header and footer
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+          // Initialize mega menu after header is loaded
+          if (typeof HospitalMegaMenu !== 'undefined') {
+            new HospitalMegaMenu();
+          }
+        });
+
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+
+  </body>
+</html>
