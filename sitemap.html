@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Map - Adam Hospital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark-theme.css">
+    <style>
+        .sitemap-container {
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        
+        [data-theme="dark"] .sitemap-container {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+        }
+        
+        .sitemap-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .sitemap-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        [data-theme="dark"] .sitemap-card {
+            background: var(--theme-card-bg);
+            border: 1px solid var(--theme-border);
+        }
+        
+        .sitemap-header {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            padding: 1.5rem;
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        [data-theme="dark"] .sitemap-header {
+            background: linear-gradient(135deg, var(--theme-dark-grey) 0%, var(--theme-dark-grey-hover) 100%);
+        }
+        
+        .sitemap-content {
+            padding: 1.5rem;
+        }
+        
+        .sitemap-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            margin: 0.25rem 0;
+            text-decoration: none;
+            color: #495057;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .sitemap-link:hover {
+            background: #007bff;
+            color: white;
+            border-left-color: #0056b3;
+            transform: translateX(5px);
+        }
+        
+        [data-theme="dark"] .sitemap-link {
+            background: var(--theme-bg);
+            color: var(--theme-text);
+            border: 1px solid var(--theme-border);
+        }
+        
+        [data-theme="dark"] .sitemap-link:hover {
+            background: var(--theme-dark-grey);
+            color: white;
+            border-left-color: var(--theme-dark-grey-light);
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+        
+        [data-theme="dark"] .page-title {
+            color: var(--theme-text);
+        }
+        
+        .category-icon {
+            margin-right: 0.5rem;
+            font-size: 1.1em;
+        }
+        
+        .stats-card {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+        
+        [data-theme="dark"] .stats-card {
+            background: linear-gradient(135deg, var(--theme-dark-grey) 0%, var(--theme-dark-grey-hover) 100%);
+        }
+        
+        .stats-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .breadcrumb {
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        [data-theme="dark"] .breadcrumb {
+            background: rgba(42, 42, 42, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <div class="sitemap-container">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Site Map</li>
+                </ol>
+            </nav>
+
+            <h1 class="page-title">
+                <i class="fas fa-sitemap category-icon"></i>
+                Adam Hospital - Site Map
+            </h1>
+
+            <!-- Statistics -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stats-card">
+                        <div class="stats-number">45+</div>
+                        <div>Total Pages</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-card">
+                        <div class="stats-number">8</div>
+                        <div>Main Categories</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-card">
+                        <div class="stats-number">25+</div>
+                        <div>Treatment Options</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Main Pages -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="sitemap-card">
+                        <h3 class="sitemap-header">
+                            <i class="fas fa-home category-icon"></i>
+                            Main Pages
+                        </h3>
+                        <div class="sitemap-content">
+                            <a href="index.html" class="sitemap-link">🏠 Home Page</a>
+                            <a href="treatments.html" class="sitemap-link">💊 All Treatments</a>
+                            <a href="our-ivf-family.html" class="sitemap-link">👨‍👩‍👧‍👦 Our IVF Family</a>
+                            <a href="chatbot.html" class="sitemap-link">🤖 AI Assistant</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Female Fertility -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="sitemap-card">
+                        <h3 class="sitemap-header">
+                            <i class="fas fa-venus category-icon"></i>
+                            Female Fertility
+                        </h3>
+                        <div class="sitemap-content">
+                            <a href="female-fertility.html" class="sitemap-link">🌸 Female Fertility Overview</a>
+                            <a href="female-fertility-treatments.html" class="sitemap-link">💉 Female Fertility Treatments</a>
+                            <a href="ivf.html" class="sitemap-link">🧬 IVF Treatment</a>
+                            <a href="ivf-icsi.html" class="sitemap-link">🔬 IVF-ICSI</a>
+                            <a href="iui.html" class="sitemap-link">💫 IUI Treatment</a>
+                            <a href="iui-treatment.html" class="sitemap-link">🎯 IUI Treatment Details</a>
+                            <a href="egg-freezing.html" class="sitemap-link">❄️ Egg Freezing</a>
+                            <a href="embryo-freezing.html" class="sitemap-link">🧊 Embryo Freezing</a>
+                            <a href="fertility-preservation.html" class="sitemap-link">🛡️ Fertility Preservation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Male Fertility -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="sitemap-card">
+                        <h3 class="sitemap-header">
+                            <i class="fas fa-mars category-icon"></i>
+                            Male Fertility
+                        </h3>
+                        <div class="sitemap-content">
+                            <a href="male-fertility.html" class="sitemap-link">♂️ Male Fertility Overview</a>
+                            <a href="male-fertility-treatments.html" class="sitemap-link">🔧 Male Fertility Treatments</a>
+                            <a href="sperm-freezing.html" class="sitemap-link">❄️ Sperm Freezing</a>
+                            <a href="urology.html" class="sitemap-link">🏥 Urology Department</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gynecological Conditions -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="sitemap-card">
+                        <h3 class="sitemap-header">
+                            <i class="fas fa-stethoscope category-icon"></i>
+                            Gynecological Conditions
+                        </h3>
+                        <div class="sitemap-content">
+                            <a href="endometriosis.html" class="sitemap-link">🩺 Endometriosis</a>
+                            <a href="pcos.html" class="sitemap-link">⚕️ PCOS Treatment</a>
+                            <a href="family-balancing.html" class="sitemap-link">⚖️ Family Balancing</a>
+                            <a href="ovarian-drilling.html" class="sitemap-link">🔧 Ovarian Drilling</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surgical Procedures -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="sitemap-card">
+                        <h3 class="sitemap-header">
+                            <i class="fas fa-cut category-icon"></i>
+                            Surgical Procedures
+                        </h3>
+                        <div class="sitemap-content">
+                            <a href="laparoscopy.html" class="sitemap-link">🔬 Laparoscopy</a>
+                            <a href="hysteroscopy.html" class="sitemap-link">🔍 Hysteroscopy</a>
+                            <a href="myomectomy.html" class="sitemap-link">✂️ Myomectomy</a>
+                            <a href="tubal-surgery.html" class="sitemap-link">🩹 Tubal Surgery</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laboratory & Testing -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="sitemap-card">
+                        <h3 class="sitemap-header">
+                            <i class="fas fa-flask category-icon"></i>
+                            Laboratory & Testing
+                        </h3>
+                        <div class="sitemap-content">
+                            <a href="advanced-laboratory.html" class="sitemap-link">🧪 Advanced Laboratory</a>
+                            <a href="genetic-testing.html" class="sitemap-link">🧬 Genetic Testing</a>
+                            <a href="haematology.html" class="sitemap-link">🩸 Haematology</a>
+                            <a href="immunology.html" class="sitemap-link">🛡️ Immunology</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support Services -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="sitemap-card">
+                        <h3 class="sitemap-header">
+                            <i class="fas fa-heart category-icon"></i>
+                            Support Services
+                        </h3>
+                        <div class="sitemap-content">
+                            <a href="psychological-support.html" class="sitemap-link">🧠 Psychological Support</a>
+                            <a href="nutrition.html" class="sitemap-link">🥗 Nutrition Counseling</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legal & Information -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="sitemap-card">
+                        <h3 class="sitemap-header">
+                            <i class="fas fa-info-circle category-icon"></i>
+                            Legal & Information
+                        </h3>
+                        <div class="sitemap-content">
+                            <a href="privacy-policy.html" class="sitemap-link">🔒 Privacy Policy</a>
+                            <a href="terms-of-service.html" class="sitemap-link">📋 Terms of Service</a>
+                            <a href="medical-disclaimer.html" class="sitemap-link">⚠️ Medical Disclaimer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Development & Testing -->
+                <div class="col-lg-12">
+                    <div class="sitemap-card">
+                        <h3 class="sitemap-header">
+                            <i class="fas fa-code category-icon"></i>
+                            Development & Testing Pages
+                        </h3>
+                        <div class="sitemap-content">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a href="test.html" class="sitemap-link">🧪 Test Page</a>
+                                    <a href="debug.html" class="sitemap-link">🐛 Debug Page</a>
+                                    <a href="debug-theme.html" class="sitemap-link">🎨 Theme Debug</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="theme-test.html" class="sitemap-link">🌙 Theme Test</a>
+                                    <a href="simple-test.html" class="sitemap-link">📝 Simple Test</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="header.html" class="sitemap-link">📄 Header Component</a>
+                                    <a href="footer.html" class="sitemap-link">📄 Footer Component</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="sitemap-card">
+                        <h3 class="sitemap-header">
+                            <i class="fas fa-compass category-icon"></i>
+                            Quick Navigation
+                        </h3>
+                        <div class="sitemap-content">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h6 class="text-primary">🏥 Main Services</h6>
+                                    <small class="text-muted">IVF, IUI, Fertility Treatments</small>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6 class="text-success">🔬 Diagnostics</h6>
+                                    <small class="text-muted">Genetic Testing, Laboratory</small>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6 class="text-warning">⚕️ Surgical</h6>
+                                    <small class="text-muted">Laparoscopy, Hysteroscopy</small>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6 class="text-info">💙 Support</h6>
+                                    <small class="text-muted">Counseling, Nutrition</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+    <script>
+        // Load header and footer
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        // Theme toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        });
+    </script>
+</body>
+</html>
