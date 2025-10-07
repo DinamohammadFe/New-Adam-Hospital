@@ -1127,3 +1127,33 @@ section {
     height: 96px !important;
   }
 }
+
+/* 1) Remove forced top padding from the hero on all mobile/tablet widths */
+@media (max-width: 991.98px) {
+  .hero-section,
+  .hero-section-new {
+    padding-top: 0 !important; /* beats styles.min.css */
+    margin-top: 0 !important;
+    top: 0 !important;
+  }
+}
+
+/* 2) Make sure the page itself isn't adding extra top spacing */
+@media (max-width: 991.98px) {
+  body, main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+
+
+/* 3) If you want the fixed top bar visible without overlapping content,
+      give the main content a controlled offset and remove hero padding. */
+:root { --topbar-h: 40px; } /* adjust to your actual .top-bar height */
+
+@media (max-width: 991.98px) {
+  .top-bar { position: fixed; top: 0; left: 0; right: 0; }
+  main { margin-top: var(--topbar-h) !important; } /* or add to the first section only */
+}
+.top-bar { padding-top: calc(8px + env(safe-area-inset-top)); }
