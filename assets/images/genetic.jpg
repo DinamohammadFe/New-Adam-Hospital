@@ -1,0 +1,42 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4cb3a0;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#2c7a7b;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#1a5f63;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="dna" patternUnits="userSpaceOnUse" width="100" height="100" patternTransform="rotate(45)">
+      <circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/>
+      <circle cx="75" cy="75" r="2" fill="rgba(255,255,255,0.1)"/>
+      <path d="M20,20 Q50,40 80,20 Q50,60 20,80" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background gradient -->
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  
+  <!-- DNA pattern overlay -->
+  <rect width="100%" height="100%" fill="url(#dna)"/>
+  
+  <!-- Medical/genetic symbols -->
+  <g opacity="0.1">
+    <!-- DNA helix representation -->
+    <path d="M200,200 Q400,300 600,200 Q800,100 1000,200 Q1200,300 1400,200" 
+          stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="none"/>
+    <path d="M200,250 Q400,350 600,250 Q800,150 1000,250 Q1200,350 1400,250" 
+          stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="none"/>
+    
+    <!-- Connecting lines -->
+    <line x1="300" y1="225" x2="300" y2="275" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+    <line x1="500" y1="225" x2="500" y2="275" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+    <line x1="700" y1="225" x2="700" y2="275" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+    <line x1="900" y1="225" x2="900" y2="275" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+    <line x1="1100" y1="225" x2="1100" y2="275" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  </g>
+  
+  <!-- Subtle medical cross -->
+  <g opacity="0.05" transform="translate(1600,800)">
+    <rect x="-20" y="-60" width="40" height="120" fill="white"/>
+    <rect x="-60" y="-20" width="120" height="40" fill="white"/>
+  </g>
+</svg>

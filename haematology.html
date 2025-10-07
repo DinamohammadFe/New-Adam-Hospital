@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haematology - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script" />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/FHB1SY09/adam.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css?v=4" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="index.html" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="our-ivf-family.html" class="accordion-sublink">Our IVF Family</a>
+              <a href="advanced-laboratory.html" class="accordion-sublink">Our Advanced Fertility Lab</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <a href="ivf.html" class="accordion-sublink">IVF Treatment</a>
+              <a href="ivf-icsi.html" class="accordion-sublink">ICSI-IVF Treatment</a>
+              <a href="iui.html" class="accordion-sublink">IUI</a>
+              <a href="genetic-testing.html" class="accordion-sublink">Genetic Testing</a>
+              <a href="family-balancing.html" class="accordion-sublink">Family Balancing</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <a href="female-fertility-treatments.html" class="accordion-sublink">Female Fertility</a>
+              <a href="male-fertility.html" class="accordion-sublink">Male Fertility</a>
+              <a href="egg-freezing.html" class="accordion-sublink">Egg Freezing</a>
+              <a href="sperm-freezing.html" class="accordion-sublink">Sperm Freezing</a>
+              <a href="embryo-freezing.html" class="accordion-sublink">Embryo Freezing</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section position-relative" role="img" aria-label="Haematology Services hero background" data-animate="fade">
+        <div class="hero-background-image" data-bg="https://i.postimg.cc/FzbCv4mr/hematology.jpg"></div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h1 class="display-4 fw-bold mb-4">Haematology Services</h1>
+              <p class="lead mb-4">
+                Specialized blood disorder diagnosis and treatment services that support your fertility journey. Our hematologists work closely with fertility specialists to address blood-related conditions that may affect conception and pregnancy.
+              </p>
+              <div class="d-flex gap-3">
+                <button class="btn btn-light btn-lg">Book Consultation</button>
+                <button class="btn btn-outline-light btn-lg">Learn More</button>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="text-center">
+                <i class="fas fa-tint" style="font-size: 8rem; opacity: 0.3;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="py-5">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <!-- Introduction -->
+              <div class="mb-5">
+                <p class="lead text-center mb-4">
+                  Blood disorders can significantly impact fertility and pregnancy outcomes. Our specialized haematology services provide comprehensive evaluation and treatment of blood-related conditions to optimize your reproductive health.
+                </p>
+              </div>
+
+              <!-- FAQ Section -->
+              <div class="row mb-5 justify-content-center">
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('blood-fertility-connection').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Blood & Fertility</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('our-services').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Our Services</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('common-conditions').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Common Conditions</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('treatment-approach').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Treatment Approach</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Blood & Fertility Connection Section -->
+              <div class="row mb-5" id="blood-fertility-connection">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4); position: relative; z-index: 5;">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">How Blood Health Affects Fertility</h2>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      Blood disorders can impact fertility in multiple ways. Clotting disorders may affect implantation and increase miscarriage risk, while anemia can reduce oxygen delivery to reproductive organs. Autoimmune blood conditions may interfere with conception and pregnancy maintenance.
+                    </p>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      Our integrated approach ensures that blood-related factors are properly evaluated and managed before and during fertility treatments, improving your chances of successful conception and healthy pregnancy outcomes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Our Services Section -->
+              <div class="row mb-5" id="our-services">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Our Haematology Services</h2>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-microscope me-2"></i>Comprehensive Blood Testing</h5>
+                          <p class="card-text">Complete blood count, coagulation studies, and specialized fertility-related blood markers.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-shield-alt me-2"></i>Thrombophilia Screening</h5>
+                          <p class="card-text">Testing for inherited and acquired clotting disorders that may affect pregnancy outcomes.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-heartbeat me-2"></i>Anemia Management</h5>
+                          <p class="card-text">Diagnosis and treatment of various types of anemia to optimize reproductive health.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-pills me-2"></i>Anticoagulation Therapy</h5>
+                          <p class="card-text">Safe blood thinning protocols during fertility treatments and pregnancy.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-user-md me-2"></i>Autoimmune Evaluation</h5>
+                          <p class="card-text">Assessment and management of autoimmune blood disorders affecting fertility.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fas fa-baby me-2"></i>Pregnancy Monitoring</h5>
+                          <p class="card-text">Specialized blood monitoring throughout pregnancy for high-risk patients.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Common Conditions Section -->
+              <div class="row mb-5" id="common-conditions">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Common Blood Conditions We Treat</h2>
+                  <div class="row">
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-tint"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Thrombophilia</h5>
+                          <p>Inherited or acquired tendency to form blood clots, which can affect implantation and pregnancy.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-tired"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Iron Deficiency Anemia</h5>
+                          <p>Low iron levels that can affect egg quality, ovulation, and overall reproductive health.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-shield-virus"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Antiphospholipid Syndrome</h5>
+                          <p>Autoimmune condition causing blood clots and recurrent pregnancy loss.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-dna"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Factor V Leiden</h5>
+                          <p>Genetic mutation increasing blood clot risk during pregnancy and fertility treatments.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-circle"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Platelet Disorders</h5>
+                          <p>Conditions affecting blood clotting and bleeding risk during procedures and pregnancy.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-lungs"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Hemoglobinopathies</h5>
+                          <p>Inherited blood disorders like sickle cell disease and thalassemia affecting pregnancy.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Treatment Approach Section -->
+              <div class="row mb-5" id="treatment-approach">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4);">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">Our Treatment Approach</h2>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-search me-2"></i>Comprehensive Assessment</h5>
+                        <p style="color: #122a4e;">Detailed evaluation of blood parameters, family history, and fertility-specific risk factors.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-users-cog me-2"></i>Multidisciplinary Care</h5>
+                        <p style="color: #122a4e;">Collaboration between hematologists, fertility specialists, and other healthcare providers.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-prescription-bottle-alt me-2"></i>Personalized Treatment</h5>
+                        <p style="color: #122a4e;">Tailored therapy plans based on individual blood disorder type and fertility goals.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-chart-line me-2"></i>Ongoing Monitoring</h5>
+                        <p style="color: #122a4e;">Regular blood tests and adjustments throughout fertility treatments and pregnancy.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-shield-alt me-2"></i>Safety First</h5>
+                        <p style="color: #122a4e;">Evidence-based protocols ensuring safe treatment during fertility procedures.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-graduation-cap me-2"></i>Patient Education</h5>
+                        <p style="color: #122a4e;">Comprehensive education about blood disorders and their impact on fertility.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- When to Seek Help Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">When to Consult Our Haematology Team</h2>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-history me-2"></i>Recurrent Pregnancy Loss</h5>
+                          <p>Multiple miscarriages that may be related to blood clotting disorders.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-family me-2"></i>Family History</h5>
+                          <p>Known blood disorders or clotting problems in your family.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-exclamation-triangle me-2"></i>Previous Blood Clots</h5>
+                          <p>Personal history of deep vein thrombosis, pulmonary embolism, or stroke.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-tired me-2"></i>Unexplained Fatigue</h5>
+                          <p>Persistent tiredness that may indicate anemia or other blood disorders.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-vial me-2"></i>Abnormal Blood Tests</h5>
+                          <p>Unusual results in routine blood work that need specialist evaluation.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h5 style="color: #4cb3a0;"><i class="fas fa-calendar-check me-2"></i>Pre-Treatment Screening</h5>
+                          <p>Routine evaluation before starting fertility treatments or pregnancy.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Call to Action -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="text-center" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); padding: 60px; border-radius: 15px; color: white;">
+                    <h2 class="mb-4">Optimize Your Blood Health for Fertility Success</h2>
+                    <p class="lead mb-4">Our specialized haematology team is here to support your fertility journey with expert blood disorder management.</p>
+                    <button class="btn btn-light btn-lg me-3">Schedule Consultation</button>
+                    <button class="btn btn-outline-light btn-lg">Learn About Testing</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="home.js?v=7"></script>
+    <script src="mega-menu.js"></script>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Load header
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

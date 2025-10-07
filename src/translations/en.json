@@ -1,0 +1,124 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "treatments": "Treatments",
+    "services": "Services",
+    "patientPortal": "Patient Portal",
+    "bookAppointment": "Book an Appointment",
+    "language": "العربية"
+  },
+  "hero": {
+    "title": "Your Journey to Parenthood Starts Here",
+    "subtitle": "Leading fertility treatments in Egypt with personalized care and advanced technology",
+    "cta": "Start Your Journey",
+    "consultation": "Free Consultation"
+  },
+  "about": {
+    "whoWeAre": "Who We Are",
+    "meetTeam": "Meet the Team",
+    "fertilityLab": "Our Advanced Fertility Lab",
+    "successStories": "Success Stories",
+    "newsUpdates": "News & Updates"
+  },
+  "treatments": {
+    "coreTitle": "Core Treatments",
+    "ivf": "IVF Treatment",
+    "icsi": "ICSI-IVF Treatment",
+    "iui": "IUI",
+    "geneticTesting": "Genetic Testing",
+    "surgicalTitle": "Surgical Options",
+    "laparoscopy": "Laparoscopy",
+    "hysteroscopy": "Hysteroscopy",
+    "tubalSurgery": "Tubal Surgery",
+    "myomectomy": "Myomectomy",
+    "specializedTitle": "Specialized Care",
+    "embryoFreezing": "Embryo Freezing",
+    "pcosTitle": "PCOS Treatment",
+    "endometriosis": "Endometriosis",
+    "familyBalancing": "Family Balancing"
+  },
+  "services": {
+    "femaleTitle": "Female Fertility",
+    "femaleAssessment": "Female Fertility Assessment",
+    "femaleTreatments": "Female Fertility Treatments",
+    "maleTitle": "Male Fertility",
+    "maleAssessment": "Male Fertility Assessment",
+    "maleTreatments": "Male Fertility Treatments",
+    "preservingTitle": "Preserving Fertility",
+    "eggFreezing": "Egg Freezing",
+    "spermFreezing": "Sperm Freezing",
+    "supportTitle": "Support Services",
+    "psychologicalSupport": "Psychological Support",
+    "nutrition": "Nutrition",
+    "consultation": "Consultation",
+    "urology": "Urology",
+    "hematology": "Hematology",
+    "immunology": "Immunology"
+  },
+  "statistics": {
+    "title": "Our journey in numbers",
+    "nationalities": "Patient nationalities",
+    "babies": "Adam's Fertility IVF babies born",
+    "years": "open since 1994 - 30 years",
+    "successRate": "Success rate"
+  },
+  "contact": {
+    "email": "info@adamhospital.com",
+    "phone": "16992",
+    "address": "Contact Us",
+    "getDirections": "Get Directions"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "treatments": "Treatments",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "medicalDisclaimer": "Medical Disclaimer",
+    "followUs": "Follow Us",
+    "copyright": "© 2024 Adam International Hospital. All rights reserved."
+  },
+  "pages": {
+    "treatments": {
+      "title": "Fertility Treatments",
+      "subtitle": "Comprehensive fertility solutions tailored to your needs",
+      "description": "Our expert team offers a full range of fertility treatments using the latest technology and personalized care approaches."
+    },
+    "fertilityPreservation": {
+      "title": "Fertility Preservation",
+      "subtitle": "Protecting your future family planning options",
+      "description": "Advanced fertility preservation techniques to help you plan for the future with confidence."
+    },
+    "advancedLab": {
+      "title": "Advanced Laboratory",
+      "subtitle": "State-of-the-art technology for optimal outcomes",
+      "description": "Our cutting-edge laboratory facilities ensure the highest standards of care and success rates."
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: January 2024"
+    },
+    "termsOfService": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: January 2024"
+    },
+    "medicalDisclaimer": {
+      "title": "Medical Disclaimer",
+      "lastUpdated": "Last updated: January 2024"
+    }
+  },
+  "chatbot": {
+    "welcome": "Hello! How can I help you today?",
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "close": "Close",
+    "title": "Chat with us"
+  },
+  "accessibility": {
+    "toggleNavigation": "Toggle navigation"
+  }
+}

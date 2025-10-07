@@ -1,0 +1,268 @@
+/* 
+ * Mobile Gap Fix CSS
+ * This file must load AFTER styles.min.css to override aggressive rules
+ * Fixes mobile white space at top of page and ensures hero images are responsive
+ */
+
+/* ===== GLOBAL MOBILE FIXES (≤991.98px) ===== */
+@media (max-width: 991.98px) {
+  
+  /* Remove forced body padding that creates white gap on mobile */
+  body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Ensure main content starts at top without gaps */
+  main {
+    margin-top: var(--topbar-h, 0) !important;
+    padding-top: 0 !important;
+  }
+  
+  /* Remove any section padding that might create gaps */
+  .hero-section,
+  .hero-section-new {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    min-height: 60vh; /* Ensure consistent height */
+  }
+  
+  /* Fix hero background image visibility and positioning */
+  .hero-section .hero-background-image,
+  .hero-section-new .hero-background-image {
+    z-index: 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    /* Fix iOS Safari parallax issues */
+    background-attachment: scroll !important;
+  }
+  
+  /* Fix genetic-hero and other fixed attachment backgrounds on mobile */
+  .genetic-hero,
+  [class*="hero"] {
+    background-attachment: scroll !important;
+  }
+  
+  /* Ensure hero overlays are properly layered */
+  .hero-section::before,
+  .hero-section-new::before {
+    z-index: 1 !important;
+  }
+  
+  /* Ensure hero content is visible and properly layered */
+  .hero-section .container,
+  .hero-section-new .container {
+    display: block !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+  
+  /* Remove any painted background on base hero sections that could hide images */
+  .hero-section,
+  .hero-section-new {
+    background-color: transparent !important;
+  }
+  
+  /* Ensure top bar positioning doesn't interfere */
+  .top-bar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1050 !important;
+  }
+  
+  /* Normalize any conflicting margins/padding across hero variants */
+  section[class*="hero"] {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* ===== TABLET SPECIFIC FIXES (768px - 991.98px) ===== */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-section,
+  .hero-section-new {
+    min-height: 70vh; /* Slightly larger on tablets */
+  }
+}
+
+/* ===== MOBILE SPECIFIC FIXES (≤767.98px) ===== */
+@media (max-width: 767.98px) {
+  
+  /* Extra mobile-specific resets */
+  html {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Ensure hero sections take proper mobile height */
+  .hero-section,
+  .hero-section-new {
+    min-height: 60vh !important;
+    max-height: 100vh !important;
+  }
+  
+  /* Mobile hero content adjustments */
+  .hero-section .container,
+  .hero-section-new .container {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+/* ===== SMALL MOBILE FIXES (≤575.98px) ===== */
+@media (max-width: 575.98px) {
+  
+  /* Compact hero for small screens */
+  .hero-section,
+  .hero-section-new {
+    min-height: 50vh !important;
+  }
+  
+  /* Adjust container padding for small screens */
+  .hero-section .container,
+  .hero-section-new .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* ===== SAFE GLOBAL RESETS ===== */
+
+/* Ensure no unexpected margins on key elements */
+.navbar-fixed-top + .hero-section,
+.navbar-fixed-top + .hero-section-new {
+  margin-top: 0 !important;
+}
+
+/* Fix any stacking context issues */
+.hero-background-image {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+}
+
+/* Ensure hero sections are positioned correctly */
+.hero-section,
+.hero-section-new {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* ===== CSS CUSTOM PROPERTIES FOR TOP BAR HEIGHT ===== */
+:root {
+  --topbar-h: 52px; /* Adjust this value based on actual top bar height */
+}
+
+/* Desktop: maintain existing layout if top bar exists */
+@media (min-width: 992px) {
+  main {
+    margin-top: var(--topbar-h) !important;
+  }
+}
+
+/* ===== ENHANCED FLOATING CARDS VISIBILITY ===== */
+
+/* Enhanced glass card visibility on hero section */
+.hero-section .glass-card,
+.hero-section-new .glass-card {
+  background: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2) !important;
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+.hero-section .glass-card:hover,
+.hero-section-new .glass-card:hover {
+  background: rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.25) !important;
+  transform: translateY(-8px) !important;
+}
+
+/* Enhanced text visibility on glass cards */
+.hero-section .glass-card-title,
+.hero-section-new .glass-card-title {
+  color: #2c5f4f !important;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+.hero-section .glass-card-description,
+.hero-section-new .glass-card-description {
+  color: #1a1a1a !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Enhanced button visibility */
+.hero-section .glass-card-btn,
+.hero-section-new .glass-card-btn {
+  background: linear-gradient(135deg, #51917c, #6ba88a) !important;
+  box-shadow: 0 6px 20px rgba(81, 145, 124, 0.4) !important;
+  font-weight: 700 !important;
+  position: relative !important;
+  z-index: 4 !important;
+}
+
+.hero-section .glass-card-btn:hover,
+.hero-section-new .glass-card-btn:hover {
+  background: linear-gradient(135deg, #6ba88a, #51917c) !important;
+  box-shadow: 0 8px 25px rgba(81, 145, 124, 0.6) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* Mobile specific enhancements */
+@media (max-width: 768px) {
+  .hero-section .glass-card,
+  .hero-section-new .glass-card {
+    background: rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .hero-section .glass-card-title,
+  .hero-section-new .glass-card-title {
+    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  .hero-section .glass-card-description,
+  .hero-section-new .glass-card-description {
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8) !important;
+  }
+}
+
+/* ===== ACCESSIBILITY AND PERFORMANCE ===== */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .hero-background-image {
+    background-attachment: scroll !important;
+  }
+  
+  .hero-section .glass-card:hover,
+  .hero-section-new .glass-card:hover {
+    transform: none !important;
+  }
+  
+  .hero-section .glass-card-btn:hover,
+  .hero-section-new .glass-card-btn:hover {
+    transform: none !important;
+  }
+}
+
+/* Ensure proper contrast and readability */
+.hero-section .container *,
+.hero-section-new .container * {
+  position: relative !important;
+  z-index: 2 !important;
+}

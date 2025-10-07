@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urology - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script" />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/FHB1SY09/adam.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css?v=4" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="index.html" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="our-ivf-family.html" class="accordion-sublink">Our IVF Family</a>
+              <a href="advanced-laboratory.html" class="accordion-sublink">Our Advanced Fertility Lab</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <a href="ivf.html" class="accordion-sublink">IVF Treatment</a>
+              <a href="ivf-icsi.html" class="accordion-sublink">ICSI-IVF Treatment</a>
+              <a href="iui.html" class="accordion-sublink">IUI</a>
+              <a href="genetic-testing.html" class="accordion-sublink">Genetic Testing</a>
+              <a href="family-balancing.html" class="accordion-sublink">Family Balancing</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <a href="female-fertility-treatments.html" class="accordion-sublink">Female Fertility</a>
+              <a href="male-fertility.html" class="accordion-sublink">Male Fertility</a>
+              <a href="egg-freezing.html" class="accordion-sublink">Egg Freezing</a>
+              <a href="sperm-freezing.html" class="accordion-sublink">Sperm Freezing</a>
+              <a href="embryo-freezing.html" class="accordion-sublink">Embryo Freezing</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section position-relative" role="img" aria-label="Urology Services hero background" data-animate="fade">
+        <div class="hero-background-image" data-bg="https://i.postimg.cc/dQ50MyNC/genetic.jpg"></div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h1 class="display-4 fw-bold mb-4">Urology Services</h1>
+              <p class="lead mb-4">
+                Comprehensive urological care that supports male fertility and reproductive health. Our urologists specialize in treating conditions that may affect male fertility and work closely with our fertility team to optimize your chances of conception.
+              </p>
+              <div class="d-flex gap-3">
+                <button class="btn btn-light btn-lg">Book Consultation</button>
+                <button class="btn btn-outline-light btn-lg">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+              <h2 class="display-5 fw-bold mb-4">Our Urology Services</h2>
+              <p class="lead">
+                Specialized urological treatments designed to address male reproductive health and fertility concerns.
+              </p>
+            </div>
+          </div>
+          
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                  <div class="mb-3">
+                    <i class="fas fa-user-md fa-3x text-primary"></i>
+                  </div>
+                  <h5 class="card-title">Male Fertility Assessment</h5>
+                  <p class="card-text">Comprehensive evaluation of male reproductive health and fertility potential.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                  <div class="mb-3">
+                    <i class="fas fa-microscope fa-3x text-primary"></i>
+                  </div>
+                  <h5 class="card-title">Varicocele Treatment</h5>
+                  <p class="card-text">Surgical and non-surgical treatment options for varicoceles affecting fertility.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                  <div class="mb-3">
+                    <i class="fas fa-dna fa-3x text-primary"></i>
+                  </div>
+                  <h5 class="card-title">Sperm Retrieval</h5>
+                  <p class="card-text">Advanced techniques for sperm extraction in cases of azoospermia.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                  <div class="mb-3">
+                    <i class="fas fa-cut fa-3x text-primary"></i>
+                  </div>
+                  <h5 class="card-title">Vasectomy Reversal</h5>
+                  <p class="card-text">Microsurgical procedures to restore fertility after vasectomy.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                  <div class="mb-3">
+                    <i class="fas fa-pills fa-3x text-primary"></i>
+                  </div>
+                  <h5 class="card-title">Hormone Therapy</h5>
+                  <p class="card-text">Treatment for hormonal imbalances affecting male fertility.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                  <div class="mb-3">
+                    <i class="fas fa-stethoscope fa-3x text-primary"></i>
+                  </div>
+                  <h5 class="card-title">Erectile Dysfunction</h5>
+                  <p class="card-text">Comprehensive treatment for erectile dysfunction and sexual health.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                  <div class="mb-3">
+                    <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                  </div>
+                  <h5 class="card-title">Prostate Health</h5>
+                  <p class="card-text">Prostate evaluation and treatment for optimal reproductive health.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                  <div class="mb-3">
+                    <i class="fas fa-search fa-3x text-primary"></i>
+                  </div>
+                  <h5 class="card-title">Genetic Counseling</h5>
+                  <p class="card-text">Genetic testing and counseling for hereditary conditions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Our Urology Services -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+              <h2 class="display-5 fw-bold mb-4">Why Choose Our Urology Services</h2>
+              <p class="lead">
+                Our experienced urologists work in close collaboration with our fertility specialists to provide comprehensive care.
+              </p>
+            </div>
+          </div>
+          
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div class="mb-3">
+                  <i class="fas fa-award fa-3x text-primary"></i>
+                </div>
+                <h5>Expert Team</h5>
+                <p>Board-certified urologists with specialized training in male fertility.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div class="mb-3">
+                  <i class="fas fa-cogs fa-3x text-primary"></i>
+                </div>
+                <h5>Advanced Technology</h5>
+                <p>State-of-the-art equipment for precise diagnosis and treatment.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div class="mb-3">
+                  <i class="fas fa-heart fa-3x text-primary"></i>
+                </div>
+                <h5>Personalized Care</h5>
+                <p>Individualized treatment plans tailored to your specific needs.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div class="mb-3">
+                  <i class="fas fa-handshake fa-3x text-primary"></i>
+                </div>
+                <h5>Collaborative Approach</h5>
+                <p>Seamless coordination with our fertility team for optimal outcomes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-5 bg-primary text-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+              <h2 class="display-5 fw-bold mb-4">Ready to Take the Next Step?</h2>
+              <p class="lead mb-4">
+                Schedule a consultation with our urology specialists to discuss your fertility concerns and treatment options.
+              </p>
+              <div class="d-flex gap-3 justify-content-center">
+                <button class="btn btn-light btn-lg">Book Consultation</button>
+                <button class="btn btn-outline-light btn-lg">Call Us Today</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="home.js?v=7"></script>
+  </body>
+</html>

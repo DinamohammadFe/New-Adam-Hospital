@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ovarian Drilling - Adam International Hospital</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script" />
+    <link rel="preload" href="home.js?v=7" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/FHB1SY09/adam.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="styles.css?v=4" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="index.html" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="our-ivf-family.html" class="accordion-sublink">Our IVF Family</a>
+              <a href="advanced-laboratory.html" class="accordion-sublink">Our Advanced Fertility Lab</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <a href="ivf.html" class="accordion-sublink">IVF Treatment</a>
+              <a href="ivf-icsi.html" class="accordion-sublink">ICSI-IVF Treatment</a>
+              <a href="iui.html" class="accordion-sublink">IUI</a>
+              <a href="genetic-testing.html" class="accordion-sublink">Genetic Testing</a>
+              <a href="family-balancing.html" class="accordion-sublink">Family Balancing</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <a href="female-fertility-treatments.html" class="accordion-sublink">Female Fertility</a>
+              <a href="male-fertility.html" class="accordion-sublink">Male Fertility</a>
+              <a href="egg-freezing.html" class="accordion-sublink">Egg Freezing</a>
+              <a href="sperm-freezing.html" class="accordion-sublink">Sperm Freezing</a>
+              <a href="embryo-freezing.html" class="accordion-sublink">Embryo Freezing</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section position-relative" role="img" aria-label="Ovarian Drilling hero background" data-animate="fade">
+        <div class="hero-background-image" data-bg="https://i.postimg.cc/dQ50MyNC/genetic.jpg"></div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h1 class="display-4 fw-bold mb-4">Ovarian Drilling</h1>
+              <p class="lead mb-4">
+                Advanced laparoscopic treatment for PCOS (Polycystic Ovary Syndrome) to restore natural ovulation. Our minimally invasive approach helps women with PCOS achieve regular ovulation and improve fertility outcomes.
+              </p>
+              <div class="d-flex gap-3">
+                <button class="btn btn-light btn-lg">Book Consultation</button>
+                <button class="btn btn-outline-light btn-lg">Learn More</button>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="text-center">
+                <i class="fas fa-circle-notch" style="font-size: 8rem; opacity: 0.3;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="py-5">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <!-- Introduction -->
+              <div class="mb-5">
+                <p class="lead text-center mb-4">
+                  Ovarian drilling is a minimally invasive surgical procedure designed to treat women with PCOS who don't respond to fertility medications. It helps restore natural ovulation and improve pregnancy rates.
+                </p>
+              </div>
+
+              <!-- FAQ Section -->
+              <div class="row mb-5 justify-content-center">
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('what-is-ovarian-drilling').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">What is Ovarian Drilling</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('who-needs-drilling').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Who Needs This Treatment</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('procedure-process').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">The Procedure</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card" onclick="document.getElementById('success-rates').scrollIntoView({behavior: 'smooth'});">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                      <h5 class="card-title mb-2">Success Rates</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- What is Ovarian Drilling Section -->
+              <div class="row mb-5" id="what-is-ovarian-drilling">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4); position: relative; z-index: 5;">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">What is Ovarian Drilling?</h2>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      Ovarian drilling, also known as laparoscopic ovarian diathermy (LOD), is a minimally invasive surgical procedure used to treat women with polycystic ovary syndrome (PCOS) who have not responded to fertility medications like clomiphene citrate.
+                    </p>
+                    <p style="color: #122a4e; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                      During the procedure, small holes are made in the ovaries using laser or electrocautery. This reduces the production of male hormones (androgens) and can restore normal ovulation patterns. The procedure is performed laparoscopically through small incisions, making it minimally invasive with faster recovery times.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Understanding PCOS Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Understanding PCOS and Ovulation Problems</h2>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h4 class="card-title text-center mb-4"><i class="fas fa-info-circle me-2"></i>What is PCOS?</h4>
+                          <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Hormonal disorder affecting 5-10% of women</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Irregular or absent ovulation</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Elevated male hormone levels</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Multiple small cysts on ovaries</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Insulin resistance</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Leading cause of female infertility</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="card h-100" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); color: white;">
+                        <div class="card-body">
+                          <h4 class="card-title text-center mb-4"><i class="fas fa-exclamation-triangle me-2"></i>PCOS Symptoms</h4>
+                          <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Irregular menstrual periods</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Difficulty getting pregnant</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Excessive hair growth</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Weight gain or difficulty losing weight</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Acne and oily skin</li>
+                            <li class="mb-2"><i class="fas fa-check me-2"></i>Hair thinning or male-pattern baldness</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Who Needs Drilling Section -->
+              <div class="row mb-5" id="who-needs-drilling">
+                <div class="col-12">
+                  <div style="background: #e9f5f4; padding: 40px; border: 2px solid rgba(255, 255, 255, 0.4);">
+                    <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #122a4e; text-align: left;">Who Needs Ovarian Drilling?</h2>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-pills me-2"></i>Clomiphene Resistance</h5>
+                        <p style="color: #122a4e;">Women with PCOS who don't ovulate with clomiphene citrate treatment.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-weight me-2"></i>Normal BMI</h5>
+                        <p style="color: #122a4e;">Particularly effective in women with normal body weight and PCOS.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-chart-line me-2"></i>High LH Levels</h5>
+                        <p style="color: #122a4e;">Women with elevated luteinizing hormone (LH) levels.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-syringe me-2"></i>Avoiding Injections</h5>
+                        <p style="color: #122a4e;">Those who prefer to avoid daily fertility injections.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-twins me-2"></i>Reduce Multiple Pregnancy Risk</h5>
+                        <p style="color: #122a4e;">Lower risk of multiple pregnancies compared to fertility drugs.</p>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <h5 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Long-term Solution</h5>
+                        <p style="color: #122a4e;">Seeking a more permanent solution to ovulation problems.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Procedure Process Section -->
+              <div class="row mb-5" id="procedure-process">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">The Ovarian Drilling Process</h2>
+                  <div class="row">
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-user-md"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Pre-operative Assessment</h5>
+                          <p>Comprehensive evaluation including hormone tests and ultrasound.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-cut"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Laparoscopic Surgery</h5>
+                          <p>Minimally invasive procedure through small abdominal incisions.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-bolt"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Drilling Process</h5>
+                          <p>Creating small holes in ovaries using laser or electrocautery.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 2rem;">
+                            <i class="fas fa-home"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Same-day Discharge</h5>
+                          <p>Outpatient procedure with quick recovery and minimal downtime.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- How It Works Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">How Ovarian Drilling Works</h2>
+                  <div class="row">
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="background: #e9f5f4; border: none;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-arrow-down"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Reduces Androgen Production</h5>
+                          <p style="color: #122a4e;">Decreases male hormone levels that interfere with ovulation.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="background: #e9f5f4; border: none;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-balance-scale"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Restores Hormone Balance</h5>
+                          <p style="color: #122a4e;">Normalizes LH and FSH levels for regular ovulation.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="background: #e9f5f4; border: none;">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-egg"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Improves Ovulation</h5>
+                          <p style="color: #122a4e;">Restores natural ovulation cycles and fertility.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Success Rates Section -->
+              <div class="row mb-5" id="success-rates">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Success Rates & Outcomes</h2>
+                  <div class="row">
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-egg"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Ovulation Rate</h5>
+                          <p class="h4" style="color: #4cb3a0;">70-80%</p>
+                          <p>Women achieve regular ovulation after the procedure.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-baby"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Pregnancy Rate</h5>
+                          <p class="h4" style="color: #4cb3a0;">50-60%</p>
+                          <p>Successful pregnancies within 12 months of treatment.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body text-center">
+                          <div class="mb-3" style="color: #4cb3a0; font-size: 3rem;">
+                            <i class="fas fa-clock"></i>
+                          </div>
+                          <h5 style="color: #4cb3a0;">Duration of Effect</h5>
+                          <p class="h4" style="color: #4cb3a0;">2-5 years</p>
+                          <p>Long-lasting improvement in ovulation patterns.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Benefits & Considerations Section -->
+              <div class="row mb-5">
+                <div class="col-md-6">
+                  <div class="card h-100" style="background: #e9f5f4; border: none;">
+                    <div class="card-body">
+                      <h3 style="color: #4cb3a0; text-align: center;" class="mb-4">Benefits</h3>
+                      <ul style="color: #122a4e; font-size: 1.1rem;">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Restores natural ovulation</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Reduces need for fertility drugs</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Lower multiple pregnancy risk</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Long-lasting effects</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Minimally invasive procedure</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Outpatient surgery</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Improves insulin sensitivity</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>May reduce miscarriage risk</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card h-100" style="background: #fff3cd; border: none;">
+                    <div class="card-body">
+                      <h3 style="color: #856404; text-align: center;" class="mb-4">Considerations</h3>
+                      <ul style="color: #856404; font-size: 1.1rem;">
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Not suitable for all PCOS patients</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Effects may diminish over time</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Small risk of adhesion formation</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>General anesthesia required</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>May affect ovarian reserve</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Success varies by individual</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Recovery period needed</li>
+                        <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Alternative treatments available</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Recovery Timeline Section -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 500; color: #4cb3a0; text-align: center;">Recovery Timeline</h2>
+                  <div class="row">
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h6 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Day 1-2</h6>
+                          <p>Rest at home, light activities only, mild discomfort normal.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h6 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Week 1</h6>
+                          <p>Gradual return to normal activities, avoid heavy lifting.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h6 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Month 1-3</h6>
+                          <p>Monitor for ovulation signs, may take time to see effects.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="border-left: 5px solid #4cb3a0;">
+                        <div class="card-body">
+                          <h6 style="color: #4cb3a0;"><i class="fas fa-clock me-2"></i>Month 3-6</h6>
+                          <p>Regular ovulation typically established, fertility improved.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Call to Action -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="text-center" style="background: linear-gradient(135deg, #4cb3a0 0%, #51917c 100%); padding: 60px; border-radius: 15px; color: white;">
+                    <h2 class="mb-4">Restore Natural Ovulation with Ovarian Drilling</h2>
+                    <p class="lead mb-4">Take control of your PCOS and improve your fertility with our expert ovarian drilling procedure.</p>
+                    <button class="btn btn-light btn-lg me-3">Schedule Consultation</button>
+                    <button class="btn btn-outline-light btn-lg">Learn About PCOS Treatment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="home.js?v=7"></script>
+    <script src="mega-menu.js"></script>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Load header
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

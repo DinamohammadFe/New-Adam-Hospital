@@ -1,0 +1,101 @@
+{
+  "timestamp": "2025-09-23T12:23:22.340Z",
+  "totalImages": 12,
+  "images": [
+    {
+      "path": "adam-logo.png",
+      "size": 443785,
+      "sizeKB": "433.38 KB",
+      "extension": ".png"
+    },
+    {
+      "path": "dist\\assets\\png\\adam-logo-CKhNOqUn.png",
+      "size": 443785,
+      "sizeKB": "433.38 KB",
+      "extension": ".png"
+    },
+    {
+      "path": "icons\\embryo.png",
+      "size": 172545,
+      "sizeKB": "168.50 KB",
+      "extension": ".png"
+    },
+    {
+      "path": "icons\\andrology02.svg",
+      "size": 49934,
+      "sizeKB": "48.76 KB",
+      "extension": ".svg"
+    },
+    {
+      "path": "icons\\endoscopy.svg",
+      "size": 26910,
+      "sizeKB": "26.28 KB",
+      "extension": ".svg"
+    },
+    {
+      "path": "icons\\egg-retrivalz.svg",
+      "size": 26320,
+      "sizeKB": "25.70 KB",
+      "extension": ".svg"
+    },
+    {
+      "path": "icons\\fertilization.png",
+      "size": 22057,
+      "sizeKB": "21.54 KB",
+      "extension": ".png"
+    },
+    {
+      "path": "icons\\mother.png",
+      "size": 20089,
+      "sizeKB": "19.62 KB",
+      "extension": ".png"
+    },
+    {
+      "path": "icons\\gyn.svg",
+      "size": 13039,
+      "sizeKB": "12.73 KB",
+      "extension": ".svg"
+    },
+    {
+      "path": "icons\\2-week.svg",
+      "size": 10531,
+      "sizeKB": "10.28 KB",
+      "extension": ".svg"
+    },
+    {
+      "path": "icons\\syringe.svg",
+      "size": 9332,
+      "sizeKB": "9.11 KB",
+      "extension": ".svg"
+    },
+    {
+      "path": "icons\\consultation.svg",
+      "size": 354,
+      "sizeKB": "0.35 KB",
+      "extension": ".svg"
+    }
+  ],
+  "recommendations": [
+    {
+      "file": "adam-logo.png",
+      "issue": "Large PNG file",
+      "suggestion": "Consider converting to WebP or optimizing PNG compression",
+      "currentSize": "433.38 KB"
+    },
+    {
+      "file": "dist\\assets\\png\\adam-logo-CKhNOqUn.png",
+      "issue": "Large PNG file",
+      "suggestion": "Consider converting to WebP or optimizing PNG compression",
+      "currentSize": "433.38 KB"
+    },
+    {
+      "file": "icons\\embryo.png",
+      "issue": "Large PNG file",
+      "suggestion": "Consider converting to WebP or optimizing PNG compression",
+      "currentSize": "168.50 KB"
+    }
+  ],
+  "totalSize": 1238681,
+  "totalSizeKB": "1209.65 KB",
+  "totalSizeMB": "1.18 MB"
+}
